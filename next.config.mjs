@@ -29,15 +29,13 @@ const nextConfig = {
   images: {
     domains: ["admin.ayasirg.com"],
     formats: ["image/avif", "image/webp"], // ⚡ modern formats for smaller size
+    // dangerouslyAllowSVG: false,
   },
 
   compress: true, // enable gzip/brotli compression
   poweredByHeader: false, // remove X-Powered-By header for security
 
-  experimental: {
-    optimizeCss: true, // improve CSS performance
-    scrollRestoration: true,
-  },
+  experimental: {},
 
   compiler: {
     removeConsole: process.env.NODE_ENV === "production", // remove console logs in prod
