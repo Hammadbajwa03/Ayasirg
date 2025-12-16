@@ -11,19 +11,21 @@ export function middleware(request) {
     "strict-origin-when-cross-origin"
   );
 
-  response.headers.set(
-    "Content-Security-Policy",
-    [
-      "default-src 'self' https://admin.ayasirg.com",
-      "img-src 'self' https://admin.ayasirg.com https: data:",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net 'unsafe-hashes' https://admin.ayasirg.com/_next/static", // allow Next.js scripts
-      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net https://admin.ayasirg.com/_next/static",
-      "font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net",
-      "object-src 'none'",
-      "base-uri 'self'",
-      "frame-ancestors 'none'",
-    ].join("; ")
-  );
+response.headers.set(
+  "Content-Security-Policy",
+  [
+    "default-src 'self' https://admin.ayasirg.com",
+    "img-src 'self' https://admin.ayasirg.com https: data:",
+    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://admin.ayasirg.com/_next/static", 
+    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net https://admin.ayasirg.com/_next/static",
+    "font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net",
+    "connect-src 'self' https://admin.ayasirg.com", // allow API calls
+    "object-src 'none'",
+    "base-uri 'self'",
+    "frame-ancestors 'none'",
+  ].join("; ")
+);
+
 
   response.headers.set(
     "Permissions-Policy",
