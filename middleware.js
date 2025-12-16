@@ -16,8 +16,8 @@ export function middleware(request) {
     [
       "default-src 'self'",
       "img-src 'self' https: data:",
-      "script-src 'self'",
-      "style-src 'self' 'unsafe-inline'",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval'", // 🔹 allow inline & eval scripts
+      "style-src 'self' 'unsafe-inline' https:", // 🔹 allow external styles
       "object-src 'none'",
       "base-uri 'self'",
       "frame-ancestors 'none'",
