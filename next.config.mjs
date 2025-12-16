@@ -42,7 +42,8 @@ const nextConfig = {
 
 
   compiler: {
-    removeConsole: process.env.NODE_ENV === "production", // remove console logs in prod
+    // removeConsole: process.env.NODE_ENV === "production", // remove console logs in prod
+    removeConsole: false,
   },
 
   // Optional headers for better caching
