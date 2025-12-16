@@ -35,7 +35,11 @@ const nextConfig = {
   compress: true, // enable gzip/brotli compression
   poweredByHeader: false, // remove X-Powered-By header for security
 
-  experimental: {},
+  experimental: {
+    scrollRestoration: true,
+    modern: true
+  },
+
 
   compiler: {
     removeConsole: process.env.NODE_ENV === "production", // remove console logs in prod
