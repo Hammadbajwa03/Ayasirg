@@ -11,18 +11,20 @@ export function middleware(request) {
     "strict-origin-when-cross-origin"
   );
 
-  response.headers.set(
-    "Content-Security-Policy",
-    [
-      "default-src 'self'",
-      "img-src 'self' https: data:",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval'", // 🔹 allow inline & eval scripts
-      "style-src 'self' 'unsafe-inline' https:", // 🔹 allow external styles
-      "object-src 'none'",
-      "base-uri 'self'",
-      "frame-ancestors 'none'",
-    ].join("; ")
-  );
+response.headers.set(
+  "Content-Security-Policy",
+  [
+    "default-src 'self' https://admin.ayasirg.com", // main domain
+    "img-src 'self' https://admin.ayasirg.com https: data:",
+    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net", // add external CDNs if used
+    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net",
+    "font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net",
+    "object-src 'none'",
+    "base-uri 'self'",
+    "frame-ancestors 'none'",
+  ].join("; ")
+);
+
 
   response.headers.set(
     "Permissions-Policy",
