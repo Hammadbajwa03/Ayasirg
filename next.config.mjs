@@ -37,13 +37,13 @@ const nextConfig = {
 
   experimental: {
     scrollRestoration: true,
-    modern: true
+    // modern: true
   },
 
 
   compiler: {
-    // removeConsole: process.env.NODE_ENV === "production", // remove console logs in prod
-    removeConsole: false,
+    removeConsole: process.env.NODE_ENV === "production", // remove console logs in prod
+    // removeConsole: false,
   },
 
   // Optional headers for better caching
