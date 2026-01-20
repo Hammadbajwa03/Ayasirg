@@ -183,7 +183,7 @@ export default function Card({ data, onLike, router }) {
                   <div>
                     <p>
                       <strong>Current Location: </strong>
-                      <span className="data_pro">{data?.area_name}, {data?.city_name}
+                      <span className="data_pro">{data?.area_name}
                         {/* {location.length > limit && (
                           <button
                             onClick={(e) => {
