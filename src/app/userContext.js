@@ -307,12 +307,14 @@ export const UserProvider = ({ children }) => {
 
   // filter api users/ companies
   const [filteredUsers, setFilteredUsers] = useState([]);
+  const [paginations, setPaginations] = useState({});
 
   const getFilteredUsers = async (params) => {
+    // console.log("getFilteredUsers called with params:", params);
     setLoader(true);
     try {
       const response = await axios.get(
-        `${baseUrl}/api/users/filter`, {
+        `${baseUrl}/api/users/new-filter`, {
         params,
         headers: userInfo?.api_token
           ? {
@@ -321,7 +323,7 @@ export const UserProvider = ({ children }) => {
           : {},
       }
       );
-
+      console.log(response, "filter users api response");
       // setFilteredUsers(response.data.data || []);
       if (response?.data) {
         const updatedData = (response.data.data || []).map((user) => ({
@@ -329,6 +331,7 @@ export const UserProvider = ({ children }) => {
           can_like: !!user.can_like,
         }));
         setFilteredUsers(updatedData);
+        setPaginations(response.data.meta || {});
       } else {
         setFilteredUsers([]);
       }
@@ -571,6 +574,7 @@ export const UserProvider = ({ children }) => {
         getCities,
         getFilteredUsers,
         filteredUsers,
+        paginations,
         toggleLike,
         getAllBanners,
         banners,

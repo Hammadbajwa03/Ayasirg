@@ -95,8 +95,9 @@ export default function Filter_bar({ dataSearch }) {
     const area_code = searchParams.get("area_code");
     const verified_status = searchParams.get("verified_status");
     const rating = searchParams.get("rating");
+    const page = searchParams.get("page") || 1;
 
-    getFilteredUsers({ role, gender, age_range, city, category_id, area_code, verified_status, rating });
+    getFilteredUsers({ role, gender, age_range, city, category_id, area_code, verified_status, rating, page });
   }, [searchParams]);
 
   useEffect(() => {

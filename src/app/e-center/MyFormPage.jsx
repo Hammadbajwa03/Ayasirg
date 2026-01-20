@@ -17,6 +17,7 @@ import Select from "react-select";
 import axios from "axios";
 import dynamic from "next/dynamic";
 import { FaDeleteLeft } from "react-icons/fa6";
+import imageCompression from "browser-image-compression";
 
 
 export default function MyFormPage() {
@@ -243,18 +244,46 @@ export default function MyFormPage() {
         }
     }, [userInfo]);
 
-    const handleFileChange = (e) => {
+    // const handleFileChange = (e) => {
+    //     const file = e.target.files[0];
+    //     if (!file) return;
+
+    //     const reader = new FileReader();
+    //     reader.onloadend = () => setImagePreview(reader.result);
+    //     reader.readAsDataURL(file);
+
+    //     setFormData((prev) => ({
+    //         ...prev,
+    //         profile_image: file,
+    //     }));
+    // };
+
+    const handleFileChange = async (e) => {
         const file = e.target.files[0];
         if (!file) return;
 
-        const reader = new FileReader();
-        reader.onloadend = () => setImagePreview(reader.result);
-        reader.readAsDataURL(file);
+        try {
+            const options = {
+                maxSizeMB: 1,
+                maxWidthOrHeight: 1024,
+                useWebWorker: true,
+            };
 
-        setFormData((prev) => ({
-            ...prev,
-            profile_image: file,
-        }));
+            // 🔥 This line fixes rotation issue
+            const fixedFile = await imageCompression(file, options);
+
+            // Preview
+            const previewUrl = URL.createObjectURL(fixedFile);
+            setImagePreview(previewUrl);
+
+            // Save corrected file for backend
+            setFormData((prev) => ({
+                ...prev,
+                profile_image: fixedFile,
+            }));
+        } catch (error) {
+            console.error("Image upload error:", error);
+        }
     };
 
     const handleRemoveImage = () => {
