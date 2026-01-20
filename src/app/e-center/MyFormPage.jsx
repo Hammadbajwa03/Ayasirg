@@ -263,28 +263,29 @@ export default function MyFormPage() {
         if (!file) return;
 
         try {
+            // Image compression + rotation fix
             const options = {
-                maxSizeMB: 1,
+                maxSizeMB: 1, // max 1MB
                 maxWidthOrHeight: 1024,
                 useWebWorker: true,
             };
 
-            // 🔥 This line fixes rotation issue
-            const fixedFile = await imageCompression(file, options);
+            const compressedFile = await imageCompression(file, options);
 
-            // Preview
-            const previewUrl = URL.createObjectURL(fixedFile);
+            // Preview (rotation fixed)
+            const previewUrl = await imageCompression.getDataUrlFromFile(compressedFile);
             setImagePreview(previewUrl);
 
-            // Save corrected file for backend
+            // Pass corrected file to backend
             setFormData((prev) => ({
                 ...prev,
-                profile_image: fixedFile,
+                profile_image: compressedFile,
             }));
-        } catch (error) {
-            console.error("Image upload error:", error);
+        } catch (err) {
+            console.error("Image upload error:", err);
         }
     };
+
 
     const handleRemoveImage = () => {
         setImagePreview(null);
@@ -611,7 +612,7 @@ export default function MyFormPage() {
                         </div>
                         <div className="col-lg-6">
                             <label htmlFor="contact_number">Phone Number</label>
-                            <input name="contact_number" placeholder="03*********" type="number" onChange={handleChange} />
+                            <input name="contact_number" placeholder="0**********" type="number" onChange={handleChange} />
                             {formErrors.contact_number && <small style={{ color: "red" }}>{formErrors.contact_number}</small>}
                         </div>
                         <div className="col-lg-6">
