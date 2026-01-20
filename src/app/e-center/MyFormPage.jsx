@@ -265,18 +265,20 @@ export default function MyFormPage() {
         try {
             // Image compression + rotation fix
             const options = {
-                maxSizeMB: 1, // max 1MB
-                maxWidthOrHeight: 1024,
+                maxSizeMB: 1,          // max 1MB
+                maxWidthOrHeight: 1024, // max dimension
                 useWebWorker: true,
             };
 
+            // compressedFile will be a File object (ready for backend)
             const compressedFile = await imageCompression(file, options);
 
-            // Preview (rotation fixed)
-            const previewUrl = await imageCompression.getDataUrlFromFile(compressedFile);
-            setImagePreview(previewUrl);
+            // Preview image (rotation fixed)
+            const reader = new FileReader();
+            reader.onloadend = () => setImagePreview(reader.result);
+            reader.readAsDataURL(compressedFile);
 
-            // Pass corrected file to backend
+            // Pass the file to backend
             setFormData((prev) => ({
                 ...prev,
                 profile_image: compressedFile,
@@ -612,7 +614,7 @@ export default function MyFormPage() {
                         </div>
                         <div className="col-lg-6">
                             <label htmlFor="contact_number">Phone Number</label>
-                            <input name="contact_number" placeholder="0**********" type="number" onChange={handleChange} />
+                            <input name="contact_number" placeholder="03*********" type="number" onChange={handleChange} />
                             {formErrors.contact_number && <small style={{ color: "red" }}>{formErrors.contact_number}</small>}
                         </div>
                         <div className="col-lg-6">
