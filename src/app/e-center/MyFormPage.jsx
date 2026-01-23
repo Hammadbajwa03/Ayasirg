@@ -1003,7 +1003,7 @@ import {
 } from "react-icons/fa";
 import { MdDelete, MdPause, MdPlayArrow } from "react-icons/md";
 import { MultiSelect } from "react-multi-select-component";
-import { toast, ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
 import { useSearchParams } from "next/navigation";
 import "react-toastify/dist/ReactToastify.css";
 import "./e-center.css";
@@ -1018,8 +1018,6 @@ import { FaDeleteLeft } from "react-icons/fa6";
 import imageCompression from "browser-image-compression";
 
 export default function MyFormPage() {
-  //   const searchParams = useSearchParams();
-  //   const userType = searchParams.get("type");
   const searchParams = useSearchParams();
   const [userType, setUserType] = useState(null);
   const router = useRouter();
@@ -1027,14 +1025,13 @@ export default function MyFormPage() {
   const [otp, setOtp] = useState(new Array(6).fill(""));
   const [loading, setLoading] = useState(false);
 
-  const blobToBase64 = (blob) => {
-    return new Promise((resolve, reject) => {
+  const blobToBase64 = (blob) =>
+    new Promise((resolve, reject) => {
       const reader = new FileReader();
       reader.onloadend = () => resolve(reader.result);
       reader.onerror = reject;
       reader.readAsDataURL(blob);
     });
-  };
 
   useEffect(() => {
     const type = searchParams.get("type");
@@ -1052,21 +1049,23 @@ export default function MyFormPage() {
     area,
     ecenterAdd,
     userInfo,
-    ecenterInfo,
   } = useContext(UserContext);
-  // console.log(locations, "locationsss")
 
   const [imagePerview, setImagePreview] = useState("");
 
-  // ==== CAMERA STATES (custom button + modal) ====
-  const [isCameraSupported, setIsCameraSupported] = useState(false);
-  const [isCameraOpen, setIsCameraOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-  const videoRef = useRef(null);
-  const canvasRef = useRef(null);
-  const streamRef = useRef(null);
+  // Profile image inputs
+  const fileInputRef = useRef(null);    // normal gallery/file
+  const cameraInputRef = useRef(null);  // camera-only input
+  const [showCameraButton, setShowCameraButton] = useState(false);
 
-  const showCustomCameraButton = isMobile && isCameraSupported;
+  // Approx: sirf mobile devices pe camera button dikhana
+  useEffect(() => {
+    if (typeof navigator !== "undefined") {
+      const ua = navigator.userAgent || navigator.vendor || "";
+      const isMobile = /android|iphone|ipad|ipod/i.test(ua);
+      setShowCameraButton(isMobile);
+    }
+  }, []);
 
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -1074,8 +1073,6 @@ export default function MyFormPage() {
   const [isRecording, setIsRecording] = useState();
   const [eCenterOtp, setEcenterOtp] = useState();
   const [showPassword, setShowPassword] = useState(false);
-
-  const fileInputRef = useRef(null);
 
   const cnicRegex = /^[0-9]{5}-[0-9]{7}-[0-9]$/;
 
@@ -1088,17 +1085,6 @@ export default function MyFormPage() {
 
   const [rows, setRows] = useState([{ id: Date.now(), city: null, areas: [] }]);
 
-  // ==== CAMERA SUPPORT & MOBILE DETECTION ====
-  useEffect(() => {
-    if (typeof navigator !== "undefined") {
-      if (navigator.mediaDevices?.getUserMedia) {
-        setIsCameraSupported(true);
-      }
-      const ua = navigator.userAgent || navigator.vendor || "";
-      setIsMobile(/android|iphone|ipad|ipod/i.test(ua));
-    }
-  }, []);
-
   const handleCityChange = (selectedCity, rowId) => {
     setRows((prev) =>
       prev.map((r) =>
@@ -1106,11 +1092,12 @@ export default function MyFormPage() {
       )
     );
 
-    // Sync with formData
     setFormData((prev) => {
       const updatedCities = [
         ...new Set([
-          ...(Array.isArray(prev.interested_cities) ? prev.interested_cities : []),
+          ...(Array.isArray(prev.interested_cities)
+            ? prev.interested_cities
+            : []),
           selectedCity?.value,
         ]),
       ].filter(Boolean);
@@ -1144,7 +1131,6 @@ export default function MyFormPage() {
   const handleDeleteRow = (rowId) => {
     setRows((prev) => prev.filter((r) => r.id !== rowId));
 
-    // FormData sync
     setFormData((prev) => {
       const remainingRows = rows.filter((r) => r.id !== rowId);
 
@@ -1166,14 +1152,11 @@ export default function MyFormPage() {
 
   const [formData, setFormData] = useState({
     profile_image: "",
-    // first_name: "",
-    // last_name: "",
     username: "",
     contact_number: "",
     email: "",
     address: "",
     gender: "",
-    // user_city: "",
     cnic: "",
     age: "",
     cnic_scan: "",
@@ -1187,7 +1170,6 @@ export default function MyFormPage() {
     picture: "",
     password: "",
     e_center_id: "",
-    // city_id: ""
   });
 
   const validateForm = () => {
@@ -1195,20 +1177,15 @@ export default function MyFormPage() {
     const requiredFields = [
       "profile_image",
       "username",
-      // "email",
       "contact_number",
       "address",
       "gender",
-      // "city_id",
       "cnic",
       "age",
       "fields_of_interest",
-      // "description",
       ...(currentRole === "handyman"
         ? ["interested_locations", "area_id", "interested_cities"]
         : []),
-      // "first_name", "last_name",
-      // "billing_address_scan",
       "cnic_scan",
       "picture",
       "audio_sample_blob",
@@ -1260,84 +1237,7 @@ export default function MyFormPage() {
     }
   }, [userInfo]);
 
-  // ==== CUSTOM CAMERA HANDLERS ====
-  const openCamera = async () => {
-    if (!isCameraSupported) return;
-    try {
-      const stream = await navigator.mediaDevices.getUserMedia({
-        video: { facingMode: "user" }, // front camera
-        audio: false,
-      });
-
-      streamRef.current = stream;
-
-      if (videoRef.current) {
-        videoRef.current.srcObject = stream;
-        await videoRef.current.play();
-      }
-
-      setIsCameraOpen(true);
-    } catch (error) {
-      console.error("Camera open error:", error);
-      alert("Camera access allow nahi hua ya browser support nahi karta.");
-    }
-  };
-
-  const stopCamera = () => {
-    if (streamRef.current) {
-      streamRef.current.getTracks().forEach((t) => t.stop());
-      streamRef.current = null;
-    }
-    setIsCameraOpen(false);
-  };
-
-  const capturePhoto = () => {
-    const video = videoRef.current;
-    const canvas = canvasRef.current;
-    if (!video || !canvas) return;
-
-    const ctx = canvas.getContext("2d");
-    canvas.width = video.videoWidth;
-    canvas.height = video.videoHeight;
-
-    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-
-    canvas.toBlob(
-      async (blob) => {
-        if (!blob) return;
-        try {
-          const options = {
-            maxSizeMB: 1,
-            maxWidthOrHeight: 1024,
-            useWebWorker: true,
-          };
-
-          const compressedBlob = await imageCompression(blob, options);
-
-          const file = new File([compressedBlob], "camera-photo.jpg", {
-            type: compressedBlob.type || "image/jpeg",
-          });
-
-          const reader = new FileReader();
-          reader.onloadend = () => setImagePreview(reader.result);
-          reader.readAsDataURL(file);
-
-          setFormData((prev) => ({
-            ...prev,
-            profile_image: file,
-          }));
-        } catch (err) {
-          console.error("Camera image process error:", err);
-        } finally {
-          stopCamera();
-        }
-      },
-      "image/jpeg",
-      0.9
-    );
-  };
-
-  // ==== PROFILE IMAGE FROM FILE (GALLERY / FILE PICKER) ====
+  // Profile image (gallery + camera input dono yahi se handle honge)
   const handleFileChange = async (e) => {
     const file = e.target.files[0];
     if (!file) return;
@@ -1351,7 +1251,6 @@ export default function MyFormPage() {
 
       const compressedBlob = await imageCompression(file, options);
 
-      // Blob -> File
       const fixedFile = new File([compressedBlob], file.name, {
         type: compressedBlob.type || file.type,
       });
@@ -1362,7 +1261,7 @@ export default function MyFormPage() {
 
       setFormData((prev) => ({
         ...prev,
-        profile_image: fixedFile, // ab ye File hai
+        profile_image: fixedFile,
       }));
     } catch (error) {
       console.error("Image upload error:", error);
@@ -1372,9 +1271,8 @@ export default function MyFormPage() {
   const handleRemoveImage = () => {
     setImagePreview(null);
     setFormData((prev) => ({ ...prev, profile_image: null }));
-    if (fileInputRef.current) {
-      fileInputRef.current.value = ""; // reset file input
-    }
+    if (fileInputRef.current) fileInputRef.current.value = "";
+    if (cameraInputRef.current) cameraInputRef.current.value = "";
   };
 
   const handleImageChange = (e) => {
@@ -1487,13 +1385,10 @@ export default function MyFormPage() {
 
     const form = new FormData();
 
-    // Append static fields
     form.append("role", userType);
-    // form.append("city_id", selectedCityId);
     form.append("interested_cities", selectedCityId);
     form.append("area_id", selectedAreaId);
 
-    // Append dynamic fields with checks for files, blobs, arrays
     for (const key in formData) {
       const value = formData[key];
 
@@ -1534,14 +1429,12 @@ export default function MyFormPage() {
     try {
       setLoader(true);
       const response = await ecenterAdd(form);
-      // console.log("API response:", response);
 
       if (
         response.success === false &&
         response.result?.status === false &&
         response.result?.errors
       ) {
-        // Validation errors
         const apiErrors = response.result.errors;
         const firstErrorKey = Object.keys(apiErrors)[0];
         const firstErrorMsg = apiErrors[firstErrorKey][0];
@@ -1591,7 +1484,6 @@ export default function MyFormPage() {
         toast.error(response.result?.message || "Something went wrong.");
       }
     } catch (err) {
-      // router.push("/error");
       console.error("Catch error:", err);
       toast.error("Something went wrong!");
     } finally {
@@ -1627,9 +1519,8 @@ export default function MyFormPage() {
     value: loc.id,
   }));
 
-  const addRow = () => {
+  const addRow = () =>
     setRows((prev) => [...prev, { id: Date.now(), city: null, areas: [] }]);
-  };
 
   return (
     <section className="Form_section">
@@ -1643,6 +1534,7 @@ export default function MyFormPage() {
             : ""}
         </h2>
         <form onSubmit={handleSubmit}>
+          {/* PROFILE IMAGE + CAMERA */}
           <div
             className="image_div cursor-pointer relative w-32 h-32"
             onClick={() => !imagePerview && fileInputRef.current?.click()}
@@ -1650,17 +1542,14 @@ export default function MyFormPage() {
             <div className="position-relative">
               <img
                 src={imagePerview || "/assets/person_img.png"}
-                accept="image/*"
                 alt="Profile"
                 className="w-32 h-32 rounded-full object-cover"
               />
 
-              {/* Show Edit Icon if no image */}
               {!imagePerview && (
                 <FaEdit className="edit_icon absolute bottom-2 right-2 text-white bg-gray-800 p-1 rounded-full" />
               )}
 
-              {/* Show Cross Icon if image selected */}
               {imagePerview && (
                 <IoMdClose
                   className="edit_icon absolute top-2 right-2 text-white bg-red-600 p-1 rounded-full"
@@ -1671,6 +1560,7 @@ export default function MyFormPage() {
                 />
               )}
 
+              {/* Gallery / normal picker */}
               <input
                 type="file"
                 name="profile_image"
@@ -1679,15 +1569,25 @@ export default function MyFormPage() {
                 ref={fileInputRef}
                 style={{ display: "none" }}
               />
+
+              {/* Camera-only input (native camera UI on most mobiles) */}
+              <input
+                type="file"
+                accept="image/*"
+                capture="environment"
+                onChange={handleFileChange}
+                ref={cameraInputRef}
+                style={{ display: "none" }}
+              />
             </div>
 
-            {/* Custom camera button – sirf mobile + camera support par */}
-            {showCustomCameraButton && (
+            {/* Custom button: opens camera input */}
+            {showCameraButton && (
               <button
                 type="button"
                 onClick={(e) => {
                   e.stopPropagation();
-                  openCamera();
+                  cameraInputRef.current?.click();
                 }}
                 className="mt-2 flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-600 text-white text-xs shadow-sm"
               >
@@ -1703,53 +1603,7 @@ export default function MyFormPage() {
             )}
           </div>
 
-          {/* CAMERA MODAL (full-screen mobile style) */}
-          {isCameraOpen && (
-            <div className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center">
-              <div className="w-full h-full max-w-md mx-auto flex flex-col bg-gray-900">
-                <div className="flex items-center justify-between px-4 py-3">
-                  <span className="text-white text-sm font-medium">
-                    Take a photo
-                  </span>
-                  <button
-                    type="button"
-                    onClick={stopCamera}
-                    className="text-white/80"
-                  >
-                    <IoMdClose size={20} />
-                  </button>
-                </div>
-
-                <div className="flex-1 flex items-center justify-center px-4">
-                  <div className="w-full max-w-xs h-80 bg-black rounded-2xl overflow-hidden border border-white/10">
-                    <video
-                      ref={videoRef}
-                      autoPlay
-                      playsInline
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-
-                <div className="pb-8 pt-4 flex flex-col items-center gap-3">
-                  <button
-                    type="button"
-                    onClick={capturePhoto}
-                    className="w-16 h-16 rounded-full border-4 border-white flex items-center justify-center active:scale-95 transition"
-                  >
-                    <div className="w-11 h-11 rounded-full bg-white" />
-                  </button>
-                  <p className="text-xs text-white/70">
-                    Capture ke baad photo profile pe set ho jayegi.
-                  </p>
-                </div>
-
-                <canvas ref={canvasRef} style={{ display: "none" }} />
-              </div>
-            </div>
-          )}
-
-          {/* First and Last Name */}
+          {/* REST OF FORM */}
           <div className="row input_one_row">
             <div className="col-lg-6">
               <label htmlFor="username">Name</label>
@@ -1821,7 +1675,6 @@ export default function MyFormPage() {
               <label htmlFor="cnic">CNIC</label>
               <input
                 name="cnic"
-                accept="image/*"
                 value={formData.cnic}
                 placeholder="CNIC e.g. 12345-1234567-1"
                 onChange={handleChangeCnic}
@@ -1846,7 +1699,6 @@ export default function MyFormPage() {
               )}
             </div>
 
-            {/* interested fields */}
             {userType !== "provider" && (
               <div>
                 {rows.map((row) => {
@@ -1875,7 +1727,6 @@ export default function MyFormPage() {
                           value={row.city}
                           onChange={(city) => {
                             handleCityChange(city, row.id);
-                            const cityId = city ? city.value : "";
                           }}
                           placeholder="Select City"
                         />
@@ -2090,7 +1941,6 @@ export default function MyFormPage() {
           {/* Audio Sample */}
           <div className="w-100">
             <div className="audio-recorder-container">
-              {/* Recorder Section */}
               {!audioURL && (
                 <div className="recorder-box">
                   <div
@@ -2117,7 +1967,6 @@ export default function MyFormPage() {
                       </p>
                     </div>
                   )}
-                  {/* Audio File Upload */}
                   {!audioURL && !isRecording && (
                     <div className="p-2">
                       <input
@@ -2161,7 +2010,6 @@ export default function MyFormPage() {
                 </div>
               )}
 
-              {/* Playback Section */}
               {audioURL && (
                 <div className="audio-bubble-container right">
                   <div
