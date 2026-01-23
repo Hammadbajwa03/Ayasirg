@@ -1059,35 +1059,13 @@ export default function MyFormPage() {
   const [showCameraButton, setShowCameraButton] = useState(false);
 
   // Approx: sirf mobile devices pe camera button dikhana
-  // Sirf un mobile WebViews / in-app browsers me camera button dikhana
-useEffect(() => {
-  if (typeof navigator === "undefined") return;
-
-  const ua = navigator.userAgent || navigator.vendor || "";
-
-  const isMobile = /android|iphone|ipad|ipod/i.test(ua);
-
-  // Major standalone browsers (jahan usually file picker me Camera + Gallery dono mil jate hain)
-  const isStandaloneBrowser =
-    /(Chrome\/|CriOS\/|Firefox\/|FxiOS\/|Safari\/|SamsungBrowser\/|OPR\/)/i.test(
-      ua
-    );
-
-  // Common in-app webviews jahan aksar camera ka option missing hota hai
-  const isInAppWebView = /FBAN|FBAV|Instagram|Line|MicroMessenger|WhatsApp|wv/i.test(
-    ua
-  );
-
-  // Logic:
-  // - Mobile zaroori
-  // - Agar in-app webview hua to button dikhao
-  // - Agar normal standalone browser hua to button hide rakho
-  if (isMobile && isInAppWebView && !isStandaloneBrowser) {
-    setShowCameraButton(true);
-  } else {
-    setShowCameraButton(false);
-  }
-}, []);
+  useEffect(() => {
+    if (typeof navigator !== "undefined") {
+      const ua = navigator.userAgent || navigator.vendor || "";
+      const isMobile = /android|iphone|ipad|ipod/i.test(ua);
+      setShowCameraButton(isMobile);
+    }
+  }, []);
 
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
