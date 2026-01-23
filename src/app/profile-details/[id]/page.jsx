@@ -544,6 +544,7 @@ export default function page() {
                     <h4>
                       CNIC: <span className="cnic">
                         {
+                          user?.cnic ?
                           user?.cnic
                             .split('')
                             .map((char, index) => {
@@ -558,7 +559,7 @@ export default function page() {
                             })
                             .join('')
                             // Add * only between digits (not after hyphens)
-                            .replace(/(?<=\d)(?=\d)/g, '*')
+                            .replace(/(?<=\d)(?=\d)/g, '*') : "N/A"
                         }
 
                       </span>
@@ -571,7 +572,7 @@ export default function page() {
                     <div className="d-flex align-items-start gap-2 me-lg-2 ">
                       <h4>
                         Field: <span className="sub_head">{Array.isArray(user?.fields_of_interest)
-                          ? user.fields_of_interest.map((item) => item.name).join(", ")
+                          ? user?.fields_of_interest.map((item) => item?.name).join(", ")
                           : "N/A"}</span>
                       </h4>
                     </div>
@@ -580,7 +581,7 @@ export default function page() {
                       <h4>
                         <div className="sub_head">
                           {Array.isArray(user?.interested_cities_areas) &&
-                            user.interested_cities_areas.map((cityData, index) => (
+                            user?.interested_cities_areas.map((cityData, index) => (
                               <p key={index}>
                                 <div className="d-flex gap-1">
                                   <h4>Interested City: </h4> {cityData?.city?.name}
