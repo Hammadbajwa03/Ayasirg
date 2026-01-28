@@ -44,7 +44,7 @@
   width: 50% !important;
 }
 
-.sign_up form div {
+.sign_up form .increase_w {
   width: 100%;
 }
 .sign_up .bg_white {

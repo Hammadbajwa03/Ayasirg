@@ -114,7 +114,8 @@ export default function page() {
       <div className="container p-2 bg_white">
         <h1 className="auth_heading margin_bottom">Sign Up</h1>
         <form onSubmit={handleSubmit}>
-          <div className="input_one_row">
+          <div className="row">
+            <div className="col-lg-6 col-md-6 col-sm-12">
             <input
               type="text"
               className="input_auth"
@@ -125,6 +126,8 @@ export default function page() {
               value={formData.first_name}
               required
             />
+            </div>
+            <div className="col-lg-6 col-md-6 col-sm-12">
             <input
               type="text"
               className="input_auth"
@@ -135,8 +138,8 @@ export default function page() {
               value={formData.last_name}
               required
             />
-          </div>
-          <div className="input_one_row">
+            </div>
+          {/* <div className="input_one_row">
             <input
               type="text"
               className="input_auth"
@@ -156,9 +159,9 @@ export default function page() {
               value={formData.email}
               required
             />
-          </div>
+          </div> */}
 
-          <div className="input_one_row">
+          {/* <div className="input_one_row"> */}
             {/* <input
               type="password"
               className="input_auth"
@@ -169,7 +172,17 @@ export default function page() {
               value={formData.password}
               required
             /> */}
-            <div className="password-wrapper" style={{ position: "relative" }}>
+            <div className="col-lg-6 col-md-6 col-sm-12">
+            <input
+              type="text"
+              className="input_auth"
+              placeholder="Email Address (optional)"
+              name="email"
+              onChange={handleChange}
+              value={formData.email}
+            />
+            </div>
+            <div className="password-wrapper col-lg-6 col-md-6 col-sm-12" style={{ position: "relative" }}>
               <input
                 type={showPassword ? "text" : "password"}
                 className="input_auth"
@@ -184,7 +197,7 @@ export default function page() {
                 onClick={togglePassword}
                 style={{
                   position: "absolute",
-                  right: "15px",
+                  right: "22px",
                   top: "38%",
                   transform: "translateY(-50%)",
                   cursor: "pointer",
@@ -193,18 +206,6 @@ export default function page() {
               >
                 {showPassword ? <FaEyeSlash /> : <FaEye />}
               </span>
-            </div>
-            <div>
-              <input
-                type="number"
-                className="input_auth"
-                placeholder="03*********"
-                name="contact_number"
-                id="contact_number"
-                onChange={handleChange}
-                value={formData.contact_number}
-                required
-              />
             </div>
             {/* <div className="d-flex align-items-center">
               <span style={{ padding: '8px', marginBottom:"11px", borderRadius:"10px 0px 0px 10px", height:'44px', border: '1px solid #afafaf', boxShadow: "4px 4px 10px #00000040", borderRight: 'none' }}>+92</span>
@@ -224,7 +225,20 @@ export default function page() {
                 required
               />
             </div> */}
-
+          
+            <div className="col-lg-6 col-md-6 col-sm-12">
+              <input
+                type="number"
+                className="input_auth"
+                placeholder="03*********"
+                name="contact_number"
+                id="contact_number"
+                onChange={handleChange}
+                value={formData.contact_number}
+                required
+              />
+            </div>
+            
           </div>
           {/* <div className="input_one_row">
             <input
@@ -256,7 +270,7 @@ export default function page() {
             <label htmlFor="privacy">
               I agree with the 
               <span className="terms">
-                <Link style={{ color: "#B50000" }} href={"/privacy-policy"} target="_blank">
+                <Link className="px-2" style={{ color: "#B50000" }} href={"/privacy-policy"} target="_blank">
                    Privacy Policy
                 </Link>
               </span> 
@@ -278,11 +292,11 @@ export default function page() {
               "Sign Up"
             )}
           </button>
-          <div className="d-flex">
+          <div className="d-flex increase_w">
             <div className="logo_div hide_logo" style={{ width: "fit-content", zIndex: 99 }}>
               <Link href={'/'}><Image src="/assets/ayasirglogo.png" width={100} height={100} alt="" className="logo" /></Link>
             </div>
-            <div>
+            <div className="increase_w">
               <Link href="/login" id="sign_p" className="term" style={{ textDecoration: "none", textAlign: "center" }}>
                 <p className="text-center mt-2 term" style={{ color: "#B50000", marginLeft: "-170px" }}>Back to sign In</p>
               </Link>

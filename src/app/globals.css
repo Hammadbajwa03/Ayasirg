@@ -52,7 +52,7 @@ p {
 
 .auth_bg {
   width: 100%;
-  height: calc(100vh - 50px);
+  height: calc(100vh - 0px);
   font-family: var(--font-poppins), sans-serif;
   background-image: url("/assets/Image-banner.webp");
   background-position: center 30%; 
@@ -60,6 +60,7 @@ p {
   background-size: cover;
   position: relative;
 }
+
 
 .auth_bg::before {
   content: "";

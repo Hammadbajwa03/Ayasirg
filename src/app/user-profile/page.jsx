@@ -384,7 +384,7 @@ export default function Page() {
                   }
 
                   <div className="name_div d-flex">
-                    <h3>{userInfo?.username}</h3>
+                    <h3>{userInfo?.first_name + " " + userInfo?.last_name}</h3>
                     {
                       userInfo?.user_type == "e-center" ? (
                         ""

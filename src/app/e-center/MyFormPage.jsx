@@ -258,36 +258,36 @@ export default function MyFormPage() {
     //     }));
     // };
 
-const handleFileChange = async (e) => {
-  const file = e.target.files[0];
-  if (!file) return;
+    const handleFileChange = async (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
 
-  try {
-    const options = {
-      maxSizeMB: 1,
-      maxWidthOrHeight: 1024,
-      useWebWorker: true,
+        try {
+            const options = {
+                maxSizeMB: 1,
+                maxWidthOrHeight: 1024,
+                useWebWorker: true,
+            };
+
+            const compressedBlob = await imageCompression(file, options);
+
+            // Blob -> File
+            const fixedFile = new File([compressedBlob], file.name, {
+                type: compressedBlob.type || file.type,
+            });
+
+            const reader = new FileReader();
+            reader.onloadend = () => setImagePreview(reader.result);
+            reader.readAsDataURL(fixedFile);
+
+            setFormData((prev) => ({
+                ...prev,
+                profile_image: fixedFile, // ab ye File hai
+            }));
+        } catch (error) {
+            console.error("Image upload error:", error);
+        }
     };
-
-    const compressedBlob = await imageCompression(file, options);
-
-    // Blob -> File
-    const fixedFile = new File([compressedBlob], file.name, {
-      type: compressedBlob.type || file.type,
-    });
-
-    const reader = new FileReader();
-    reader.onloadend = () => setImagePreview(reader.result);
-    reader.readAsDataURL(fixedFile);
-
-    setFormData((prev) => ({
-      ...prev,
-      profile_image: fixedFile, // ab ye File hai
-    }));
-  } catch (error) {
-    console.error("Image upload error:", error);
-  }
-};
 
     const handleRemoveImage = () => {
         setImagePreview(null);
