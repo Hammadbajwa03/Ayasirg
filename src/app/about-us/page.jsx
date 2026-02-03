@@ -24,11 +24,12 @@ export default function AboutPage() {
               <h4 className="fw-semibold ps-3 mb-2 border_color">
                 About Aya Sir G!
               </h4>
-              <p>
+              {/* <p>
                 At <b>Aya Sir G!</b>, we understand the importance of trust when inviting
                 someone into your home. Therefore, we prioritize the verification of
                 all service providers. Each individual undergoes a thorough verification process, including CNIC, photographs, permanent address, and registered contact numbers.
-              </p>
+              </p> */}
+              <p>At <b>Aya Sir G!</b>, we understand how important trust is when inviting someone into your home. That is why we prioritize the verification of our service providers. Our standard verification process includes CNIC details, photographs, permanent address, and registered contact numbers.</p>
             </div>
           </div>
 
@@ -39,7 +40,8 @@ export default function AboutPage() {
                 Our Mission
               </h4>
               <p>
-                <b>Aya Sir G!</b> is a digital platform that connects blue-collar job seekers with users in need of reliable services.
+                {/* <b>Aya Sir G!</b> is a digital platform that connects blue-collar job seekers with users in need of reliable services. */}
+                As we are still in the early stages of our mission, we recognize that many individuals from Pakistan’s blue-collar community may not feel comfortable sharing complete credentials with a new platform. To address this, we have introduced non-verified profiles on our website.
               </p>
             </div>
           </div>

@@ -25,9 +25,10 @@ export default function PrivacyPolicyPage() {
             of the amended terms.
           </p>
           <p>
-            Please read this privacy policy carefully to understand how we handle
+            {/* Please read this privacy policy carefully to understand how we handle
             your personal data, your privacy rights, and the legal protections
-            available to you.
+            available to you. */}
+            Please note that if a user hires a non-verified service provider through Aya Sir G! and faces any fraud, misconduct, or unusual activity, Aya Sir G! will not be held responsible in any capacity. Users are advised to proceed with caution when contacting non-verified profiles.
           </p>
         </div>
 
@@ -62,6 +63,18 @@ export default function PrivacyPolicyPage() {
               <p>
                 We collect personal information such as: Account ID, full name, gender, age, phone number, email address (optional), residential address, and service-related details (through registrations, surveys, or E-centers).
               </p>
+            </div>
+          </div>
+
+          <div className="col-md-12">
+            <div className="shadow-sm  p-lg-4 p-3 rounded-3 h-100">
+              <p>That said, non-verified profiles are still partially traceable, as mobile numbers in Pakistan are issued only against a valid CNIC, and basic details such as name, phone number, and photograph are available.</p>
+            </div>
+          </div>
+
+          <div className="col-md-12">
+            <div className="shadow-sm  p-lg-4 p-3 rounded-3 h-100">
+              <p>Our team remains fully committed to our mission, and our goal is to achieve 100% verified profiles on Aya Sir G! in the near future, ensuring maximum trust and safety for our users.</p>
             </div>
           </div>
 
