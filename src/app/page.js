@@ -7,7 +7,7 @@ import Work from "./components/Find-Work/Work";
 import { useEffect } from "react";
 
 export default function Home() {
-  // Home page component me (ya layout me)
+  // Home page component
   useEffect(() => {
     sessionStorage.setItem("fromHome", "true");
   }, []);
