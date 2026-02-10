@@ -44,7 +44,7 @@ export default function page() {
   const params = useParams();
   const { id } = params;
   const [user, setUser] = useState(null);
-  // console.log(user, "profile data res.")
+  console.log(user, "profile data res.")
   const [reviewsRating, setReviewsRating] = useState();
   // console.log(reviewsRating, "reviewsRating data res.")
   const reviewCount = reviewsRating?.length;
