@@ -100,7 +100,7 @@ export default function Card({ data, onLike, router }) {
                   unoptimized
                   className={`rounded-circle object-fit-cover transition-opacity ${loading ? "opacity-0" : "opacity-100"}`}
                   onLoadingComplete={() => setLoading(false)}
-                  loading="lazy"
+                  // loading="lazy"
                 />
               </div>
               <p className="title">{data?.username || "No Name"}</p>
