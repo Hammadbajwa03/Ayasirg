@@ -86,7 +86,7 @@ export default function Card({ data, onLike, router }) {
               {/* <img src={data?.profile_image || "/assets/person_img.png"} alt="person" /> */}
               <div
                 className="position-relative rounded-circle overflow-hidden"
-                // style={{ width: 189, height: 189 }}
+                style={{ width: 189, height: 189 }}
               >
                 {loading && (
                   <div className="skeleton-loader-image rounded-circle"></div>
