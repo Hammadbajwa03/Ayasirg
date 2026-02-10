@@ -169,6 +169,11 @@ html[lang="ur"] .personal_card .card_div .heart_div p {
     height: 440px;
   }
 
+  .mobile-profile-image{
+    width: auto !important;
+    height: 160px !important;
+  }
+
 }
 
 

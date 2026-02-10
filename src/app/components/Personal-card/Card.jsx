@@ -85,7 +85,7 @@ export default function Card({ data, onLike, router }) {
             <div className="d-flex justify-content-center flex-column align-items-center w-100">
               {/* <img src={data?.profile_image || "/assets/person_img.png"} alt="person" /> */}
               <div
-                className="position-relative rounded-circle overflow-hidden"
+                className="position-relative rounded-circle overflow-hidden mobile-profile-image"
                 style={{ width: 189, height: 189 }}
               >
                 {loading && (
