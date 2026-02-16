@@ -22,7 +22,7 @@ export default function Myform({ openedFrom, setSelectedType }) {
     getLocations
   } = useContext(UserContext);
   // console.log(userDetails, "user detail,.,.,.")
-  const [imagePerview, setImagePreview] = useState(userDetails?.profile_image);
+  const [imagePerview, setImagePreview] = useState(userDetails?.profile_image.webp || "/assets/profile.png");
   const [isRecording, setIsRecording] = useState(false);
   const [audioURL, setAudioURL] = useState(userDetails?.audio_sample);
   const [formErrors, setFormErrors] = useState({});

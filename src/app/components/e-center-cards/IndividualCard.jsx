@@ -202,12 +202,14 @@ export default function individualcard({ data, fetchData, onEditClick }) {
       <div className="card_div py-3 px-4">
         <div className="d-flex justify-content-center align-items-center flex-column w-100 position-relative">
           <button
-            className="btn btn-sm card_btn_background text-white mt-2 position-absolute top-0 right-0" style={{right: "0"}}
+            className="btn btn-sm card_btn_background text-white mt-2 position-absolute top-0 right-0" style={{ right: "0" }}
             onClick={onEditClick}
           >
             Edit
           </button>
-          <Image width={100} height={100} src={data?.profile_image || "/assets/person_img.png"} alt="person" />
+          <Image width={100} height={100} src={data?.profile_image?.webp ||
+            data?.profile_image?.web ||
+            data?.profile_image?.original || "/assets/person_img.png"} alt="person" />
           <p className="title">{data?.username || "No Name"}</p>
 
           <div className="heart_div position-relative">

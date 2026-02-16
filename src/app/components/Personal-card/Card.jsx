@@ -19,7 +19,9 @@ export default function Card({ data, onLike, router }) {
   // };
   const [loading, setLoading] = useState(true);
 
-  const src = data?.profile_image;
+  const src = data?.profile_image?.webp ||
+  data?.profile_image?.web ||
+  data?.profile_image?.original;
 
   // rating
   const ratingView = data?.handyman_rating || 0;

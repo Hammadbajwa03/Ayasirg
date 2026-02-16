@@ -310,7 +310,7 @@ function EcenterInnerPage() {
       audio_sample_blob: null,
     });
 
-    setImagePreview(item?.profile_image ? `${item.profile_image}` : "/assets/person_img.png");
+    setImagePreview(item?.profile_image?.webp ? `${item.profile_image?.webp}` : "/assets/person_img.png");
 
     setSelectedAreaId(matchedAreaId); // ✅ Set select default
     setAudioURL(item?.audio_sample || "");
@@ -370,7 +370,7 @@ function EcenterInnerPage() {
     form.append("area_id", formData.area_id || "");
     form.append("address", formData.address || "");
     form.append("description", formData.description || "");
-    if (formData.profile_image) form.append("profile_image", formData.profile_image);
+    if (formData.profile_image?.webp) form.append("profile_image", formData.profile_image?.webp);
     if (updatedFormData.audio_sample_blob)
       form.append("audio_sample_blob", updatedFormData.audio_sample_blob);
     try {

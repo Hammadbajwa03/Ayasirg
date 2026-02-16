@@ -545,21 +545,21 @@ export default function page() {
                       CNIC: <span className="cnic">
                         {
                           user?.cnic ?
-                          user?.cnic
-                            .split('')
-                            .map((char, index) => {
-                              // Keep hyphens as-is
-                              if (char === '-') return '-';
+                            user?.cnic
+                              .split('')
+                              .map((char, index) => {
+                                // Keep hyphens as-is
+                                if (char === '-') return '-';
 
-                              // Show digits at specific indexes
-                              if ([4, 6, 8, 10, 14].includes(index)) return char;
+                                // Show digits at specific indexes
+                                if ([4, 6, 8, 10, 14].includes(index)) return char;
 
-                              // Replace other digits with *
-                              return '*';
-                            })
-                            .join('')
-                            // Add * only between digits (not after hyphens)
-                            .replace(/(?<=\d)(?=\d)/g, '*') : "N/A"
+                                // Replace other digits with *
+                                return '*';
+                              })
+                              .join('')
+                              // Add * only between digits (not after hyphens)
+                              .replace(/(?<=\d)(?=\d)/g, '*') : "N/A"
                         }
 
                       </span>
@@ -625,7 +625,9 @@ export default function page() {
                       )}
 
                       <Image
-                        src={user?.profile_image || "/assets/hazar_2.png"}
+                        src={user?.profile_image?.webp ||
+                          user?.profile_image?.web ||
+                          user?.profile_image?.original || "/assets/hazar_2.png"}
                         alt={"title"}
                         width={100}
                         height={100}

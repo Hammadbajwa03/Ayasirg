@@ -16,7 +16,7 @@ import { useRouter } from "next/navigation";
 export default function Page() {
   const router = useRouter();
   const { userInfo, userDetails, updateUserProfile, updateAssociatedUserProfile } = useContext(UserContext);
-  // console.log(userInfo, "oooooo");
+  console.log(userInfo, "oooooo");
   // console.log(imagePerview, "imagePerview");
   // console.log(userDetails, ",,..,");
   // const [isRecording, setIsRecording] = useState(false);
@@ -84,7 +84,7 @@ export default function Page() {
         audio_sample_blob: "",
       });
       setAudioURL(data.audio_sample || "");
-      setImagePreview(data.profile_image || "");
+      setImagePreview(data.profile_image.webp || "");
     } else if (userDetails) {
       setSelectedUser(null);
       setFormData({
@@ -98,7 +98,7 @@ export default function Page() {
         audio_sample_blob: "",
       });
       setAudioURL(userDetails.audio_sample || "");
-      setImagePreview(userDetails.profile_image || "");
+      setImagePreview(userDetails.profile_image.webp || "");
     }
     setShow(true);
   };
@@ -117,7 +117,7 @@ export default function Page() {
     }
   };
 
-  const [imagePerview, setImagePreview] = useState(formData?.profile_image);
+  const [imagePerview, setImagePreview] = useState(formData?.profile_image?.webp || "/assets/profile.png");
 
   // audio
   const modalRef = useRef(null);
@@ -273,7 +273,7 @@ export default function Page() {
         const res = await updateUserProfile(formDataToSend);
         toast.success("Profile Image updated successfully!");
       } catch (error) {
-      // router.push("/error");
+        // router.push("/error");
         console.error("Error uploading image:", error);
       } finally {
         setLoader(false);
@@ -337,7 +337,7 @@ export default function Page() {
                           style={{
                             display: "flex",
                             justifyContent: "center",
-                            alignItems:"center",
+                            alignItems: "center",
                             width: "150px",
                             border: "1px solid var(--red-color)",
                             height: "150px",
@@ -348,10 +348,14 @@ export default function Page() {
                           <div className="spinner-border text-secondary" role="status">
                             <span className="visually-hidden">Loading...</span>
                           </div>
-                        </div> : <img
-                          src={userInfo?.profile_image || "/assets/profile.png"}
+                        </div> : 
+                        <img
+                          src={userInfo?.profile_image?.webp ||
+                            userInfo?.profile_image?.web ||
+                            userInfo?.profile_image?.original || "/assets/profile.png"}
                           alt="user"
-                        />}
+                        />
+                        }
                         <div
                           style={{
                             position: "absolute",
@@ -378,7 +382,7 @@ export default function Page() {
                         />
                       </div>
                     ) : (<img
-                      src={userInfo?.profile_image || "/assets/profile.png"}
+                      src={userInfo?.profile_image.webp || "/assets/profile.png"}
                       alt="user"
                     />)
                   }
@@ -440,7 +444,9 @@ export default function Page() {
                       transition: "0.3s ease"
                     }}>
                       <div className="d-flex justify-content-center flex-column align-items-center w-100">
-                        <img src={data?.profile_image || "/assets/person_img.png"} alt="person" />
+                        <img src={data?.profile_image?.webp ||
+                          data?.profile_image?.web ||
+                          data?.profile_image?.original || "/assets/person_img.png"} alt="person" />
                         <p className="person_info">{data?.username || "No Name"}</p>
 
                         <div className="heart_div position-relative">
