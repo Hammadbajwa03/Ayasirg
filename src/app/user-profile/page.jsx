@@ -16,7 +16,7 @@ import { useRouter } from "next/navigation";
 export default function Page() {
   const router = useRouter();
   const { userInfo, userDetails, updateUserProfile, updateAssociatedUserProfile } = useContext(UserContext);
-  console.log(userInfo, "oooooo");
+  // console.log(userInfo, "oooooo");
   // console.log(imagePerview, "imagePerview");
   // console.log(userDetails, ",,..,");
   // const [isRecording, setIsRecording] = useState(false);

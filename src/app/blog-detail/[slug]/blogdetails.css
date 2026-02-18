@@ -208,6 +208,23 @@ p.description {
   .flex_div {
     margin-bottom: 0px;
   }
+
+ .blog_details .description span {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+    margin: auto;
+}
+
+.blog_details .description span img {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.blog_details .description p a {
+    padding: 15px 8px !important;
+}
+
 }
 
 
