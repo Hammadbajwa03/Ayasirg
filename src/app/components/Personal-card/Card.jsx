@@ -83,7 +83,7 @@ const params = searchParams.toString();
       <div className="personal_card h-100">
         <Link href={params
       ? `/profile-details/${data?.id}?${params}`
-      : `/profile-details/${data?.id}`} >
+      : `/profile-details/${data?.id}`} target="_blank">
           <div className="card_div py-3 px-4 h-100" style={{
             height: showFullFields || showFull ? "auto" : "",
             overflow: "hidden",
@@ -240,7 +240,7 @@ const params = searchParams.toString();
               }
               <Link href={params
       ? `/profile-details/${data?.id}?${params}`
-      : `/profile-details/${data?.id}`} className="verified_btn card_btn_background">More Details</Link>
+      : `/profile-details/${data?.id}`} target="_blank" className="verified_btn card_btn_background">More Details</Link>
             </div>
           </div>
         </Link>
