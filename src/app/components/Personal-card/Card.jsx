@@ -10,6 +10,7 @@ import { UserContext } from "@/app/userContext";
 import 'tippy.js/dist/tippy.css';
 import Tippy from "@tippyjs/react";
 import Image from "next/image";
+import { useSearchParams } from "next/navigation";
 
 export default function Card({ data, onLike, router }) {
   // console.log(data, "data user ind.")
@@ -18,6 +19,8 @@ export default function Card({ data, onLike, router }) {
   //   setLiked(!isLiked);
   // };
   const [loading, setLoading] = useState(true);
+  const searchParams = useSearchParams();
+const params = searchParams.toString();
 
   const src = data?.profile_image?.webp ||
   data?.profile_image?.web ||
@@ -78,7 +81,9 @@ export default function Card({ data, onLike, router }) {
   return (
     <section className=" col-lg-6 col-md-6 col-sm-12 mb-lg-4 mb-3">
       <div className="personal_card h-100">
-        <Link href={`/profile-details/${data?.id}`} target="_blank">
+        <Link href={params
+      ? `/profile-details/${data?.id}?${params}`
+      : `/profile-details/${data?.id}`} >
           <div className="card_div py-3 px-4 h-100" style={{
             height: showFullFields || showFull ? "auto" : "",
             overflow: "hidden",
@@ -233,7 +238,9 @@ export default function Card({ data, onLike, router }) {
                 </button>
               )
               }
-              <Link href={`/profile-details/${data?.id}`} className="verified_btn card_btn_background">More Details</Link>
+              <Link href={params
+      ? `/profile-details/${data?.id}?${params}`
+      : `/profile-details/${data?.id}`} className="verified_btn card_btn_background">More Details</Link>
             </div>
           </div>
         </Link>
