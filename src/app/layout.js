@@ -27,6 +27,9 @@ const poppins = Poppins({
 export const metadata = {
   title: "Aya Sir G!",
   description: "Aya Sir G! The official site.",
+  verification: {
+    google: "AmPMtQzaUe0ZihZM-3LXhAXMke8fDlmEeBIHcVzUtdY",
+  },
   icons: {
     icon: "/logo_header.png",
     apple: "/logo_header.png",
