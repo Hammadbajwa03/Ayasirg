@@ -57,6 +57,7 @@ export default function CustomNavbar() {
   const handleNavbar = () => setMyNavbar(!myNavbar);
 
   const gotoLogin = () => router.push("/login");
+  const gotoCreateProfile = () => router.push("/create-profile");
   const gotoContactUs = () => router.push("/contact-us");
   const gotoProfile = () => router.push("/user-profile");
   const gotoEcenters = () => router.push("/register-yourself");
@@ -136,7 +137,10 @@ export default function CustomNavbar() {
                 {userToken ? (
                   <p onClick={() => handleDropdownItemClick(handleLogout)}><Link href={'/login'}>Logout</Link></p>
                 ) : (
-                  <p onClick={gotoLogin}><Link href={'/login'}>Login</Link></p>
+                  <div className="d-flex flex-column justify-content-center align-items-center gap-2">
+                    <p onClick={gotoLogin}><Link href={'/login'}>Login</Link></p>
+                    {/* <p onClick={gotoCreateProfile}><Link href={'/create-profile'} >Create Your Profile</Link></p> */}
+                  </div>
                 )}
               </li>
 
@@ -197,7 +201,10 @@ export default function CustomNavbar() {
                     <p className="ms-2">{userDetails?.first_name}</p>
                   ) : (
                     // <p onClick={gotoLogin}>Login</p>
+                    <div className="d-flex gap-2">
                     <button className="btn btn_primary_btn" onClick={gotoLogin}>Login</button>
+                    {/* <button className="btn btn_primary_btn text-capitalize" onClick={gotoCreateProfile}>Create Your Profile</button> */}
+                    </div>
                   )}
                 </div>
 

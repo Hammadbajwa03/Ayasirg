@@ -37,14 +37,16 @@ import { toast } from "react-toastify";
 import Tippy from "@tippyjs/react";
 import 'tippy.js/dist/tippy.css';
 import Image from "next/image";
+import NotedModal from "@/app/components/NotedModal/NotedModal";
 
 
 export default function page() {
   const [loadingImage, setLoadingImage] = useState();
   const params = useParams();
   const { id } = params;
+  const [showNotice, setShowNotice] = useState(true);
+
   const [user, setUser] = useState(null);
-  console.log(user, "profile data res.")
   const [reviewsRating, setReviewsRating] = useState();
   // console.log(reviewsRating, "reviewsRating data res.")
   const reviewCount = reviewsRating?.length;
@@ -53,6 +55,10 @@ export default function page() {
   // const currentUrl = window.location.href;
   const [currentUrl, setCurrentUrl] = useState("");
   const [audioLoading, setAudioLoading] = useState(false);
+
+  useEffect(() => {
+    setShowNotice(true);
+  }, [id]);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -761,6 +767,10 @@ export default function page() {
           </div>
         </div>
       </div>
+      {/* <NotedModal
+        open={showNotice}
+        onClose={() => setShowNotice(false)}
+      /> */}
     </section>
   );
 }

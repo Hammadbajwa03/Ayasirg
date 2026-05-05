@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { UserProvider } from "./userContext";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,6 +24,7 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 
 export const metadata = {
   title: "Aya Sir G!",
@@ -70,12 +72,34 @@ export default function RootLayout({ children }) {
         <meta property="og:url" content="https://ayasirg.com/" />
         <meta property="og:type" content="website" />
       </head> */}
+      {/* GOOGLE ANALYTICS */}
+      {GA_ID && (
+        <>
+          <Script
+            src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+            strategy="afterInteractive"
+          />
+          <Script id="google-analytics" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${GA_ID}', {
+                page_path: window.location.pathname,
+              });
+            `}
+          </Script>
+        </>
+      )}
       <body className={poppins.variable}>
         <UserProvider>
           <AosWrapper>
-            <SiteChrome position="top" />
-            {children}
-            <SiteChrome position="bottom" />
+            <div id="app-content">
+              <SiteChrome position="top" />
+              {children}
+              <SiteChrome position="bottom" />
+            </div>
+            <div id="noted-modal-root" />
             <ToastContainer />
           </AosWrapper>
         </UserProvider>

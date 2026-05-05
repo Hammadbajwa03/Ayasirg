@@ -18,6 +18,7 @@ import Link from "next/link";
 import Skeleton from "react-loading-skeleton";
 import 'react-loading-skeleton/dist/skeleton.css';
 import 'tippy.js/dist/tippy.css';
+import NotedModal from "@/app/components/NotedModal/NotedModal";
 
 import {
   FacebookShareButton,
@@ -51,6 +52,12 @@ export default function page() {
   // const currentUrl = window.location.href;
   const [currentUrl, setCurrentUrl] = useState("");
   const [audioLoading, setAudioLoading] = useState(false);
+
+  
+  const [showNotice, setShowNotice] = useState(true);
+    useEffect(() => {
+    setShowNotice(true);
+  }, [id]);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -686,6 +693,10 @@ export default function page() {
           </div>
         </div>
       </div>
+      {/* <NotedModal
+        open={showNotice}
+        onClose={() => setShowNotice(false)}
+      /> */}
     </section>
   );
 }

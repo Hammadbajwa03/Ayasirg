@@ -4,6 +4,19 @@
   box-sizing: border-box;
 }
 
+
+/* globals.css */
+body.noted-modal-open #app-content {
+  filter: blur(12px) brightness(0.7) saturate(0.5);
+  transform: scale(1.02);
+  /* transition: all 0.3s ease; */
+  pointer-events: none;
+}
+
+/* body.noted-modal-open {
+  background: red !important;
+} */
+
 body {
   font-family: var(--font-poppins), sans-serif;
 }
