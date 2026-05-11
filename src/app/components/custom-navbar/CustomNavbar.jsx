@@ -139,7 +139,7 @@ export default function CustomNavbar() {
                 ) : (
                   <div className="d-flex flex-column justify-content-center align-items-center gap-2">
                     <p onClick={gotoLogin}><Link href={'/login'}>Login</Link></p>
-                    {/* <p onClick={gotoCreateProfile}><Link href={'/create-profile'} >Create Your Profile</Link></p> */}
+                    <p onClick={gotoCreateProfile}><Link href={'/create-profile'} >Create Your Profile</Link></p>
                   </div>
                 )}
               </li>
@@ -203,7 +203,7 @@ export default function CustomNavbar() {
                     // <p onClick={gotoLogin}>Login</p>
                     <div className="d-flex gap-2">
                     <button className="btn btn_primary_btn" onClick={gotoLogin}>Login</button>
-                    {/* <button className="btn btn_primary_btn text-capitalize" onClick={gotoCreateProfile}>Create Your Profile</button> */}
+                    <button className="btn btn_primary_btn text-capitalize" onClick={gotoCreateProfile}>Create Your Profile</button>
                     </div>
                   )}
                 </div>

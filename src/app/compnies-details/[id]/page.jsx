@@ -693,10 +693,10 @@ export default function page() {
           </div>
         </div>
       </div>
-      {/* <NotedModal
+      <NotedModal
         open={showNotice}
         onClose={() => setShowNotice(false)}
-      /> */}
+      />
     </section>
   );
 }

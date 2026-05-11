@@ -5,7 +5,7 @@
   background-image: url("/assets/Image-banner.webp");
   /* background-position: center 30%;  */
   background-repeat: no-repeat;
-  /* background-size: cover; */
+  background-size: cover;
   position: relative;
 }
 
@@ -46,11 +46,34 @@
 }
 
 .create_profile .image_div img {
-  width: 100px;
-  height: 100px;
+  width: 108px;
+  height: 108px;
   object-fit: cover;
   border-radius: 50%;
   border: 2px solid #b50000;
+}
+
+.create_profile .remove_image_btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #b50000;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .create_profile .image_div .edit_icon {
@@ -160,8 +183,309 @@ span.terms {
   color: #999;
 }
 
-.create_profile select:invalid {
+/* Native selects: closed box gray only for placeholder; chosen value black */
+.create_profile select.input_auth:invalid {
   color: #999;
+}
+
+.create_profile select.input_auth:valid {
+  color: #111;
+}
+
+/* Open dropdown list — options stay black (don’t inherit gray from closed select) */
+.create_profile select.input_auth option {
+  color: #111;
+}
+
+.create_profile select.input_auth option[value=""] {
+  color: #999;
+}
+
+/* Interested locations (MultiSelect): placeholder .gray only; list items black */
+.create_profile .rmsc .gray {
+  color: #999 !important;
+}
+
+.create_profile .rmsc .select-item,
+.create_profile .rmsc .select-item .item-renderer,
+.create_profile .rmsc .select-item .item-renderer span {
+  color: #111 !important;
+}
+
+.create_profile .rmsc .dropdown-heading-value span:not(.gray) {
+  color: #111 !important;
+}
+
+/* Password input with eye toggle */
+.create_profile .password_wrapper {
+  position: relative;
+  width: 100%;
+}
+.create_profile .password_wrapper .input_auth {
+  padding-right: 40px;
+}
+.create_profile .password_eye {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #555;
+  z-index: 2;
+}
+
+/* File inputs (CNIC scan, picture, billing) */
+.create_profile .file_label {
+  display: block;
+  margin: 4px 0 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+  text-align: left;
+}
+.create_profile .file_input {
+  text-align: left !important;
+  padding: 9px 12px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* Dynamic city/area rows: small circular add / delete buttons */
+.create_profile .row_btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #b50000;
+  color: #fff;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 1;
+  padding: 0;
+  flex-shrink: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18);
+  transition: background-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+.create_profile .row_btn:hover {
+  background-color: #8a0000;
+  box-shadow: 0 2px 6px rgba(181, 0, 0, 0.35);
+  transform: translateY(-1px);
+}
+.create_profile .row_btn:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+.create_profile .row_btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(181, 0, 0, 0.22);
+}
+.create_profile .row_btn svg {
+  width: 12px;
+  height: 12px;
+  display: block;
+}
+
+/* Delete variant: subtle gray, turns red on hover */
+.create_profile .row_btn.row_btn_delete {
+  background-color: #f1f3f5;
+  color: #555;
+  border: 1px solid #e0e0e0;
+}
+.create_profile .row_btn.row_btn_delete:hover {
+  background-color: #b50000;
+  color: #fff;
+  border-color: #b50000;
+}
+
+/* Interested locations row: MultiSelect shrinks, + / delete stay visible */
+.create_profile .location_row_flex {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  min-width: 0;
+}
+.create_profile .location_row_multiselect {
+  min-width: 0;
+  width: 100%;
+  /* visible: dropdown panel is position:absolute; hidden was clipping and could confuse layout */
+  overflow: visible;
+  position: relative;
+  z-index: 1;
+}
+
+/* Open dropdown floats over content below — no row reflow */
+.create_profile .location_row_multiselect .rmsc .dropdown-content {
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  top: 100% !important;
+  z-index: 10050 !important;
+}
+
+.create_profile .location_row_multiselect .rmsc:has(.dropdown-container[aria-expanded="true"]) {
+  z-index: 10040;
+}
+
+.create_profile .location_row_multiselect .rmsc,
+.create_profile .location_row_multiselect .rmsc .dropdown-container {
+  width: 100% !important;
+  max-width: 100%;
+}
+.create_profile .location_row_multiselect .rmsc .dropdown-heading {
+  min-width: 0;
+}
+.create_profile .location_row_multiselect .rmsc .dropdown-heading-value {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+.create_profile .location_row_actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 38px;
+  flex-shrink: 0;
+}
+
+/* Interested city + locations row: never wider than parent (fixes mobile overflow) */
+.create_profile .interested_loc_row {
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  --bs-gutter-x: 0.5rem;
+}
+.create_profile .interested_loc_row > [class*="col-"] {
+  min-width: 0 !important;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Flex/grid items need min-width:0 explicitly so they can shrink below content size */
+.create_profile .location_row_flex,
+.create_profile .location_row_multiselect,
+.create_profile .location_row_multiselect .rmsc,
+.create_profile .location_row_multiselect .rmsc .dropdown-container,
+.create_profile .location_row_multiselect .rmsc .dropdown-heading,
+.create_profile .location_row_multiselect .rmsc .dropdown-heading-value {
+  min-width: 0 !important;
+  max-width: 100% !important;
+}
+
+/* Grid track trick: forces multiselect to NEVER exceed parent width on any screen */
+.create_profile .location_row_multiselect {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  width: 100% !important;
+}
+.create_profile .location_row_multiselect > .rmsc {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+}
+.create_profile .location_row_multiselect .rmsc .dropdown-heading-value {
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+.create_profile .location_row_multiselect .rmsc .dropdown-heading-value span {
+  display: block !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  max-width: 100% !important;
+}
+
+@media screen and (max-width: 767.98px) {
+  .create_profile .interested_loc_row > [class*="col-"] {
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .create_profile .location_row_flex {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    grid-auto-rows: auto;
+    align-items: stretch;
+    gap: 8px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .create_profile .location_row_multiselect {
+    flex: 1 1 auto;
+    width: 100% !important;
+    max-width: 100%;
+  }
+
+  .create_profile .location_row_multiselect .rmsc,
+  .create_profile .location_row_multiselect .rmsc .dropdown-container {
+    max-width: 100% !important;
+    min-width: 0 !important;
+    width: 100% !important;
+  }
+
+  /* Selected items text must shrink inside the field, not push it out */
+  .create_profile .location_row_multiselect .rmsc .dropdown-heading {
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-right: 4px;
+    box-sizing: border-box;
+  }
+  .create_profile .location_row_multiselect .rmsc .dropdown-heading-value {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    flex: 1 1 0 !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    display: block !important;
+  }
+  .create_profile .location_row_multiselect .rmsc .dropdown-heading-value span,
+  .create_profile .location_row_multiselect .rmsc .dropdown-heading-value > * {
+    display: inline-block !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    max-width: 100% !important;
+  }
+
+  .create_profile .location_row_actions {
+    width: 100%;
+    height: auto;
+    min-height: 32px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+}
+
+/* react-select: no focus ring / blue outline (matches cp_rs_select prefix in page.jsx) */
+.create_profile .cp_rs_select__control,
+.create_profile .cp_rs_select__control--is-focused {
+  box-shadow: none !important;
+  outline: none !important;
+}
+.create_profile .cp_rs_select__control:focus-within {
+  outline: none !important;
+}
+.create_profile .cp_rs_select__input input {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* react-select: keep text aligned left so it doesn’t look odd next to center inputs */
+.create_profile .col-md-5 > div,
+.create_profile .col-md-7 > div,
+.create_profile .col-lg-6 .css-13cymwt-control,
+.create_profile .col-lg-6 .css-t3ipsp-control {
+  text-align: left;
 }
 
 .dropdown-content .panel-content .select-panel .options {
@@ -497,3 +821,23 @@ span.terms {
   visibility: visible;
   opacity: 1;
 }
+
+
+.css-13cymwt-control{
+  border: none !important;
+  overflow: hidden !important;
+  padding: 0px !important;
+  min-height: auto !important;
+  border-radius: 32px !important;
+}
+
+.css-13cymwt-control:focus{
+  border: none !important;
+  overflow: hidden !important;
+  padding: 0px !important;
+  min-height: auto !important;
+  border-radius: 32px !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+

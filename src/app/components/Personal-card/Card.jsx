@@ -186,7 +186,7 @@ const params = searchParams.toString();
               </button>
             )}
           </p> */}
-                {data?.address && (
+                {data?.area_name && (
                   <div>
                     <p>
                       <strong>Current Location: </strong>
