@@ -290,9 +290,15 @@ export default function MyFormPage() {
     };
 
     const handleRemoveImage = () => {
-        setImagePreview(null);
+        setImagePreview("");
         setFormData((prev) => ({ ...prev, profile_image: null }));
-        fileInputRef.current.value = ""; // reset file input
+        if (fileInputRef.current) fileInputRef.current.value = "";
+    };
+
+    const openProfileFilePicker = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        fileInputRef.current?.click();
     };
 
     const handleImageChange = (e) => {
@@ -546,37 +552,57 @@ export default function MyFormPage() {
         ]);
     };
 
+    const DEFAULT_PROFILE_AVATAR =
+        "data:image/svg+xml;utf8," +
+        encodeURIComponent(
+            `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+            <defs>
+                <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#ffe5e5"/>
+                    <stop offset="100%" stop-color="#fff4f4"/>
+                </linearGradient>
+            </defs>
+            <circle cx="100" cy="100" r="100" fill="url(#bg)"/>
+            <circle cx="100" cy="80" r="34" fill="#B50000"/>
+            <path d="M40,178 C40,138 70,120 100,120 C130,120 160,138 160,178 Z" fill="#B50000"/>
+        </svg>`
+        );
+
     return (
         <section className="Form_section">
             <div className="container myform_page">
                 <h2>Add New {userType == "handyman" ? "Individual" : userType == "provider" ? "Company" : ""}</h2>
                 <form onSubmit={handleSubmit}>
-                    <div
-                        className="image_div cursor-pointer relative w-32 h-32"
-                        onClick={() => !imagePerview && fileInputRef.current.click()}
-                    >
+                    <div className="image_div relative w-32 h-32">
                         <div className="position-relative">
                             <img
-                                src={
-                                    imagePerview ||
-                                    "/assets/person_img.png"
-                                }
-                                accept="image/*"
+                                src={imagePerview || DEFAULT_PROFILE_AVATAR}
                                 alt="Profile"
-                                className="w-32 h-32 rounded-full object-cover"
+                                className="w-32 h-32 rounded-full object-cover border border-neutral-200 bg-neutral-50"
                             />
 
-                            {/* Show Edit Icon if no image */}
-                            {!imagePerview && (
-                                <FaEdit className="edit_icon absolute bottom-2 right-2 text-white bg-gray-800 p-1 rounded-full" />
-                            )}
-
-                            {/* Show Cross Icon if image selected */}
-                            {imagePerview && (
-                                <IoMdClose
-                                    className="edit_icon absolute top-2 right-2 text-white bg-red-600 p-1 rounded-full"
-                                    onClick={handleRemoveImage}
-                                />
+                            {!imagePerview ? (
+                                <button
+                                    type="button"
+                                    aria-label="Choose profile photo"
+                                    className="edit_icon absolute bottom-2 right-2 z-10 flex h-9 w-9 cursor-pointer items-center justify-center rounded-full bg-black text-white shadow-md transition-colors hover:bg-neutral-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-black/40"
+                                    onClick={openProfileFilePicker}
+                                >
+                                    <FaEdit className="text-sm" />
+                                </button>
+                            ) : (
+                                <button
+                                    type="button"
+                                    aria-label="Remove profile photo"
+                                    className="edit_icon absolute bottom-2 right-2 z-10 flex h-9 w-9 cursor-pointer items-center justify-center rounded-full bg-black text-white shadow-md transition-colors hover:bg-neutral-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-black/40"
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        e.stopPropagation();
+                                        handleRemoveImage();
+                                    }}
+                                >
+                                    <IoMdClose className="text-lg leading-none" />
+                                </button>
                             )}
 
                             <input

@@ -363,7 +363,7 @@ export default function Myform({ openedFrom, setSelectedType }) {
 
   // fileds of intrest
   const options = apiCategory2.map((cat) => ({
-    label: cat.name, 
+    label: cat.name,
     value: cat.id
   }));
 
@@ -384,7 +384,7 @@ export default function Myform({ openedFrom, setSelectedType }) {
 
   // intrested locations
   const optionsLocation = locations.map((loc) => ({
-    label: loc.name, 
+    label: loc.name,
     value: loc.id
   }));
 
@@ -408,6 +408,21 @@ export default function Myform({ openedFrom, setSelectedType }) {
     }
   }, [selectedCityId]);
 
+  const DEFAULT_PROFILE_AVATAR =
+    "data:image/svg+xml;utf8," +
+    encodeURIComponent(
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+            <defs>
+                <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#ffe5e5"/>
+                    <stop offset="100%" stop-color="#fff4f4"/>
+                </linearGradient>
+            </defs>
+            <circle cx="100" cy="100" r="100" fill="url(#bg)"/>
+            <circle cx="100" cy="80" r="34" fill="#B50000"/>
+            <path d="M40,178 C40,138 70,120 100,120 C130,120 160,138 160,178 Z" fill="#B50000"/>
+        </svg>`
+    );
 
 
   return (
@@ -427,7 +442,7 @@ export default function Myform({ openedFrom, setSelectedType }) {
           <Modal.Body className="model_body d-flex justify-content-center w-100">
             <form onSubmit={handleSubmit}>
               <div className="image_div" onClick={handleImageClick} style={{ cursor: "pointer" }}>
-                <img src={imagePerview} alt="Profile" className="w-32 h-32 rounded-full object-cover" style={{ border: '2px solid #B50000', borderRadius: "50%" }} />
+                <img src={imagePerview || DEFAULT_PROFILE_AVATAR} alt="Profile" className="w-32 h-32 rounded-full object-cover" style={{ border: '2px solid #B50000', borderRadius: "50%" }} />
                 <FaEdit className="edit_icon" />
               </div>
               <input type="file" name="profile_image"

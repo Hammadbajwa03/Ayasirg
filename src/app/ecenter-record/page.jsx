@@ -21,6 +21,23 @@ export default function Page() {
 
 function EcenterInnerPage() {
   const { userInfo, area } = useContext(UserContext);
+
+  const DEFAULT_PROFILE_AVATAR =
+    "data:image/svg+xml;utf8," +
+    encodeURIComponent(
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+            <defs>
+                <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#ffe5e5"/>
+                    <stop offset="100%" stop-color="#fff4f4"/>
+                </linearGradient>
+            </defs>
+            <circle cx="100" cy="100" r="100" fill="url(#bg)"/>
+            <circle cx="100" cy="80" r="34" fill="#B50000"/>
+            <path d="M40,178 C40,138 70,120 100,120 C130,120 160,138 160,178 Z" fill="#B50000"/>
+        </svg>`
+    );
+
   const router = useRouter();
   const [display, setDisplay] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -310,7 +327,7 @@ function EcenterInnerPage() {
       audio_sample_blob: null,
     });
 
-    setImagePreview(item?.profile_image?.webp ? `${item.profile_image?.webp}` : "/assets/person_img.png");
+    setImagePreview(item?.profile_image?.webp ? `${item.profile_image?.webp}` : DEFAULT_PROFILE_AVATAR);
 
     setSelectedAreaId(matchedAreaId); // ✅ Set select default
     setAudioURL(item?.audio_sample || "");
@@ -321,7 +338,7 @@ function EcenterInnerPage() {
   const handleCloseModal = () => {
     setShowModal(false);
     setSelectedItem(null);
-    setImagePreview("");
+    setImagePreview(DEFAULT_PROFILE_AVATAR);
     setAudioURL("");
     setFormData({
       id: "",
@@ -400,7 +417,7 @@ function EcenterInnerPage() {
   };
 
   const handleRemoveImage = () => {
-    setImagePreview("");
+    setImagePreview(DEFAULT_PROFILE_AVATAR);
     setFormData((prev) => ({ ...prev, profile_image: null }));
   };
 
@@ -582,7 +599,7 @@ function EcenterInnerPage() {
                           <img
                             src={
                               imagePerview ||
-                              "/assets/person_img.png"
+                              DEFAULT_PROFILE_AVATAR
                             }
                             accept="image/*"
                             alt="Profile"

@@ -113,17 +113,35 @@ async function collectAllBlogEntries(apiBase, siteOrigin) {
 //   return entries;
 // }
 
-function resolveSiteOrigin() {
-  if (process.env.NEXT_PUBLIC_SITE_URL) {
-    return trimTrailingSlash(process.env.NEXT_PUBLIC_SITE_URL);
+/** Production canonical uses `www` (e.g. https://www.ayasirg.com/). Preview hosts unchanged. */
+function ensureWwwAyaSirG(origin) {
+  const o = trimTrailingSlash(origin);
+  try {
+    const u = new URL(o);
+    if (u.hostname === "ayasirg.com") {
+      u.hostname = "www.ayasirg.com";
+      u.protocol = "https:";
+      return u.origin;
+    }
+  } catch {
+    return o;
   }
-  const vercel = process.env.VERCEL_URL;
-  if (vercel) {
-    return trimTrailingSlash(
+  return o;
+}
+
+function resolveSiteOrigin() {
+  let origin;
+  if (process.env.NEXT_PUBLIC_SITE_URL) {
+    origin = trimTrailingSlash(process.env.NEXT_PUBLIC_SITE_URL);
+  } else if (process.env.VERCEL_URL) {
+    const vercel = process.env.VERCEL_URL;
+    origin = trimTrailingSlash(
       vercel.startsWith("http") ? vercel : `https://${vercel}`
     );
+  } else {
+    origin = "https://www.ayasirg.com";
   }
-  return "https://ayasirg.com";
+  return ensureWwwAyaSirG(origin);
 }
 
 /** @returns {Promise<import('next').MetadataRoute.Sitemap>} */

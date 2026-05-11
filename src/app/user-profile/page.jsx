@@ -70,6 +70,22 @@ export default function Page() {
   //   }
   // };
 
+  const DEFAULT_PROFILE_AVATAR =
+    "data:image/svg+xml;utf8," +
+    encodeURIComponent(
+        `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+            <defs>
+                <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#ffe5e5"/>
+                    <stop offset="100%" stop-color="#fff4f4"/>
+                </linearGradient>
+            </defs>
+            <circle cx="100" cy="100" r="100" fill="url(#bg)"/>
+            <circle cx="100" cy="80" r="34" fill="#B50000"/>
+            <path d="M40,178 C40,138 70,120 100,120 C130,120 160,138 160,178 Z" fill="#B50000"/>
+        </svg>`
+    );
+
   const handleShow = (data = null) => {
     if (data) {
       setSelectedUser(data);
@@ -84,7 +100,7 @@ export default function Page() {
         audio_sample_blob: "",
       });
       setAudioURL(data.audio_sample || "");
-      setImagePreview(data.profile_image.webp || "");
+      setImagePreview(data.profile_image.webp || DEFAULT_PROFILE_AVATAR);
     } else if (userDetails) {
       setSelectedUser(null);
       setFormData({
@@ -98,7 +114,7 @@ export default function Page() {
         audio_sample_blob: "",
       });
       setAudioURL(userDetails.audio_sample || "");
-      setImagePreview(userDetails.profile_image.webp || "");
+      setImagePreview(userDetails.profile_image.webp || DEFAULT_PROFILE_AVATAR);
     }
     setShow(true);
   };
@@ -117,7 +133,7 @@ export default function Page() {
     }
   };
 
-  const [imagePerview, setImagePreview] = useState(formData?.profile_image?.webp || "/assets/profile.png");
+  const [imagePerview, setImagePreview] = useState(formData?.profile_image?.webp || DEFAULT_PROFILE_AVATAR);
 
   // audio
   const modalRef = useRef(null);
@@ -388,7 +404,7 @@ export default function Page() {
                   }
 
                   <div className="name_div d-flex">
-                    <h3>{userInfo?.first_name + " " + userInfo?.last_name}</h3>
+                    <h3>{userInfo?.first_name ? userInfo?.first_name + " " + userInfo?.last_name : "Asg"}</h3>
                     {
                       userInfo?.user_type == "e-center" ? (
                         ""

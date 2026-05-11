@@ -16,11 +16,26 @@ import Image from "next/image";
 
 const TranslateWrapper = dynamic(() => import("../translateWrapper/TranslateWrapper"), { ssr: false });
 
+/** API may return a string URL or `{ original, web, webp }` (Spatie-style). */
+function resolveProfileAvatarUrl(profileImage) {
+  if (!profileImage) return null;
+  if (typeof profileImage === "string" && profileImage.trim()) {
+    return profileImage.trim();
+  }
+  if (typeof profileImage === "object") {
+    const u =
+      profileImage.webp ||
+      profileImage.web ||
+      profileImage.original;
+    return typeof u === "string" && u.trim() ? u.trim() : null;
+  }
+  return null;
+}
+
 export default function CustomNavbar() {
   const router = useRouter();
   const pathname = usePathname();
   const { userInfo, setUserInfo, loadingUser, userDetails } = useContext(UserContext);
-  // console.log(userInfo, "pic....")
 
   const [selectedType, setSelectedType] = useState(null);
   const [userDetailss, showuserDetailss] = useState(false);
@@ -96,7 +111,24 @@ export default function CustomNavbar() {
     router.push(`/e-center?type=${type}`);
   };
 
+  const DEFAULT_PROFILE_AVATAR =
+    "data:image/svg+xml;utf8," +
+    encodeURIComponent(
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+            <defs>
+                <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#ffe5e5"/>
+                    <stop offset="100%" stop-color="#fff4f4"/>
+                </linearGradient>
+            </defs>
+            <circle cx="100" cy="100" r="100" fill="url(#bg)"/>
+            <circle cx="100" cy="80" r="34" fill="#B50000"/>
+            <path d="M40,178 C40,138 70,120 100,120 C130,120 160,138 160,178 Z" fill="#B50000"/>
+        </svg>`
+    );
 
+  const profileAvatarSrc =
+    resolveProfileAvatarUrl(userInfo?.profile_image) || DEFAULT_PROFILE_AVATAR;
 
   return (
     <section className="navbar notranslate">
@@ -124,7 +156,7 @@ export default function CustomNavbar() {
                     <Image
                       width={100} height={100}
                       className="icon_person_pic"
-                      src={userInfo?.profile_image}
+                      src={profileAvatarSrc}
                       alt="profile"
                       style={{ width: "32px", height: "32px", borderRadius: "50%", marginRight: "8px" }}
                     />
@@ -190,7 +222,7 @@ export default function CustomNavbar() {
                     }
                   }}
 
-                    src={userInfo?.profile_image}
+                    src={profileAvatarSrc}
                     className="icon_person_pic"
                     alt="profile"
                   />
@@ -202,8 +234,8 @@ export default function CustomNavbar() {
                   ) : (
                     // <p onClick={gotoLogin}>Login</p>
                     <div className="d-flex gap-2">
-                    <button className="btn btn_primary_btn" onClick={gotoLogin}>Login</button>
-                    <button className="btn btn_primary_btn text-capitalize" onClick={gotoCreateProfile}>Create Your Profile</button>
+                      <button className="btn btn_primary_btn" onClick={gotoLogin}>Login</button>
+                      <button className="btn btn_primary_btn text-capitalize" onClick={gotoCreateProfile}>Create Your Profile</button>
                     </div>
                   )}
                 </div>
