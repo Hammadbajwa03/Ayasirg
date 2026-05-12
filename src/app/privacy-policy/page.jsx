@@ -3,6 +3,12 @@
 import React from "react";
 import "./privacy_policy.css";
 
+export const metadata = {
+  title: "Privacy Policy - Aya Sir G! | Data Security & User Rights",
+  description:
+    "Read the Aya Sir G! privacy policy to learn how we collect, use, and protect your personal data. We are committed to ensuring transparency, trust, and safety.",
+};
+
 export default function PrivacyPolicyPage() {
   return (
     <section className="privacy_policy margin_navbar">

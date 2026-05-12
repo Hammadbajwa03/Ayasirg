@@ -101,7 +101,7 @@ const params = searchParams.toString();
 
                 <Image
                   src={src || "/assets/person_img.png"}
-                  alt="person"
+                  alt={data?.username ? `Profile photo: ${data.username}` : "Service provider profile photo"}
                   width={189}
                   height={189}
                   unoptimized

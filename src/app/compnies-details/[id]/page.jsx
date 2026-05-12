@@ -521,7 +521,7 @@ export default function page() {
                           </div>
 
                           <div className="d-flex align-items-center">
-                            <Image className="mic_icon" width={100} height={100} src="/assets/taaruf.jpg" alt="" />
+                            <Image className="mic_icon" width={100} height={100} src="/assets/taaruf.jpg" alt="Voice introduction sample graphic" />
                           </div>
                         </div>
                       </div>
@@ -611,7 +611,7 @@ export default function page() {
 
                     <Image
                       src={company?.profile_image || "/assets/hazar_2.png"}
-                      alt={"title"}
+                      alt={company?.username ? `Company profile photo: ${company.username}` : "Company profile photo on Aya Sir G!"}
                       width={100}
                       height={100}
                       unoptimized

@@ -219,7 +219,7 @@ export default function Page() {
 
                     <Image
                         src={src || "/assets/blog_img.jpg"}
-                        alt={blogData?.title}
+                        alt={blogData?.title ? `${blogData.title} — featured image` : "Blog post featured image on Aya Sir G!"}
                         width={100}
                         height={100}
                         unoptimized
@@ -231,7 +231,7 @@ export default function Page() {
                 <div className="col-md-12 d-lg-flex d-md-flex justify-content-between align-items-center mt-2">
                     <div className="flex_div_parent">
                         <div className="flex_div">
-                            <img src={blogData?.author_image} className="rounded_circle" alt="" />
+                            <img src={blogData?.author_image} className="rounded_circle" alt={blogData?.author_name ? `Blog author ${blogData.author_name}` : "Blog author photo"} />
                             <h4>{blogData?.author_name || ""}</h4>
                         </div>
                         <div className="flex_div">
@@ -431,7 +431,7 @@ export default function Page() {
                                             width={40}
                                             height={40}
                                             src={item?.user_image || "https://admin.ayasirg.com/storage/256/why_do_you_need.png"}
-                                            alt={"alter"}
+                                            alt={item?.user_name ? `Comment by ${item.user_name}` : "Blog commenter avatar"}
                                         />
                                     </div>
                                     <div>

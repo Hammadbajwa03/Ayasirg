@@ -54,7 +54,7 @@ export default function BlogCard({ content }) {
 
           <Image
             src={src || "/assets/blog_img.jpg"}
-            alt="person"
+            alt={content?.title ? `Featured image for blog: ${content.title}` : "Blog post featured image on Aya Sir G!"}
             fill
             unoptimized
             className={`transition-opacity ${loading ? "opacity-0" : "opacity-100"}`}

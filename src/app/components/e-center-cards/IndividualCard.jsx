@@ -209,7 +209,7 @@ export default function individualcard({ data, fetchData, onEditClick }) {
           </button>
           <Image width={100} height={100} src={data?.profile_image?.webp ||
             data?.profile_image?.web ||
-            data?.profile_image?.original || "/assets/person_img.png"} alt="person" />
+            data?.profile_image?.original || "/assets/person_img.png"} alt={data?.username ? `Profile photo: ${data.username}` : "Service provider profile photo"} />
           <p className="title">{data?.username || "No Name"}</p>
 
           <div className="heart_div position-relative">

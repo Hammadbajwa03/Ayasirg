@@ -1,6 +1,12 @@
 import React from "react";
 import "./about.css";
 
+export const metadata = {
+  title: "About Us | Connecting Skilled Labor with Employers in Pakistan",
+  description:
+    "Discover Aya Sir G!, Pakistan’s trusted platform connecting skilled professionals—from drivers to electricians—with reliable local employers. Learn our story.",
+};
+
 export default function AboutPage() {
   return (
     <section className="about_us margin_navbar py-3 bg-light">

@@ -135,7 +135,7 @@ export default function CustomNavbar() {
       <div className="container">
         <nav className="nav">
           <div className="logo_div" onClick={() => { setMyNavbar(false) }}>
-            <Link href={'/'}><Image src="/assets/ayasirglogo.png" width={200} height={200} alt="Logo" className="logo" /></Link>
+            <Link href={'/'}><Image src="/assets/ayasirglogo.png" width={200} height={200} alt="Aya Sir G! logo — go to homepage" className="logo" /></Link>
           </div>
 
           <div className="nav_items d-flex align-items-center">
@@ -157,7 +157,7 @@ export default function CustomNavbar() {
                       width={100} height={100}
                       className="icon_person_pic"
                       src={profileAvatarSrc}
-                      alt="profile"
+                      alt={`${userDetails?.first_name || "Account"} profile photo`}
                       style={{ width: "32px", height: "32px", borderRadius: "50%", marginRight: "8px" }}
                     />
                     <span>{userDetails?.first_name}</span>
@@ -224,7 +224,7 @@ export default function CustomNavbar() {
 
                     src={profileAvatarSrc}
                     className="icon_person_pic"
-                    alt="profile"
+                    alt={`${userDetails?.first_name || "Account"} profile photo`}
                   />
                 )}
 

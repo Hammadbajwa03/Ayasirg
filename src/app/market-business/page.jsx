@@ -4,6 +4,12 @@ import React from "react";
 import "./market_business.css";
 import Advartisement from "../components/AdvertisementBar/Advartisement";
 
+export const metadata = {
+  title: "Market Your Business in Pakistan | Reach New Customers Now",
+  description:
+    "Promote your products and services to millions of engaged Pakistani consumers. Partner with Aya Sir G! to grow your brand while supporting a social mission.",
+};
+
 export default function Page() {
   return (
     <section className="market_business margin_navbar">

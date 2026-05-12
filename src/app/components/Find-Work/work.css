@@ -57,8 +57,12 @@ span.red_title {
   }
 
   .work h2.section_heading {
-    font-size: 23px;
+    font-size: 23px !important;
     margin-bottom: 10px !important;
+  }
+
+  span.red_title {
+    font-size: 23px !important;
   }
 
   .work .heading {

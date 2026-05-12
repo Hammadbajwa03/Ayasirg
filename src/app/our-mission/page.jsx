@@ -3,6 +3,12 @@
 import React from "react";
 import "./our_mission.css";
 
+export const metadata = {
+  title: "Our Mission | Empowering Pakistan’s Blue-Collar Workforce",
+  description:
+    "Discover our mission to bridge the gap between skilled workers and households. We empower Pakistan's blue-collar workforce by providing a reliable digital platform.",
+};
+
 export default function page() {
   return (
     <section className="our_mission margin_navbar">
@@ -21,7 +27,7 @@ export default function page() {
                 At <b>Aya Sir G!</b> we are committed to creating opportunities
                 for individuals who are eager to work, believe in their abilities,
                 and embrace self-reliance. Inspired by the timeless principle,
-                <span className="fw-semibold"> "Allah helps those who help themselves,"</span> 
+                <span className="fw-semibold"> "Allah helps those who help themselves,"</span>
                 we empower people to take initiative and strive for a better future.
               </p>
               <p>
@@ -60,7 +66,7 @@ export default function page() {
                 better opportunities.
               </p>
               <p>
-                In essence, <b>Aya Sir G!</b> is like <span className="fw-semibold">“LinkedIn”</span> 
+                In essence, <b>Aya Sir G!</b> is like <span className="fw-semibold">“LinkedIn”</span>
                 for the blue-collar community. We envision a future where workers
                 no longer need to wait at street corners or main chowks for
                 opportunities. Instead, we bring opportunities directly to them,
@@ -72,9 +78,9 @@ export default function page() {
           <div className="col-md-6">
             <div className="shadow-sm p-lg-4 p-3 rounded-3 h-100">
               <p>
-                We consider this platform a form of 
+                We consider this platform a form of
                 <span className="fw-semibold"> Sadaqah Jariyah </span>
-                <span>(continuous charity)</span>. 
+                <span>(continuous charity)</span>.
                 If you know anyone in your circle who could benefit from Aya Sir G!
                 but hasn’t connected with us yet, please share their contact details
                 via the WhatsApp number below. Together, we can make a meaningful

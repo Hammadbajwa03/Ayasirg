@@ -29,7 +29,7 @@ export default function Comments({ item }) {
       </div> */}
       <div className="single_comment_parent_div ">
         <div className="pic_div">
-          <Image width={100} height={100} style={{ borderRadius: "50%", border: "1px solid gray", width: "30px", height: "30px" }} src={item.customer_profile_image || "/assets/comment_pic.png"} alt="" />
+          <Image width={100} height={100} style={{ borderRadius: "50%", border: "1px solid gray", width: "30px", height: "30px" }} src={item.customer_profile_image || "/assets/comment_pic.png"} alt="Reviewer profile photo" />
         </div>
         <div className="comment_div p-2">
           <p className="comment">

@@ -33,7 +33,7 @@ export default function Work() {
             </div>
           </div>
           <div className="col-lg-6 img_col mt-lg-0 mt-3" data-aos="fade-bottom">
-            <Image src="/assets/staffs.png" width={200} height={200} alt="Image Blue collar" />
+            <Image src="/assets/staffs.png" width={200} height={200} alt="Blue-collar workers and professionals finding opportunities on Aya Sir G! in Pakistan" />
           </div>
         </div>
       </div>

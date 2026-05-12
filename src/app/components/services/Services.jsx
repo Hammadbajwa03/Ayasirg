@@ -12,7 +12,7 @@ export default function Services() {
         <div className="row mb-3 mt-5  ">
           <div className="col-lg-3 col-sm-6 margin_top" data-aos="fade-right">
             <div className="card p-3 col_height">
-              <Image src="/assets/card_img1.png" width={100} height={100} alt="" />
+              <Image src="/assets/card_img1.png" width={100} height={100} alt="Step 1: choose your service category on Aya Sir G!" />
               <p id="heading">Step 1</p>
               <p id="heading">Choose Your Service</p>
               <p id="description">
@@ -25,7 +25,7 @@ export default function Services() {
             data-aos="fade-up"
           >
             <div className="card p-3 col_height" data-aos="fade-down">
-              <Image src="/assets/card_img2.png" width={100} height={100} alt="" />
+              <Image src="/assets/card_img2.png" width={100} height={100} alt="Step 2: sign up easily with your phone on Aya Sir G!" />
               <p id="heading">Step 2</p>
               <p id="heading">Sign Up Easily</p>
               <p id="description">
@@ -35,7 +35,7 @@ export default function Services() {
           </div>
           <div className="col-lg-3 col-sm-6 margin_top" data-aos="fade-up">
             <div className="card p-3 col_height">
-              <Image src="/assets/card_img3.png" width={100} height={100} alt="" />
+              <Image src="/assets/card_img3.png" width={100} height={100} alt="Step 3: compare and select providers using filters on Aya Sir G!" />
               <p id="heading">Step 3</p>
               <p id="heading">Compare & Select</p>
               <p id="description">
@@ -45,8 +45,7 @@ export default function Services() {
           </div>
           <div className="col-lg-3 col-sm-6 margin_top mt_top" >
             <div className="card p-3 col_height">
-              <Image src="/assets/card_img3.png" width={100} height={100} alt="" />
-              <p id="heading">Step 4</p>
+              <Image src="/assets/card_img3.png" width={100} height={100} alt="Step 4: connect and hire your chosen provider on Aya Sir G!" />
               <p id="heading">Connect & Hire</p>
               <p id="description">
                 View contact details and directly call or message the provider to finalize.

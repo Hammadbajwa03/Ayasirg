@@ -6,6 +6,12 @@ import { FaPhoneVolume } from "react-icons/fa6";
 import Link from "next/link";
 import Image from "next/image";
 
+export const metadata = {
+  title: "Contact Aya Sir G! | Get in Touch for Support & Services",
+  description:
+    "Need help or have questions? Contact Aya Sir G! today. Reach us via phone, email, or visit our Lahore office. We are here to assist you Monday to Saturday.",
+};
+
 export default function page() {
   return (
     <>
@@ -60,7 +66,7 @@ export default function page() {
                 </div> */}
                 <div className="w-100 text-center d-flex justify-content-center">
                   <div className="logo_div mt-3 text-center">
-                    <Link href={'/'} className="text-center"><Image src="/assets/ayasirglogo.png" width={100} height={100} style={{height: "auto"}} alt="" className="logo" /></Link>
+                    <Link href={'/'} className="text-center"><Image src="/assets/ayasirglogo.png" width={100} height={100} style={{ height: "auto" }} alt="Aya Sir G! logo — go to homepage" className="logo" /></Link>
                     {/* <p id="head">AYA SIR G!</p>
                   <p id="descri">YOUR TRUSTED EVERYWHERE</p> */}
                   </div>

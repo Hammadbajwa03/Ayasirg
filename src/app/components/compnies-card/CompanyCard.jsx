@@ -67,7 +67,7 @@ export default function CompanyCard({ data, onLike, router }) {
 
                   <Image
                     src={src || "/assets/person_img.png"}
-                    alt="person"
+                    alt={data?.username ? `Company profile photo: ${data.username}` : "Company listing profile photo"}
                     // width={189}
                     fill
                     unoptimized

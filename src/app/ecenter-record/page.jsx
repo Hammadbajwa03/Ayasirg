@@ -602,7 +602,7 @@ function EcenterInnerPage() {
                               DEFAULT_PROFILE_AVATAR
                             }
                             accept="image/*"
-                            alt="Profile"
+                            alt="Profile photo for edited E-center record"
                             className="w-32 h-32 rounded-full object-cover"
                           />
 

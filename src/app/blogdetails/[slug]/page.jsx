@@ -194,12 +194,12 @@ export default function Page() {
     <section className="container margin_navbar">
       <div className="row py-3">
         <div className="col-md-12 img_div">
-          <Image src={blogData?.attchments[0]} width={200} height={200} alt={blogData?.title} />
+          <Image src={blogData?.attchments[0]} width={200} height={200} alt={blogData?.title ? `${blogData.title} — featured image` : "Blog post featured image on Aya Sir G!"} />
         </div>
         <div className="col-md-12">
           <div className="flex_div_parent">
             <div className="flex_div">
-              <img src={blogData?.author_image} className="rounded_circle" alt="" />
+              <img src={blogData?.author_image} className="rounded_circle" alt={blogData?.author_name ? `Blog author ${blogData.author_name}` : "Blog author photo"} />
               <h4>{blogData?.author_name || ""}</h4>
             </div>
             <div className="flex_div">

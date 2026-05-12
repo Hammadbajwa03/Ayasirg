@@ -369,7 +369,7 @@ export default function Page() {
                           src={userInfo?.profile_image?.webp ||
                             userInfo?.profile_image?.web ||
                             userInfo?.profile_image?.original || "/assets/profile.png"}
-                          alt="user"
+                          alt="My account profile photo"
                         />
                         }
                         <div
@@ -399,7 +399,7 @@ export default function Page() {
                       </div>
                     ) : (<img
                       src={userInfo?.profile_image.webp || "/assets/profile.png"}
-                      alt="user"
+                      alt="My account profile photo"
                     />)
                   }
 
@@ -462,7 +462,7 @@ export default function Page() {
                       <div className="d-flex justify-content-center flex-column align-items-center w-100">
                         <img src={data?.profile_image?.webp ||
                           data?.profile_image?.web ||
-                          data?.profile_image?.original || "/assets/person_img.png"} alt="person" />
+                          data?.profile_image?.original || "/assets/person_img.png"} alt={data?.username ? `Associated account: ${data.username}` : "Associated account profile photo"} />
                         <p className="person_info">{data?.username || "No Name"}</p>
 
                         <div className="heart_div position-relative">
@@ -524,7 +524,7 @@ export default function Page() {
             >
               <img
                 src={imagePerview || "/assets/profile.png"}
-                alt="Profile"
+                alt="Profile photo preview — update your Aya Sir G! account picture"
                 className="w-32 h-32 rounded-full object-cover" style={{ borderRadius: "50%", border: "1px solid #B50000" }}
               />
               <FaEdit className="edit_icon" />

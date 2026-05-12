@@ -25,7 +25,7 @@ export default function WishlistComponent({ data }) {
     <div className="wishlistcard py-3 mb-3 h-100">
       <div>
         <div className="info_div">
-          <Image width={100} height={100} src={data?.profile_image || "/assets/raza.png"} alt="" />
+          <Image width={100} height={100} src={data?.profile_image || "/assets/raza.png"} alt={data?.username ? `Saved profile: ${data.username}` : "Saved service provider profile photo"} />
           <h2>{data?.username || ""}</h2>
           <p>{data?.gender === "male" ? "Male" : data?.gender === "female" ? "Female" : ""}, {data?.age || ""} years old</p>
         </div>

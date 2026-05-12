@@ -577,7 +577,7 @@ export default function MyFormPage() {
                         <div className="position-relative">
                             <img
                                 src={imagePerview || DEFAULT_PROFILE_AVATAR}
-                                alt="Profile"
+                                alt="Profile photo for new listing on Aya Sir G!"
                                 className="w-32 h-32 rounded-full object-cover border border-neutral-200 bg-neutral-50"
                             />
 

@@ -40,12 +40,10 @@
 @media (max-width: 600px) {
   .our_mission h2 {
     font-size: 24px;
-    font-weight: 500;
   }
 
   .our_mission h2>span {
     font-size: 24px;
-    font-weight: bold;
     color: #B43336;
   }
 }

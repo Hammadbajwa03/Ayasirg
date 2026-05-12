@@ -19,7 +19,7 @@ export default function MyNavbar() {
             <img
               className="logo"
               src="/assets/ayasirglogo.png"
-              alt="logo iamge"
+              alt="Aya Sir G! logo — home"
             />
             <p id="head">Aya Sir G!</p>
             <p id="descri">YOUR TRUSTED EVERYWHERE</p>

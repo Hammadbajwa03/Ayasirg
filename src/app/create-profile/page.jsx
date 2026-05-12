@@ -623,14 +623,14 @@ export default function CreateProfilePage() {
                     Aya-Sir-G! does not charge any money from you.
                 </p>
 
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} autoComplete="off">
                     <div className="row">
                         {/* IMAGE UPLOAD */}
                         <div className="col-12 text-center mb-3">
                             <div className="image_div relative mx-auto inline-block h-32 w-32 shrink-0">
                                 <img
                                     src={imagePreview || DEFAULT_PROFILE_AVATAR}
-                                    alt="Profile"
+                                    alt="Profile photo preview for your new Aya Sir G! account"
                                     className="h-32 w-32 rounded-full border object-cover"
                                 />
 
@@ -668,6 +668,7 @@ export default function CreateProfilePage() {
                                 name="username"
                                 value={formData.username}
                                 onChange={handleChange}
+                                autoComplete="off"
                                 required
                             />
                             {formErrors.username && <small style={{ color: "red" }}>{formErrors.username}</small>}
@@ -682,6 +683,7 @@ export default function CreateProfilePage() {
                                 name="contact_number"
                                 value={formData.contact_number}
                                 onChange={handleChange}
+                                autoComplete="off"
                                 required
                             />
                             {formErrors.contact_number && <small style={{ color: "red" }}>{formErrors.contact_number}</small>}
@@ -696,6 +698,7 @@ export default function CreateProfilePage() {
                                 name="password"
                                 value={formData.password}
                                 onChange={handleChange}
+                                autoComplete="new-password"
                                 required
                             />
                             {formErrors.password && <small style={{ color: "red" }}>{formErrors.password}</small>}
@@ -708,6 +711,7 @@ export default function CreateProfilePage() {
                                 name="gender"
                                 value={formData.gender}
                                 onChange={handleChange}
+                                autoComplete="off"
                                 required
                             >
                                 <option value="" disabled>
@@ -886,6 +890,7 @@ export default function CreateProfilePage() {
                                 name="age"
                                 value={formData.age}
                                 onChange={handleChange}
+                                autoComplete="off"
                             />
                             {formErrors.age && (
                                 <small style={{ color: "red" }}>{formErrors.age}</small>
@@ -901,6 +906,7 @@ export default function CreateProfilePage() {
                                 name="disability_status"
                                 value={formData.disability_status}
                                 onChange={handleChange}
+                                autoComplete="off"
                             />
                         </div>
 
@@ -913,6 +919,7 @@ export default function CreateProfilePage() {
                                 name="experience"
                                 value={formData.experience}
                                 onChange={handleChange}
+                                autoComplete="off"
                             />
                             {formErrors.experience && (
                                 <small style={{ color: "red" }}>{formErrors.experience}</small>
@@ -1015,7 +1022,7 @@ export default function CreateProfilePage() {
                     {/* FOOTER */}
                     <div className="d-flex increase_w">
                         <div className="logo_div hide_logo" style={{ width: "fit-content", zIndex: 99 }}>
-                            <Link href={'/'}><Image src="/assets/ayasirglogo.png" width={100} height={100} alt="" className="logo" /></Link>
+                            <Link href={'/'}><Image src="/assets/ayasirglogo.png" width={100} height={100} alt="Aya Sir G! logo — go to homepage" className="logo" /></Link>
                         </div>
                         <div className="increase_w">
                             <Link href="/login" id="sign_p" className="term" style={{ textDecoration: "none", textAlign: "center" }}>

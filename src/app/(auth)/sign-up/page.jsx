@@ -294,7 +294,7 @@ export default function page() {
           </button>
           <div className="d-flex increase_w">
             <div className="logo_div hide_logo" style={{ width: "fit-content", zIndex: 99 }}>
-              <Link href={'/'}><Image src="/assets/ayasirglogo.png" width={100} height={100} alt="" className="logo" /></Link>
+              <Link href={'/'}><Image src="/assets/ayasirglogo.png" width={100} height={100} alt="Aya Sir G! logo — go to homepage" className="logo" /></Link>
             </div>
             <div className="increase_w">
               <Link href="/login" id="sign_p" className="term" style={{ textDecoration: "none", textAlign: "center" }}>
@@ -311,7 +311,7 @@ export default function page() {
         {/* <ToastContainer /> */}
 
         {/* <div className="logo_div mt-3">
-          <img src="/assets/logo_header.png" alt="" className="logo" />
+          <img src="/assets/logo_header.png" alt="Aya Sir G! brand logo" className="logo" />
           <p id="head">AYA SIR G!</p>
           <p id="descri">YOUR TRUSTED EVERYWHERE</p>
         </div> */}

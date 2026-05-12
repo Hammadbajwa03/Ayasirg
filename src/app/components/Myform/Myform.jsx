@@ -442,7 +442,7 @@ export default function Myform({ openedFrom, setSelectedType }) {
           <Modal.Body className="model_body d-flex justify-content-center w-100">
             <form onSubmit={handleSubmit}>
               <div className="image_div" onClick={handleImageClick} style={{ cursor: "pointer" }}>
-                <img src={imagePerview || DEFAULT_PROFILE_AVATAR} alt="Profile" className="w-32 h-32 rounded-full object-cover" style={{ border: '2px solid #B50000', borderRadius: "50%" }} />
+                <img src={imagePerview || DEFAULT_PROFILE_AVATAR} alt="Profile photo in registration form" className="w-32 h-32 rounded-full object-cover" style={{ border: '2px solid #B50000', borderRadius: "50%" }} />
                 <FaEdit className="edit_icon" />
               </div>
               <input type="file" name="profile_image"
