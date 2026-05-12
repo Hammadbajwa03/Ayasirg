@@ -10,14 +10,14 @@ export default function OurMission() {
       <div className="container">
         <div className="row mt-3">
           <div className="left_div col-lg-5 ">
-            <h3 className="section_heading">
+            <h2 className="section_heading">
               Our <span className="red_title">Mission</span>
-            </h3>
+            </h2>
             <p id="para">
               <p className="mb-2">Welcome to Aya Sir G!</p>
-              At Aya Sir G!, we are committed to empowering blue-collar job seekers in Pakistan who are hardworking, self-reliant, and eager to grow. Guided by the timeless principle, ‘Allah helps those who help themselves,’ we encourage individuals to take initiative and shape a better future.
+              At Aya Sir G!, we are here to help people find <b>blue collar jobs</b> in Pakistan. We support hardworking and honest workers who want to grow. We believe that "Allah helps those who help themselves," so we give you the platform to start a better life.
             </p>
-            <p id="para" className="my-2">With deep roots in Pakistan, we recognize the untapped potential of our youth and workforce. Many are skilled and hardworking but lack access to the right platforms. Families and businesses often struggle to find reliable maids, drivers, guards, and helpers for their needs, while blue-collar workers face challenges such as limited education, lack of digital presence, and trust issues in hiring.</p>
+            <p id="para" className="my-2">We know that Pakistan has a very talented workforce. Many families and businesses need reliable help, but workers often find it hard to connect with them. We are fixing this by bringing <b>blue collar jobs</b> online, making it easy and safe for everyone to hire or get hired.</p>
             {/* <Button className="my-3" variant="outline-danger">
               Hire an Employee <FaArrowRight />
             </Button> */}

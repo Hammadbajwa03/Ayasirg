@@ -34,8 +34,12 @@ span.red_title {
   color: #212529;
 }
 
+.work h2.section_heading {
+  line-height: 1.5 !important;
+}
+
 @media screen and (max-width: 991px) {
-  .work p.section_heading {
+  .work h2.section_heading {
     font-size: 27px;
   }
 
@@ -52,7 +56,7 @@ span.red_title {
     font-weight: 500;
   }
 
-  .work p.section_heading {
+  .work h2.section_heading {
     font-size: 23px;
     margin-bottom: 10px !important;
   }

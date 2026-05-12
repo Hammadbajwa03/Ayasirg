@@ -9,19 +9,19 @@ export default function Work() {
         <div className="row mb-3">
           <div className="col-lg-6">
             <div className="right_div" data-aos="fade-right">
-              <p className="section_heading mb-1">
-                Revolutionizing How Blue-Collar <br /><span className="red_title">Workers Find Jobs in Pakistan</span>
-              </p>
+              <h2 className="section_heading mb-1">
+                The Most Trusted Way to Find  <br /><span className="red_title">Blue Collar Jobs in Pakistan</span>
+              </h2>
               <div className="col_1 mt-lg-5 mt-3">
                 <h3 className="heading">Find Trusted Professionals</h3>
                 <p>
-                  Discover verified and skilled blue-collar professionals in Pakistan through Aya Sir G!, from home maintenance to personal assistance.
+                  Discover verified and skilled workers for all types of <b>blue collar jobs</b> in Pakistan through Aya Sir G!. From home repairs to personal help, we connect you with the right experts easily.
                 </p>
               </div>
               <div className="col_1 mt-lg-5 mt-4">
                 <h3 className="heading">Hire with Confidence</h3>
                 <p>
-                  Check detailed worker profiles, read genuine client reviews, and hire with confidence based on experience and ratings.
+                  Choose the best people from the biggest market of <b>blue collar jobs</b>. Check worker profiles, read real reviews, and hire someone you can trust based on their experience and ratings.
                 </p>
               </div>
               <div className="col_1 mt-lg-5 mt-4">
