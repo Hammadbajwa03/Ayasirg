@@ -31,7 +31,7 @@ export default function MyNavbar() {
                 Home
               </Nav.Link>
               <Nav.Link href="#home">About Us</Nav.Link>
-              <Nav.Link href="#home">Register Yourself</Nav.Link>
+              <Nav.Link href="#home">How to Register</Nav.Link>
               {/* <Nav.Link href="#home">Blogs</Nav.Link>
               <Nav.Link href="#home">FAQ</Nav.Link>
               <Nav.Link href="#home">Contact Us</Nav.Link> */}

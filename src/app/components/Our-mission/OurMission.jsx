@@ -28,18 +28,18 @@ export default function OurMission() {
                 className="Card text-center d-flex flex-column justify-content-center "
                 data-aos="fade-right"
               >
-                <h1 className="fw-bold">
+                <h3 className="fw-bold">
                   5K <span className="pluse_icon">+</span>
-                </h1>
+                </h3>
                 <p id="details">Jobs Posted</p>
               </div>
               <div
                 className="Card text-center d-flex flex-column justify-content-center "
                 data-aos="fade-up"
               >
-                <h1 className="fw-bold">
+                <h3 className="fw-bold">
                   80 <span className="pluse_icon">+</span>
-                </h1>
+                </h3>
                 <p id="details">Employers</p>
               </div>
             </div>
@@ -48,18 +48,18 @@ export default function OurMission() {
                 className="Card text-center d-flex flex-column justify-content-center "
                 data-aos="fade-down"
               >
-                <h1 className="fw-bold">
+                <h3 className="fw-bold">
                   200 <span className="pluse_icon">+</span>
-                </h1>
+                </h3>
                 <p id="details">Happy Customers</p>
               </div>
               <div
                 className="Card text-center d-flex flex-column justify-content-center "
                 data-aos="fade-up"
               >
-                <h1 className="fw-bold">
+                <h3 className="fw-bold">
                   8K<span className="pluse_icon">+</span>
-                </h1>
+                </h3>
                 <p id="details">Employees</p>
               </div>
             </div>

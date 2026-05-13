@@ -1,5 +1,5 @@
 "use client";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import "./custom_navbar.css";
 import { CiGlobe } from "react-icons/ci";
 import { IoIosArrowDown } from "react-icons/io";
@@ -41,6 +41,9 @@ export default function CustomNavbar() {
   const [userDetailss, showuserDetailss] = useState(false);
   const [myNavbar, setMyNavbar] = useState(false);
   const [isTranslateLoaded, setTranslateLoaded] = useState(false);
+  /** Desktop “More” menu — hover + controlled for outside click */
+  const [moreNavOpen, setMoreNavOpen] = useState(false);
+  const moreNavLeaveTimer = useRef(null);
 
   const userToken = userInfo?.api_token;
 
@@ -67,6 +70,40 @@ export default function CustomNavbar() {
   const handleDropdownItemClick = (callback) => {
     showuserDetailss(false);
     if (callback && typeof callback === "function") callback();
+  };
+
+  useEffect(() => {
+    return () => {
+      if (moreNavLeaveTimer.current) clearTimeout(moreNavLeaveTimer.current);
+    };
+  }, []);
+
+  useEffect(() => {
+    setMoreNavOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    if (myNavbar) setMoreNavOpen(false);
+  }, [myNavbar]);
+
+  const clearMoreNavLeaveTimer = () => {
+    if (moreNavLeaveTimer.current) {
+      clearTimeout(moreNavLeaveTimer.current);
+      moreNavLeaveTimer.current = null;
+    }
+  };
+
+  const openMoreNav = () => {
+    clearMoreNavLeaveTimer();
+    setMoreNavOpen(true);
+  };
+
+  const scheduleCloseMoreNav = () => {
+    clearMoreNavLeaveTimer();
+    moreNavLeaveTimer.current = setTimeout(() => {
+      setMoreNavOpen(false);
+      moreNavLeaveTimer.current = null;
+    }, 240);
   };
 
   const handleNavbar = () => setMyNavbar(!myNavbar);
@@ -130,6 +167,8 @@ export default function CustomNavbar() {
   const profileAvatarSrc =
     resolveProfileAvatarUrl(userInfo?.profile_image) || DEFAULT_PROFILE_AVATAR;
 
+  const moreMenuActive = ["/blogs", "/faq", "/contact-us"].includes(pathname);
+
   return (
     <section className="navbar notranslate">
       <div className="container">
@@ -140,16 +179,87 @@ export default function CustomNavbar() {
 
           <div className="nav_items d-flex align-items-center">
             <ul className={`list-unstyled list ${myNavbar ? "active" : ""}`}>
-              <li onClick={() => { setMyNavbar(false); handleDropdownItemClick() }}><Link href="/" className={pathname === "/" ? "active" : ""}>Home</Link></li>
-              <li onClick={() => { setMyNavbar(false); handleDropdownItemClick() }}><Link href="/about-us" className={pathname === "/about-us" ? "active" : ""}>About Us</Link></li>
+              <li onClick={() => { setMyNavbar(false); handleDropdownItemClick(); }}><Link href="/" className={pathname === "/" ? "active" : ""}>Home</Link></li>
+              <li onClick={() => { setMyNavbar(false); handleDropdownItemClick(); }}><Link href="/about-us" className={pathname === "/about-us" ? "active" : ""}>About Us</Link></li>
+              <li onClick={() => { setMyNavbar(false); handleDropdownItemClick(); }}><Link href="/services" className={pathname === "/services" ? "active" : ""}>Services</Link></li>
               {!["handyman", "e-center", "provider"].includes(userDetails?.user_type) && (
-                <li onClick={() => { setMyNavbar(false); handleDropdownItemClick() }}><Link href="/register-yourself" className={pathname === "/register-yourself" ? "active" : ""}>Register Yourself</Link></li>
+                <li onClick={() => { setMyNavbar(false); handleDropdownItemClick(); }}><Link href="/register-yourself" className={pathname === "/register-yourself" ? "active" : ""}>How to Register</Link></li>
               )}
-              <li onClick={() => { setMyNavbar(false); handleDropdownItemClick() }}><Link href="/blogs" className={pathname === "/blogs" ? "active" : ""}>Blogs</Link></li>
-              <li onClick={() => { setMyNavbar(false); handleDropdownItemClick() }}><Link href="/faq" className={pathname === "/faq" ? "active" : ""}>FAQ</Link></li>
+              {/* Mobile: flat links (below md) */}
+              <li className="d-md-none" onClick={() => { setMyNavbar(false); handleDropdownItemClick(); }}><Link href="/blogs" className={pathname === "/blogs" ? "active" : ""}>Blogs</Link></li>
+              <li className="d-md-none" onClick={() => { setMyNavbar(false); handleDropdownItemClick(); }}><Link href="/faq" className={pathname === "/faq" ? "active" : ""}>FAQ</Link></li>
               {
-                userToken ? "" : <li onClick={() => { setMyNavbar(false); handleDropdownItemClick() }}><Link href="/contact-us" className={pathname === "/contact-us" ? "active" : ""}>Contact Us</Link></li>
+                userToken ? "" : (
+                  <li className="d-md-none" onClick={() => { setMyNavbar(false); handleDropdownItemClick(); }}><Link href="/contact-us" className={pathname === "/contact-us" ? "active" : ""}>Contact Us</Link></li>
+                )
               }
+              {/* Desktop (md+): Blogs, FAQ, Contact in “More” — hover + theme */}
+              <li
+                className={`d-none d-md-block nav_more_li ${moreNavOpen ? "nav_more_open" : ""} ${moreMenuActive ? "nav_more_has_active" : ""}`}
+                onClick={(e) => e.stopPropagation()}
+              >
+                <Dropdown
+                  align="end"
+                  show={moreNavOpen}
+                  onToggle={setMoreNavOpen}
+                  onMouseEnter={openMoreNav}
+                  onMouseLeave={scheduleCloseMoreNav}
+                >
+                  <Dropdown.Toggle
+                    variant="link"
+                    id="nav-more-desktop"
+                    className={`nav_more_toggle text-decoration-none ${moreMenuActive ? "active" : ""}`}
+                    aria-expanded={moreNavOpen}
+                  >
+                    <span className="nav_more_toggle_label">More</span>
+                    <IoIosArrowDown className="nav_more_caret" aria-hidden />
+                  </Dropdown.Toggle>
+                  <Dropdown.Menu className="nav_more_menu">
+                    <div className="nav_more_menu_header">Explore</div>
+                    <Dropdown.Item
+                      as={Link}
+                      href="/blogs"
+                      active={pathname === "/blogs"}
+                      className="nav_more_item"
+                      onClick={() => {
+                        setMoreNavOpen(false);
+                        setMyNavbar(false);
+                        handleDropdownItemClick();
+                      }}
+                    >
+                      Blogs
+                    </Dropdown.Item>
+                    <Dropdown.Item
+                      as={Link}
+                      href="/faq"
+                      active={pathname === "/faq"}
+                      className="nav_more_item"
+                      onClick={() => {
+                        setMoreNavOpen(false);
+                        setMyNavbar(false);
+                        handleDropdownItemClick();
+                      }}
+                    >
+                      FAQ
+                    </Dropdown.Item>
+                    {!userToken && (
+                      <Dropdown.Item
+                        as={Link}
+                        href="/contact-us"
+                        active={pathname === "/contact-us"}
+                        className="nav_more_item"
+                        onClick={() => {
+                          setMoreNavOpen(false);
+                          setMyNavbar(false);
+                          handleDropdownItemClick();
+                        }}
+                      >
+                        Contact Us
+                      </Dropdown.Item>
+                    )}
+                  </Dropdown.Menu>
+                </Dropdown>
+              </li>
               <li className="d-block d-md-none" onClick={() => setMyNavbar(false)}>
                 {userToken && (
                   <Link href="/user-profile" className="d-flex align-items-center">

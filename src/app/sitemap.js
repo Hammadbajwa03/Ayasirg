@@ -159,6 +159,7 @@ export default async function sitemap() {
     "/privacy-policy",
     "/faq",
     "/blogs",
+    "/services",
     "/market-business",
     "/register-yourself",
     "/compnies",

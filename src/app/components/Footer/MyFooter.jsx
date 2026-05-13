@@ -18,6 +18,9 @@ export default function MyFooter() {
                 <Link href="/about-us">About Us</Link>
               </li>
               <li>
+                <Link href="/services">Services</Link>
+              </li>
+              <li>
                 <Link href="/our-mission">Our Mission</Link>
               </li>
               <li>
@@ -41,7 +44,7 @@ export default function MyFooter() {
             <ul className="list-unstyled">
               {!["handyman", "e-center", "provider"].includes(userDetails?.user_type) && (
                 <li>
-                  <Link href="/register-yourself">Register Yourself</Link>
+                  <Link href="/register-yourself">How to Register</Link>
                 </li>
               )}
               <li>

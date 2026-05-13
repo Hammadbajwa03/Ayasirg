@@ -47,6 +47,128 @@
   margin-right: 10px;
 }
 
+/* Desktop “More” — theme (#b50000), hover-open bridge, polished menu */
+.navbar .nav_more_li {
+  list-style: none;
+  position: relative;
+}
+
+.navbar .nav_more_toggle {
+  text-decoration: none;
+  color: var(--black-color);
+  font-size: 16px;
+  text-transform: uppercase;
+  transition: 0.3s all;
+  /* background: rgba(255, 255, 255, 0.95) !important; */
+  /* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04) !important; */
+  display: inline-flex !important;
+  align-items: center;
+  gap: 6px;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  /* transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease; */
+}
+
+.navbar .nav_more_toggle_label {
+  /* line-height: 1; */
+  color: var(--black-color) !important;
+  font-weight: 400 !important;
+}
+
+.navbar .nav_more_li:hover .nav_more_toggle,
+.navbar .nav_more_li.nav_more_open .nav_more_toggle {
+  color: var(--black-color);
+  /* border-color: rgba(181, 0, 0, 0.45) !important;
+  background: linear-gradient(180deg, #fff5f5 0%, #ffecec 100%) !important;
+  box-shadow: 0 4px 14px rgba(181, 0, 0, 0.12) !important; */
+}
+
+.navbar .nav_more_toggle:focus,
+.navbar .nav_more_toggle:focus-visible {
+  color: var(--black-color);
+  outline: none !important;
+  /* box-shadow: 0 0 0 3px rgba(181, 0, 0, 0.2) !important; */
+}
+
+/* .navbar .nav_more_toggle.active,
+.navbar .nav_more_li.nav_more_has_active .nav_more_toggle:not(.nav_more_open) {
+  color: #b50000 !important;
+  font-weight: 700;
+} */
+
+.navbar .nav_more_toggle::after {
+  display: none !important;
+}
+
+.navbar .nav_more_caret {
+  font-size: 15px;
+  transition: transform 0.25s ease;
+}
+
+.navbar .nav_more_li.nav_more_open .nav_more_caret {
+  transform: rotate(180deg);
+}
+
+.navbar .nav_more_menu {
+  min-width: 232px;
+  margin-top: 0.55rem !important;
+  /* padding: 0.4rem 0 0.55rem; */
+  /* border: 1px solid rgba(181, 0, 0, 0.12); */
+  /* border-radius: 14px; */
+  background: #ffffff;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(255, 255, 255, 0.8) inset;
+  z-index: 1100;
+  overflow: hidden;
+}
+
+/* Invisible hover bridge between toggle and menu */
+.navbar .nav_more_menu::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0;
+  right: 0;
+  height: 10px;
+}
+
+.navbar .nav_more_menu_header {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #b50000;
+  padding: 0.35rem 1.15rem 0.5rem;
+  margin: 0 0.5rem 0.15rem;
+  border-bottom: 1px solid rgba(181, 0, 0, 0.1);
+}
+
+.navbar .nav_more_menu .nav_more_item.dropdown-item {
+  text-transform: uppercase;
+  font-size: 16px;
+  /* font-weight: 400; */
+  padding: 10px 15px;
+  margin: 0 0.45rem;
+  color: var(--black-color) !important;
+  border-left: 3px solid transparent;
+  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease, padding-left 0.18s ease;
+}
+
+.navbar .nav_more_menu .nav_more_item.dropdown-item:hover,
+.navbar .nav_more_menu .nav_more_item.dropdown-item:focus {
+  background: linear-gradient(90deg, rgba(181, 0, 0, 0.08) 0%, rgba(181, 0, 0, 0.02) 100%) !important;
+  color: #b50000 !important;
+  border-left-color: #b50000;
+  padding-left: 1.1rem;
+}
+
+.navbar .nav_more_menu .nav_more_item.dropdown-item.active,
+.navbar .nav_more_menu .nav_more_item.dropdown-item:active {
+  color: #b50000 !important;
+  font-weight: 700;
+  background: rgba(181, 0, 0, 0.1) !important;
+  border-left-color: #b50000;
+}
+
 .navbar ul li a:hover {
   color: #b50000 !important;
 }
@@ -163,8 +285,8 @@
 
 .navbar .dropdown button span {
   color: black;
-  padding-right: 14px;
-  border-right: 1px solid black;
+  /* padding-right: 14px; */
+  /* border-right: 1px solid black; */
   font-weight: 500;
 }
 
