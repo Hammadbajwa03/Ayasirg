@@ -42,7 +42,7 @@ export default function ServicesCategoryGrid({ categories }) {
               {imgSrc ? (
                 <Image
                   src={imgSrc}
-                  alt=""
+                  alt={name}
                   width={72}
                   height={72}
                   className="services_cat_img"

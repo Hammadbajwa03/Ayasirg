@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Advartisement from "@/app/components/AdvertisementBar/Advartisement";
+import ServicesCategoriesJsonLd from "@/app/components/seo/ServicesCategoriesJsonLd";
 import "./services-page.css";
 import ServicesCategoryGrid from "./ServicesCategoryGrid";
 
@@ -38,6 +38,7 @@ export default async function ServicesPage() {
 
   return (
     <section className="services_page margin_navbar">
+      <ServicesCategoriesJsonLd categories={categories} />
       <div className="container py-3">
         <header className="services_page_header text-center text-md-start mb-3 mb-md-4">
           <h2 className="services_page_h1 fw-bold mb-1">Services</h2>

@@ -51,6 +51,27 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
+
+  // ORGANIZATION SCHEMA
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+
+    name: "Aya Sir G!",
+    url: "https://www.ayasirg.com",
+
+    logo: "https://www.ayasirg.com/assets/logo_header.png",
+
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+92-309-8574093",
+      contactType: "customer service",
+      areaServed: "PK",
+      availableLanguage: ["English", "Urdu"],
+    },
+  };
+
   return (
     <html lang="en">
       {/* <head>
@@ -63,6 +84,15 @@ export default function RootLayout({ children }) {
         <meta property="og:url" content="https://ayasirg.com/" />
         <meta property="og:type" content="website" />
       </head> */}
+      {/* ORGANIZATION SCHEMA */}
+      <Script
+        id="organization-schema"
+        type="application/ld+json"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(organizationSchema),
+        }}
+      />
       {/* GOOGLE ANALYTICS */}
       {GA_ID && (
         <>

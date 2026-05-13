@@ -7,6 +7,7 @@ import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import dynamic from "next/dynamic";
 import { useSearchParams } from "next/navigation";
+import CompaniesServiceJsonLd from "../components/seo/CompaniesServiceJsonLd";
 
 const ButtonComp = dynamic(() => import("../components/Button-component/ButtonComp"), {
   ssr: false,
@@ -28,7 +29,11 @@ function SearchParamsWrapper() {
   const verified_status = searchParams.get("verified_status") || "";
   const rating = searchParams.get("rating") || "";
 
+  const qs = searchParams.toString();
+
   return (
+    <>
+      <CompaniesServiceJsonLd categoryId={category_id} queryString={qs} />
     <div className="row">
       <div className="col-lg-4 col_filter">
         <Filterbar
@@ -41,6 +46,7 @@ function SearchParamsWrapper() {
         />
       </div>
     </div>
+    </>
   );
 }
 

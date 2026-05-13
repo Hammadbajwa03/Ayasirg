@@ -221,7 +221,7 @@ export default function CustomNavbar() {
                     <IoIosArrowDown className="nav_more_caret" aria-hidden />
                   </Dropdown.Toggle>
                   <Dropdown.Menu className="nav_more_menu">
-                    <div className="nav_more_menu_header">Explore</div>
+                    {/* <div className="nav_more_menu_header">Explore</div> */}
                     <Dropdown.Item
                       as={Link}
                       href="/blogs"

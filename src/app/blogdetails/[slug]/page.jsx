@@ -15,6 +15,7 @@ import { FacebookIcon, FacebookShareButton, LinkedinIcon, LinkedinShareButton, T
 import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import BlogPostingJsonLd from "@/app/components/seo/BlogPostingJsonLd";
 
 export default function Page() {
   const router = useRouter();
@@ -191,6 +192,8 @@ export default function Page() {
   );
 
   return (
+    <>
+      {/* {blogData ? <BlogPostingJsonLd blog={blogData} slug={slug} blogPath="blogdetails" /> : null} */}
     <section className="container margin_navbar">
       <div className="row py-3">
         <div className="col-md-12 img_div">
@@ -360,5 +363,6 @@ export default function Page() {
       </div>
 
     </section>
+    </>
   );
 }

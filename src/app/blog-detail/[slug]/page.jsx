@@ -18,6 +18,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { FaXTwitter } from "react-icons/fa6";
+import BlogPostingJsonLd from "@/app/components/seo/BlogPostingJsonLd";
 
 export default function Page() {
     const { userInfo, addBlogComment, commentBlog } = useContext(UserContext);
@@ -207,6 +208,8 @@ export default function Page() {
     const src = blogData?.attchments[0];
 
     return (
+        <>
+            {blogData ? <BlogPostingJsonLd blog={blogData} slug={slug} blogPath="blog-detail" /> : null}
         <section className="container margin_navbar blog_details">
             <div className="row py-3">
                 {/* <img src={blogData?.attchments[0]} alt={blogData?.title} /> */}
@@ -471,5 +474,6 @@ export default function Page() {
                 </Swiper>
             </div>
         </section>
+        </>
     );
 }
