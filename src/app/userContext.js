@@ -268,10 +268,6 @@ export const UserProvider = ({ children }) => {
     }
   };
 
-  useEffect(() => {
-    getLocations();
-  }, []);
-
   // areas
   const [area, setArea] = useState([]);
   const getAreas = async () => {
@@ -323,7 +319,6 @@ export const UserProvider = ({ children }) => {
           : {},
       }
       );
-      console.log(response, "filter users api response");
       // setFilteredUsers(response.data.data || []);
       if (response?.data) {
         const updatedData = (response.data.data || []).map((user) => ({

@@ -108,8 +108,14 @@ export default function CustomNavbar() {
 
   const handleNavbar = () => setMyNavbar(!myNavbar);
 
-  const gotoLogin = () => router.push("/login");
-  const gotoCreateProfile = () => router.push("/create-profile");
+  const gotoLogin = () => {
+    setMyNavbar(false);
+    router.push("/login");
+  };
+  const gotoCreateProfile = () => {
+    setMyNavbar(false);
+    router.push("/create-profile");
+  };
   const gotoContactUs = () => router.push("/contact-us");
   const gotoProfile = () => router.push("/user-profile");
   const gotoEcenters = () => router.push("/register-yourself");
@@ -280,8 +286,12 @@ export default function CustomNavbar() {
                   <p onClick={() => handleDropdownItemClick(handleLogout)}><Link href={'/login'}>Logout</Link></p>
                 ) : (
                   <div className="d-flex flex-column justify-content-center align-items-center gap-2">
-                    <p onClick={gotoLogin}><Link href={'/login'}>Login</Link></p>
-                    <p onClick={gotoCreateProfile}><Link href={'/create-profile'} >Create Your Profile</Link></p>
+                    <Link href="/login" className="text-decoration-none" onClick={() => setMyNavbar(false)}>
+                      Login
+                    </Link>
+                    <Link href="/create-profile" className="text-decoration-none" onClick={() => setMyNavbar(false)}>
+                      Create Your Profile
+                    </Link>
                   </div>
                 )}
               </li>

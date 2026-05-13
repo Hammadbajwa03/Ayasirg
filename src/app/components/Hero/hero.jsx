@@ -1,14 +1,14 @@
 "use client";
-import React, { useContext, useEffect, useMemo, useRef, useState } from "react";
+import React, { useContext, useMemo, useRef, useState } from "react";
 import "./hero.css";
 import Dropdown from "react-bootstrap/Dropdown";
 import { IoSearch } from "react-icons/io5";
-import { usePathname, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { UserContext } from "@/app/userContext";
 
 export default function Hero() {
   const router = useRouter();
-  const { apiCategory2, setapiCategories2, cities, setCities, locations, setLocations, getCities, getLocations } = useContext(UserContext);
+  const { apiCategory2, cities, setCities, locations, setLocations, getCities, getLocations } = useContext(UserContext);
 
   const cityDropdownRef = useRef(null);
   const locationDropdownRef = useRef(null);
@@ -72,33 +72,6 @@ export default function Hero() {
       await getCities(id);
     }
   };
-
-  const baseUrl =
-    process.env.NEXT_PUBLIC_BASE_URL ||
-    "https://admin.ayasirg.com";
-
-  const getCategories = async () => {
-    try {
-      const res = await fetch(`${baseUrl}/api/category-list`);
-      const data = await res.json();
-      setapiCategories2(data.data);
-    } catch (error) {
-      // router.push("/error");
-      console.log("Error while fetching categories");
-    }
-  };
-
-  // const handleCategorySelect = async (eventKey) => {
-  //   const [name, id] = eventKey.split("||");
-  //   setSelectedCategory(name);
-
-  //   if (id === "any") {
-  //     setCategoryId(null);
-  //   } else {
-  //     setCategoryId(id);
-  //     await getCities(id); // Cities will update if needed but city & location selection remain
-  //   }
-  // };
 
 
   const handleCitySelect = async (eventKey) => {
@@ -166,10 +139,6 @@ export default function Hero() {
     }
   };
 
-
-  useEffect(() => {
-    getCategories();
-  }, []);
 
   return (
     <section className="hero_section mb-5 d-flex flex-column align-items-center">

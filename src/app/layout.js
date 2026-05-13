@@ -1,4 +1,4 @@
-import { Poppins, Geist, Geist_Mono } from "next/font/google";
+import { Poppins } from "next/font/google";
 import AosWrapper from "./components/AosWrapper";
 import SiteChrome from "./SiteChrome";
 import "./globals.css";
@@ -8,20 +8,11 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Script from "next/script";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 const poppins = Poppins({
-  weight: ["300", "400", "500", "600", "700"],
-  subsets: ["latin"], // remove any other implicit ranges
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
   variable: "--font-poppins",
+  display: "swap",
 });
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
