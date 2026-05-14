@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 function categoryImageUrl(cat) {
-  const raw = cat?.category_image ?? cat?.image ?? cat?.icon_url;
+  const raw = cat?.category_image ?? cat?.category_image ?? cat?.icon_url;
   return typeof raw === "string" && /^https?:\/\//i.test(raw.trim()) ? raw.trim() : null;
 }
 
