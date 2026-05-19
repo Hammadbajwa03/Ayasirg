@@ -101,17 +101,23 @@ footer {
   color: white;
 }
 
-.footer .social_inner:nth-child(4):hover {
-  background: #2727278d;
+.footer .social_inner:nth-child(4):hover,
+.footer .social_inner_threads:hover {
+  background: #000000;
   color: white;
 }
 
 .footer .social_inner:nth-child(5):hover {
-  background: #00acee;
+  background: #2727278d;
   color: white;
 }
 
 .footer .social_inner:nth-child(6):hover {
+  background: #00acee;
+  color: white;
+}
+
+.footer .social_inner:nth-child(7):hover {
   background: #007cad;
   color: white;
 }

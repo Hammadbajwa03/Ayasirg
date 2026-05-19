@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
 import "./footer.css";
 import Link from "next/link";
-import { FaFacebook, FaFacebookF, FaInstagram, FaLinkedin, FaTiktok, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLinkedin, FaTiktok, FaYoutube } from "react-icons/fa";
 import { UserContext } from "@/app/userContext";
 import { FaXTwitter } from "react-icons/fa6";
+import ThreadsIcon from "./ThreadsIcon";
 
 export default function MyFooter() {
   const { userDetails } = useContext(UserContext);
@@ -36,6 +37,20 @@ export default function MyFooter() {
               </li> */}
               <li>
                 <Link href="/contact-us">Contact Us</Link>
+              </li>
+            </ul>
+          </div>
+          <div className="col-lg-2 col-md-6 col-sm-12">
+            <p className="footer_heading">CITIES</p>
+            <ul className="list-unstyled">
+              <li>
+                <Link href="/services/lahore">Lahore</Link>
+              </li>
+              <li>
+                <Link href="/services/karachi">Karachi</Link>
+              </li>
+              <li>
+                <Link href="/services/islamabad">Islamabad</Link>
               </li>
             </ul>
           </div>
@@ -85,32 +100,79 @@ export default function MyFooter() {
             <div className=" flex-wrap social-div d-flex align-items-center justify-content-center gap-3 mx-auto">
 
               {/* YouTube */}
-              <Link className="social_inner d-flex align-items-center gap-2" href={'https://www.youtube.com/@AyaSirG'} target="_blank">
+              <Link
+                className="social_inner d-flex align-items-center gap-2"
+                href="https://www.youtube.com/@AyaSirG"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Aya Sir G on YouTube"
+              >
                 <FaYoutube />
               </Link>
 
               {/* Facebook */}
-              <Link className="social_inner d-flex align-items-center gap-2" href={'https://www.facebook.com/profile.php?id=61577785319983'} target="_blank">
+              <Link
+                className="social_inner d-flex align-items-center gap-2"
+                href="https://www.facebook.com/share/1BNgdCAE9L/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Aya Sir G on Facebook"
+              >
                 <FaFacebookF />
               </Link>
 
               {/* Instagram */}
-              <Link className="social_inner d-flex align-items-center gap-2" href={'https://www.instagram.com/ayasirg_official/?igsh=MXJldGk5ODJqODI2NA%3D%3D#'} target="_blank">
+              <Link
+                className="social_inner d-flex align-items-center gap-2"
+                href="https://www.instagram.com/ayasirg_official/?igsh=MXJldGk5ODJqODI2NA%3D%3D#"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Aya Sir G on Instagram"
+              >
                 <FaInstagram />
               </Link>
 
+              {/* Threads */}
+              <Link
+                className="social_inner social_inner_threads d-flex align-items-center gap-2"
+                href="https://www.threads.net/@ayasirg_official"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Aya Sir G on Threads"
+              >
+                <ThreadsIcon size={20} />
+              </Link>
+
               {/* TikTok */}
-              <Link className="social_inner d-flex align-items-center gap-2" href={'https://www.tiktok.com/@ayasirg?is_from_webapp=1&sender_device=pc'} target="_blank">
+              <Link
+                className="social_inner d-flex align-items-center gap-2"
+                href="https://www.tiktok.com/@ayasirg?is_from_webapp=1&sender_device=pc"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Aya Sir G on TikTok"
+              >
                 <FaTiktok />
               </Link>
 
               {/* Twitter (X) */}
-              <Link className="social_inner d-flex align-items-center gap-2" href={'https://x.com/Aya_Sir_G'} target="_blank">
+              <Link
+                className="social_inner d-flex align-items-center gap-2"
+                href="https://x.com/Aya_Sir_G"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Aya Sir G on X"
+              >
                 <FaXTwitter />
               </Link>
 
               {/* LinkedIn */}
-              <Link className="social_inner d-flex align-items-center gap-2" href={'https://www.linkedin.com/company/ayasirg/?viewAsMember=true'} target="_blank">
+              <Link
+                className="social_inner d-flex align-items-center gap-2"
+                href="https://www.linkedin.com/company/ayasirg/?viewAsMember=true"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Aya Sir G on LinkedIn"
+              >
                 <FaLinkedin />
               </Link>
 

@@ -1,0 +1,439 @@
+.city_page {
+  --city-brand: #b50000;
+  background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 45%);
+  min-height: 50vh;
+  font-family: var(--font-poppins), sans-serif;
+}
+
+.city_page_header {
+  padding-bottom: 0.25rem;
+}
+
+.city_page_h1 {
+  font-size: clamp(1.65rem, 2.5vw, 2rem);
+  color: #1a1a1a;
+  letter-spacing: -0.02em;
+}
+
+.city_page_h2 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--city-brand);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.city_main_panel {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+  padding: 0;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+.city_hero {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 21 / 9;
+  min-height: 200px;
+  max-height: 380px;
+  background: #e9e9e9;
+}
+
+.city_hero_img {
+  object-fit: cover;
+}
+
+.city_hero_overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.15) 0%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem 1.35rem;
+  color: #fff;
+}
+
+.city_hero_tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.9;
+  margin-bottom: 0.35rem;
+}
+
+.city_hero_title {
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.city_body {
+  padding: 1.35rem 1.25rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .city_body {
+    padding: 1.5rem 1.5rem 1.75rem;
+  }
+}
+
+.city_intro {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #333;
+  margin-bottom: 1.25rem;
+}
+
+.city_block {
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 1.1rem 1.15rem;
+  margin-bottom: 1rem;
+  height: 100%;
+}
+
+.city_block h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.65rem;
+  padding-left: 0.75rem;
+  border-left: 4px solid var(--city-brand);
+}
+
+.city_block p,
+.city_block li {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #444;
+}
+
+.city_highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.city_highlights li {
+  position: relative;
+  padding-left: 1.35rem;
+  margin-bottom: 0.5rem;
+}
+
+.city_highlights li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--city-brand);
+}
+
+.city_services_grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.city_service_chip {
+  display: inline-block;
+  padding: 0.4rem 0.75rem;
+  background: #fff;
+  border: 1px solid rgba(181, 0, 0, 0.2);
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.city_cta_row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.35rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #eee;
+}
+
+.city_btn_primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 1.25rem;
+  background: var(--city-brand);
+  color: #fff !important;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-radius: 999px;
+  border: 2px solid var(--city-brand);
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.city_btn_primary:hover {
+  background: #8f0000;
+  border-color: #8f0000;
+  color: #fff !important;
+}
+
+.city_btn_outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 1.25rem;
+  background: transparent;
+  color: var(--city-brand) !important;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-radius: 999px;
+  border: 2px solid var(--city-brand);
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.city_btn_outline:hover {
+  background: rgba(181, 0, 0, 0.06);
+  color: var(--city-brand) !important;
+}
+
+/* Rich SEO layout — hero height matches original compact banner */
+.city_hero_rich {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 21 / 9;
+  min-height: 180px;
+  max-height: 320px;
+  overflow: hidden;
+  background: #222;
+}
+
+.city_hero_media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: unset;
+  max-height: none;
+  min-height: 0;
+  background: #222;
+}
+
+.city_hero_overlay_rich {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.15rem 1.2rem;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(0, 0, 0, 0.65) 100%
+  );
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.city_hero_h1 {
+  font-size: clamp(1.15rem, 2.8vw, 1.75rem);
+  font-weight: 700;
+  margin: 0 0 0.45rem;
+  line-height: 1.22;
+  max-width: 42rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.city_hero_sub {
+  font-size: clamp(0.82rem, 1.6vw, 0.95rem);
+  line-height: 1.45;
+  margin: 0 0 0.65rem;
+  max-width: 40rem;
+  opacity: 0.95;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.city_cta_row_hero {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+  width: 100%;
+}
+
+/* Mobile: shorter hero, content still on image */
+@media (max-width: 767.98px) {
+  .city_hero_rich {
+    aspect-ratio: 21 / 9;
+    min-height: 210px;
+    max-height: 320px;
+  }
+
+  .city_hero_overlay_rich {
+    padding: 0.85rem 0.75rem 0.9rem;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.78) 100%
+    );
+  }
+
+  .city_hero_tag {
+    font-size: 0.58rem;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.25rem;
+  }
+
+  .city_hero_h1 {
+    font-size: 0.95rem;
+    line-height: 1.25;
+    margin-bottom: 0.3rem;
+    max-width: 100%;
+  }
+
+  .city_hero_sub {
+    font-size: 0.7rem;
+    line-height: 1.35;
+    margin-bottom: 0.45rem;
+    max-width: 100%;
+  }
+
+  .city_cta_row_hero {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.35rem;
+  }
+
+  .city_cta_row_hero .city_btn_primary,
+  .city_cta_row_hero .city_btn_outline,
+  .city_cta_row_hero .city_btn_whatsapp {
+    width: 100%;
+    max-width: 100%;
+    font-size: 0.62rem;
+    padding: 0.4rem 0.55rem;
+    text-align: center;
+    white-space: normal;
+    line-height: 1.2;
+  }
+
+  .city_btn_outline_light {
+    border-color: rgba(255, 255, 255, 0.85) !important;
+  }
+
+  .city_body {
+    padding: 1.1rem 0.9rem 1.35rem;
+  }
+
+  .city_page .container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+}
+
+.city_btn_whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 1.25rem;
+  background: #25d366;
+  color: #fff !important;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-radius: 999px;
+  border: 2px solid #25d366;
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.city_btn_whatsapp:hover {
+  background: #1da851;
+  border-color: #1da851;
+  color: #fff !important;
+}
+
+.city_btn_whatsapp_dark {
+  background: #25d366;
+  border-color: #25d366;
+  color: #fff !important;
+}
+
+.city_btn_outline_light {
+  border-color: #fff !important;
+  color: #fff !important;
+}
+
+.city_btn_outline_light:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: #fff !important;
+}
+
+.city_section {
+  margin-bottom: 1.75rem;
+}
+
+.city_section_h2 {
+  font-size: clamp(1.2rem, 2.5vw, 1.45rem);
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.65rem;
+  padding-left: 0.75rem;
+  border-left: 4px solid var(--city-brand);
+}
+
+.city_section_h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--city-brand);
+  margin-bottom: 0.75rem;
+}
+
+.city_section_lead {
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.city_service_h3 {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+  padding-left: 0;
+  border-left: none;
+}
+
+.city_service_card {
+  margin-bottom: 0;
+}
+
+.city_steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.city_steps li {
+  margin-bottom: 0;
+}

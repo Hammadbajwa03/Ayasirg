@@ -165,6 +165,9 @@ export default async function sitemap() {
     "/compnies",
     "/e-center",
     "/contact-us",
+    "/services/lahore",
+    "/services/karachi",
+    "/services/islamabad",
   ];
 
   const staticEntries = staticPaths.map((path) => ({

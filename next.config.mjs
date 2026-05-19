@@ -27,7 +27,7 @@ const nextConfig = {
   reactStrictMode: true,
 
   images: {
-    domains: ["admin.ayasirg.com"],
+    domains: ["admin.ayasirg.com", "images.unsplash.com"],
     formats: ["image/avif", "image/webp"], // ⚡ modern formats for smaller size
     // dangerouslyAllowSVG: false,
   },
