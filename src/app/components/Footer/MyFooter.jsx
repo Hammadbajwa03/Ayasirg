@@ -3,8 +3,7 @@ import "./footer.css";
 import Link from "next/link";
 import { FaFacebookF, FaInstagram, FaLinkedin, FaTiktok, FaYoutube } from "react-icons/fa";
 import { UserContext } from "@/app/userContext";
-import { FaXTwitter } from "react-icons/fa6";
-import ThreadsIcon from "./ThreadsIcon";
+import { FaThreads, FaXTwitter } from "react-icons/fa6";
 
 export default function MyFooter() {
   const { userDetails } = useContext(UserContext);
@@ -140,7 +139,7 @@ export default function MyFooter() {
                 rel="noopener noreferrer"
                 aria-label="Aya Sir G on Threads"
               >
-                <ThreadsIcon size={20} />
+                <FaThreads />
               </Link>
 
               {/* TikTok */}
