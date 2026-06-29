@@ -1,5 +1,6 @@
 "use client";
 import React, { useContext, useMemo, useRef, useState } from "react";
+import Image from "next/image";
 import "./hero.css";
 import Dropdown from "react-bootstrap/Dropdown";
 import { IoSearch } from "react-icons/io5";
@@ -142,7 +143,16 @@ export default function Hero() {
 
   return (
     <section className="hero_section mb-5 d-flex flex-column align-items-center">
-      <div className="position-relative text-center">
+      <Image
+        src="/assets/Image-banner.webp"
+        alt="Aya Sir G! Banner"
+        fill
+        priority
+        fetchPriority="high"
+        className="hero_bg_img"
+      />
+      <div className="hero_overlay"></div>
+      <div className="position-relative text-center w-100" style={{ zIndex: 1 }}>
         <div className="container">
           <div className="row section_margin">
             <div className="col-lg-12">

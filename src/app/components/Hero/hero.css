@@ -1,19 +1,26 @@
 .hero_section {
   width: 100%;
   height: calc(100vh - 10px);
-  background-image: url("/assets/Image-banner.webp");
-  background-size: cover;
-  background-position: center 30%;
   color: white;
   position: relative;
   font-family: var(--font-poppins), sans-serif;
 }
 
-.hero_section::before {
-  content: "";
+.hero_bg_img {
+  position: absolute !important;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  object-position: center 30%;
+  z-index: -2;
+}
+
+.hero_overlay {
   position: absolute;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
 }
 
 .hero_section h1.hero_heading {
