@@ -1,0 +1,370 @@
+/* Solar Technician Landing Page CSS */
+
+.solar_technician_page {
+  font-family: var(--font-poppins), sans-serif;
+  color: #2b2b2b;
+  overflow-x: hidden;
+}
+
+.solar_technician_page .red_title {
+  color: var(--red-color);
+  font-weight: 700;
+}
+
+.solar_technician_section_heading {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 700;
+  text-align: center;
+  color: #1a1a1a;
+  margin-bottom: 2rem;
+}
+
+/* Hero — White Background */
+.solar_technician_hero {
+  background: #ffffff;
+  color: #1a1a1a;
+  padding: clamp(3.5rem, 8vw, 6rem) 0;
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.solar_technician_hero_content {
+  max-width: 700px;
+}
+
+.solar_technician_hero_h1 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.solar_technician_hero_subheading {
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  line-height: 1.6;
+  color: #4a4a4a;
+  margin-bottom: 2.5rem;
+  font-weight: 400;
+}
+
+.solar_technician_hero_ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.solar_technician_btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+.solar_technician_btn_primary {
+  background-color: var(--red-color);
+  color: #ffffff !important;
+  border: 2px solid var(--red-color);
+}
+
+.solar_technician_btn_primary:hover {
+  background-color: #8c0000;
+  border-color: #8c0000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(181, 0, 0, 0.4);
+}
+
+.solar_technician_btn_secondary {
+  background-color: transparent;
+  color: #1a1a1a !important;
+  border: 2px solid #1a1a1a;
+}
+
+.solar_technician_btn_secondary:hover {
+  background-color: #1a1a1a;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Content Block */
+.solar_technician_content_block {
+  background-color: #f8f9fa;
+  padding: clamp(3rem, 6vw, 4.5rem) 0;
+}
+
+.solar_technician_content_wrapper {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.solar_technician_content_text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #4a4a4a;
+}
+
+/* Services Grid */
+.solar_technician_services_sec {
+  padding: clamp(3.5rem, 7vw, 5.5rem) 0;
+  background-color: #ffffff;
+}
+
+.solar_technician_services_grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+@media (min-width: 576px) {
+  .solar_technician_services_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .solar_technician_services_grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.solar_technician_service_card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 2.25rem 1.75rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+}
+
+.solar_technician_service_card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+  border-color: rgba(202, 138, 4, 0.2);
+}
+
+/* Accent: Solar Gold/Amber */
+.solar_technician_card_icon_wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  background: rgba(202, 138, 4, 0.08);
+  color: #ca8a04;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.solar_technician_service_card:hover .solar_technician_card_icon_wrap {
+  background: var(--red-color);
+  color: #ffffff;
+}
+
+.solar_technician_card_title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.75rem;
+}
+
+.solar_technician_card_desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #666666;
+}
+
+/* Trust Block */
+.solar_technician_trust_sec {
+  background-color: #efefef;
+  padding: clamp(3.5rem, 7vw, 5.5rem) 0;
+}
+
+.solar_technician_trust_col_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.solar_technician_trust_points {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  margin-top: 2rem;
+}
+
+.solar_technician_trust_point {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.solar_technician_trust_icon_box {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: var(--red-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.solar_technician_trust_point_title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.35rem;
+}
+
+.solar_technician_trust_point_desc {
+  font-size: 0.95rem;
+  color: #4a4a4a;
+  line-height: 1.5;
+}
+
+.solar_technician_trust_img_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* Cities Section */
+.solar_technician_cities_sec {
+  padding: clamp(3.5rem, 6vw, 4.5rem) 0;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.solar_technician_city_pills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.solar_technician_city_pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 2.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333333 !important;
+  background-color: #f1f3f5;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 50px;
+  text-decoration: none !important;
+  transition: all 0.25s ease;
+}
+
+.solar_technician_city_pill:hover {
+  background-color: var(--red-color);
+  color: #ffffff !important;
+  border-color: var(--red-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(181, 0, 0, 0.25);
+}
+
+/* FAQ Accordion */
+.solar_technician_faq_sec {
+  padding: clamp(3.5rem, 7vw, 5.5rem) 0;
+  background-color: #f8f9fa;
+}
+
+.solar_technician_faq_wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.solar_technician_faq_sec .accordion-item {
+  border: none;
+  background-color: #ffffff;
+  border-radius: 8px !important;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.solar_technician_faq_sec .accordion-button {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #1a1a1a;
+  padding: 1.25rem 1.5rem;
+  background-color: #ffffff;
+  box-shadow: none;
+}
+
+.solar_technician_faq_sec .accordion-button:not(.collapsed) {
+  color: #ca8a04;
+  background-color: rgba(202, 138, 4, 0.02);
+}
+
+.solar_technician_faq_sec .accordion-button::after {
+  background-size: 1.1rem;
+}
+
+.solar_technician_faq_sec .accordion-body {
+  padding: 1.25rem 1.5rem;
+  font-size: 0.95rem;
+  color: #555555;
+  line-height: 1.7;
+  border-top: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+/* CTA Banner */
+.solar_technician_cta_banner {
+  background: linear-gradient(135deg, var(--red-color) 0%, #8c0000 100%);
+  color: #ffffff;
+  padding: clamp(4rem, 8vw, 5.5rem) 0;
+  text-align: center;
+}
+
+.solar_technician_cta_banner_h2 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 800;
+  margin-bottom: 2rem;
+}
+
+.solar_technician_cta_banner .solar_technician_btn {
+  background-color: #ffffff;
+  color: var(--red-color) !important;
+  border: 2px solid #ffffff;
+  font-size: 1.05rem;
+  padding: 0.9rem 2.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.solar_technician_cta_banner .solar_technician_btn:hover {
+  background-color: #f8f9fa;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .solar_technician_hero_ctas {
+    flex-direction: column;
+  }
+  .solar_technician_hero_ctas .solar_technician_btn {
+    width: 100%;
+  }
+}

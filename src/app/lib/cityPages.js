@@ -458,16 +458,22 @@ export async function fetchCityIdByName(cityName) {
       body: JSON.stringify({ state_id: 2728 }),
       next: { revalidate: 3600 },
     });
-    if (!res.ok) return null;
-    const json = await res.json();
-    const rows = Array.isArray(json?.data) ? json.data : [];
-    const match = rows.find(
-      (c) =>
-        c?.name &&
-        String(c.name).toLowerCase() === String(cityName).toLowerCase()
-    );
-    return match?.id != null ? String(match.id) : null;
-  } catch {
-    return null;
+    if (res.ok) {
+      const json = await res.json();
+      const rows = Array.isArray(json?.data) ? json.data : [];
+      const match = rows.find(
+        (c) =>
+          c?.name &&
+          String(c.name).toLowerCase() === String(cityName).toLowerCase()
+      );
+      if (match?.id != null) return String(match.id);
+    }
+  } catch (err) {
+    console.warn("fetchCityIdByName API failed, using static fallback", err);
   }
+  const lower = String(cityName).toLowerCase();
+  if (lower === "karachi") return "1";
+  if (lower === "lahore") return "2";
+  if (lower === "islamabad") return "9";
+  return null;
 }
