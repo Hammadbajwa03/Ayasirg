@@ -37,7 +37,6 @@ const nextConfig = {
 
   experimental: {
     scrollRestoration: true,
-    inlineCss: true,
     // modern: true
   },
 
