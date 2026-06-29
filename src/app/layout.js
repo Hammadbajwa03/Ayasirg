@@ -18,8 +18,12 @@ const poppins = Poppins({
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 
 export const metadata = {
-  title: "Aya Sir G!",
-  description: "Aya Sir G! The official site.",
+  title: "Aya Sir G! - Pakistan's Trusted Blue Collar Job Platform",
+  description:
+    "Connect with skilled and verified blue-collar workers in Pakistan. Hire reliable maids, drivers, cooks, plumbers, electricians, and security personnel easily.",
+  alternates: {
+    canonical: "https://www.ayasirg.com",
+  },
   verification: {
     google: "AmPMtQzaUe0ZihZM-3LXhAXMke8fDlmEeBIHcVzUtdY",
   },
@@ -28,25 +32,27 @@ export const metadata = {
     apple: "/logo_header.png",
   },
   openGraph: {
-    title: "Aya Sir G!",
-    description: "Aya Sir G! The official site.",
-    url: "https://ayasirg.com",
+    title: "Aya Sir G! - Pakistan's Trusted Blue Collar Job Platform",
+    description:
+      "Hire reliable, verified blue-collar workers in Pakistan. Connecting you with skilled maids, drivers, technicians, and more.",
+    url: "https://www.ayasirg.com",
     siteName: "Aya Sir G!",
     images: [
       {
-        url: "https://ayasirg.com/logo_header.png",
+        url: "https://www.ayasirg.com/logo_header.png",
         width: 1200,
         height: 630,
-        alt: "Aya Sir G Logo",
+        alt: "Aya Sir G! Logo",
       },
     ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aya Sir G!",
-    description: "Aya Sir G! The official site.",
-    images: ["https://ayasirg.com/logo_header.png"],
+    title: "Aya Sir G! - Pakistan's Trusted Blue Collar Job Platform",
+    description:
+      "Hire reliable, verified blue-collar workers in Pakistan. Connecting you with skilled maids, drivers, technicians, and more.",
+    images: ["https://www.ayasirg.com/logo_header.png"],
   },
 };
 
