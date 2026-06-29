@@ -425,6 +425,11 @@ export default function Page() {
                             <FaInstagram />
                         </Link>
 
+                        {/* Threads */}
+                        <Link className="social_inner social_inner_threads d-flex align-items-center gap-2" href="https://www.threads.net/@ayasirg_official" target="_blank" rel="noopener noreferrer">
+                            <FaThreads />
+                        </Link>
+
                         {/* TikTok */}
                         <Link className="social_inner d-flex align-items-center gap-2" href={'https://www.tiktok.com/@ayasirg?is_from_webapp=1&sender_device=pc'} target="_blank">
                             <FaTiktok />
