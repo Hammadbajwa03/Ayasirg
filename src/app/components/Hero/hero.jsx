@@ -253,7 +253,6 @@ export default function Hero() {
                           <Dropdown.Item
                             key={city.id}
                             eventKey={`${city.name}||${city.id}`}
-                            disabled={city.name !== "Lahore"} // Lahore ke ilawa sab disable
                           >
                             {city.name}
                           </Dropdown.Item>
