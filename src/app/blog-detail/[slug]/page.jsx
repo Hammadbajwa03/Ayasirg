@@ -17,7 +17,7 @@ import { UserContext } from "@/app/userContext";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaThreads, FaXTwitter } from "react-icons/fa6";
 import BlogPostingJsonLd from "@/app/components/seo/BlogPostingJsonLd";
 
 export default function Page() {
@@ -205,6 +205,22 @@ export default function Page() {
         </div>
     );
 
+    const ThreadsIcon = ({ size = 40, round = false }) => (
+        <div
+            style={{
+                width: size,
+                height: size,
+                borderRadius: round ? "50%" : "0%",
+                background: "black",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+            }}
+        >
+            <FaThreads size={size * 0.55} style={{ color: "white" }} />
+        </div>
+    );
+
     const src = blogData?.attchments[0];
 
     return (
@@ -333,6 +349,14 @@ export default function Page() {
                                                 <TelegramShareButton url={currentUrl}>
                                                     <TelegramIcon size={40} round />
                                                 </TelegramShareButton>
+                                                <a
+                                                    href={`https://www.threads.net/intent/post?url=${encodeURIComponent(currentUrl)}&text=${encodeURIComponent(blogData?.title || "")}`}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    style={{ textDecoration: "none" }}
+                                                >
+                                                    <ThreadsIcon size={40} round />
+                                                </a>
                                             </div>
 
                                             <button
