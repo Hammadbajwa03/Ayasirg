@@ -52,7 +52,24 @@ export default function TranslateWrapper() {
   };
 
   useEffect(() => {
-    loadAndInit();
+    const delayLoad = () => {
+      if (typeof window !== "undefined") {
+        if ("requestIdleCallback" in window) {
+          window.requestIdleCallback(() => {
+            setTimeout(loadAndInit, 1000);
+          });
+        } else {
+          setTimeout(loadAndInit, 2000);
+        }
+      }
+    };
+
+    if (document.readyState === "complete") {
+      delayLoad();
+    } else {
+      window.addEventListener("load", delayLoad);
+      return () => window.removeEventListener("load", delayLoad);
+    }
   }, []);
 
   return (
