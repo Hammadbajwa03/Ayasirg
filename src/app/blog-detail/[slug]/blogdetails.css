@@ -138,17 +138,22 @@ p.description {
 }
 
 .blog_details .social_inner:nth-child(4) {
-  background: #121212c1;
+  background: #121212c1; /* Threads: black */
   color: white;
 }
 
 .blog_details .social_inner:nth-child(5) {
-  background: #00acee;
+  background: #121212c1; /* TikTok: dark gray/black */
   color: white;
 }
 
 .blog_details .social_inner:nth-child(6) {
-  background: #007cad;
+  background: #000000; /* Twitter (X): black */
+  color: white;
+}
+
+.blog_details .social_inner:nth-child(7) {
+  background: #007cad; /* LinkedIn: blue */
   color: white;
 }
 
