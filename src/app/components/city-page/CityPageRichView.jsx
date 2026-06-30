@@ -187,6 +187,11 @@ export default function CityPageRichView({ city, cityId }) {
                     </div>
                   </section>
                 ) : null}
+                <div className="city_cta_row justify-content-center text-center mt-3" style={{ borderTop: "none", paddingTop: 0 }}>
+                  <Link href={listingsHref} className="city_btn_primary">
+                    {hero.ctaPrimary}
+                  </Link>
+                </div>
               </div>
             </article>
           </div>
@@ -194,14 +199,6 @@ export default function CityPageRichView({ city, cityId }) {
       </div>
 
       <OurServices />
-
-      <div className="container py-4">
-        <div className="city_cta_row justify-content-center text-center mt-2" style={{ borderTop: "none" }}>
-          <Link href={listingsHref} className="city_btn_primary">
-            {hero.ctaPrimary}
-          </Link>
-        </div>
-      </div>
     </section>
   );
 }
