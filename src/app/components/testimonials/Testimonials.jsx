@@ -3,7 +3,6 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import { FaStar, FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import "./testimonials.css";
 import "swiper/css";
 import "swiper/css/navigation";
 

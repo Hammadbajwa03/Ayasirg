@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { FaChevronDown } from "react-icons/fa";
-import "./faq_section.css";
 
 const faqData = [
   {

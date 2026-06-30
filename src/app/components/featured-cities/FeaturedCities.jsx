@@ -3,7 +3,6 @@ import React, { useContext, useMemo, useState } from "react";
 import Link from "next/link";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { UserContext } from "@/app/userContext";
-import "./featured_cities.css";
 
 const priorityNames = [
   "Karachi", "Lahore", "Islamabad", "Faisalabad", "Rawalpindi", 

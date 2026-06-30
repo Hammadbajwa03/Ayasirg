@@ -10,7 +10,6 @@ import {
   FaHeadphones, 
   FaUsers 
 } from "react-icons/fa";
-import "./why_choose_us.css";
 
 const reasonsData = [
   {

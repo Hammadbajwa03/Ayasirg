@@ -1,0 +1,631 @@
+/* ==========================================================================
+   HOMEPAGE CUSTOM SECTIONS CONSOLIDATED STYLESHEET
+   Combines: OurServices, Testimonials, FeaturedCities, FaqSection, WhyChooseUs, PopularCategories
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Our Services Slider Styles
+   -------------------------------------------------------------------------- */
+.our_services {
+  font-family: var(--font-poppins), sans-serif;
+  background-color: #ffffff;
+}
+
+.swiper-container-wrapper {
+  position: relative;
+  padding: 0 35px;
+}
+
+.service-card-link {
+  display: block;
+}
+
+.service-card {
+  background: #ffffff;
+  border: 1.5px solid #f2f2f2;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), 
+              box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), 
+              border-color 0.3s ease;
+  height: 270px;
+  width: 100%;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  border-color: var(--red-color);
+}
+
+.service-icon-wrapper {
+  background: #f8f9fa;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.service-card:hover .service-icon-wrapper {
+  background: rgba(181, 0, 0, 0.05);
+}
+
+.service-icon-img {
+  object-fit: contain;
+  padding: 10px;
+}
+
+.service-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #2b2b2b;
+  transition: color 0.3s ease;
+}
+
+.service-card:hover .service-card-title {
+  color: var(--red-color);
+}
+
+.service-card-desc {
+  font-size: 13.5px;
+  color: #6c757d;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.services-swiper-prev,
+.services-swiper-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  color: #495057;
+}
+
+.services-swiper-prev {
+  left: -15px;
+}
+
+.services-swiper-next {
+  right: -15px;
+}
+
+.services-swiper-prev:hover,
+.services-swiper-next:hover {
+  background: var(--red-color);
+  color: #ffffff;
+  border-color: var(--red-color);
+  box-shadow: 0 4px 12px rgba(181, 0, 0, 0.3);
+}
+
+.services-swiper-prev.swiper-button-disabled,
+.services-swiper-next.swiper-button-disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.services-swiper-pagination .swiper-pagination-bullet {
+  background: #dee2e6;
+  opacity: 1;
+  width: 8px;
+  height: 8px;
+  transition: all 0.3s ease;
+  margin: 0 4px;
+}
+
+.services-swiper-pagination .swiper-pagination-bullet-active {
+  background: var(--red-color) !important;
+  width: 24px;
+  border-radius: 4px;
+}
+
+/* --------------------------------------------------------------------------
+   2. Testimonials Section Styles
+   -------------------------------------------------------------------------- */
+.testimonials_section {
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.testimonials-slider-container {
+  position: relative;
+  padding: 20px 45px;
+}
+
+.testimonial-card {
+  background: #ffffff;
+  border: 1.5px solid #eaeaea;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  min-height: 200px;
+}
+
+.star-icon {
+  color: #ffc107;
+  font-size: 16px;
+  margin: 0 2px;
+}
+
+.testimonial-text {
+  font-size: 15px;
+  color: #495057;
+  font-style: italic;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.testimonial-author {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #6c757d;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.testimonials-swiper .swiper-slide {
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), 
+              opacity 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  opacity: 0.4;
+  transform: scale(0.88);
+  padding: 10px 0;
+}
+
+.testimonials-swiper .swiper-slide-active {
+  opacity: 1;
+  transform: scale(1.04);
+}
+
+.testimonials-swiper .swiper-slide-active .testimonial-card {
+  border-color: var(--red-color);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.testimonials-prev-btn,
+.testimonials-next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  color: #495057;
+}
+
+.testimonials-prev-btn {
+  left: -10px;
+}
+
+.testimonials-next-btn {
+  right: -10px;
+}
+
+.testimonials-prev-btn:hover,
+.testimonials-next-btn:hover {
+  background: var(--red-color);
+  color: #ffffff;
+  border-color: var(--red-color);
+  box-shadow: 0 4px 12px rgba(181, 0, 0, 0.3);
+}
+
+/* --------------------------------------------------------------------------
+   3. Featured Cities Styles
+   -------------------------------------------------------------------------- */
+.featured_cities {
+  background-color: #ffffff;
+}
+
+.cities-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.city-pill-link {
+  display: block;
+}
+
+.city-pill {
+  background: #ffffff;
+  border: 1.5px solid #f2f2f2;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), 
+              box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), 
+              border-color 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+}
+
+.city-pill:hover {
+  transform: translateY(-4px);
+  border-color: var(--red-color);
+  box-shadow: 0 8px 20px rgba(181, 0, 0, 0.06);
+}
+
+.pin-icon {
+  color: #6c757d;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.city-pill:hover .pin-icon {
+  color: var(--red-color);
+}
+
+.city-name {
+  color: #2b2b2b;
+  font-weight: 600;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.city-pill:hover .city-name {
+  color: var(--red-color);
+}
+
+.view-all-btn {
+  font-family: var(--font-poppins), sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  border-color: var(--red-color);
+  color: var(--red-color);
+  background: transparent;
+}
+
+.view-all-btn:hover,
+.view-all-btn:focus,
+.view-all-btn:active {
+  background-color: var(--red-color) !important;
+  color: #ffffff !important;
+  border-color: var(--red-color) !important;
+  box-shadow: 0 4px 12px rgba(181, 0, 0, 0.25) !important;
+}
+
+/* --------------------------------------------------------------------------
+   4. FAQ Section Styles
+   -------------------------------------------------------------------------- */
+.faq_section {
+  background-color: #ffffff;
+}
+
+.section_subheading {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.faq-accordion-container {
+  max-width: 800px;
+  width: 100%;
+}
+
+.faq-item {
+  background: #ffffff;
+  border: 1.5px solid #f2f2f2;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.faq-item:hover {
+  border-color: #dee2e6;
+}
+
+.faq-item.active {
+  border-color: var(--red-color);
+  box-shadow: 0 8px 20px rgba(181, 0, 0, 0.06);
+}
+
+.faq-question-btn {
+  outline: none;
+  cursor: pointer;
+}
+
+.faq-question-text {
+  font-family: var(--font-poppins), sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  color: #2b2b2b;
+  transition: color 0.3s ease;
+}
+
+.faq-question-btn:hover .faq-question-text {
+  color: var(--red-color);
+}
+
+.faq-chevron {
+  color: #6c757d;
+  font-size: 16px;
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), 
+              color 0.3s ease;
+  flex-shrink: 0;
+  margin-left: 15px;
+}
+
+.faq-item.active .faq-chevron {
+  transform: rotate(180deg);
+  color: var(--red-color);
+}
+
+.faq-answer-wrapper {
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), 
+              opacity 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.faq-answer-content p {
+  font-size: 14.5px;
+  color: #495057;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.view-all-faq-btn {
+  font-family: var(--font-poppins), sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  border-color: var(--red-color);
+  color: var(--red-color);
+  display: inline-block;
+}
+
+.view-all-faq-btn:hover,
+.view-all-faq-btn:focus,
+.view-all-faq-btn:active {
+  background-color: var(--red-color) !important;
+  color: #ffffff !important;
+  border-color: var(--red-color) !important;
+  box-shadow: 0 4px 12px rgba(181, 0, 0, 0.25) !important;
+}
+
+/* --------------------------------------------------------------------------
+   5. Why Choose Us Styles
+   -------------------------------------------------------------------------- */
+.why_choose_section {
+  background-color: #f8f9fa;
+}
+
+.why-choose-subheading {
+  font-family: var(--font-poppins), sans-serif;
+  max-width: 600px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.reason-card {
+  background: #ffffff;
+  border: 1.5px solid #eaeaea;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), 
+              box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), 
+              border-color 0.3s ease;
+}
+
+.reason-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--red-color);
+  box-shadow: 0 8px 24px rgba(181, 0, 0, 0.07);
+}
+
+.reason-icon-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  background-color: rgba(181, 0, 0, 0.08);
+  color: var(--red-color);
+  font-size: 22px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.reason-card:hover .reason-icon-box {
+  background-color: var(--red-color);
+  color: #ffffff;
+}
+
+.reason-card-title {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: #2b2b2b;
+  transition: color 0.3s ease;
+}
+
+.reason-card:hover .reason-card-title {
+  color: var(--red-color);
+}
+
+.reason-card-desc {
+  font-size: 13.5px;
+  color: #6c757d;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* --------------------------------------------------------------------------
+   6. Popular Categories Styles
+   -------------------------------------------------------------------------- */
+.popular_categories_section {
+  background-color: #ffffff;
+}
+
+.pop-categories-subheading {
+  font-family: var(--font-poppins), sans-serif;
+  max-width: 500px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.pop-categories-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.pop-category-card-link {
+  display: block;
+}
+
+.pop-category-card {
+  background: #ffffff;
+  border: 1.5px solid #eaeaea;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), 
+              box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), 
+              border-color 0.3s ease;
+  height: 240px;
+}
+
+.pop-category-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--red-color);
+  box-shadow: 0 8px 24px rgba(181, 0, 0, 0.07);
+}
+
+.pop-category-icon-box {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(181, 0, 0, 0.06);
+  color: var(--red-color);
+  font-size: 24px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.pop-category-card:hover .pop-category-icon-box {
+  background-color: var(--red-color);
+  color: #ffffff;
+}
+
+.pop-category-card-title {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #2b2b2b;
+  transition: color 0.3s ease;
+}
+
+.pop-category-card:hover .pop-category-card-title {
+  color: var(--red-color);
+}
+
+.pop-category-card-desc {
+  font-size: 13.5px;
+  color: #6c757d;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   GLOBAL RESPONSIVE OVERRIDES
+   ========================================================================== */
+@media (max-width: 992px) {
+  .reasons-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .pop-categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .cities-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-slider-container {
+    padding: 20px 5px;
+  }
+  .testimonials-prev-btn,
+  .testimonials-next-btn {
+    display: none !important;
+  }
+  .testimonials-swiper .swiper-slide {
+    transform: scale(0.92);
+  }
+  .testimonials-swiper .swiper-slide-active {
+    transform: scale(1.02);
+  }
+}
+
+@media (max-width: 576px) {
+  .cities-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .city-pill {
+    padding: 10px 8px !important;
+  }
+  .city-name {
+    font-size: 14px;
+  }
+  .faq-question-text {
+    font-size: 15px;
+  }
+  .faq-question-btn {
+    padding: 18px 16px !important;
+  }
+  .faq-answer-content {
+    padding: 0 16px 18px 16px !important;
+  }
+  .faq-answer-content p {
+    font-size: 13.5px;
+  }
+  .reasons-grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px;
+  }
+  .reason-card {
+    padding: 20px !important;
+  }
+  .pop-categories-grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px;
+  }
+  .pop-category-card {
+    height: auto;
+    min-height: 200px;
+    padding: 20px !important;
+  }
+}

@@ -2,7 +2,6 @@
 import React from "react";
 import Link from "next/link";
 import { FaCar, FaBroom, FaBolt, FaWrench } from "react-icons/fa";
-import "./popular_categories.css";
 
 const categoriesData = [
   {

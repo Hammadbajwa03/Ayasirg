@@ -2,6 +2,7 @@
 
 import React, { useEffect } from "react";
 import dynamic from "next/dynamic";
+import "./components/homepage_custom_sections.css";
 import Hero from "./components/Hero/hero";
 
 const OurMission = dynamic(() => import("./components/Our-mission/OurMission"), {

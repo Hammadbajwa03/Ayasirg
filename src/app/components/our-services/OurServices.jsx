@@ -5,7 +5,6 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import "./our_services.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
