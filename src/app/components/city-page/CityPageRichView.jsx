@@ -5,6 +5,7 @@ import Link from "next/link";
 import dynamic from "next/dynamic";
 import Advartisement from "@/app/components/AdvertisementBar/Advartisement";
 import "./city-page.css";
+import "../homepage_custom_sections.css";
 
 const OurServices = dynamic(() => import("../our-services/OurServices"), {
   ssr: false,
