@@ -1,9 +1,10 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./translateWrapper.css";
 
 export default function TranslateWrapper() {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [shouldLoad, setShouldLoad] = useState(false);
 
   const cleanupGoogleWidget = () => {
     const el = document.getElementById("google_translate_element");
@@ -51,30 +52,44 @@ export default function TranslateWrapper() {
     document.body.appendChild(script);
   };
 
-  useEffect(() => {
-    const delayLoad = () => {
-      if (typeof window !== "undefined") {
-        if ("requestIdleCallback" in window) {
-          window.requestIdleCallback(() => {
-            setTimeout(loadAndInit, 1000);
-          });
-        } else {
-          setTimeout(loadAndInit, 2000);
-        }
-      }
-    };
+  const handleInteraction = () => {
+    setShouldLoad(true);
+    loadAndInit();
+  };
 
-    if (document.readyState === "complete") {
-      delayLoad();
-    } else {
-      window.addEventListener("load", delayLoad);
-      return () => window.removeEventListener("load", delayLoad);
-    }
-  }, []);
+  if (!shouldLoad) {
+    return (
+      <div className="translate-placeholder" style={{ marginRight: "10px" }}>
+        <select 
+          onClick={handleInteraction}
+          onTouchStart={handleInteraction}
+          onChange={handleInteraction}
+          defaultValue="en"
+          style={{
+            background: "#f0f0f0",
+            borderRadius: "6px",
+            padding: "4px 8px",
+            border: "none",
+            outline: "none",
+            cursor: "pointer",
+            fontSize: "14px",
+            fontWeight: "500",
+            color: "#2b2b2b"
+          }}
+        >
+          <option value="en">Urdu / English</option>
+        </select>
+      </div>
+    );
+  }
 
   return (
     <div>
-      {!isLoaded && <div className="skeleton-box"></div>}
+      {!isLoaded && (
+        <div className="translate-loader">
+          <div className="skeleton-box"></div>
+        </div>
+      )}
       <div id="google_translate_element"></div>
     </div>
   );
