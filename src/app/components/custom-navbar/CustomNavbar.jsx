@@ -179,12 +179,12 @@ export default function CustomNavbar() {
     <section className="navbar notranslate">
       <div className="container">
         <nav className="nav">
-          <div className="logo_div" onClick={() => { setMyNavbar(false) }}>
-            <Link href={'/'}><Image src="/assets/ayasirglogo.png" width={200} height={200} alt="Aya Sir G! logo — go to homepage" className="logo" /></Link>
-          </div>
+          <div className="d-flex align-items-center gap-4 logo-nav-group">
+            <div className="logo_div" onClick={() => { setMyNavbar(false) }}>
+              <Link href={'/'}><Image src="/assets/ayasirglogo.png" width={200} height={200} alt="Aya Sir G! logo — go to homepage" className="logo" /></Link>
+            </div>
 
-          <div className="nav_items d-flex align-items-center">
-            <ul className={`list-unstyled list ${myNavbar ? "active" : ""}`}>
+            <ul className={`list-unstyled list mb-0 ${myNavbar ? "active" : ""}`}>
               <li onClick={() => { setMyNavbar(false); handleDropdownItemClick(); }}><Link href="/" className={pathname === "/" ? "active" : ""}>Home</Link></li>
               <li onClick={() => { setMyNavbar(false); handleDropdownItemClick(); }}><Link href="/about-us" className={pathname === "/about-us" ? "active" : ""}>About Us</Link></li>
               <li onClick={() => { setMyNavbar(false); handleDropdownItemClick(); }}><Link href="/services" className={pathname === "/services" ? "active" : ""}>Services</Link></li>
@@ -297,17 +297,9 @@ export default function CustomNavbar() {
               </li>
 
             </ul>
+          </div>
 
-            {/* <Dropdown>
-              <Dropdown.Toggle>
-                <CiGlobe /> Language <IoIosArrowDown />
-              </Dropdown.Toggle>
-              <Dropdown.Menu>
-                <Dropdown.Item onClick={() => changeLanguage("en")} >English</Dropdown.Item>
-                <Dropdown.Item onClick={() => changeLanguage("ur")} >Urdu</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown> */}
-
+          <div className="nav_items d-flex align-items-center gap-3">
             <TranslateWrapper onClick={() => { setMyNavbar(false); handleDropdownItemClick() }} />
             {/* <div style={{ border: "1px solid gray" }}>
               <div id="google_translate_element"></div> 
