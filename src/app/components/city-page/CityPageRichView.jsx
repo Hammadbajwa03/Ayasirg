@@ -1,7 +1,15 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import Advartisement from "@/app/components/AdvertisementBar/Advartisement";
 import "./city-page.css";
+
+const OurServices = dynamic(() => import("../our-services/OurServices"), {
+  ssr: false,
+  loading: () => <div className="skeleton-box" style={{ height: "300px", background: "#ffffff", margin: "20px 0", borderRadius: "8px" }}></div>,
+});
 
 /**
  * SEO-rich city landing (Islamabad / Karachi).
@@ -48,12 +56,12 @@ export default function CityPageRichView({ city, cityId }) {
                   <span className="city_hero_tag">Aya Sir G · {city.name}</span>
                   <h1 className="city_hero_h1">{hero.h1}</h1>
                   <p className="city_hero_sub">{hero.subheading}</p>
-                  {/* <div className="city_cta_row city_cta_row_hero">
+                  <div className="city_cta_row city_cta_row_hero">
                     <Link href={listingsHref} className="city_btn_primary">
                       {hero.ctaPrimary}
                     </Link>
                     <Link href="/services" className="city_btn_outline city_btn_outline_light">
-                      {hero.ctaSecondary}
+                      Book Now
                     </Link>
                     {hero.ctaTertiary && hero.whatsappHref ? (
                       <a
@@ -65,7 +73,7 @@ export default function CityPageRichView({ city, cityId }) {
                         {hero.ctaTertiary}
                       </a>
                     ) : null}
-                  </div> */}
+                  </div>
                 </div>
               </div>
 
@@ -197,12 +205,14 @@ export default function CityPageRichView({ city, cityId }) {
                   </section>
                 ) : null}
 
-                {/* <div className="city_cta_row">
+                <OurServices />
+
+                <div className="city_cta_row justify-content-center text-center mt-4">
                   <Link href={listingsHref} className="city_btn_primary">
                     {hero.ctaPrimary}
                   </Link>
                   <Link href="/services" className="city_btn_outline">
-                    {hero.ctaSecondary}
+                    Book Now
                   </Link>
                   {hero.ctaTertiary && hero.whatsappHref ? (
                     <a
@@ -214,7 +224,7 @@ export default function CityPageRichView({ city, cityId }) {
                       {hero.ctaTertiary}
                     </a>
                   ) : null}
-                </div> */}
+                </div>
               </div>
             </article>
           </div>
