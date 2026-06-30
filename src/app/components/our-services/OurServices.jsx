@@ -276,7 +276,6 @@ export default function OurServices() {
                         width={70} 
                         height={70} 
                         className="service-icon-img"
-                        unoptimized
                       />
                     </div>
                     <h3 className="service-card-title mb-2">{service.name}</h3>
