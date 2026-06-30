@@ -187,17 +187,19 @@ export default function CityPageRichView({ city, cityId }) {
                     </div>
                   </section>
                 ) : null}
-
-                <OurServices />
-
-                <div className="city_cta_row justify-content-center text-center mt-4">
-                  <Link href={listingsHref} className="city_btn_primary">
-                    {hero.ctaPrimary}
-                  </Link>
-                </div>
               </div>
             </article>
           </div>
+        </div>
+      </div>
+
+      <OurServices />
+
+      <div className="container py-4">
+        <div className="city_cta_row justify-content-center text-center mt-2" style={{ borderTop: "none" }}>
+          <Link href={listingsHref} className="city_btn_primary">
+            {hero.ctaPrimary}
+          </Link>
         </div>
       </div>
     </section>
