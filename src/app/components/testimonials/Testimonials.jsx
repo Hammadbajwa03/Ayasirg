@@ -60,6 +60,8 @@ export default function Testimonials() {
             slidesPerView={1.2}
             centeredSlides={true}
             loop={true}
+            observer={true}
+            observeParents={true}
             autoplay={{ delay: 4000, disableOnInteraction: false }}
             navigation={{
               prevEl: ".testimonials-prev-btn",

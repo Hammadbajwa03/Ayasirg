@@ -484,6 +484,8 @@ export default function Page() {
                     modules={[Navigation, Pagination, Autoplay]}
                     spaceBetween={20}
                     slidesPerView={4}
+                    observer={true}
+                    observeParents={true}
                     autoplay={{ delay: 3000 }}
                     pagination={{ clickable: true }}
                     navigation

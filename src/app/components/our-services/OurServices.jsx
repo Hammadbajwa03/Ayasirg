@@ -249,6 +249,8 @@ export default function OurServices() {
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={24}
             slidesPerView={4}
+            observer={true}
+            observeParents={true}
             autoplay={{ delay: 3500, disableOnInteraction: false }}
             pagination={{ clickable: true, el: ".services-swiper-pagination" }}
             navigation={{

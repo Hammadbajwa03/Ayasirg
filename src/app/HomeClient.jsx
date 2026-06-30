@@ -16,7 +16,7 @@ const PopularCategories = dynamic(() => import("./components/popular-categories/
 });
 
 const OurServices = dynamic(() => import("./components/our-services/OurServices"), {
-  ssr: true,
+  ssr: false,
   loading: () => <div className="skeleton-box" style={{ height: "300px", background: "#ffffff", margin: "20px 0", borderRadius: "8px" }}></div>,
 });
 
@@ -31,7 +31,7 @@ const Services = dynamic(() => import("./components/services/Services"), {
 });
 
 const Testimonials = dynamic(() => import("./components/testimonials/Testimonials"), {
-  ssr: true,
+  ssr: false,
   loading: () => <div className="skeleton-box" style={{ height: "250px", background: "#ffffff", margin: "20px 0", borderRadius: "8px" }}></div>,
 });
 
