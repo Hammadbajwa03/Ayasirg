@@ -32,7 +32,7 @@
   color: #1a1a1a;
   padding: clamp(3.5rem, 8vw, 6rem) 0;
   position: relative;
-  border-bottom: 4px solid var(--red-color);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .mech_hero_content {
@@ -378,9 +378,7 @@
 /* Responsive adjustments */
 @media (max-width: 767px) {
   .mech_hero_ctas {
-    flex-direction: column;
-  }
-  .mech_hero_ctas .mech_btn {
-    width: 100%;
+    flex-direction: row;
+    justify-content: center;
   }
 }
