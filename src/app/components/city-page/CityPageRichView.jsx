@@ -190,7 +190,7 @@ export default function CityPageRichView({ city, cityId }) {
                 <OurServices />
 
                 <div className="city_cta_row justify-content-center text-center mt-4">
-                  <Link href={listingsHref} className="city_btn_primary">
+                  <Link href="/services" className="city_btn_primary">
                     {hero.ctaPrimary}
                   </Link>
                 </div>
