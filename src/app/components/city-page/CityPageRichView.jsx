@@ -56,24 +56,6 @@ export default function CityPageRichView({ city, cityId }) {
                   <span className="city_hero_tag">Aya Sir G · {city.name}</span>
                   <h1 className="city_hero_h1">{hero.h1}</h1>
                   <p className="city_hero_sub">{hero.subheading}</p>
-                  <div className="city_cta_row city_cta_row_hero">
-                    <Link href={listingsHref} className="city_btn_primary">
-                      {hero.ctaPrimary}
-                    </Link>
-                    <Link href="/services" className="city_btn_outline city_btn_outline_light">
-                      Book Now
-                    </Link>
-                    {hero.ctaTertiary && hero.whatsappHref ? (
-                      <a
-                        href={hero.whatsappHref}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="city_btn_whatsapp"
-                      >
-                        {hero.ctaTertiary}
-                      </a>
-                    ) : null}
-                  </div>
                 </div>
               </div>
 
@@ -211,19 +193,6 @@ export default function CityPageRichView({ city, cityId }) {
                   <Link href={listingsHref} className="city_btn_primary">
                     {hero.ctaPrimary}
                   </Link>
-                  <Link href="/services" className="city_btn_outline">
-                    Book Now
-                  </Link>
-                  {hero.ctaTertiary && hero.whatsappHref ? (
-                    <a
-                      href={hero.whatsappHref}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="city_btn_whatsapp city_btn_whatsapp_dark"
-                    >
-                      {hero.ctaTertiary}
-                    </a>
-                  ) : null}
                 </div>
               </div>
             </article>
