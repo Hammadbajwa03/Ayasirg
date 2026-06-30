@@ -1,0 +1,117 @@
+.faq_section {
+  background-color: #ffffff;
+}
+
+.section_subheading {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.faq-accordion-container {
+  max-width: 800px;
+  width: 100%;
+}
+
+.faq-item {
+  background: #ffffff;
+  border: 1.5px solid #f2f2f2;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.faq-item:hover {
+  border-color: #dee2e6;
+}
+
+.faq-item.active {
+  border-color: var(--red-color);
+  box-shadow: 0 8px 20px rgba(181, 0, 0, 0.06);
+}
+
+.faq-question-btn {
+  outline: none;
+  cursor: pointer;
+}
+
+.faq-question-text {
+  font-family: var(--font-poppins), sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  color: #2b2b2b;
+  transition: color 0.3s ease;
+}
+
+.faq-question-btn:hover .faq-question-text {
+  color: var(--red-color);
+}
+
+.faq-chevron {
+  color: #6c757d;
+  font-size: 16px;
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), 
+              color 0.3s ease;
+  flex-shrink: 0;
+  margin-left: 15px;
+}
+
+.faq-item.active .faq-chevron {
+  transform: rotate(180deg);
+  color: var(--red-color);
+}
+
+/* Accordion slide-down transition styling */
+.faq-answer-wrapper {
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), 
+              opacity 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.faq-answer-content p {
+  font-size: 14.5px;
+  color: #495057;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* Button link custom style */
+.view-all-faq-btn {
+  font-family: var(--font-poppins), sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  border-color: var(--red-color);
+  color: var(--red-color);
+  display: inline-block;
+}
+
+.view-all-faq-btn:hover,
+.view-all-faq-btn:focus,
+.view-all-faq-btn:active {
+  background-color: var(--red-color) !important;
+  color: #ffffff !important;
+  border-color: var(--red-color) !important;
+  box-shadow: 0 4px 12px rgba(181, 0, 0, 0.25) !important;
+}
+
+/* Mobile responsive style */
+@media (max-width: 576px) {
+  .faq-question-text {
+    font-size: 15px;
+  }
+  
+  .faq-question-btn {
+    padding: 18px 16px !important;
+  }
+
+  .faq-answer-content {
+    padding: 0 16px 18px 16px !important;
+  }
+
+  .faq-answer-content p {
+    font-size: 13.5px;
+  }
+}
