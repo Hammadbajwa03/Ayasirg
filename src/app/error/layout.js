@@ -1,4 +1,5 @@
 export const metadata = {
+  title: "Page Not Found | Ayasirg",
   robots: { index: false, follow: false },
 };
 

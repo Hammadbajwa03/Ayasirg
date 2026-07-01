@@ -8,10 +8,13 @@ export async function generateMetadata({ params }) {
     const user = data.data;
     if (!user) return {};
 
-    const title = `${user.username || "Profile"} | Aya Sir G!`;
-    const description = user.description
-      ? user.description.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim().slice(0, 160)
-      : `View profile, ratings, portfolio, contact details and reviews of ${user.username || "this helper"} on Aya Sir G!.`;
+    const workerName = user.username || "Verified Professional";
+    const jobTitle = (Array.isArray(user.fields_of_interest) && user.fields_of_interest[0]?.name)
+      ? user.fields_of_interest[0].name
+      : "Local Service";
+
+    const title = `${workerName} - Professional ${jobTitle} Services | Ayasirg`;
+    const description = `Hire ${workerName}, a professional ${jobTitle}. View skills, work experience, customer ratings, and book top local services instantly on Ayasirg.`;
 
     return {
       title,
@@ -23,7 +26,7 @@ export async function generateMetadata({ params }) {
   } catch (error) {
     console.error("Error generating metadata for profile details:", error);
     return {
-      title: "Profile Details | Aya Sir G!",
+      title: "Worker Profile | Ayasirg",
     };
   }
 }

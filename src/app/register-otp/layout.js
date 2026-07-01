@@ -1,4 +1,5 @@
 export const metadata = {
+  title: "Verify Registration OTP | Ayasirg",
   robots: { index: false, follow: false },
 };
 

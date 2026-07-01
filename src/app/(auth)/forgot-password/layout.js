@@ -1,4 +1,5 @@
 export const metadata = {
+  title: "Reset Your Password | Ayasirg",
   robots: { index: false, follow: false },
 };
 

@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "E-Center Records & Onboarded Partner Listings | Aya Sir G!",
+  title: "View E-Center Records & History | Ayasirg",
   description:
-    "Manage and update records of all onboarded helpers and service providers. View user types, verify ratings, and check active registrations.",
+    "Keep track of your digital e-center service history, records, and ongoing applications securely through the centralized Ayasirg platform.",
   alternates: {
     canonical: "https://www.ayasirg.com/ecenter-record",
   },

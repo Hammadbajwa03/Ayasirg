@@ -1,4 +1,5 @@
 export const metadata = {
+  title: "Create a New Account | Ayasirg",
   robots: { index: false, follow: false },
 };
 

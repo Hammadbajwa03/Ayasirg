@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "Register as a Service Provider | Find Daily Jobs on Aya Sir G!",
+  title: "Join as a Verified Service Provider | Ayasirg",
   description:
-    "Register your blue-collar skills or domestic services on Aya Sir G! today. Create your profile, upload your credentials, and get direct job calls without commission.",
+    "Grow your business today. Register as a verified service provider on Ayasirg, reach more customers, and start earning more.",
   alternates: {
     canonical: "https://www.ayasirg.com/register-service-provider",
   },

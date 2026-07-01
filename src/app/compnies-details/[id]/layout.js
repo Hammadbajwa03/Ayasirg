@@ -6,12 +6,16 @@ export async function generateMetadata({ params }) {
     if (!res.ok) throw new Error("Failed to fetch company details");
     const data = await res.json();
     const company = data.data;
-    if (!company) return {};
+    if (!company) {
+      return {
+        title: "Ayasirg Services, Reviews & Details | Ayasirg",
+        description: "Learn more about ayasirg Check their services, customer reviews, contact details, and professional background on Ayasirg.",
+      };
+    }
 
-    const title = `${company.username || "Company"} | Aya Sir G!`;
-    const description = company.description
-      ? company.description.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim().slice(0, 160)
-      : `View profile, ratings, contact details and services of ${company.username || "this company"} on Aya Sir G!.`;
+    const companyName = company.username || "Ayasirg Partner";
+    const title = `${companyName} Services, Reviews & Details | Ayasirg`;
+    const description = `Learn more about ${companyName}. Check their services, customer reviews, contact details, and professional background on Ayasirg.`;
 
     return {
       title,
@@ -23,7 +27,8 @@ export async function generateMetadata({ params }) {
   } catch (error) {
     console.error("Error generating metadata for company details:", error);
     return {
-      title: "Company Details | Aya Sir G!",
+      title: "Ayasirg Services, Reviews & Details | Ayasirg",
+      description: "Learn more about ayasirg Check their services, customer reviews, contact details, and professional background on Ayasirg.",
     };
   }
 }

@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "E-Center Partner Registration & Onboarding | Aya Sir G!",
+  title: "Digital E-Center Services Directory | Ayasirg",
   description:
-    "Join Aya Sir G! as an E-Center partner. Register your shop or agency, onboard local service providers and helpers, and start earning commission in Pakistan.",
+    "Access the online Ayasirg E-Center to manage records, explore available digital services, and connect with local service channels seamlessly.",
   alternates: {
     canonical: "https://www.ayasirg.com/e-center",
   },

@@ -9,11 +9,11 @@ export async function generateMetadata({ params }) {
     if (!blog) return {};
     
     const plainDescription = blog.description
-      ? blog.description.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim().slice(0, 160)
+      ? blog.description.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim().slice(0, 150)
       : "";
 
     return {
-      title: `${blog.title} | Aya Sir G!`,
+      title: `${blog.title} | Ayasirg`,
       description: plainDescription,
       alternates: {
         canonical: `https://www.ayasirg.com/blog-detail/${slug}`,
@@ -22,7 +22,7 @@ export async function generateMetadata({ params }) {
   } catch (error) {
     console.error("Error generating metadata for blog detail:", error);
     return {
-      title: "Blog Details | Aya Sir G!",
+      title: "Blog Details | Ayasirg",
     };
   }
 }

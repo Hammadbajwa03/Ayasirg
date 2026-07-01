@@ -1,7 +1,7 @@
 export async function generateMetadata() {
   return {
-    title: "Expert Blogs & Home Service Guides | Aya Sir G!",
-    description: "Read the latest blogs, guides, and tips on maintenance, cleaning, parenting, and home improvement in Pakistan from Aya Sir G!.",
+    title: "Latest Blogs, News & Expert Articles | Ayasirg",
+    description: "Read our latest blogs, expert articles, and helpful tips on local services, maintenance, and updates. Stay informed with Ayasirg.",
     alternates: {
       canonical: "https://www.ayasirg.com/blogs",
     },

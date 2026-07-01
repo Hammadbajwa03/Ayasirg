@@ -19,8 +19,8 @@ export async function generateMetadata({ searchParams }) {
           ? cat.description.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim().slice(0, 160)
           : "";
         return {
-          title: `${name} Services in Pakistan | Aya Sir G!`,
-          description: plainDesc || `${name} — Browse verified professionals on Aya Sir G! in Pakistan.`,
+          title: `${name} Services in Pakistan | Ayasirg`,
+          description: plainDesc || `${name} — Browse verified professionals on Ayasirg in Pakistan.`,
           alternates: {
             canonical: `https://www.ayasirg.com/compnies?category_id=${categoryId}`,
           },
@@ -32,8 +32,8 @@ export async function generateMetadata({ searchParams }) {
   }
 
   return {
-    title: "Verified Companies & Service Providers | Aya Sir G!",
-    description: "Browse and hire verified local service providers, home cooks, cleaners, plumbers, electricians, and more on Aya Sir G!.",
+    title: "Find Verified Companies & Workers Online | Ayasirg",
+    description: "Browse our complete directory of verified companies and local workers. Connect with top-rated professionals for your needs today through Ayasirg.",
     alternates: {
       canonical: "https://www.ayasirg.com/compnies",
     },
