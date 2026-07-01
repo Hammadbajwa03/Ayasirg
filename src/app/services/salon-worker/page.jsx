@@ -153,10 +153,19 @@ export default function SalonWorkerPage() {
         <div className="container">
           <div className="salon_worker_content_wrapper">
             <h2 className="salon_worker_section_heading">
-              What Does a Salon Worker &amp; Beautician Do?
+              Salon Services at Home with Aya Sir G!
             </h2>
             <p className="salon_worker_content_text">
-              Professional salon workers help deliver quality beauty and grooming services while ensuring customers enjoy a comfortable experience. In Lahore, Pakistan, salons and beauty parlours hire trained salon staff for hair styling, hair washing, makeup assistance, manicure, pedicure, skincare treatments, customer service, appointment management, and maintaining hygiene standards. Whether you need a full-time salon worker, beauty assistant, or experienced salon staff for a beauty salon, spa, or grooming center, skilled professionals contribute to smooth daily operations. Aya Sir G connects businesses with trusted salon workers in Lahore, making it easy to hire reliable beauty and grooming professionals for salons and personal care businesses.
+              At first glance, the salon services category may seem less essential compared to other blue-collar services. However, in reality, it plays an important role in many households.
+            </p>
+            <p className="salon_worker_content_text">
+              For example, families with elderly members, patients or young children (toddlers) often find it difficult to visit salons. In such cases, they require professional salon services at home, such as haircuts, shaving and head massage.
+            </p>
+            <p className="salon_worker_content_text">
+              This is why Aya Sir G! includes salon workers as part of its platform. The goal is to ensure that every type of worker is valued and every essential service is accessible in one place.
+            </p>
+            <p className="salon_worker_content_text">
+              With Aya Sir G!, users can find trusted at-home salon professionals, review their profiles and book services conveniently. The platform is designed to bring all essential services under one roof, making life easier for both workers and customers.
             </p>
             <div className="mt-4 pt-2">
               <span className="text-muted small">

@@ -151,9 +151,15 @@ export default function BeauticianPage() {
       <section className="beautician_content_block">
         <div className="container">
           <div className="beautician_content_wrapper">
-            <h2 className="beautician_section_heading">What Does a Professional Beautician Do?</h2>
+            <h2 className="beautician_section_heading">Book a Trusted Female Beautician at Home with Aya Sir G!</h2>
             <p className="beautician_content_text">
-              Professional beauty services help you look and feel your best for everyday life as well as special occasions. In Lahore, Pakistan, experienced beauticians offer a wide range of services, including bridal makeup, party makeup, skincare treatments, facials, hair styling, hair cutting, manicure, pedicure, waxing, threading, and professional beauty consultations. Whether you are preparing for a wedding, an event, or simply want regular self-care, a skilled beautician ensures quality service using proper techniques and hygiene standards. Many professionals also provide home beauty services for added convenience. Aya Sir G helps you find trusted beauticians in Lahore, making it easy to book experienced beauty professionals for salon services, home salon visits, and personalized beauty care according to your needs.
+              You may have heard controversial news about beauty salons that can make people uncomfortable, especially in Pakistani society, where privacy, identity and personal dignity are highly valued. Many women who follow cultural and religious values do not always feel comfortable visiting a beauty salon.
+            </p>
+            <p className="beautician_content_text">
+              To provide a safer and more convenient option, Aya Sir G! has introduced the Beautician at Home category. You can easily find and book a trusted beautician near you and enjoy professional beauty services in the comfort and privacy of your own home. This allows you to avoid concerns about scams, hidden cameras or other privacy issues.
+            </p>
+            <p className="beautician_content_text">
+              Since a beautician's experience and expertise are important, Aya Sir G! allows you to view each beautician's profile before making a decision. You can check their experience, read customer reviews and go through the comments section to choose the beautician that best meets your needs with confidence.
             </p>
             <div className="mt-4 pt-2">
               <span className="text-muted small">

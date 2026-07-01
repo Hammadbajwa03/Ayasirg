@@ -153,9 +153,18 @@ export default function BlindsCurtainsWallpapersPage() {
       <section className="blinds_content_block">
         <div className="container">
           <div className="blinds_content_wrapper">
-            <h2 className="blinds_section_heading">What Do Blinds, Curtains & Wallpaper Installers Do?</h2>
+            <h2 className="blinds_section_heading">One Platform for All Home and Local Services — Aya Sir G!</h2>
             <p className="blinds_content_text">
-              Blinds, curtains, and wallpapers play an important role in enhancing the beauty, privacy, and comfort of any home or office. In Lahore, Pakistan, homeowners and businesses often choose modern window blinds, stylish curtains, and decorative wallpapers to create elegant and functional interior spaces. Professional service providers offer curtain stitching, curtain installation, roller blinds, zebra blinds, vertical blinds, blackout curtains, custom window treatments, wallpaper installation, and wall décor solutions for bedrooms, living rooms, offices, shops, and commercial properties. Whether you are renovating your space or decorating a new property, Aya Sir G helps you connect with experienced professionals in Lahore for high-quality blinds, curtains, wallpapers, installation, and interior decoration services that match your style and budget.
+              The aim of Aya Sir G! is to make life easier for customers by bringing essential home and local services onto a single platform.
+            </p>
+            <p className="blinds_content_text">
+              If we look back 10 years, most restaurants had their own delivery riders with customized bikes and food boxes. Today, these have been replaced by food delivery apps. Similarly, traditional rickshaw booking or taxi arrangements have largely been replaced by ride-hailing apps.
+            </p>
+            <p className="blinds_content_text">
+              In the same way, Aya Sir G! believes that customers should be able to access all essential services in one place. There is no need to visit nearby shops for curtain installation experts, knock on neighbors' doors to find a maid, call friends to ask for the best mechanic or go to local markets and chowks to find masons for construction work.
+            </p>
+            <p className="blinds_content_text">
+              With Aya Sir G!, you can simply sign up and find nearby professionals such as blind installation experts, curtain fitters, wallpaper services, electricians, plumbers and other home service providers quickly and easily, all from one platform.
             </p>
             <div className="mt-4 pt-2">
               <span className="text-muted small">

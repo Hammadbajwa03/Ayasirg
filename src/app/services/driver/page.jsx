@@ -152,9 +152,24 @@ export default function DriverPage() {
       <section className="driver_content_block">
         <div className="container">
           <div className="driver_content_wrapper">
-            <h2 className="driver_section_heading">What Does a Professional Driver Do?</h2>
+            <h2 className="driver_section_heading">Trusted Drivers and Verified Driver Hiring with Aya Sir G!</h2>
             <p className="driver_content_text">
-              Hiring a professional driver provides convenience, safety, and peace of mind for daily travel, business trips, family outings, and special occasions. In Lahore, Pakistan, experienced drivers offer services for personal vehicles, company transport, chauffeur services, airport transfers, outstation travel, school pick-up and drop-off, corporate transportation, and event driving. Whether you need a full-time driver, part-time driver, temporary driver, or a personal chauffeur, skilled professionals ensure safe and responsible driving while following traffic regulations. Aya Sir G connects you with trusted drivers in Lahore, making it easy to find reliable transportation professionals for residential, commercial, and business travel according to your schedule and requirements.
+              Are you looking for a driver for your home, family or personal vehicle? When you hand over a car worth millions of rupees, you are also trusting that person with your safety and your loved ones.
+            </p>
+            <p className="driver_content_text">
+              A driver is not an ordinary hire. They may be responsible for picking up your children from school, transporting family members or managing daily travel. In such cases, trust, responsibility and background matter more than anything else.
+            </p>
+            <p className="driver_content_text">
+              It is not safe to randomly hire someone without proper verification and experience. The risk involves not only your valuable asset but also the safety of your family.
+            </p>
+            <p className="driver_content_text">
+              Aya Sir G! understands these concerns and provides a safer way to hire verified drivers. On the platform, you can review each driver's profile, experience and feedback from previous employers. You can also listen to voice notes, CV details and check their work history to make an informed decision.
+            </p>
+            <p className="driver_content_text">
+              With Aya Sir G!, you can also check whether a driver has any past complaints or issues, ensuring transparency before hiring.
+            </p>
+            <p className="driver_content_text">
+              This helps you choose a responsible and trustworthy driver with confidence, rather than relying on unknown or unverified sources.
             </p>
             <div className="mt-4 pt-2">
               <span className="text-muted small">

@@ -152,9 +152,21 @@ export default function WeldingWorkerPage() {
       <section className="welding_worker_content_block">
         <div className="container">
           <div className="welding_worker_content_wrapper">
-            <h2 className="welding_worker_section_heading">Expert Metal Fabrication &amp; Gate Repair Services</h2>
+            <h2 className="welding_worker_section_heading">Reliable Welders and Fabrication Services with Aya Sir G!</h2>
             <p className="welding_worker_content_text">
-              Professional welding workers provide strong, durable, and precision metal fabrication services for residential, commercial, and industrial projects. In Lahore, Pakistan, skilled welders offer steel welding, iron welding, stainless steel fabrication, gate fabrication, grill welding, window frames, stair railings, metal repair, structural welding, and custom metalwork according to client requirements. Whether you need welding services for construction, home renovation, factory work, or custom fabrication, experienced professionals ensure quality workmanship and safety standards. Aya Sir G connects you with trusted welding workers in Lahore, making it easy to hire reliable welders for metal fabrication, repairs, installation, and structural welding services.
+              Whether you are building a new home, adding a shade or working on any metal structure, you often need a professional welder to complete the job.
+            </p>
+            <p className="welding_worker_content_text">
+              With Aya Sir G!, you can easily find nearby welding and fabrication experts and request competitive quotations directly from verified professionals.
+            </p>
+            <p className="welding_worker_content_text">
+              In many cases, people face issues where a welder takes an advance payment but does not show up or delays the work. These situations can lead to frustration and financial loss.
+            </p>
+            <p className="welding_worker_content_text">
+              Aya Sir G! helps solve this problem by allowing users to check each welder's profile, credibility, ratings and past customer feedback before hiring. This ensures you are dealing with experienced and trustworthy professionals.
+            </p>
+            <p className="welding_worker_content_text">
+              The platform is not just a service directory it brings real, verified profiles of skilled workers, helping customers connect with experts in their field with confidence and transparency.
             </p>
             <div className="mt-4 pt-2">
               <span className="text-muted small">

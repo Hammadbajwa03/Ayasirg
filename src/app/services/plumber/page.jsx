@@ -152,9 +152,18 @@ export default function PlumberPage() {
       <section className="plumber_content_block">
         <div className="container">
           <div className="plumber_content_wrapper">
-            <h2 className="plumber_section_heading">What Does a Professional Plumber Do?</h2>
+            <h2 className="plumber_section_heading">Empowering Plumbers and Blue-Collar Workers with Aya Sir G!</h2>
             <p className="plumber_content_text">
-              A professional plumber is essential for maintaining safe and efficient water supply and drainage systems in homes, offices, shops, and commercial buildings. In Lahore, Pakistan, experienced plumbers provide services such as pipe installation, water leakage repair, drain cleaning, bathroom fitting, kitchen plumbing, sewer line repair, water tank installation, geyser installation, faucet replacement, toilet repair, and complete plumbing maintenance. Whether you need emergency plumbing repairs or plumbing services for a new construction project, skilled professionals ensure reliable workmanship and long-lasting solutions. Aya Sir G helps you connect with trusted plumbers in Lahore for residential and commercial plumbing installation, repairs, maintenance, and water system solutions.
+              In many local markets, it is common to see plumbers and other skilled workers sitting outside sanitary shops, waiting for customers. They often spend hours talking to each other or helping shopkeepers just to stay available for daily work opportunities.
+            </p>
+            <p className="plumber_content_text">
+              Unfortunately, many of them wait the entire day without receiving any job and eventually return home without earning anything. This traditional system depends heavily on chance and physical presence, which limits opportunities for skilled workers.
+            </p>
+            <p className="plumber_content_text">
+              Aya Sir G! aims to change this system by connecting the entire blue-collar community online. Instead of waiting in shops for work, workers can now create their profiles on the platform and become visible to customers searching for services.
+            </p>
+            <p className="plumber_content_text">
+              With Aya Sir G!, plumbers and other skilled professionals no longer need to stand in markets for hours. They can simply register, build their profile and start receiving job requests and calls directly through the platform. This creates a more efficient, fair and accessible way to find work and earn income.
             </p>
             <div className="mt-4 pt-2">
               <span className="text-muted small">

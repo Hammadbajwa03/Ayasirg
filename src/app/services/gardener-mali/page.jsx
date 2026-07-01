@@ -152,9 +152,21 @@ export default function GardenerMaliPage() {
       <section className="gardener_content_block">
         <div className="container">
           <div className="gardener_content_wrapper">
-            <h2 className="gardener_section_heading">What Does a Gardener or Mali Do?</h2>
+            <h2 className="gardener_section_heading">Professional Gardening Services with Aya Sir G!</h2>
             <p className="gardener_content_text">
-              A skilled gardener, also known as a mali, helps maintain healthy and beautiful outdoor spaces for homes, offices, parks, and commercial properties. In Lahore, Pakistan, professional gardeners provide services such as lawn mowing, plant care, tree trimming, hedge cutting, garden maintenance, seasonal planting, flower bed design, landscaping, irrigation support, weed removal, and garden cleaning. Regular garden care enhances the beauty of your property while keeping plants healthy throughout the year. Whether you need a full-time mali, part-time gardener, or a landscaping expert for a new garden project, Aya Sir G connects you with trusted gardening professionals in Lahore who offer reliable residential and commercial garden maintenance and landscaping services tailored to your needs.
+              Gardening is not just decoration it is a passion, love and a way to bring life and color into your surroundings. It is especially meaningful for those who enjoy seeing seasonal blooms and feel connected to nature.
+            </p>
+            <p className="gardener_content_text">
+              More than just making a garden beautiful, gardening is about giving something back to nature and playing your part in maintaining a healthy environment.
+            </p>
+            <p className="gardener_content_text">
+              Finding the right gardener is important for anyone who truly values this work. That is why Aya Sir G! is building a network of gardeners from across Pakistan so users can easily find skilled professionals based on their needs.
+            </p>
+            <p className="gardener_content_text">
+              On the platform, you can view gardener profiles, check ratings and reviews and listen to "Ta'araf" voice notes or CV details to better understand their experience and expertise before hiring.
+            </p>
+            <p className="gardener_content_text">
+              The best part is that there is no middleman commission. You can simply sign up on Aya Sir G!, explore verified profiles and contact gardeners directly to choose the right person for your requirements.
             </p>
             <div className="mt-4 pt-2">
               <span className="text-muted small">

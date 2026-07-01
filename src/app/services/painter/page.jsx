@@ -152,9 +152,21 @@ export default function PainterPage() {
       <section className="painter_content_block">
         <div className="container">
           <div className="painter_content_wrapper">
-            <h2 className="painter_section_heading">What Does a Professional Painter Do?</h2>
+            <h2 className="painter_section_heading">Building Pakistan's Blue-Collar Network with Aya Sir G!</h2>
             <p className="painter_content_text">
-              A professional painter can enhance the appearance and protect the walls of your home, office, shop, or commercial property with high-quality painting and finishing services. In Lahore, Pakistan, experienced painters provide interior painting, exterior painting, wall painting, ceiling painting, texture paint, decorative finishes, wood painting, metal painting, waterproof coatings, wall putty, and surface preparation. Whether you are building a new property, renovating an existing space, or refreshing a single room, skilled painters ensure smooth finishes, clean workmanship, and long-lasting results. Aya Sir G connects you with trusted painters in Lahore, making it easy to find reliable professionals for residential and commercial painting, repainting, touch-up work, and complete property renovation services.
+              Aya Sir G! is not only a platform for household services it is working to build a LinkedIn-style network for Pakistan's blue-collar community.
+            </p>
+            <p className="painter_content_text">
+              In many areas, painters and skilled workers still wait at local chowks every day with their tools, hoping to get daily work. This becomes even more difficult in extreme weather conditions, where summer temperatures can reach up to 50°C and winters can be very harsh.
+            </p>
+            <p className="painter_content_text">
+              To solve this problem, Aya Sir G! is on a mission to digitalize Pakistan's blue-collar workforce and help painters and other skilled workers connect directly with customers across the country.
+            </p>
+            <p className="painter_content_text">
+              On the platform, painters can create profiles, showcase their experience and build credibility through ratings and customer reviews. As their reputation grows, they can also earn better opportunities and charge fair prices based on their skills and performance.
+            </p>
+            <p className="painter_content_text">
+              With Aya Sir G!, skilled workers no longer need to wait at chowks they can connect with customers online and build a stable, respected source of income.
             </p>
             <div className="mt-4 pt-2">
               <span className="text-muted small">

@@ -151,9 +151,18 @@ export default function SofaCarpetCleanerPage() {
       <section className="sofa_carpet_content_block">
         <div className="container">
           <div className="sofa_carpet_content_wrapper">
-            <h2 className="sofa_carpet_section_heading">Professional Sofa &amp; Upholstery Deep Cleaning</h2>
+            <h2 className="sofa_carpet_section_heading">Sofa and Carpet Cleaning Services with Aya Sir G!</h2>
             <p className="sofa_carpet_content_text">
-              Professional sofa and carpet cleaning services help maintain a clean, fresh, and hygienic indoor environment for homes, offices, hotels, and commercial spaces. In Lahore, Pakistan, experienced cleaning professionals provide deep sofa cleaning, carpet shampooing, steam cleaning, stain removal, fabric cleaning, upholstery cleaning, rug cleaning, odor removal, and sanitization using modern equipment and safe cleaning solutions. Regular cleaning improves indoor hygiene, removes dust and allergens, and extends the life of your furniture and carpets. Aya Sir G connects you with trusted sofa and carpet cleaners in Lahore, making it easy to book reliable professionals for residential and commercial upholstery and carpet cleaning services.
+              If you have young children at home, it is common for carpets and sofas to get dirty from daily use, spills and general wear and tear. This can make your home environment less clean and less comfortable over time.
+            </p>
+            <p className="sofa_carpet_content_text">
+              In many cases, people are not aware that old and unclean furniture, especially sofas and carpets, can contribute to hygiene issues and may affect indoor air quality if not properly maintained. That is why regular deep cleaning is important for a healthy home environment.
+            </p>
+            <p className="sofa_carpet_content_text">
+              With Aya Sir G!, you can easily find professional sofa cleaning and carpet cleaning experts without paying any commission. You can directly contact service providers through the platform, check their ratings and review their experience before hiring.
+            </p>
+            <p className="sofa_carpet_content_text">
+              Simply sign up on Aya Sir G!, explore verified profiles of cleaning specialists and choose the right professional to keep your home clean, safe and comfortable for your family.
             </p>
             <div className="mt-4 pt-2">
               <span className="text-muted small">

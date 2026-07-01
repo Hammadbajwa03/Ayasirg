@@ -152,9 +152,24 @@ export default function CeilingWorkPage() {
       <section className="ceiling_content_block">
         <div className="container">
           <div className="ceiling_content_wrapper">
-            <h2 className="ceiling_section_heading">What Does a Ceiling Specialist Do?</h2>
+            <h2 className="ceiling_section_heading">Safe Ceiling and Construction Work with Aya Sir G!</h2>
             <p className="ceiling_content_text">
-              Professional ceiling work can enhance the appearance, functionality, and value of any home, office, or commercial property. In Lahore, Pakistan, skilled ceiling contractors offer a range of services, including gypsum ceiling installation, POP ceiling designs, false ceilings, PVC ceilings, wooden ceilings, suspended ceilings, ceiling repairs, decorative ceiling panels, LED ceiling lighting integration, and complete ceiling renovations. Whether you are building a new space or renovating an existing one, a well-designed ceiling improves interior aesthetics while concealing electrical wiring and enhancing lighting. Aya Sir G helps you connect with experienced ceiling work professionals in Lahore, making it easy to find reliable experts for custom ceiling design, installation, repairs, and finishing services for residential and commercial projects.
+              Many people may have experienced or heard about cases where a ceiling suddenly collapses without any earthquake or major external event. It is a frightening thought, especially when families are sleeping inside a newly built or renovated house.
+            </p>
+            <p className="ceiling_content_text">
+              Unfortunately, such incidents are not rare. Across different regions, including Pakistan, multiple ceiling and roof collapse cases have been reported over the years, often linked to poor construction quality, weak materials or lack of proper supervision.
+            </p>
+            <p className="ceiling_content_text">
+              These situations highlight an important reality: even jobs that seem simple like ceiling installation or finishing work require skilled and experienced professionals. Poor workmanship can lead to serious safety risks for families.
+            </p>
+            <p className="ceiling_content_text">
+              This is why trust and expertise matter so much when hiring construction workers.
+            </p>
+            <p className="ceiling_content_text">
+              With Aya Sir G!, you can find verified ceiling contractors, builders and construction experts. Instead of relying on unknown or unverified individuals, you can check each worker's profile, experience and customer feedback before hiring.
+            </p>
+            <p className="ceiling_content_text">
+              This helps ensure that you choose qualified professionals for your home, reducing risks and improving safety for your loved ones.
             </p>
             <div className="mt-4 pt-2">
               <span className="text-muted small">

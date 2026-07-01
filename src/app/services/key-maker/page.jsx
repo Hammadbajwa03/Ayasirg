@@ -153,9 +153,15 @@ export default function KeyMakerPage() {
       <section className="key_maker_content_block">
         <div className="container">
           <div className="key_maker_content_wrapper">
-            <h2 className="key_maker_section_heading">What Does a Key Maker & Locksmith Do?</h2>
+            <h2 className="key_maker_section_heading">Lost Your Keys? Find a Nearby Key Maker with Aya Sir G!</h2>
             <p className="key_maker_content_text">
-              A professional key maker provides quick and reliable solutions for all types of lock and key needs, helping homeowners, businesses, and vehicle owners regain secure access to their property. In Lahore, Pakistan, experienced key makers offer services such as duplicate key cutting, house key replacement, car key duplication, motorcycle key cutting, office keys, lock repair, lock installation, lock replacement, master key systems, and emergency locksmith services. Whether you have lost your keys, need spare keys, or want to upgrade your property's security, skilled locksmiths ensure accurate workmanship and dependable service. Aya Sir G helps you connect with trusted key makers and locksmiths in Lahore, making it easy to find professionals for residential, commercial, and automotive lock and key services whenever you need them.
+              One of my friends returned home late at night after attending a wedding, only to discover that they had lost their house keys somewhere. Unfortunately, they didn't have a spare key and had to stay with relatives for the night.
+            </p>
+            <p className="key_maker_content_text">
+              Situations like this can happen to anyone. Whether you've lost your house key, car key, bike key or need a duplicate key, help is only a few clicks away.
+            </p>
+            <p className="key_maker_content_text">
+              Simply sign up on Aya Sir G! and find a nearby key maker or emergency locksmith. A trusted professional can come to your location and help you get back inside or make a replacement key without unnecessary delays.
             </p>
             <div className="mt-4 pt-2">
               <span className="text-muted small">

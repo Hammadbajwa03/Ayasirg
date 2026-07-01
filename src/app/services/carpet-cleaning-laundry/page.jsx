@@ -153,9 +153,15 @@ export default function CarpetCleaningLaundryPage() {
       <section className="laundry_content_block">
         <div className="container">
           <div className="laundry_content_wrapper">
-            <h2 className="laundry_section_heading">What Does Carpet Cleaning & Laundry Service Do?</h2>
+            <h2 className="laundry_section_heading">Professional Laundry Services Near You with Aya Sir G!</h2>
             <p className="laundry_content_text">
-              Clean carpets and freshly washed clothes create a healthier, more comfortable living environment for every home and business. In Lahore, Pakistan, professional carpet cleaning and laundry services help remove dust, stains, odors, allergens, and bacteria using modern cleaning techniques and quality products. Whether you need carpet shampooing, deep carpet cleaning, sofa and rug cleaning, dry cleaning, laundry washing, ironing, steam cleaning, or fabric care, experienced professionals can handle household and commercial cleaning needs with care. Regular cleaning not only improves hygiene but also extends the life of carpets, clothing, and upholstery. Aya Sir G connects you with trusted carpet cleaning and laundry service providers in Lahore, making it easy to book reliable professionals for residential and commercial cleaning solutions at your convenience.
+              Many people prefer their laundry to be handled by professionals, especially those who live alone in another city for work. Single professionals often spend the entire day at the office and may not have a maid available to visit their home during working hours.
+            </p>
+            <p className="laundry_content_text">
+              Some people also prefer their clothes to be professionally washed, ironed and neatly prepared to save time and maintain quality.
+            </p>
+            <p className="laundry_content_text">
+              That's why Aya Sir G! has introduced the Laundry Services category. Simply sign up, find a nearby laundry service and choose a trusted professional to take care of your clothes with ease.
             </p>
             <div className="mt-4 pt-2">
               <span className="text-muted small">

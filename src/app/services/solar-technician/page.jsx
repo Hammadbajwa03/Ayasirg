@@ -152,9 +152,21 @@ export default function SolarTechnicianPage() {
       <section className="solar_technician_content_block">
         <div className="container">
           <div className="solar_technician_content_wrapper">
-            <h2 className="solar_technician_section_heading">Expert Solar Installation &amp; Maintenance Services</h2>
+            <h2 className="solar_technician_section_heading">Solar Installation and Maintenance Services with Aya Sir G!</h2>
             <p className="solar_technician_content_text">
-              As the demand for renewable energy continues to grow, skilled solar technicians are essential for installing and maintaining efficient solar power systems. In Lahore, Pakistan, professional solar technicians provide services such as solar panel installation, solar inverter installation, battery backup setup, system maintenance, fault diagnosis, panel cleaning, wiring, net metering support, and complete solar energy solutions for homes, offices, farms, and commercial buildings. Whether you are installing a new solar system or upgrading an existing one, experienced technicians ensure safe installation and maximum energy efficiency. Aya Sir G connects you with trusted solar technicians in Lahore, making it easy to find reliable professionals for residential and commercial solar installation, repair, and maintenance services.
+              Due to rising electricity prices, solar energy systems are becoming increasingly popular in Pakistan. Many households are now installing solar panels to reduce electricity costs and ensure a more stable power supply.
+            </p>
+            <p className="solar_technician_content_text">
+              Solar adoption is no longer just about saving money it has become a real necessity. With increasing temperatures each year due to global warming, summers are becoming more intense. In recent years, extreme heat conditions have been recorded in parts of Pakistan, making reliable energy solutions even more important for households.
+            </p>
+            <p className="solar_technician_content_text">
+              However, installing solar panels is only the first step. Proper solar maintenance is equally important. Regular cleaning, cable inspection and checking electrical connections are required at least every few months to ensure efficient performance and system safety.
+            </p>
+            <p className="solar_technician_content_text">
+              Hiring large corporate companies for every small maintenance job can be expensive for many households.
+            </p>
+            <p className="solar_technician_content_text">
+              This is where Aya Sir G! helps. The platform connects users with nearby solar technicians and maintenance experts by listing their profiles, experience and customer feedback. You can easily find and contact the nearest qualified technician without paying unnecessary high service charges, making solar maintenance more accessible and affordable for everyone.
             </p>
             <div className="mt-4 pt-2">
               <span className="text-muted small">

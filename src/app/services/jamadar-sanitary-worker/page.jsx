@@ -153,9 +153,21 @@ export default function JamadarSanitaryWorkerPage() {
       <section className="sanitary_worker_content_block">
         <div className="container">
           <div className="sanitary_worker_content_wrapper">
-            <h2 className="sanitary_worker_section_heading">What Does a Sanitary Worker / Jamadar Do?</h2>
+            <h2 className="sanitary_worker_section_heading">Reliable Drainage and Jamadar Services with Aya Sir G!</h2>
             <p className="sanitary_worker_content_text">
-              Professional sanitary workers, also known as jamadars, play an essential role in maintaining cleanliness and hygiene in homes, offices, hospitals, schools, residential societies, and commercial buildings. In Lahore, Pakistan, experienced sanitary workers provide services such as floor cleaning, washroom cleaning, waste collection, garbage disposal, disinfection, building maintenance, office cleaning, public area cleaning, and general housekeeping support. Regular cleaning helps create a healthy environment, reduces the spread of germs, and improves the overall appearance of any property. Whether you need a full-time sanitary worker, part-time cleaner, or cleaning staff for residential or commercial premises, Aya Sir G helps you connect with trusted sanitation professionals in Lahore for reliable cleaning and hygiene maintenance services.
+              Have you ever experienced a situation where a child accidentally drops something into a drain or you notice your drainage system is overflowing or blocked?
+            </p>
+            <p className="sanitary_worker_content_text">
+              In such cases, most people don't even know a reliable jamadar or sanitation worker they can call immediately. And often, when an emergency happens, it becomes stressful to find help at the right time.
+            </p>
+            <p className="sanitary_worker_content_text">
+              The question is why should you need to save random contacts or depend on unknown sources when help should be easily available?
+            </p>
+            <p className="sanitary_worker_content_text">
+              With Aya Sir G!, you can quickly find a nearby jamadar, sanitation worker or drainage cleaning expert whenever you need them whether it is late night, evening or early morning.
+            </p>
+            <p className="sanitary_worker_content_text">
+              You can view profiles, check ratings and directly contact trusted professionals through the platform, ensuring fast and reliable service without unnecessary delays.
             </p>
             <div className="mt-4 pt-2">
               <span className="text-muted small">

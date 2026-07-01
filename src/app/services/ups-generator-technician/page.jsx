@@ -152,9 +152,15 @@ export default function UPSGeneratorTechnicianPage() {
       <section className="ups_generator_content_block">
         <div className="container">
           <div className="ups_generator_content_wrapper">
-            <h2 className="ups_generator_section_heading">Trusted UPS Repair &amp; Generator Tuning Services</h2>
+            <h2 className="ups_generator_section_heading">Need an Emergency UPS Technician? Find One with Aya Sir G!</h2>
             <p className="ups_generator_content_text">
-              A qualified UPS and generator technician helps ensure uninterrupted power for homes, offices, shops, hospitals, and commercial facilities. In Lahore, Pakistan, experienced technicians provide UPS installation, generator installation, battery replacement, electrical troubleshooting, preventive maintenance, wiring, inverter setup, generator repair, UPS repair, and emergency backup power solutions. Regular servicing improves equipment performance, reduces unexpected breakdowns, and extends the lifespan of your backup power system. Whether you need installation, repairs, or routine maintenance, Aya Sir G connects you with trusted UPS and generator technicians in Lahore for reliable residential and commercial power backup services.
+              Imagine it's the middle of the night, your electricity from WAPDA is out and your UPS suddenly stops working. Most people only realize their UPS has a problem when a power outage occurs. This situation can become even more stressful if you have toddlers, elderly family members or a patient at home.
+            </p>
+            <p className="ups_generator_content_text">
+              Instead of searching for a UPS repair shop or trying to find an electrician's phone number at the last minute, simply sign up on Aya Sir G!. You can quickly find and contact a nearby UPS technician for emergency UPS repair and home electrical services.
+            </p>
+            <p className="ups_generator_content_text">
+              With Aya Sir G!, trusted UPS technicians are available online, making it easier to get professional help whenever you need it.
             </p>
             <div className="mt-4 pt-2">
               <span className="text-muted small">

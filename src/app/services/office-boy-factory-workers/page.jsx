@@ -153,9 +153,15 @@ export default function OfficeBoyFactoryWorkersPage() {
       <section className="office_boy_content_block">
         <div className="container">
           <div className="office_boy_content_wrapper">
-            <h2 className="office_boy_section_heading">What Does an Office Boy &amp; Factory Worker Do?</h2>
+            <h2 className="office_boy_section_heading">Find Office Boys, Factory Workers and Blue-Collar Jobs with Aya Sir G!</h2>
             <p className="office_boy_content_text">
-              Office boys and factory workers are essential for the smooth day-to-day operations of businesses, offices, warehouses, manufacturing units, and industrial facilities. In Lahore, Pakistan, office boys assist with office cleaning, document delivery, tea and refreshments, filing, photocopying, inventory support, and general office tasks, while factory workers handle production, packing, assembly, loading and unloading, quality checks, machine assistance, and warehouse operations. Whether you need full-time or part-time support staff, reliable workers help improve productivity and maintain an organized workplace. Aya Sir G connects businesses with trusted office boys and skilled factory workers in Lahore, making it easy to hire dependable manpower for administrative support, manufacturing, logistics, and industrial operations.
+              If you're reading this article, there's a good chance you're either looking to hire an office boy, factory worker or other skilled worker or you're searching for a job. Whether you live in a busy city, the suburbs or a remote rural area, Aya Sir G! is here to connect employers with job seekers.
+            </p>
+            <p className="office_boy_content_text">
+              Aya Sir G! is a platform that bridges the gap between employers and employees, creating meaningful opportunities across Pakistan. We believe in the potential of Pakistan's blue-collar workforce and want to provide a platform where skilled individuals can showcase their abilities and connect with the right employers.
+            </p>
+            <p className="office_boy_content_text">
+              For example, imagine a factory that produces Pakistani handicrafts. Instead of searching for workers through personal contacts, the factory can find skilled artisans on Aya Sir G!. Likewise, craftsmen can create their profiles, connect directly with businesses, receive work orders and allow brands to market and sell their products. This creates opportunities for both employers and skilled workers while supporting local talent.
             </p>
             <div className="mt-4 pt-2">
               <span className="text-muted small">

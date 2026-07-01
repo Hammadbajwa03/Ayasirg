@@ -153,9 +153,18 @@ export default function MasonHelperPage() {
       <section className="mason_helper_content_block">
         <div className="container">
           <div className="mason_helper_content_wrapper">
-            <h2 className="mason_helper_section_heading">What Does a Mason (Mistri) & Helper Do?</h2>
+            <h2 className="mason_helper_section_heading">Find Masons and Construction Helpers Easily with Aya Sir G!</h2>
             <p className="mason_helper_content_text">
-              Professional masons and construction helpers are essential for building, repairing, and renovating residential and commercial properties. In Lahore, Pakistan, skilled masons provide expert brickwork, block work, plastering, concrete work, tile laying, wall construction, foundation work, and other masonry services, while experienced helpers assist with material handling, site preparation, mixing cement, and supporting daily construction activities. Whether you are constructing a new house, renovating a property, or carrying out small repair projects, qualified masonry workers ensure quality workmanship and timely completion. Aya Sir G connects you with trusted masons and construction helpers in Lahore, making it easy to find reliable professionals for home construction, commercial projects, repairs, and general building maintenance.
+              Are you a contractor facing a situation where your client or homeowner expects the job to be completed but your mason or helper is unavailable due to personal reasons?
+            </p>
+            <p className="mason_helper_content_text">
+              In such cases, work delays can become stressful and impact your project timeline.
+            </p>
+            <p className="mason_helper_content_text">
+              Instead of relying on references or calling friends to find a spare mason or construction helper, you can simply use Aya Sir G!. The platform allows contractors to quickly find available skilled workers nearby and contact them directly.
+            </p>
+            <p className="mason_helper_content_text">
+              With Aya Sir G!, you can check profiles, availability and ratings, then hire the right mason or helper without unnecessary delays or dependency on informal networks.
             </p>
             <div className="mt-4 pt-2">
               <span className="text-muted small">

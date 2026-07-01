@@ -153,9 +153,15 @@ export default function AutomotiveMechanicPage() {
       <section className="mech_content_block">
         <div className="container">
           <div className="mech_content_wrapper">
-            <h2 className="mech_section_heading">What Does an Automotive Mechanic Do?</h2>
+            <h2 className="mech_section_heading">Find a Trusted Car Mechanic Near You with Aya Sir G!</h2>
             <p className="mech_content_text">
-              Keeping your vehicle in good condition is essential for safe and comfortable travel in Lahore, Pakistan. A professional automotive mechanic can diagnose and repair a wide range of vehicle issues, including engine problems, brake repair, suspension repair, battery replacement, oil change, car tuning, transmission repair, clutch replacement, and general vehicle maintenance. Regular servicing helps improve fuel efficiency, extends the lifespan of your car, and reduces the risk of unexpected breakdowns. Whether you own a small family car, SUV, motorcycle, or commercial vehicle, experienced mechanics ensure your vehicle performs at its best. Aya Sir G connects customers with skilled automotive mechanics in Lahore, making it easy to find reliable professionals for car repair, routine maintenance, emergency mechanical services, and complete vehicle inspections whenever you need trusted automotive assistance.
+              Imagine you're driving in an unfamiliar area and all of a sudden, your car breaks down. It doesn't matter whether you're a man or a woman being stranded in an unknown location can be stressful.
+            </p>
+            <p className="mech_content_text">
+              Your first thought might be to search Google for the nearest car mechanic or car repair shop. But how do you know if the mechanic is trustworthy or experienced?
+            </p>
+            <p className="mech_content_text">
+              With Aya Sir G!, you can find and contact a nearby car mechanic while also viewing their profile, experience and customer reviews before making your decision. Simply sign up, choose the best nearby option and get the help you need with confidence.
             </p>
             <div className="mt-4 pt-2">
               <span className="text-muted small">

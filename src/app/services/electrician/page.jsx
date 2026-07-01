@@ -152,9 +152,21 @@ export default function ElectricianPage() {
       <section className="electrician_content_block">
         <div className="container">
           <div className="electrician_content_wrapper">
-            <h2 className="electrician_section_heading">What Does a Professional Electrician Do?</h2>
+            <h2 className="electrician_section_heading">Find Trusted Electricians Anytime with Aya Sir G!</h2>
             <p className="electrician_content_text">
-              Electrical systems require proper installation and regular maintenance to ensure the safety and efficiency of homes, offices, shops, and commercial buildings. In Lahore, Pakistan, professional electricians provide a wide range of electrical services, including electrical wiring, switch and socket installation, circuit breaker repair, lighting installation, fan installation, power backup wiring, electrical fault finding, inverter and UPS wiring, DB panel installation, and complete electrical maintenance. Whether you need a qualified electrician for a new construction project, home renovation, emergency electrical repair, or routine maintenance, experienced professionals ensure safe and high-quality workmanship. Aya Sir G helps you connect with trusted electricians in Lahore, making it easy to find reliable experts for residential and commercial electrical installation, repair, troubleshooting, and maintenance services.
+              Whether you are constructing a new home or handling a repair job, finding a reliable electrician is often a challenge. Many people still visit local markets, check different electrical shops and try to find available electricians on their own.
+            </p>
+            <p className="electrician_content_text">
+              The problem is that you may not know the experience level or credibility of the person you hire. Since electrical work involves expensive materials like cables, switches and wiring, it is important to hire someone skilled who understands the job properly and does not make mistakes or "experiment" on your home.
+            </p>
+            <p className="electrician_content_text">
+              Poor electrical work can lead to safety risks, delays and extra costs.
+            </p>
+            <p className="electrician_content_text">
+              This is why Aya Sir G! makes the process easier. Instead of searching randomly in markets, you can simply open the platform and find a nearby qualified electrician available day or night.
+            </p>
+            <p className="electrician_content_text">
+              With Aya Sir G!, you can review profiles, check experience and contact trusted electricians directly without wasting time visiting shops or relying on uncertain sources.
             </p>
             <div className="mt-4 pt-2">
               <span className="text-muted small">

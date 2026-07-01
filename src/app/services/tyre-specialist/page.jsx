@@ -152,9 +152,15 @@ export default function TyreSpecialistPage() {
       <section className="tyre_specialist_content_block">
         <div className="container">
           <div className="tyre_specialist_content_wrapper">
-            <h2 className="tyre_specialist_section_heading">Professional Tyre Fitting, Alignment &amp; Balancing</h2>
+            <h2 className="tyre_specialist_section_heading">Flat Tyre? Find a Nearby Tyre Repair Specialist with Aya Sir G!</h2>
             <p className="tyre_specialist_content_text">
-              A professional tyre specialist helps keep your vehicle safe and roadworthy by providing expert tyre inspection, repair, and replacement services. In Lahore, Pakistan, experienced tyre technicians offer tyre fitting, wheel balancing, wheel alignment, puncture repair, tyre rotation, tyre replacement, nitrogen tyre filling, alloy wheel services, and complete tyre maintenance for cars, motorcycles, SUVs, trucks, and commercial vehicles. Regular tyre maintenance improves fuel efficiency, enhances driving safety, and extends tyre life. Aya Sir G connects you with trusted tyre specialists in Lahore, making it easy to find reliable professionals for tyre repair, installation, balancing, and vehicle wheel maintenance services.
+              Imagine you wake up on a busy morning, get ready for work and suddenly remember that your car had a flat tyre or puncture the night before. You need to leave on time but your car isn't ready. It's a stressful situation.
+            </p>
+            <p className="tyre_specialist_content_text">
+              Aya Sir G! has a simple solution.
+            </p>
+            <p className="tyre_specialist_content_text">
+              Just open the Aya Sir G! website, sign up and contact the nearest tyre repair specialist or puncture repair service. While you're taking a shower or having breakfast, a nearby professional can come to your location and fix the problem, helping you get back on the road without unnecessary delays.
             </p>
             <div className="mt-4 pt-2">
               <span className="text-muted small">

@@ -152,10 +152,25 @@ export default function SecurityGuardPage() {
         <div className="container">
           <div className="security_guard_content_wrapper">
             <h2 className="security_guard_section_heading">
-              What Does a Security Guard &amp; Watchman Do?
+              Verified Security Guard Hiring with Aya Sir G!
             </h2>
             <p className="security_guard_content_text">
-              Security guards and watchmen play a vital role in protecting homes, offices, shops, factories, schools, and commercial properties. In Lahore, Pakistan, trained security personnel provide services such as access control, visitor management, property surveillance, gate security, night guarding, patrol services, event security, warehouse security, and emergency response. Whether you need a full-time security guard, night watchman, residential security, or commercial security staff, experienced professionals help ensure the safety of people and property. Aya Sir G connects you with trusted security guards and watchmen in Lahore, making it easy to hire dependable security professionals for residential, commercial, and industrial security needs.
+              When hiring a security guard, the biggest concern is trust and responsibility. How do you know the person you are hiring is reliable enough to protect your home, office, warehouse or shop?
+            </p>
+            <p className="security_guard_content_text">
+              A security guard is responsible for safeguarding valuable assets and sometimes even ensuring the safety of your family. However, problems can arise if the person is careless, leaves duty during the night or does not take the job seriously. In some cases, lack of discipline or awareness can create serious security risks.
+            </p>
+            <p className="security_guard_content_text">
+              That is why choosing the right person is extremely important. You need someone who understands responsibility, remains alert and knows how to respond in the right situation.
+            </p>
+            <p className="security_guard_content_text">
+              In today's modern environment, people are moving away from traditional hiring methods and using more structured and transparent systems.
+            </p>
+            <p className="security_guard_content_text">
+              With Aya Sir G!, you can hire verified security guards by reviewing their profiles, experience, ratings and customer feedback. This helps you make an informed decision before hiring.
+            </p>
+            <p className="security_guard_content_text">
+              The platform also allows you to directly contact guards without paying any commission, giving you full control over your hiring process while ensuring transparency and trust.
             </p>
             <div className="mt-4 pt-2">
               <span className="text-muted small">

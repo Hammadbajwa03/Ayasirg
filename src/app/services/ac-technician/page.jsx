@@ -152,9 +152,21 @@ export default function AcTechnicianPage() {
       <section className="ac_content_block">
         <div className="container">
           <div className="ac_content_wrapper">
-            <h2 className="ac_section_heading">What Does an AC Technician Do?</h2>
+            <h2 className="ac_section_heading">Trusted AC Gas Filling and Repair Services with Aya Sir G!</h2>
             <p className="ac_content_text">
-              In Lahore, where summer temperatures can become extremely high, having access to a reliable AC technician is essential for every home, office, shop, and commercial building. Professional AC technicians provide expert services including AC installation, AC repair, AC gas filling, AC maintenance, AC cleaning, inverter AC servicing, and complete air conditioner troubleshooting. Regular AC servicing not only improves cooling performance but also reduces electricity consumption and extends the life of your air conditioner. Whether you need a split AC technician for a new installation or an experienced technician to fix cooling issues, water leakage, unusual noise, or compressor problems, finding a skilled professional can save both time and money. Aya Sir G makes it easy to connect with trusted AC technicians in Lahore, Pakistan, helping customers quickly find experienced professionals for residential and commercial AC services whenever they need reliable cooling solutions.
+              In Pakistan, especially during the summer season, almost every household relies on air conditioners (ACs) for cooling. However, a common issue in traditional AC systems is gas leakage, which affects cooling performance.
+            </p>
+            <p className="ac_content_text">
+              The problem is that most people do not have a way to verify whether the AC technician is using high-quality refrigerant gas or a poor-quality substitute. Since AC cooling takes some time to stabilize, it becomes difficult to immediately identify whether the service was done properly or not. In many cases, users only realize the issue later when cooling performance drops.
+            </p>
+            <p className="ac_content_text">
+              Unfortunately, due to this lack of transparency, fraud and low-quality service practices can sometimes occur in the market.
+            </p>
+            <p className="ac_content_text">
+              This is where Aya Sir G! plays an important role. The platform aims to create a transparent and competitive environment where AC technicians and other skilled workers can be easily found, reviewed and compared based on ratings and past customer experiences.
+            </p>
+            <p className="ac_content_text">
+              With Aya Sir G!, customers can check verified profiles, view feedback and directly contact skilled and trustworthy AC technicians. This helps ensure that only qualified professionals are hired, reducing the chances of scams and improving service quality for everyone.
             </p>
             <div className="mt-4 pt-2">
               <span className="text-muted small">

@@ -153,10 +153,19 @@ export default function PestControlPage() {
         <div className="container">
           <div className="pest_control_content_wrapper">
             <h2 className="pest_control_section_heading">
-              What Does Pest Control &amp; Termite Treatment Include?
+              Reliable Pest Control Services in Pakistan with Aya Sir G!
             </h2>
             <p className="pest_control_content_text">
-              Professional pest control and termite treatment services help protect homes, offices, restaurants, warehouses, and commercial properties from harmful pests and structural damage. In Lahore, Pakistan, experienced pest control specialists provide effective solutions for termites, cockroaches, mosquitoes, ants, bed bugs, rodents, flies, and other common pests using safe and approved treatment methods. Services include termite inspection, pre-construction and post-construction termite treatment, fumigation, disinfection, rodent control, and preventive pest management to maintain a clean and healthy environment. Whether you need a one-time treatment or regular pest control maintenance, Aya Sir G connects you with trusted pest control professionals in Lahore, making it easy to find reliable experts for residential and commercial pest management and termite protection services.
+              A large number of homes in Pakistan face issues such as wall dampness, which often leads to long-term moisture problems. This creates an ideal environment for pests and insects, especially in houses with expensive furniture like wall cupboards, fixed showcases, door frames and wooden doors.
+            </p>
+            <p className="pest_control_content_text">
+              Because of this, pest control services are widely advertised everywhere. However, the real concern is trust how do you know which pest control company is reliable? Almost every provider claims to be the best but results are not always immediate or guaranteed.
+            </p>
+            <p className="pest_control_content_text">
+              In some cases, unsafe or low-quality chemicals may also be used, which can lead to serious health risks, especially in homes with toddlers and children. This makes choosing the right pest control service even more important.
+            </p>
+            <p className="pest_control_content_text">
+              With Aya Sir G!, you can find qualified pest control professionals, review their profiles and check their previous experience and customer feedback before making a decision. This helps you choose trusted experts with proven results and satisfied customers, ensuring safer and more reliable pest control services for your home.
             </p>
             <div className="mt-4 pt-2">
               <span className="text-muted small">

@@ -152,9 +152,18 @@ export default function FastFoodCrewPage() {
       <section className="crew_content_block">
         <div className="container">
           <div className="crew_content_wrapper">
-            <h2 className="crew_section_heading">What Does a Fast-Food & Crew Member Do?</h2>
+            <h2 className="crew_section_heading">Connecting Job Seekers and Employers with Aya Sir G!</h2>
             <p className="crew_content_text">
-              Fast food workers and crew members play a vital role in delivering quality customer service and maintaining smooth restaurant operations. In Lahore, Pakistan, restaurants, cafés, food chains, and takeaway outlets rely on trained staff for food preparation, order taking, cashier duties, customer service, kitchen assistance, cleaning, packing, and serving customers efficiently. Professional crew members help maintain hygiene standards, ensure timely order delivery, and provide a positive dining experience. Whether you need full-time or part-time fast food staff for a new restaurant, busy outlet, or seasonal demand, Aya Sir G helps businesses connect with reliable fast food workers and experienced crew members in Lahore for restaurants, cafés, food courts, and commercial food service operations.
+              Aya Sir G! aims to transform not only Pakistan's domestic services sector but also its commercial sector by making it easier for employers to find skilled workers and for job seekers to discover new opportunities.
+            </p>
+            <p className="crew_content_text">
+              Many businesses still fill vacancies through employee referrals, asking existing staff to recommend friends or relatives. While referrals can be helpful, they may also limit opportunities for other qualified and deserving candidates.
+            </p>
+            <p className="crew_content_text">
+              With Aya Sir G!, employers can search for workers based on their skills and experience, while job seekers can create a professional profile and apply for suitable opportunities. We especially encourage people living in rural areas to register on the platform, showcase their abilities and connect with employers looking for reliable manpower.
+            </p>
+            <p className="crew_content_text">
+              By giving everyone an equal opportunity, Aya Sir G! helps deserving people find work based on their skills and potential.
             </p>
             <div className="mt-4 pt-2">
               <span className="text-muted small">

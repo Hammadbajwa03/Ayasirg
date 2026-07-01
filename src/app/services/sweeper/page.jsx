@@ -152,9 +152,21 @@ export default function SweeperPage() {
       <section className="sweeper_content_block">
         <div className="container">
           <div className="sweeper_content_wrapper">
-            <h2 className="sweeper_section_heading">Trusted Yard Sweeping &amp; Sanitation Services</h2>
+            <h2 className="sweeper_section_heading">Connecting Blue-Collar Workers and Employers with Aya Sir G!</h2>
             <p className="sweeper_content_text">
-              Professional sweepers help maintain cleanliness and hygiene in residential, commercial, and public spaces. In Lahore, Pakistan, experienced sweepers provide services for homes, offices, schools, hospitals, factories, shopping centers, and apartment buildings. Their responsibilities include sweeping floors, collecting waste, cleaning outdoor areas, maintaining public spaces, and supporting general housekeeping and sanitation. Whether you need a full-time sweeper, part-time cleaning staff, or commercial cleaning support, reliable professionals help create a clean, healthy, and welcoming environment. Aya Sir G connects you with trusted sweepers in Lahore, making it easy to hire dependable cleaning staff for daily, weekly, or routine maintenance services.
+              Aya Sir G! is not only a household services platform it is building a wider blue-collar workforce community that connects skilled and semi-skilled workers with real job opportunities across Pakistan.
+            </p>
+            <p className="sweeper_content_text">
+              Sweepers and cleaning staff are essential in many places such as offices, schools, warehouses and hospitals. At the same time, HR teams and employers in different industries often struggle to find reliable and available workers on time.
+            </p>
+            <p className="sweeper_content_text">
+              Through Aya Sir G!, employers can connect directly with workers based on location, skills and availability. The platform also allows people from different cities to create profiles and explore opportunities, including relocation for better and more stable employment near job locations.
+            </p>
+            <p className="sweeper_content_text">
+              This creates a structured system where both employers and workers benefit helping reduce delays, improve hiring transparency and support people in finding meaningful work.
+            </p>
+            <p className="sweeper_content_text">
+              Be part of the Aya Sir G! mission. Join the platform and help us build a stronger, more connected workforce community that creates real impact.
             </p>
             <div className="mt-4 pt-2">
               <span className="text-muted small">

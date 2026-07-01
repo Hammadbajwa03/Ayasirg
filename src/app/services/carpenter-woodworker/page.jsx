@@ -153,9 +153,21 @@ export default function CarpenterWoodworkerPage() {
       <section className="carpenter_content_block">
         <div className="container">
           <div className="carpenter_content_wrapper">
-            <h2 className="carpenter_section_heading">What Does a Carpenter or Woodworker Do?</h2>
+            <h2 className="carpenter_section_heading">Transparent Carpenter and Home Renovation Services with Aya Sir G!</h2>
             <p className="carpenter_content_text">
-              A skilled carpenter or woodworker can transform your ideas into durable and beautifully crafted wooden furniture and fittings for homes, offices, and commercial spaces. In Lahore, Pakistan, professional carpenters provide a wide range of woodworking services, including furniture making, custom wardrobes, kitchen cabinets, doors, windows, shelves, wooden flooring, office furniture, repairs, polishing, and furniture restoration. Whether you need custom-made furniture, home renovations, or minor wood repairs, experienced craftsmen ensure quality workmanship with attention to detail. Aya Sir G connects you with trusted carpenters and woodworkers in Lahore, making it easy to find reliable professionals for residential and commercial woodworking projects, furniture installation, maintenance, and customized wood solutions that fit your style and budget.
+              Have you ever upgraded your kitchen or hired a local carpenter, only to face issues like unexpected costs or delays? For example, a carpenter may recommend a specific hardware shop for "A-grade" materials but later you may discover that the materials were overpriced. In some cases, work is delayed or additional charges are requested after the job has started.
+            </p>
+            <p className="carpenter_content_text">
+              Unfortunately, such situations are not uncommon in Pakistan, especially in home renovation and carpentry services, where transparency is often missing.
+            </p>
+            <p className="carpenter_content_text">
+              Aya Sir G! aims to solve this problem by creating a more transparent and accountable system. On the platform, users can rate and review service providers with proof, helping others make informed decisions before hiring.
+            </p>
+            <p className="carpenter_content_text">
+              By allowing customers to check profiles, read feedback and verify work history, Aya Sir G! ensures that only skilled, honest and experienced professionals are promoted within the system.
+            </p>
+            <p className="carpenter_content_text">
+              The platform is designed to revolutionize the blue-collar service industry by building trust between customers and workers, while also ensuring there are no hidden platform fees for users.
             </p>
             <div className="mt-4 pt-2">
               <span className="text-muted small">

@@ -153,9 +153,24 @@ export default function BabysitterNannyPage() {
       <section className="nanny_content_block">
         <div className="container">
           <div className="nanny_content_wrapper">
-            <h2 className="nanny_section_heading">What Does a Baby Sitter or Nanny Do?</h2>
+            <h2 className="nanny_section_heading">Trusted Babysitter Services for Working Mothers with Aya Sir G!</h2>
             <p className="nanny_content_text">
-              Finding a trustworthy babysitter or nanny is one of the most important decisions for parents in Lahore, Pakistan. Whether you need full-time childcare, part-time babysitting, newborn care, or an experienced nanny for daily assistance, hiring a reliable caregiver provides peace of mind while ensuring your child receives proper attention and care. Professional babysitters can assist with feeding, hygiene, playtime, bedtime routines, and creating a safe environment for children of different age groups. Many families also look for childcare support during working hours, evenings, or special occasions. Aya Sir G helps parents connect with verified babysitters and experienced nannies in Lahore, making it easier to find dependable childcare professionals who can provide caring, responsible, and family-friendly services according to your household's needs.
+              For many working women, balancing professional responsibilities and personal life is not easy. In Pakistan, a significant number of women are forced to leave their jobs or pause their careers simply because they cannot find a reliable babysitter or childcare support for their toddlers.
+            </p>
+            <p className="nanny_content_text">
+              This challenge affects career growth and often leads to talented women stepping away from their professional goals due to lack of trustworthy help at home.
+            </p>
+            <p className="nanny_content_text">
+              While every individual’s journey is different, access to dependable childcare can play an important role in helping working mothers continue their careers with confidence.
+            </p>
+            <p className="nanny_content_text">
+              This is where Aya Sir G! aims to make a positive difference. The platform helps families find trusted babysitters and childcare providers who can support working parents by taking care of their children in a safe and responsible manner.
+            </p>
+            <p className="nanny_content_text">
+              With Aya Sir G!, users can browse profiles, check ratings and reviews and choose suitable babysitters based on experience and feedback. The platform ensures transparency and removes middlemen, so there are no commission fees or hidden charges.
+            </p>
+            <p className="nanny_content_text">
+              By connecting families with reliable childcare support, Aya Sir G! helps working women focus on their careers while ensuring their children are cared for with trust and responsibility.
             </p>
             <div className="mt-4 pt-2">
               <span className="text-muted small">

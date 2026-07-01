@@ -153,9 +153,21 @@ export default function BawarchiCookPage() {
       <section className="cook_content_block">
         <div className="container">
           <div className="cook_content_wrapper">
-            <h2 className="cook_section_heading">What Does a Bawarchi or Cook Do?</h2>
+            <h2 className="cook_section_heading">Trusted Home Cook Services for Overseas Pakistanis with Aya Sir G!</h2>
             <p className="cook_content_text">
-              A skilled bawarchi or cook can make everyday meals and special occasions more enjoyable by preparing fresh, hygienic, and delicious food according to your family's preferences. In Lahore, Pakistan, many households hire home cooks for daily meal preparation, while others need experienced chefs for dinner parties, family gatherings, weddings, and other events. Professional cooks can prepare Pakistani, Chinese, Continental, BBQ, and other cuisines while maintaining cleanliness and food safety standards. Whether you need a full-time cook, part-time bawarchi, female cook, or an experienced home chef for regular or occasional cooking, Aya Sir G helps you connect with trusted cooking professionals in Lahore who can provide quality home cooking and catering support based on your requirements.
+              Are you an overseas Pakistani with parents living back home but no one available to cook for them regularly? Many families in this situation try different service providers who promise "professional staff," "zero commission," and "high-quality service," but still struggle to find someone truly reliable.
+            </p>
+            <p className="cook_content_text">
+              In reality, what matters most is not formal promises it is finding a trustworthy home cook who understands traditional Pakistani taste and can prepare and serve meals properly with care.
+            </p>
+            <p className="cook_content_text">
+              This is why Aya Sir G! has introduced a platform where you can find hundreds of verified home cooks and domestic helpers without paying any commission. You can directly contact service providers, discuss your requirements and agree on working terms without unnecessary middlemen.
+            </p>
+            <p className="cook_content_text">
+              For safety and transparency, Aya Sir G! recommends users to always verify profiles. You may request a CNIC copy or background check for non-verified users. However, if a service provider has a verified "green badge", you can hire them with confidence, as their profile has already been checked for authenticity.
+            </p>
+            <p className="cook_content_text">
+              With Aya Sir G!, families can ensure their loved ones are cared for by reliable and skilled individuals, giving peace of mind even from abroad.
             </p>
             <div className="mt-4 pt-2">
               <span className="text-muted small">

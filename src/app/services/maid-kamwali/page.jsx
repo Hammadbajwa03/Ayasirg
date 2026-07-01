@@ -153,9 +153,21 @@ export default function MaidKamwaliPage() {
       <section className="maid_kamwali_content_block">
         <div className="container">
           <div className="maid_kamwali_content_wrapper">
-            <h2 className="maid_kamwali_section_heading">What Does a Domestic Maid / Kamwali Do?</h2>
+            <h2 className="maid_kamwali_section_heading">Transparent and Trusted Maid/Kamwali Hiring with Aya Sir G!</h2>
             <p className="maid_kamwali_content_text">
-              A reliable maid, also known as a kaam wali, can make household management easier by assisting with daily cleaning and routine domestic tasks. In Lahore, Pakistan, many families hire experienced maids for house cleaning, dusting, mopping, kitchen cleaning, bathroom cleaning, laundry, ironing, dishwashing, and other household chores. Whether you need a full-time maid, part-time housemaid, live-in maid, or domestic helper for regular home maintenance, professional staff can help keep your home clean, organized, and comfortable. Aya Sir G connects you with trusted maids and domestic workers in Lahore, making it simple to find dependable household help for residential cleaning and daily home care according to your family's needs and schedule.
+              Aya Sir G! is on a mission to revolutionize the way maids (kamwali) and domestic helpers are hired in Pakistan, making the process simple, transparent and reliable.
+            </p>
+            <p className="maid_kamwali_content_text">
+              Traditionally, people often had to rely on neighbors, shopkeepers or informal references to find a maid or domestic worker. This process was not always secure or efficient.
+            </p>
+            <p className="maid_kamwali_content_text">
+              In reality, the domestic services market includes different types of providers. Some are professional and charge fair rates with well-trained staff, while others operate informally with commission-based arrangements. Unfortunately, there are also cases where individuals face scams or unreliable intermediaries.
+            </p>
+            <p className="maid_kamwali_content_text">
+              To address these issues, the Aya Sir G! team is actively working to connect verified maids and domestic workers with households directly. We are building profiles of service providers across different areas, especially in urban and semi-urban communities where many workers live and work.
+            </p>
+            <p className="maid_kamwali_content_text">
+              With Aya Sir G!, there is no need to pay any commission or depend on middlemen. Simply sign up, browse verified profiles, review experience and ratings and contact domestic workers directly with confidence.
             </p>
             <div className="mt-4 pt-2">
               <span className="text-muted small">

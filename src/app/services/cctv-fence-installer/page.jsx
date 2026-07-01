@@ -152,9 +152,24 @@ export default function CctvFenceInstallerPage() {
       <section className="cctv_content_block">
         <div className="container">
           <div className="cctv_content_wrapper">
-            <h2 className="cctv_section_heading">What Does a CCTV & Fence Installer Do?</h2>
+            <h2 className="cctv_section_heading">CCTV and Electric Fence Installation Services with Aya Sir G!</h2>
             <p className="cctv_content_text">
-              Installing a reliable CCTV system and secure fencing is one of the best ways to protect homes, offices, shops, warehouses, and commercial properties in Lahore, Pakistan. Professional CCTV and fence installers provide services such as CCTV camera installation, security camera setup, DVR and NVR configuration, IP camera installation, video surveillance systems, maintenance, troubleshooting, barbed wire fencing, boundary fencing, chain link fencing, razor wire installation, and security fence solutions. Whether you want to improve the security of your home or business, experienced technicians can recommend and install the right surveillance and perimeter protection system based on your needs. Aya Sir G connects you with trusted CCTV and fence installation professionals in Lahore, making it easy to find reliable experts for complete security solutions, installation, repairs, and maintenance.
+              Inflation is a major challenge in Pakistan. One of its biggest impacts is that many people struggle with rising costs of daily essentials such as food and medicine and in some cases job losses also add to financial pressure. Due to these difficulties, security concerns have increased in many areas.
+            </p>
+            <p className="cctv_content_text">
+              In recent years, home robberies and security incidents have become more common, making systems like CCTV cameras and electric fencing an important part of home and business safety.
+            </p>
+            <p className="cctv_content_text">
+              However, the challenge is finding a reliable and skilled professional for CCTV installation or electric fence setup. Many people still depend on personal references, which is not always the most transparent or efficient method.
+            </p>
+            <p className="cctv_content_text">
+              Aya Sir G! provides a better solution by offering a platform where you can find verified CCTV technicians, security system installers and other blue-collar professionals in one place.
+            </p>
+            <p className="cctv_content_text">
+              Users can compare profiles, check ratings and experience and make informed decisions based on real feedback. This helps ensure quality work, competitive pricing and greater transparency.
+            </p>
+            <p className="cctv_content_text">
+              With Aya Sir G!, you get a one-window solution for all blue-collar service needs, making it easier to find trusted professionals without relying only on informal references.
             </p>
             <div className="mt-4 pt-2">
               <span className="text-muted small">
