@@ -60,6 +60,31 @@ const nextConfig = {
       },
     ];
   },
+
+  async redirects() {
+    return [
+      {
+        source: "/lahore",
+        destination: "/services/lahore",
+        permanent: true,
+      },
+      {
+        source: "/karachi",
+        destination: "/services/karachi",
+        permanent: true,
+      },
+      {
+        source: "/islamabad",
+        destination: "/services/islamabad",
+        permanent: true,
+      },
+      {
+        source: "/companies",
+        destination: "/compnies",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default withBundleAnalyzer(nextConfig);

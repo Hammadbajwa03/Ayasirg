@@ -1,79 +1,45 @@
+import React from "react";
+import CompaniesClient from "./CompaniesClient";
 
+export async function generateMetadata({ searchParams }) {
+  const categoryId = searchParams?.category_id;
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://admin.ayasirg.com";
 
-"use client";
-import React, { Suspense } from "react";
-import "./individuals.css";
-import Skeleton from "react-loading-skeleton";
-import "react-loading-skeleton/dist/skeleton.css";
-import dynamic from "next/dynamic";
-import { useSearchParams } from "next/navigation";
-import CompaniesServiceJsonLd from "../components/seo/CompaniesServiceJsonLd";
+  try {
+    const res = await fetch(`${baseUrl}/api/category-list`, { cache: "no-store" });
+    if (!res.ok) throw new Error("Failed to fetch category list");
+    const data = await res.json();
+    const categories = data.data || [];
 
-const ButtonComp = dynamic(() => import("../components/Button-component/ButtonComp"), {
-  ssr: false,
-});
+    if (categoryId) {
+      const cat = categories.find((c) => String(c?.id) === String(categoryId));
+      if (cat) {
+        const name = String(cat.name).trim();
+        const plainDesc = cat.description
+          ? cat.description.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim().slice(0, 160)
+          : "";
+        return {
+          title: `${name} Services in Pakistan | Aya Sir G!`,
+          description: plainDesc || `${name} — Browse verified professionals on Aya Sir G! in Pakistan.`,
+          alternates: {
+            canonical: `https://www.ayasirg.com/compnies?category_id=${categoryId}`,
+          },
+        };
+      }
+    }
+  } catch (error) {
+    console.error("Error generating metadata for companies list:", error);
+  }
 
-const Filterbar = dynamic(() => import("../components/Filter-bar/Filter-bar"), {
-  ssr: false,
-});
-
-// Wrapper component that uses useSearchParams inside Suspense
-function SearchParamsWrapper() {
-  const searchParams = useSearchParams();
-  const role = searchParams.get("role") || "handyman";
-  const gender = searchParams.get("gender") || "";
-  const age_range = searchParams.get("age_range") || "";
-  const city = searchParams.get("city") || "";
-  const category_id = searchParams.get("category_id") || "";
-  const area_code = searchParams.get("area_code") || "";
-  const verified_status = searchParams.get("verified_status") || "";
-  const rating = searchParams.get("rating") || "";
-
-  const qs = searchParams.toString();
-
-  return (
-    <>
-      <CompaniesServiceJsonLd categoryId={category_id} queryString={qs} />
-    <div className="row">
-      <div className="col-lg-4 col_filter">
-        <Filterbar
-          dataSearch={{ role, gender, age_range, city, category_id, area_code, verified_status, rating }}
-        />
-      </div>
-      <div className="col-lg-8 col-md-12 col-sm-12">
-        <ButtonComp
-          searchParamdata={{ age_range, gender, verified_status }}
-        />
-      </div>
-    </div>
-    </>
-  );
+  return {
+    title: "Verified Companies & Service Providers | Aya Sir G!",
+    description: "Browse and hire verified local service providers, home cooks, cleaners, plumbers, electricians, and more on Aya Sir G!.",
+    alternates: {
+      canonical: "https://www.ayasirg.com/compnies",
+    },
+  };
 }
 
 export default function Page() {
-  return (
-    <section className="individuals margin_navbar">
-      <div className="container content py-3">
-        <Suspense
-          fallback={
-            <div className="d-flex flex-wrap gap-3">
-              {Array.from({ length: 4 }).map((_, index) => (
-                <div key={index} className="card_div py-3 px-4 skeleton_card">
-                  <Skeleton circle height={100} width={100} />
-                  <Skeleton height={20} width={`60%`} className="mt-3" />
-                  <Skeleton height={15} width={`40%`} className="mt-2" />
-                  <Skeleton height={15} width={`80%`} className="mt-2" />
-                  <Skeleton height={15} width={`50%`} className="mt-2" />
-                  <Skeleton height={15} width={`70%`} className="mt-2" />
-                  <Skeleton height={30} width={`100%`} className="mt-3" />
-                </div>
-              ))}
-            </div>
-          }
-        >
-          <SearchParamsWrapper />
-        </Suspense>
-      </div>
-    </section>
-  );
+  return <CompaniesClient />;
 }
