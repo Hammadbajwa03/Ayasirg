@@ -27,9 +27,17 @@ const nextConfig = {
   reactStrictMode: true,
 
   images: {
-    domains: ["admin.ayasirg.com", "images.unsplash.com"],
-    formats: ["image/avif", "image/webp"], // ⚡ modern formats for smaller size
-    // dangerouslyAllowSVG: false,
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "admin.ayasirg.com",
+      },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
+    ],
+    formats: ["image/avif", "image/webp"],
   },
 
   compress: true, // enable gzip/brotli compression
@@ -37,24 +45,40 @@ const nextConfig = {
 
   experimental: {
     scrollRestoration: true,
-    // modern: true
+    optimizeCss: true, // extracts critical CSS and defers the rest via critters
   },
-
 
   compiler: {
     removeConsole: process.env.NODE_ENV === "production", // remove console logs in prod
-    // removeConsole: false,
   },
 
-  // Optional headers for better caching
+  // Optional headers for better caching of static assets
   async headers() {
     return [
       {
-        source: "/(.*).(js|css|svg|jpg|jpeg|png|webp|avif|woff2)$",
+        source: "/_next/static/:path*",
         headers: [
           {
             key: "Cache-Control",
             value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        source: "/assets/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        source: "/:path*.(js|css|svg|jpg|jpeg|png|webp|avif|woff2|ico)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, must-revalidate",
           },
         ],
       },
