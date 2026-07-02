@@ -45,7 +45,7 @@ const nextConfig = {
 
   experimental: {
     scrollRestoration: true,
-    optimizeCss: true, // extracts critical CSS and defers the rest via critters
+    inlineCss: true,
   },
 
   compiler: {
