@@ -156,8 +156,10 @@ export default function Hero() {
         <div className="container">
           <div className="row section_margin">
             <div className="col-lg-12">
-              <h1 className="hero_heading">From chowks to clicks, Pakistan's most trusted </h1>
-              <h1 className="hero_heading">platform for blue collar jobs.</h1>
+              <h1 className="hero_heading">
+                From chowks to clicks, Pakistan's most trusted <br />
+                platform for blue collar jobs.
+              </h1>
               <p className="fw-medium my-4">Whether you are a skilled worker searching for work or an employer looking to hire, we bridge <br /> the gap between talent and opportunity.</p>
             </div>
           </div>

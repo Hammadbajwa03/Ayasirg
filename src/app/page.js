@@ -1,5 +1,6 @@
 import React from "react";
 import HomeClient from "./HomeClient";
+import HomeJsonLd from "./components/seo/HomeJsonLd";
 
 export const metadata = {
   title: "Aya Sir G! | Trusted Blue Collar Jobs & Services in Pakistan",
@@ -34,5 +35,10 @@ export const metadata = {
 };
 
 export default function Home() {
-  return <HomeClient />;
+  return (
+    <>
+      <HomeJsonLd />
+      <HomeClient />
+    </>
+  );
 }

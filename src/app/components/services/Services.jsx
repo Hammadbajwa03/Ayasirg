@@ -6,9 +6,9 @@ export default function Services() {
   return (
     <section className="Services">
       <div className="container">
-        <h1 className="section_heading text-center">
+        <h2 className="section_heading text-center">
           Your Perfect Service <span className="red_title">in Just 4 Steps</span>
-        </h1>
+        </h2>
         <div className="row mb-3 mt-5  ">
           <div className="col-lg-3 col-sm-6 margin_top" data-aos="fade-right">
             <div className="card p-3 col_height">
