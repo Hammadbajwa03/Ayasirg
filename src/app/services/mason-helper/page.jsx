@@ -17,6 +17,7 @@ import {
 } from "react-icons/fa6";
 import { fetchCityIdByName } from "@/app/lib/cityPages";
 import ServicesSteps from "@/app/components/services/Services";
+import ServiceChooseSection from "@/app/components/services/ServiceChooseSection";
 import "./mason-helper.css";
 
 export default function MasonHelperPage() {
@@ -113,7 +114,7 @@ export default function MasonHelperPage() {
                 </p>
                 <div className="mason_helper_hero_ctas justify-content-center justify-content-lg-start">
                   <Link
-                    href="/compnies?role=handyman&category_id=48"
+                    href="/compnies/mason-helper"
                     className="mason_helper_btn mason_helper_btn_primary"
                   >
                     Find Masons / Helpers
@@ -319,30 +320,32 @@ export default function MasonHelperPage() {
       {/* Shared 4 Steps Component */}
       <ServicesSteps />
 
+      <ServiceChooseSection slug="mason-helper" />
+
       {/* Cities Section */}
       <section className="mason_helper_cities_sec">
         <div className="container">
           <h2 className="mason_helper_section_heading">Find Masons & Helpers in Your City</h2>
           <div className="mason_helper_city_pills">
             <Link
-              href={`/compnies?role=handyman&category_id=48${
-                cityIds.lahore ? `&city=${cityIds.lahore}` : ""
+              href={`/compnies/mason-helper${
+                cityIds.lahore ? `?city=${cityIds.lahore}` : ""
               }`}
               className="mason_helper_city_pill"
             >
               Lahore
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=48${
-                cityIds.karachi ? `&city=${cityIds.karachi}` : ""
+              href={`/compnies/mason-helper${
+                cityIds.karachi ? `?city=${cityIds.karachi}` : ""
               }`}
               className="mason_helper_city_pill"
             >
               Karachi
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=48${
-                cityIds.islamabad ? `&city=${cityIds.islamabad}` : ""
+              href={`/compnies/mason-helper${
+                cityIds.islamabad ? `?city=${cityIds.islamabad}` : ""
               }`}
               className="mason_helper_city_pill"
             >
@@ -400,7 +403,7 @@ export default function MasonHelperPage() {
             Planning Home Repairs or Tiling Work? Find Expert Masons Now.
           </h2>
           <Link
-            href="/compnies?role=handyman&category_id=48"
+            href="/compnies/mason-helper"
             className="mason_helper_btn"
           >
             Browse Masons & Helpers

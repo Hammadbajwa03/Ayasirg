@@ -17,6 +17,7 @@ import {
 } from "react-icons/fa6";
 import { fetchCityIdByName } from "@/app/lib/cityPages";
 import ServicesSteps from "@/app/components/services/Services";
+import ServiceChooseSection from "@/app/components/services/ServiceChooseSection";
 import "./carpenter-woodworker.css";
 
 export default function CarpenterWoodworkerPage() {
@@ -113,7 +114,7 @@ export default function CarpenterWoodworkerPage() {
                 </p>
                 <div className="carpenter_hero_ctas justify-content-center justify-content-lg-start">
                   <Link
-                    href="/compnies?role=handyman&category_id=26"
+                    href="/compnies/carpenter-woodworker"
                     className="carpenter_btn carpenter_btn_primary"
                   >
                     Find a Carpenter
@@ -322,30 +323,32 @@ export default function CarpenterWoodworkerPage() {
       {/* Shared 4 Steps Component */}
       <ServicesSteps />
 
+      <ServiceChooseSection slug="carpenter-woodworker" />
+
       {/* Cities Section */}
       <section className="carpenter_cities_sec">
         <div className="container">
           <h2 className="carpenter_section_heading">Find Carpenters in Your City</h2>
           <div className="carpenter_city_pills">
             <Link
-              href={`/compnies?role=handyman&category_id=26${
-                cityIds.lahore ? `&city=${cityIds.lahore}` : ""
+              href={`/compnies/carpenter-woodworker${
+                cityIds.lahore ? `?city=${cityIds.lahore}` : ""
               }`}
               className="carpenter_city_pill"
             >
               Lahore
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=26${
-                cityIds.karachi ? `&city=${cityIds.karachi}` : ""
+              href={`/compnies/carpenter-woodworker${
+                cityIds.karachi ? `?city=${cityIds.karachi}` : ""
               }`}
               className="carpenter_city_pill"
             >
               Karachi
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=26${
-                cityIds.islamabad ? `&city=${cityIds.islamabad}` : ""
+              href={`/compnies/carpenter-woodworker${
+                cityIds.islamabad ? `?city=${cityIds.islamabad}` : ""
               }`}
               className="carpenter_city_pill"
             >
@@ -403,7 +406,7 @@ export default function CarpenterWoodworkerPage() {
             Need Expert Woodwork or Furniture Repairs? Find a Carpenter Now.
           </h2>
           <Link
-            href="/compnies?role=handyman&category_id=26"
+            href="/compnies/carpenter-woodworker"
             className="carpenter_btn"
           >
             Browse Carpenters

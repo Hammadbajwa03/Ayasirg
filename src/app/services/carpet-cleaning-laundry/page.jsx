@@ -17,6 +17,7 @@ import {
 } from "react-icons/fa6";
 import { fetchCityIdByName } from "@/app/lib/cityPages";
 import ServicesSteps from "@/app/components/services/Services";
+import ServiceChooseSection from "@/app/components/services/ServiceChooseSection";
 import "./carpet-cleaning-laundry.css";
 
 export default function CarpetCleaningLaundryPage() {
@@ -50,42 +51,42 @@ export default function CarpetCleaningLaundryPage() {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "How do I book a carpet cleaning or laundry service on Aya Sir G!?",
+        "name": "How do I book a sofa or carpet cleaning service on Aya Sir G!?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "To book, browse through our verified carpet cleaning and laundry service providers, compare their profiles, check ratings and customer reviews, and contact them directly to schedule a service."
+          "text": "Just browse through verified cleaner profiles offering sofa cleaning services on Aya Sir G!, check their ratings, go through customer reviews, and take a look at photos of their past work. Once you find someone you like, message them directly for a quote and set up a time that works for you."
         }
       },
       {
         "@type": "Question",
-        "name": "How long does it take for a carpet to dry after deep cleaning?",
+        "name": "What cleaning methods do the professionals use?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Depending on the room ventilation and humidity levels, a deep-cleaned carpet using our specialists' extraction machines typically takes 3 to 6 hours to dry completely."
+          "text": "Depends on what you need — cleaners here use deep vacuuming, wet shampoo washing, steam extraction, foam cleaning, or dry cleaning, based on your fabric type (velvet, leather, or regular upholstery). It's all part of the standard sofa and carpet cleaning services offered on the platform."
         }
       },
       {
         "@type": "Question",
-        "name": "Do I need to provide water, detergents, or electricity?",
+        "name": "How long does it take for a sofa or carpet to dry after cleaning?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The carpet cleaners will bring their own specialized shampoos, stain removers, and vacuum extraction machines. They will need access to clean water and a standard power outlet to run their cleaning equipment."
+          "text": "Usually somewhere between 3 to 6 hours, depending on the room's ventilation, temperature, and which method was used. If you turn on a fan or the AC afterward, it'll dry even faster."
         }
       },
       {
         "@type": "Question",
-        "name": "What is the difference between dry cleaning and regular laundry?",
+        "name": "Can you remove stubborn pet stains and bad odours?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Regular laundry uses water and standard detergents, perfect for everyday cottons and linens. Dry cleaning uses specialized chemical solvents to clean delicate fabrics like silk, wool, and structured suits without water, avoiding fabric shrinkage or color fading."
+          "text": "Yes, definitely. Professionals bring specialized stain removers and deodorizers that handle tough stains — coffee, tea, ink, even pet urine — and get rid of those lingering smells. It's a core part of proper sofa set cleaning services."
         }
       },
       {
         "@type": "Question",
-        "name": "Can the cleaners remove old, stubborn stains from my sofa or carpet?",
+        "name": "Do I need to provide any cleaning machines or chemicals?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, our experts use professional-grade fabric stain removers and hot-water extractors to lift stubborn spots like ink, coffee, oil, and pet stains. While most stains are successfully removed, extremely old or set-in stains might fade significantly but not disappear completely."
+          "text": "Nope, not at all. The cleaner brings their own vacuum, steam extraction machine, and detergents. All you need to have ready is water and electricity access. That's really it — finding sofa cleaning services near me shouldn't be complicated, and it isn't."
         }
       }
     ]
@@ -106,14 +107,14 @@ export default function CarpetCleaningLaundryPage() {
             <div className="col-lg-7">
               <div className="laundry_hero_content text-center text-lg-start">
                 <h1 className="laundry_hero_h1">
-                  Carpet Cleaning & Laundry Services in Pakistan — Hire on Aya Sir G!
+                  Professional Sofa Cleaning Services & Carpet Cleaning — Aya Sir G!
                 </h1>
                 <p className="laundry_hero_subheading">
-                  Find verified carpet cleaners, compare dry cleaning and laundry service profiles, read real customer reviews, and hire trusted experts.
+                  Looking for verified local cleaners who actually know what they're doing? Get deep steam cleaning, stain removal, and odor elimination done right. Compare profiles, check reviews, and hire directly — no middleman.
                 </p>
                 <div className="laundry_hero_ctas justify-content-center justify-content-lg-start">
                   <Link
-                    href="/compnies?role=handyman&category_id=55"
+                    href="/compnies/carpet-cleaning-laundry"
                     className="laundry_btn laundry_btn_primary"
                   >
                     Find Cleaning Services
@@ -149,23 +150,26 @@ export default function CarpetCleaningLaundryPage() {
         </div>
       </header>
 
-      {/* Content Block (Word Count: ~150 words) */}
+      {/* Content Block */}
       <section className="laundry_content_block">
         <div className="container">
           <div className="laundry_content_wrapper">
-            <h2 className="laundry_section_heading">Professional Laundry Services Near You with Aya Sir G!</h2>
+            <h2 className="laundry_section_heading">Sofa and Carpet Cleaning Services with Aya Sir G!</h2>
             <p className="laundry_content_text">
-              Many people prefer their laundry to be handled by professionals, especially those who live alone in another city for work. Single professionals often spend the entire day at the office and may not have a maid available to visit their home during working hours.
+              If you've got kids running around the house, you already know how fast carpets and sofas pick up stains, spills, and general everyday grime. Over time, this makes the whole house feel less fresh — even if you're cleaning regularly. That's usually when people start looking for sofa cleaning services near me, just to get things back to normal.
             </p>
             <p className="laundry_content_text">
-              Some people also prefer their clothes to be professionally washed, ironed and neatly prepared to save time and maintain quality.
+              What most people don't realize is that old, neglected furniture — especially sofas and carpets — can actually become a hygiene problem. Dust, bacteria, and trapped odors build up over time and can even affect the air quality inside your home. So getting a proper deep clean done isn't just about looks; it matters for health too.
             </p>
             <p className="laundry_content_text">
-              That's why Aya Sir G! has introduced the Laundry Services category. Simply sign up, find a nearby laundry service and choose a trusted professional to take care of your clothes with ease.
+              That's where Aya Sir G! comes in. You can find genuine, professional sofa cleaning services and carpet cleaning experts on the platform — and there's no commission involved. You talk to the service provider directly, check their ratings, look at past reviews, and decide for yourself who to hire.
+            </p>
+            <p className="laundry_content_text">
+              Just sign up, browse through verified profiles of sofa and carpet cleaning services specialists, and pick whoever fits your budget and needs. Simple as that.
             </p>
             <div className="mt-4 pt-2">
               <span className="text-muted small">
-                Explore other services at{" "}
+                Want to check out more? Head over to{" "}
                 <Link href="/services" className="red_title text-decoration-none">
                   Aya Sir G! Services
                 </Link>
@@ -177,7 +181,7 @@ export default function CarpetCleaningLaundryPage() {
                 <Link href="/contact-us" className="red_title text-decoration-none">
                   Contact Us
                 </Link>{" "}
-                for any assistance.
+                if you need help along the way.
               </span>
             </div>
           </div>
@@ -187,46 +191,46 @@ export default function CarpetCleaningLaundryPage() {
       {/* Services Grid Section */}
       <section className="laundry_services_sec">
         <div className="container">
-          <h2 className="laundry_section_heading">Cleaning Services Available on Aya Sir G!</h2>
+          <h2 className="laundry_section_heading">Cleaning Services Available</h2>
           <div className="laundry_services_grid">
             {/* Card 1 */}
             <div className="laundry_service_card">
               <div className="laundry_card_icon_wrap">
-                <FaBroom />
+                <FaSoap />
               </div>
-              <h3 className="laundry_card_title">Deep Carpet Cleaning</h3>
+              <h3 className="laundry_card_title">Sofa Deep Cleaning</h3>
               <p className="laundry_card_desc">
-                Shampooing, chemical scrubbing, and hot-water vacuum extraction to restore dirty carpets, rugs, and runners.
+                Vacuuming, shampoo scrubbing, and extraction washing for fabric, velvet, and leather sofas to remove dust, dirt, and oil buildup.
               </p>
             </div>
             {/* Card 2 */}
             <div className="laundry_service_card">
               <div className="laundry_card_icon_wrap">
-                <FaShirt />
+                <FaBroom />
               </div>
-              <h3 className="laundry_card_title">Professional Laundry</h3>
+              <h3 className="laundry_card_title">Carpet & Rug Washing</h3>
               <p className="laundry_card_desc">
-                High-quality washing, tumble drying, and neat folding services for all your regular apparel, linens, and bedsheets.
+                Steam cleaning and deep extraction wash for wall-to-wall carpets and area rugs to restore color and kill bacteria.
               </p>
             </div>
             {/* Card 3 */}
             <div className="laundry_service_card">
               <div className="laundry_card_icon_wrap">
-                <FaSoap />
+                <FaWater />
               </div>
-              <h3 className="laundry_card_title">Dry Cleaning & Pressing</h3>
+              <h3 className="laundry_card_title">Mattress Sanitization</h3>
               <p className="laundry_card_desc">
-                Careful dry cleaning for suits, sherwanis, wedding dresses, and professional steam pressing for crisp finishes.
+                Hygienic deep cleaning of single/double mattresses to eliminate dust mites, bedbugs, sweat stains, and allergens.
               </p>
             </div>
             {/* Card 4 */}
             <div className="laundry_service_card">
               <div className="laundry_card_icon_wrap">
-                <FaWater />
+                <FaTag />
               </div>
-              <h3 className="laundry_card_title">Sofa & Mattress Washing</h3>
+              <h3 className="laundry_card_title">Stain & Odour Removal</h3>
               <p className="laundry_card_desc">
-                Deep steam vacuuming and fabric shampooing to extract dirt, bacteria, and allergens from sofas and mattresses.
+                Targeted chemical treatment for stubborn stains like coffee, ink, oil, or pet urine, combined with deep deodorizing.
               </p>
             </div>
             {/* Card 5 */}
@@ -234,19 +238,19 @@ export default function CarpetCleaningLaundryPage() {
               <div className="laundry_card_icon_wrap">
                 <FaClock />
               </div>
-              <h3 className="laundry_card_title">Express Pick & Drop</h3>
+              <h3 className="laundry_card_title">Dining & Office Chair Cleaning</h3>
               <p className="laundry_card_desc">
-                Convenient doorstep pickup and drop-off options for your weekly laundry bags with guaranteed turnaround.
+                Restoring fabric and cushion foam on office chairs, conference room chairs, dining chairs, and decorative cushions.
               </p>
             </div>
             {/* Card 6 */}
             <div className="laundry_service_card">
               <div className="laundry_card_icon_wrap">
-                <FaTag />
+                <FaShirt />
               </div>
-              <h3 className="laundry_card_title">Stain & Odor Removal</h3>
+              <h3 className="laundry_card_title">Commercial Cleaning</h3>
               <p className="laundry_card_desc">
-                Targeted chemical treatment for coffee spills, food stains, pet odors, mold, and dust mite sanitization.
+                Large-scale carpet and upholstery deep cleaning for corporate offices, banks, mosques, and hotels with quick drying solutions.
               </p>
             </div>
           </div>
@@ -260,7 +264,7 @@ export default function CarpetCleaningLaundryPage() {
             <div className="col-lg-6 laundry_trust_col_text">
               <h2 className="section_heading text-start mb-2">
                 Why Choose Aya Sir G! <br />
-                <span className="red_title">for Carpet Cleaning & Laundry?</span>
+                <span className="red_title">for Sofa Set Cleaning Services & Carpet Cleaners?</span>
               </h2>
               <div className="laundry_trust_points">
                 <div className="laundry_trust_point">
@@ -268,9 +272,9 @@ export default function CarpetCleaningLaundryPage() {
                     <FaUserShield />
                   </div>
                   <div>
-                    <h3 className="laundry_trust_point_title">Verified & Safe Shampoos</h3>
+                    <h3 className="laundry_trust_point_title">Verified & Rated Professionals</h3>
                     <p className="laundry_trust_point_desc">
-                      We connect you with professionals who use non-toxic, eco-friendly detergents safe for kids and pets.
+                      Every cleaner listed on Aya Sir G! goes through CNIC verification and has genuine customer ratings — so you know exactly who's walking into your home.
                     </p>
                   </div>
                 </div>
@@ -279,9 +283,9 @@ export default function CarpetCleaningLaundryPage() {
                     <FaWater />
                   </div>
                   <div>
-                    <h3 className="laundry_trust_point_title">Advanced Steam Extraction</h3>
+                    <h3 className="laundry_trust_point_title">Advanced Equipment & Safe Chemicals</h3>
                     <p className="laundry_trust_point_desc">
-                      Technicians utilize high-performance extraction machinery that pulls out moisture for rapid drying.
+                      Our providers come equipped with high-suction vacuum extractors and fabric-safe chemicals that lift dirt without wrecking your upholstery.
                     </p>
                   </div>
                 </div>
@@ -290,9 +294,9 @@ export default function CarpetCleaningLaundryPage() {
                     <FaStar />
                   </div>
                   <div>
-                    <h3 className="laundry_trust_point_title">Highly Rated Local Cleaners</h3>
+                    <h3 className="laundry_trust_point_title">Direct Deals — Zero Commissions</h3>
                     <p className="laundry_trust_point_desc">
-                      Browse verified profiles with transparent customer reviews and rates in Lahore, Karachi, and Islamabad.
+                      Talk directly to local providers of sofa and carpet cleaning services, negotiate based on seating or area size, and only pay what you both agree on. No hidden fees, no surprises — just honest sofa cleaning services when you need them.
                     </p>
                   </div>
                 </div>
@@ -316,30 +320,32 @@ export default function CarpetCleaningLaundryPage() {
       {/* Shared 4 Steps Component */}
       <ServicesSteps />
 
+      <ServiceChooseSection slug="carpet-cleaning-laundry" />
+
       {/* Cities Section */}
       <section className="laundry_cities_sec">
         <div className="container">
           <h2 className="laundry_section_heading">Find Cleaners & Laundry in Your City</h2>
           <div className="laundry_city_pills">
             <Link
-              href={`/compnies?role=handyman&category_id=55${
-                cityIds.lahore ? `&city=${cityIds.lahore}` : ""
+              href={`/compnies/carpet-cleaning-laundry${
+                cityIds.lahore ? `?city=${cityIds.lahore}` : ""
               }`}
               className="laundry_city_pill"
             >
               Lahore
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=55${
-                cityIds.karachi ? `&city=${cityIds.karachi}` : ""
+              href={`/compnies/carpet-cleaning-laundry${
+                cityIds.karachi ? `?city=${cityIds.karachi}` : ""
               }`}
               className="laundry_city_pill"
             >
               Karachi
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=55${
-                cityIds.islamabad ? `&city=${cityIds.islamabad}` : ""
+              href={`/compnies/carpet-cleaning-laundry${
+                cityIds.islamabad ? `?city=${cityIds.islamabad}` : ""
               }`}
               className="laundry_city_pill"
             >
@@ -352,37 +358,37 @@ export default function CarpetCleaningLaundryPage() {
       {/* FAQ Section */}
       <section className="laundry_faq_sec">
         <div className="container">
-          <h2 className="laundry_section_heading">Frequently Asked Questions</h2>
+          <h2 className="laundry_section_heading">Frequently Asked Questions About Sofa Cleaning Services</h2>
           <div className="laundry_faq_wrapper">
             <Accordion defaultActiveKey="0">
               <Accordion.Item eventKey="0">
-                <Accordion.Header>How do I book a carpet cleaning or laundry service on Aya Sir G!?</Accordion.Header>
+                <Accordion.Header>How do I book a sofa or carpet cleaning service on Aya Sir G!?</Accordion.Header>
                 <Accordion.Body>
-                  To book, browse through our verified carpet cleaning and laundry service providers, compare their profiles, check ratings and customer reviews, and contact them directly to schedule a service.
+                  Just browse through verified cleaner profiles offering sofa cleaning services on Aya Sir G!, check their ratings, go through customer reviews, and take a look at photos of their past work. Once you find someone you like, message them directly for a quote and set up a time that works for you.
                 </Accordion.Body>
               </Accordion.Item>
               <Accordion.Item eventKey="1">
-                <Accordion.Header>How long does it take for a carpet to dry after deep cleaning?</Accordion.Header>
+                <Accordion.Header>What cleaning methods do the professionals use?</Accordion.Header>
                 <Accordion.Body>
-                  Depending on the room ventilation and humidity levels, a deep-cleaned carpet using our specialists' extraction machines typically takes 3 to 6 hours to dry completely.
+                  Depends on what you need — cleaners here use deep vacuuming, wet shampoo washing, steam extraction, foam cleaning, or dry cleaning, based on your fabric type (velvet, leather, or regular upholstery). It's all part of the standard sofa and carpet cleaning services offered on the platform.
                 </Accordion.Body>
               </Accordion.Item>
               <Accordion.Item eventKey="2">
-                <Accordion.Header>Do I need to provide water, detergents, or electricity?</Accordion.Header>
+                <Accordion.Header>How long does it take for a sofa or carpet to dry after cleaning?</Accordion.Header>
                 <Accordion.Body>
-                  The carpet cleaners will bring their own specialized shampoos, stain removers, and vacuum extraction machines. They will need access to clean water and a standard power outlet to run their cleaning equipment.
+                  Usually somewhere between 3 to 6 hours, depending on the room's ventilation, temperature, and which method was used. If you turn on a fan or the AC afterward, it'll dry even faster.
                 </Accordion.Body>
               </Accordion.Item>
               <Accordion.Item eventKey="3">
-                <Accordion.Header>What is the difference between dry cleaning and regular laundry?</Accordion.Header>
+                <Accordion.Header>Can you remove stubborn pet stains and bad odours?</Accordion.Header>
                 <Accordion.Body>
-                  Regular laundry uses water and standard detergents, perfect for everyday cottons and linens. Dry cleaning uses specialized chemical solvents to clean delicate fabrics like silk, wool, and structured suits without water, avoiding fabric shrinkage or color fading.
+                  Yes, definitely. Professionals bring specialized stain removers and deodorizers that handle tough stains — coffee, tea, ink, even pet urine — and get rid of those lingering smells. It's a core part of proper sofa set cleaning services.
                 </Accordion.Body>
               </Accordion.Item>
               <Accordion.Item eventKey="4">
-                <Accordion.Header>Can the cleaners remove old, stubborn stains from my sofa or carpet?</Accordion.Header>
+                <Accordion.Header>Do I need to provide any cleaning machines or chemicals?</Accordion.Header>
                 <Accordion.Body>
-                  Yes, our experts use professional-grade fabric stain removers and hot-water extractors to lift stubborn spots like ink, coffee, oil, and pet stains. While most stains are successfully removed, extremely old or set-in stains might fade significantly but not disappear completely.
+                  Nope, not at all. The cleaner brings their own vacuum, steam extraction machine, and detergents. All you need to have ready is water and electricity access. That's really it — finding sofa cleaning services near me shouldn't be complicated, and it isn't.
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion>
@@ -397,7 +403,7 @@ export default function CarpetCleaningLaundryPage() {
             Need Doorstep Carpet Cleaning or Premium Laundry? Find a Specialist Now.
           </h2>
           <Link
-            href="/compnies?role=handyman&category_id=55"
+            href="/compnies/carpet-cleaning-laundry"
             className="laundry_btn"
           >
             Browse Cleaners

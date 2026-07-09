@@ -17,6 +17,7 @@ import {
 } from "react-icons/fa6";
 import { fetchCityIdByName } from "@/app/lib/cityPages";
 import ServicesSteps from "@/app/components/services/Services";
+import ServiceChooseSection from "@/app/components/services/ServiceChooseSection";
 import "./key-maker.css";
 
 export default function KeyMakerPage() {
@@ -113,7 +114,7 @@ export default function KeyMakerPage() {
                 </p>
                 <div className="key_maker_hero_ctas justify-content-center justify-content-lg-start">
                   <Link
-                    href="/compnies?role=handyman&category_id=57"
+                    href="/compnies/key-maker"
                     className="key_maker_btn key_maker_btn_primary"
                   >
                     Find Key Makers
@@ -316,30 +317,32 @@ export default function KeyMakerPage() {
       {/* Shared 4 Steps Component */}
       <ServicesSteps />
 
+      <ServiceChooseSection slug="key-maker" />
+
       {/* Cities Section */}
       <section className="key_maker_cities_sec">
         <div className="container">
           <h2 className="key_maker_section_heading">Find Key Makers in Your City</h2>
           <div className="key_maker_city_pills">
             <Link
-              href={`/compnies?role=handyman&category_id=57${
-                cityIds.lahore ? `&city=${cityIds.lahore}` : ""
+              href={`/compnies/key-maker${
+                cityIds.lahore ? `?city=${cityIds.lahore}` : ""
               }`}
               className="key_maker_city_pill"
             >
               Lahore
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=57${
-                cityIds.karachi ? `&city=${cityIds.karachi}` : ""
+              href={`/compnies/key-maker${
+                cityIds.karachi ? `?city=${cityIds.karachi}` : ""
               }`}
               className="key_maker_city_pill"
             >
               Karachi
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=57${
-                cityIds.islamabad ? `&city=${cityIds.islamabad}` : ""
+              href={`/compnies/key-maker${
+                cityIds.islamabad ? `?city=${cityIds.islamabad}` : ""
               }`}
               className="key_maker_city_pill"
             >
@@ -397,7 +400,7 @@ export default function KeyMakerPage() {
             Locked Out or Need a Duplicate Key? Contact Local Locksmiths Now.
           </h2>
           <Link
-            href="/compnies?role=handyman&category_id=57"
+            href="/compnies/key-maker"
             className="key_maker_btn"
           >
             Browse Key Makers

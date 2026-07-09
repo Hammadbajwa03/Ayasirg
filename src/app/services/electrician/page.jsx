@@ -16,6 +16,7 @@ import {
 } from "react-icons/fa6";
 import { fetchCityIdByName } from "@/app/lib/cityPages";
 import ServicesSteps from "@/app/components/services/Services";
+import ServiceChooseSection from "@/app/components/services/ServiceChooseSection";
 import "./electrician.css";
 
 export default function ElectricianPage() {
@@ -112,7 +113,7 @@ export default function ElectricianPage() {
                 </p>
                 <div className="electrician_hero_ctas justify-content-center justify-content-lg-start">
                   <Link
-                    href="/compnies?role=handyman&category_id=25"
+                    href="/compnies/electrician"
                     className="electrician_btn electrician_btn_primary"
                   >
                     Find an Electrician
@@ -321,30 +322,32 @@ export default function ElectricianPage() {
       {/* Shared 4 Steps Component */}
       <ServicesSteps />
 
+      <ServiceChooseSection slug="electrician" />
+
       {/* Cities Section */}
       <section className="electrician_cities_sec">
         <div className="container">
           <h2 className="electrician_section_heading">Find Electricians in Your City</h2>
           <div className="electrician_city_pills">
             <Link
-              href={`/compnies?role=handyman&category_id=25${
-                cityIds.lahore ? `&city=${cityIds.lahore}` : ""
+              href={`/compnies/electrician${
+                cityIds.lahore ? `?city=${cityIds.lahore}` : ""
               }`}
               className="electrician_city_pill"
             >
               Lahore
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=25${
-                cityIds.karachi ? `&city=${cityIds.karachi}` : ""
+              href={`/compnies/electrician${
+                cityIds.karachi ? `?city=${cityIds.karachi}` : ""
               }`}
               className="electrician_city_pill"
             >
               Karachi
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=25${
-                cityIds.islamabad ? `&city=${cityIds.islamabad}` : ""
+              href={`/compnies/electrician${
+                cityIds.islamabad ? `?city=${cityIds.islamabad}` : ""
               }`}
               className="electrician_city_pill"
             >
@@ -402,7 +405,7 @@ export default function ElectricianPage() {
             Dealing with a Short Circuit or Need New Wiring? Find an Electrician Now.
           </h2>
           <Link
-            href="/compnies?role=handyman&category_id=25"
+            href="/compnies/electrician"
             className="electrician_btn"
           >
             Browse Electricians

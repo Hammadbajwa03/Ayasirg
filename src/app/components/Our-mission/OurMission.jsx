@@ -13,11 +13,11 @@ export default function OurMission() {
             <h2 className="section_heading">
               Our <span className="red_title">Mission</span>
             </h2>
-            <p id="para">
-              <p className="mb-2">Welcome to Aya Sir G!</p>
+            <div id="para">
+              <div className="mb-2 fw-bold">Welcome to Aya Sir G!</div>
               At Aya Sir G!, we are here to help people find <b>blue collar jobs</b> in Pakistan. We support hardworking and honest workers who want to grow. We believe that "Allah helps those who help themselves," so we give you the platform to start a better life.
-            </p>
-            <p id="para" className="my-2">We know that Pakistan has a very talented workforce. Many families and businesses need reliable help, but workers often find it hard to connect with them. We are fixing this by bringing <b>blue collar jobs</b> online, making it easy and safe for everyone to hire or get hired.</p>
+            </div>
+            <div id="para-desc" className="my-2">We know that Pakistan has a very talented workforce. Many families and businesses need reliable help, but workers often find it hard to connect with them. We are fixing this by bringing <b>blue collar jobs</b> online, making it easy and safe for everyone to hire or get hired.</div>
             {/* <Button className="my-3" variant="outline-danger">
               Hire an Employee <FaArrowRight />
             </Button> */}

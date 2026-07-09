@@ -10,7 +10,7 @@ export default function Page() {
         <div className="row">
           <div className="col-md-8">
             <div className="content my-5">
-              <h2 className="heading_main">Frequently asked <span>questions</span></h2>
+              <h1 className="heading_main">Frequently asked <span>questions</span></h1>
               <p className="sub_heading">
                 Everything you need to know about us.
               </p>

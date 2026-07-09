@@ -17,6 +17,7 @@ import {
 } from "react-icons/fa6";
 import { fetchCityIdByName } from "@/app/lib/cityPages";
 import ServicesSteps from "@/app/components/services/Services";
+import ServiceChooseSection from "@/app/components/services/ServiceChooseSection";
 import "./sweeper.css";
 
 export default function SweeperPage() {
@@ -113,7 +114,7 @@ export default function SweeperPage() {
                 </p>
                 <div className="sweeper_hero_ctas justify-content-center justify-content-lg-start">
                   <Link
-                    href="/compnies?role=handyman&category_id=46"
+                    href="/compnies/sweeper"
                     className="sweeper_btn sweeper_btn_primary"
                   >
                     Find Sweepers Near Me
@@ -325,30 +326,32 @@ export default function SweeperPage() {
       {/* Shared 4 Steps Component */}
       <ServicesSteps />
 
+      <ServiceChooseSection slug="sweeper" />
+
       {/* Cities Section */}
       <section className="sweeper_cities_sec">
         <div className="container">
           <h2 className="sweeper_section_heading">Find Sweepers in Your City</h2>
           <div className="sweeper_city_pills">
             <Link
-              href={`/compnies?role=handyman&category_id=46${
-                cityIds.lahore ? `&city=${cityIds.lahore}` : ""
+              href={`/compnies/sweeper${
+                cityIds.lahore ? `?city=${cityIds.lahore}` : ""
               }`}
               className="sweeper_city_pill"
             >
               Lahore
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=46${
-                cityIds.karachi ? `&city=${cityIds.karachi}` : ""
+              href={`/compnies/sweeper${
+                cityIds.karachi ? `?city=${cityIds.karachi}` : ""
               }`}
               className="sweeper_city_pill"
             >
               Karachi
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=46${
-                cityIds.islamabad ? `&city=${cityIds.islamabad}` : ""
+              href={`/compnies/sweeper${
+                cityIds.islamabad ? `?city=${cityIds.islamabad}` : ""
               }`}
               className="sweeper_city_pill"
             >
@@ -406,7 +409,7 @@ export default function SweeperPage() {
             Keep Your Premises Clean. Find Reliable Sweepers Now.
           </h2>
           <Link
-            href="/compnies?role=handyman&category_id=46"
+            href="/compnies/sweeper"
             className="sweeper_btn"
           >
             Browse Sweepers

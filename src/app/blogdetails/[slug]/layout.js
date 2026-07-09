@@ -1,5 +1,5 @@
 export async function generateMetadata({ params }) {
-  const { slug } = params;
+  const { slug } = await params;
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://admin.ayasirg.com";
   try {
     const res = await fetch(`${baseUrl}/api/blog-detail/${slug}`, { cache: "no-store" });

@@ -16,6 +16,7 @@ import {
 } from "react-icons/fa6";
 import { fetchCityIdByName } from "@/app/lib/cityPages";
 import ServicesSteps from "@/app/components/services/Services";
+import ServiceChooseSection from "@/app/components/services/ServiceChooseSection";
 import "./gardener-mali.css";
 
 export default function GardenerMaliPage() {
@@ -112,7 +113,7 @@ export default function GardenerMaliPage() {
                 </p>
                 <div className="gardener_hero_ctas justify-content-center justify-content-lg-start">
                   <Link
-                    href="/compnies?role=handyman&category_id=20"
+                    href="/compnies/gardener-mali"
                     className="gardener_btn gardener_btn_primary"
                   >
                     Find a Gardener
@@ -321,30 +322,32 @@ export default function GardenerMaliPage() {
       {/* Shared 4 Steps Component */}
       <ServicesSteps />
 
+      <ServiceChooseSection slug="gardener-mali" />
+
       {/* Cities Section */}
       <section className="gardener_cities_sec">
         <div className="container">
           <h2 className="gardener_section_heading">Find Gardeners in Your City</h2>
           <div className="gardener_city_pills">
             <Link
-              href={`/compnies?role=handyman&category_id=20${
-                cityIds.lahore ? `&city=${cityIds.lahore}` : ""
+              href={`/compnies/gardener-mali${
+                cityIds.lahore ? `?city=${cityIds.lahore}` : ""
               }`}
               className="gardener_city_pill"
             >
               Lahore
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=20${
-                cityIds.karachi ? `&city=${cityIds.karachi}` : ""
+              href={`/compnies/gardener-mali${
+                cityIds.karachi ? `?city=${cityIds.karachi}` : ""
               }`}
               className="gardener_city_pill"
             >
               Karachi
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=20${
-                cityIds.islamabad ? `&city=${cityIds.islamabad}` : ""
+              href={`/compnies/gardener-mali${
+                cityIds.islamabad ? `?city=${cityIds.islamabad}` : ""
               }`}
               className="gardener_city_pill"
             >
@@ -402,7 +405,7 @@ export default function GardenerMaliPage() {
             Want a Lush, Beautifully Maintained Lawn? Find a Gardener Now.
           </h2>
           <Link
-            href="/compnies?role=handyman&category_id=20"
+            href="/compnies/gardener-mali"
             className="gardener_btn"
           >
             Browse Verified Malis

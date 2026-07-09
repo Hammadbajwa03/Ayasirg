@@ -8,8 +8,8 @@ import "./city-page.css";
  */
 export default function CityPageView({ city, cityId }) {
   const listingsHref = cityId
-    ? `/compnies?role=handyman&city=${encodeURIComponent(cityId)}`
-    : "/compnies?role=handyman";
+    ? `/compnies?city=${encodeURIComponent(cityId)}`
+    : "/compnies";
 
   return (
     <section className="city_page margin_navbar">

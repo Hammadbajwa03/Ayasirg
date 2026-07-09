@@ -14,7 +14,7 @@ import Myform from "../Myform/Myform";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 
-const TranslateWrapper = dynamic(() => import("../translateWrapper/TranslateWrapper"), { ssr: false });
+const TranslateWrapper = dynamic(() => import("../translateWrapper/LanguageDropdown"), { ssr: false });
 
 /** API may return a string URL or `{ original, web, webp }` (Spatie-style). */
 function resolveProfileAvatarUrl(profileImage) {
@@ -408,3 +408,5 @@ export default function CustomNavbar() {
     </section>
   );
 }
+
+// force reload

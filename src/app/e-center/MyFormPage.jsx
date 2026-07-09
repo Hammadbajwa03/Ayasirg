@@ -569,9 +569,7 @@ export default function MyFormPage() {
         );
 
     return (
-        <section className="Form_section">
-            <div className="container myform_page">
-                <h2>Add New {userType == "handyman" ? "Individual" : userType == "provider" ? "Company" : ""}</h2>
+        <>
                 <form onSubmit={handleSubmit}>
                     <div className="image_div relative w-32 h-32">
                         <div className="position-relative">
@@ -1001,7 +999,6 @@ export default function MyFormPage() {
                 </div>
             </div> */}
 
-            </div>
-        </section>
+        </>
     );
 }

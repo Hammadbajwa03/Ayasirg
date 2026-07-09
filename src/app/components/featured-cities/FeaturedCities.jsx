@@ -65,9 +65,9 @@ export default function FeaturedCities() {
     if (name === "islamabad") return "/services/islamabad";
     
     if (String(city.id).startsWith("fallback-")) {
-      return `/compnies?role=handyman`;
+      return "/compnies";
     }
-    return `/compnies?role=handyman&city=${city.id}`;
+    return `/compnies?city=${city.id}`;
   };
 
   return (

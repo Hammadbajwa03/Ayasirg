@@ -17,6 +17,7 @@ import {
 } from "react-icons/fa6";
 import { fetchCityIdByName } from "@/app/lib/cityPages";
 import ServicesSteps from "@/app/components/services/Services";
+import ServiceChooseSection from "@/app/components/services/ServiceChooseSection";
 import "./automotive-mechanic.css";
 
 export default function AutomotiveMechanicPage() {
@@ -113,7 +114,7 @@ export default function AutomotiveMechanicPage() {
                 </p>
                 <div className="mech_hero_ctas justify-content-center justify-content-lg-start">
                   <Link
-                    href="/compnies?role=handyman&category_id=56"
+                    href="/compnies/automotive-mechanic"
                     className="mech_btn mech_btn_primary"
                   >
                     Find an Automotive Mechanic
@@ -316,30 +317,32 @@ export default function AutomotiveMechanicPage() {
       {/* Shared 4 Steps Component */}
       <ServicesSteps />
 
+      <ServiceChooseSection slug="automotive-mechanic" />
+
       {/* Cities Section */}
       <section className="mech_cities_sec">
         <div className="container">
           <h2 className="mech_section_heading">Find Automotive Mechanics in Your City</h2>
           <div className="mech_city_pills">
             <Link
-              href={`/compnies?role=handyman&category_id=56${
-                cityIds.lahore ? `&city=${cityIds.lahore}` : ""
+              href={`/compnies/automotive-mechanic${
+                cityIds.lahore ? `?city=${cityIds.lahore}` : ""
               }`}
               className="mech_city_pill"
             >
               Lahore
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=56${
-                cityIds.karachi ? `&city=${cityIds.karachi}` : ""
+              href={`/compnies/automotive-mechanic${
+                cityIds.karachi ? `?city=${cityIds.karachi}` : ""
               }`}
               className="mech_city_pill"
             >
               Karachi
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=56${
-                cityIds.islamabad ? `&city=${cityIds.islamabad}` : ""
+              href={`/compnies/automotive-mechanic${
+                cityIds.islamabad ? `?city=${cityIds.islamabad}` : ""
               }`}
               className="mech_city_pill"
             >
@@ -397,7 +400,7 @@ export default function AutomotiveMechanicPage() {
             Car Trouble? Find a Mechanic Near You Right Now.
           </h2>
           <Link
-            href="/compnies?role=handyman&category_id=56"
+            href="/compnies/automotive-mechanic"
             className="mech_btn"
           >
             Browse Automotive Mechanics

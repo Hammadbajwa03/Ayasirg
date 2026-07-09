@@ -16,6 +16,7 @@ import {
 } from "react-icons/fa6";
 import { fetchCityIdByName } from "@/app/lib/cityPages";
 import ServicesSteps from "@/app/components/services/Services";
+import ServiceChooseSection from "@/app/components/services/ServiceChooseSection";
 import "./security-guard-watchman.css";
 
 export default function SecurityGuardPage() {
@@ -46,50 +47,49 @@ export default function SecurityGuardPage() {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: [
+    "mainEntity": [
       {
         "@type": "Question",
-        name: "How do I hire a security guard or watchman on Aya Sir G!?",
-        acceptedAnswer: {
+        "name": "How do I hire a security guard or watchman on Aya Sir G!?",
+        "acceptedAnswer": {
           "@type": "Answer",
-          text: "Browse verified security guard profiles on Aya Sir G!, check their experience, customer ratings, and availability, then contact them directly to discuss duty hours, location, and monthly salary.",
-        },
+          "text": "Browse verified security guard profiles on Aya Sir G!, check their experience, customer ratings, and availability, then reach out to them directly to work out duty hours, location, and monthly salary."
+        }
       },
       {
         "@type": "Question",
-        name: "What types of security guard services are available?",
-        acceptedAnswer: {
+        "name": "What types of security guard services are available?",
+        "acceptedAnswer": {
           "@type": "Answer",
-          text: "Our security staff covers residential gate guards, commercial building security, night watchmen, factory and warehouse security, armed guards, and event security personnel.",
-        },
+          "text": "Our security staff covers residential gate guards, commercial building security, night watchmen, factory and warehouse security, armed guards, and event security personnel."
+        }
       },
       {
         "@type": "Question",
-        name: "Can I hire a security guard for a residential society or home?",
-        acceptedAnswer: {
+        "name": "Can I hire a security guard for a residential society or home?",
+        "acceptedAnswer": {
           "@type": "Answer",
-          text: "Yes. Many security guards on Aya Sir G! specialize in residential security — guarding gates, monitoring entry/exit, and providing 24/7 watchman services for houses, apartments, and housing societies.",
-        },
+          "text": "Yes. Many security guards on Aya Sir G! specialize in home security guard services — guarding gates, monitoring entry and exit, and providing 24/7 watchman services for houses, apartments, and housing societies."
+        }
       },
       {
         "@type": "Question",
-        name: "How much does a security guard cost per month in Pakistan?",
-        acceptedAnswer: {
+        "name": "How much does a security guard cost per month in Pakistan?",
+        "acceptedAnswer": {
           "@type": "Answer",
-          text: "Security guard monthly salaries in Pakistan typically range from PKR 25,000 to PKR 50,000 depending on the city, duty hours (day/night), experience, and whether armed or unarmed. Contact guards directly on Aya Sir G! for accurate rates.",
-        },
+          "text": "Security guard monthly salaries in Pakistan usually range from PKR 25,000 to PKR 50,000, depending on the city, duty hours (day or night), experience, and whether the guard is armed or unarmed. For accurate rates, it's best to contact security guard services near me directly on Aya Sir G!."
+        }
       },
       {
         "@type": "Question",
-        name: "Are the security guards on Aya Sir G! background checked?",
-        acceptedAnswer: {
+        "name": "Are the security guards on Aya Sir G! background checked?",
+        "acceptedAnswer": {
           "@type": "Answer",
-          text: "Aya Sir G! displays verified profile cards with CNIC status and genuine customer reviews so you can safely recruit trustworthy, reliable security staff for your property.",
-        },
-      },
-    ],
+          "text": "Aya Sir G! shows verified profile cards with CNIC status and genuine customer reviews, so you can safely bring on the best security guard services and reliable staff for your property."
+        }
+      }
+    ]
   };
-
   return (
     <div className="security_guard_page margin_navbar">
       {/* FAQ Schema */}
@@ -105,14 +105,14 @@ export default function SecurityGuardPage() {
             <div className="col-lg-7">
               <div className="security_guard_hero_content text-center text-lg-start">
                 <h1 className="security_guard_hero_h1">
-                  Security Guards &amp; Watchmen — Aya Sir G!
+                  Security Guard Services & Watchmen — Aya Sir G!
                 </h1>
                 <p className="security_guard_hero_subheading">
-                  Find verified security guards and watchmen for homes, offices, factories, and housing societies. Compare profiles, check reviews, and hire directly.
+                  Find reliable security guard services and watchmen for homes, offices, factories, and housing societies. Compare profiles, check reviews, and hire directly.
                 </p>
                 <div className="security_guard_hero_ctas justify-content-center justify-content-lg-start">
                   <Link
-                    href="/compnies?role=handyman&category_id=12"
+                    href="/compnies/security-guard-watchman"
                     className="security_guard_btn security_guard_btn_primary"
                   >
                     Find Security Guards
@@ -152,25 +152,25 @@ export default function SecurityGuardPage() {
         <div className="container">
           <div className="security_guard_content_wrapper">
             <h2 className="security_guard_section_heading">
-              Verified Security Guard Hiring with Aya Sir G!
+              Verified Security Guard Services with Aya Sir G!
             </h2>
             <p className="security_guard_content_text">
-              When hiring a security guard, the biggest concern is trust and responsibility. How do you know the person you are hiring is reliable enough to protect your home, office, warehouse or shop?
+              When you're hiring a security guard, the biggest worry is usually trust and responsibility. How do you really know the person you're bringing on is reliable enough to protect your home, office, warehouse, or shop?
             </p>
             <p className="security_guard_content_text">
-              A security guard is responsible for safeguarding valuable assets and sometimes even ensuring the safety of your family. However, problems can arise if the person is careless, leaves duty during the night or does not take the job seriously. In some cases, lack of discipline or awareness can create serious security risks.
+              A security guard is responsible for safeguarding valuable assets, and sometimes even the safety of your family. But problems can crop up if the person is careless, leaves their post at night, or simply doesn't take the job seriously. In some cases, a lack of discipline or awareness can create real security risks.
             </p>
             <p className="security_guard_content_text">
-              That is why choosing the right person is extremely important. You need someone who understands responsibility, remains alert and knows how to respond in the right situation.
+              That's why choosing the right person matters so much. You need someone who understands responsibility, stays alert, and knows how to respond when it counts.
             </p>
             <p className="security_guard_content_text">
-              In today's modern environment, people are moving away from traditional hiring methods and using more structured and transparent systems.
+              These days, people are moving away from traditional hiring methods and looking for the best security guard services through more structured, transparent systems instead.
             </p>
             <p className="security_guard_content_text">
-              With Aya Sir G!, you can hire verified security guards by reviewing their profiles, experience, ratings and customer feedback. This helps you make an informed decision before hiring.
+              With Aya Sir G!, you can hire verified security guards by going through their profiles, experience, ratings, and customer feedback — so you can make an informed decision before hiring.
             </p>
             <p className="security_guard_content_text">
-              The platform also allows you to directly contact guards without paying any commission, giving you full control over your hiring process while ensuring transparency and trust.
+              The platform also lets you contact security guard services near me directly, without paying any commission, giving you full control over the hiring process while keeping things transparent and trustworthy.
             </p>
             <div className="mt-4 pt-2">
               <span className="text-muted small">
@@ -207,7 +207,7 @@ export default function SecurityGuardPage() {
               </div>
               <h3 className="security_guard_card_title">Residential Gate Guard</h3>
               <p className="security_guard_card_desc">
-                Stationed at the main entrance of homes, apartments, and housing societies to monitor and control visitor entry, exit, and vehicle movement.
+                Stationed at the main entrance of homes, apartments, and housing societies as part of trusted home security guard services, keeping an eye on visitor entry, exit, and vehicle movement.
               </p>
             </div>
             {/* Card 2 */}
@@ -217,7 +217,7 @@ export default function SecurityGuardPage() {
               </div>
               <h3 className="security_guard_card_title">Commercial Building Security</h3>
               <p className="security_guard_card_desc">
-                Patrolling office buildings, shopping plazas, banks, and corporate premises to prevent theft, unauthorized access, and maintain overall security.
+                Patrolling office buildings, shopping plazas, banks, and corporate premises to prevent theft, stop unauthorized access, and keep overall security in check.
               </p>
             </div>
             {/* Card 3 */}
@@ -227,7 +227,7 @@ export default function SecurityGuardPage() {
               </div>
               <h3 className="security_guard_card_title">Night Watchman (Chowkidar)</h3>
               <p className="security_guard_card_desc">
-                Overnight watchman services for homes, shops, and properties — ensuring safety through the night with regular patrols and emergency response.
+                Overnight watchman services for homes, shops, and properties — keeping things safe through the night with regular patrols and quick emergency response.
               </p>
             </div>
             {/* Card 4 */}
@@ -235,9 +235,9 @@ export default function SecurityGuardPage() {
               <div className="security_guard_card_icon_wrap">
                 <FaLock />
               </div>
-              <h3 className="security_guard_card_title">Factory &amp; Warehouse Security</h3>
+              <h3 className="security_guard_card_title">Factory & Warehouse Security</h3>
               <p className="security_guard_card_desc">
-                Industrial security personnel to safeguard factories, warehouses, storage yards, and manufacturing units from theft, vandalism, and unauthorized entry.
+                Industrial security personnel who safeguard factories, warehouses, storage yards, and manufacturing units from theft, vandalism, and unauthorized entry.
               </p>
             </div>
             {/* Card 5 */}
@@ -245,9 +245,9 @@ export default function SecurityGuardPage() {
               <div className="security_guard_card_icon_wrap">
                 <FaEye />
               </div>
-              <h3 className="security_guard_card_title">CCTV Monitoring &amp; Patrol</h3>
+              <h3 className="security_guard_card_title">CCTV Monitoring & Patrol</h3>
               <p className="security_guard_card_desc">
-                On-site security guards trained to monitor CCTV feeds, respond to camera alerts, conduct scheduled property patrols, and maintain incident logs.
+                On-site security guards trained to monitor CCTV feeds, respond to camera alerts, carry out scheduled property patrols, and maintain incident logs.
               </p>
             </div>
             {/* Card 6 */}
@@ -255,9 +255,9 @@ export default function SecurityGuardPage() {
               <div className="security_guard_card_icon_wrap">
                 <FaCircleCheck />
               </div>
-              <h3 className="security_guard_card_title">Event &amp; VIP Security</h3>
+              <h3 className="security_guard_card_title">Event & VIP Security</h3>
               <p className="security_guard_card_desc">
-                Professional security personnel for weddings, corporate events, conferences, and private gatherings to manage crowd control and guest safety.
+                Professional security personnel for weddings, corporate events, conferences, and private gatherings, managing crowd control and guest safety.
               </p>
             </div>
           </div>
@@ -271,7 +271,7 @@ export default function SecurityGuardPage() {
             <div className="col-lg-6 security_guard_trust_col_text">
               <h2 className="section_heading text-start mb-2">
                 Why Choose Aya Sir G! <br />
-                <span className="red_title">for Security Guards?</span>
+                <span className="red_title">for Security Guard Services?</span>
               </h2>
               <div className="security_guard_trust_points">
                 <div className="security_guard_trust_point">
@@ -281,7 +281,7 @@ export default function SecurityGuardPage() {
                   <div>
                     <h3 className="security_guard_trust_point_title">CNIC-Verified Profiles</h3>
                     <p className="security_guard_trust_point_desc">
-                      Every security guard on Aya Sir G! has a CNIC-verified profile with genuine customer ratings — so you can confidently recruit trustworthy, background-checked personnel.
+                      Every security guard on Aya Sir G! has a CNIC-verified profile with genuine customer ratings, so you can confidently bring on trustworthy, background-checked personnel.
                     </p>
                   </div>
                 </div>
@@ -290,9 +290,9 @@ export default function SecurityGuardPage() {
                     <FaClock />
                   </div>
                   <div>
-                    <h3 className="security_guard_trust_point_title">Day, Night &amp; 24/7 Shifts</h3>
+                    <h3 className="security_guard_trust_point_title">Day, Night & 24/7 Shifts</h3>
                     <p className="security_guard_trust_point_desc">
-                      Find security guards available for fixed day shifts, night duty, or full 24-hour rotational guard posts depending on your property's security requirements.
+                      Find security guards available for fixed day shifts, night duty, or full 24-hour rotational guard posts, depending on what your property actually needs.
                     </p>
                   </div>
                 </div>
@@ -303,7 +303,7 @@ export default function SecurityGuardPage() {
                   <div>
                     <h3 className="security_guard_trust_point_title">Direct Hire — No Agency Commission</h3>
                     <p className="security_guard_trust_point_desc">
-                      Contact security staff directly, negotiate monthly salaries and duty terms, and hire without paying extra fees to security agencies or placement firms.
+                      Contact security staff directly, negotiate monthly salaries and duty terms, and hire without paying extra fees to agencies or placement firms for security guard services.
                     </p>
                   </div>
                 </div>
@@ -437,6 +437,9 @@ export default function SecurityGuardPage() {
       {/* Shared 4 Steps Component */}
       <ServicesSteps />
 
+      <ServiceChooseSection slug="security-guard-watchman" />
+
+
       {/* Cities Section */}
       <section className="security_guard_cities_sec">
         <div className="container">
@@ -445,24 +448,24 @@ export default function SecurityGuardPage() {
           </h2>
           <div className="security_guard_city_pills">
             <Link
-              href={`/compnies?role=handyman&category_id=12${
-                cityIds.lahore ? `&city=${cityIds.lahore}` : ""
+              href={`/compnies/security-guard-watchman${
+                cityIds.lahore ? `?city=${cityIds.lahore}` : ""
               }`}
               className="security_guard_city_pill"
             >
               Lahore
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=12${
-                cityIds.karachi ? `&city=${cityIds.karachi}` : ""
+              href={`/compnies/security-guard-watchman${
+                cityIds.karachi ? `?city=${cityIds.karachi}` : ""
               }`}
               className="security_guard_city_pill"
             >
               Karachi
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=12${
-                cityIds.islamabad ? `&city=${cityIds.islamabad}` : ""
+              href={`/compnies/security-guard-watchman${
+                cityIds.islamabad ? `?city=${cityIds.islamabad}` : ""
               }`}
               className="security_guard_city_pill"
             >
@@ -485,7 +488,7 @@ export default function SecurityGuardPage() {
                   How do I hire a security guard or watchman on Aya Sir G!?
                 </Accordion.Header>
                 <Accordion.Body>
-                  Browse verified security guard profiles on Aya Sir G!, check their experience, customer ratings, and availability, then contact them directly to discuss duty hours, location, and monthly salary.
+                  Browse verified security guard profiles on Aya Sir G!, check their experience, customer ratings, and availability, then reach out to them directly to work out duty hours, location, and monthly salary.
                 </Accordion.Body>
               </Accordion.Item>
               <Accordion.Item eventKey="1">
@@ -501,7 +504,7 @@ export default function SecurityGuardPage() {
                   Can I hire a security guard for a residential society or home?
                 </Accordion.Header>
                 <Accordion.Body>
-                  Yes. Many security guards on Aya Sir G! specialize in residential security — guarding gates, monitoring entry/exit, and providing 24/7 watchman services for houses, apartments, and housing societies.
+                  Yes. Many security guards on Aya Sir G! specialize in home security guard services — guarding gates, monitoring entry and exit, and providing 24/7 watchman services for houses, apartments, and housing societies.
                 </Accordion.Body>
               </Accordion.Item>
               <Accordion.Item eventKey="3">
@@ -509,7 +512,7 @@ export default function SecurityGuardPage() {
                   How much does a security guard cost per month in Pakistan?
                 </Accordion.Header>
                 <Accordion.Body>
-                  Security guard monthly salaries in Pakistan typically range from PKR 25,000 to PKR 50,000 depending on the city, duty hours (day/night), experience, and whether armed or unarmed. Contact guards directly on Aya Sir G! for accurate rates.
+                  Security guard monthly salaries in Pakistan usually range from PKR 25,000 to PKR 50,000, depending on the city, duty hours (day or night), experience, and whether the guard is armed or unarmed. For accurate rates, it's best to contact security guard services near me directly on Aya Sir G!.
                 </Accordion.Body>
               </Accordion.Item>
               <Accordion.Item eventKey="4">
@@ -517,7 +520,7 @@ export default function SecurityGuardPage() {
                   Are the security guards on Aya Sir G! background checked?
                 </Accordion.Header>
                 <Accordion.Body>
-                  Aya Sir G! displays verified profile cards with CNIC status and genuine customer reviews so you can safely recruit trustworthy, reliable security staff for your property.
+                  Aya Sir G! shows verified profile cards with CNIC status and genuine customer reviews, so you can safely bring on the best security guard services and reliable staff for your property.
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion>
@@ -532,7 +535,7 @@ export default function SecurityGuardPage() {
             Need Reliable Security? Find Verified Guards Now.
           </h2>
           <Link
-            href="/compnies?role=handyman&category_id=12"
+            href="/compnies/security-guard-watchman"
             className="security_guard_btn"
           >
             Browse Security Guards &amp; Watchmen

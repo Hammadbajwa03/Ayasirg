@@ -16,6 +16,7 @@ import {
 } from "react-icons/fa6";
 import { fetchCityIdByName } from "@/app/lib/cityPages";
 import ServicesSteps from "@/app/components/services/Services";
+import ServiceChooseSection from "@/app/components/services/ServiceChooseSection";
 import "./ceiling-work.css";
 
 export default function CeilingWorkPage() {
@@ -112,7 +113,7 @@ export default function CeilingWorkPage() {
                 </p>
                 <div className="ceiling_hero_ctas justify-content-center justify-content-lg-start">
                   <Link
-                    href="/compnies?role=handyman&category_id=35"
+                    href="/compnies/ceiling-work"
                     className="ceiling_btn ceiling_btn_primary"
                   >
                     Find Ceiling Experts
@@ -324,30 +325,32 @@ export default function CeilingWorkPage() {
       {/* Shared 4 Steps Component */}
       <ServicesSteps />
 
+      <ServiceChooseSection slug="ceiling-work" />
+
       {/* Cities Section */}
       <section className="ceiling_cities_sec">
         <div className="container">
           <h2 className="ceiling_section_heading">Find Ceiling Installers in Your City</h2>
           <div className="ceiling_city_pills">
             <Link
-              href={`/compnies?role=handyman&category_id=35${
-                cityIds.lahore ? `&city=${cityIds.lahore}` : ""
+              href={`/compnies/ceiling-work${
+                cityIds.lahore ? `?city=${cityIds.lahore}` : ""
               }`}
               className="ceiling_city_pill"
             >
               Lahore
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=35${
-                cityIds.karachi ? `&city=${cityIds.karachi}` : ""
+              href={`/compnies/ceiling-work${
+                cityIds.karachi ? `?city=${cityIds.karachi}` : ""
               }`}
               className="ceiling_city_pill"
             >
               Karachi
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=35${
-                cityIds.islamabad ? `&city=${cityIds.islamabad}` : ""
+              href={`/compnies/ceiling-work${
+                cityIds.islamabad ? `?city=${cityIds.islamabad}` : ""
               }`}
               className="ceiling_city_pill"
             >
@@ -405,7 +408,7 @@ export default function CeilingWorkPage() {
             Elevate Your Room's Interior. Find False Ceiling Installers Now.
           </h2>
           <Link
-            href="/compnies?role=handyman&category_id=35"
+            href="/compnies/ceiling-work"
             className="ceiling_btn"
           >
             Browse Ceiling Installers

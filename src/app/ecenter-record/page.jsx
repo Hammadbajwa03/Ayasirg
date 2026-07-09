@@ -425,6 +425,7 @@ function EcenterInnerPage() {
   return (
     <section className="all_center_page margin_navbar">
       <div className="container py-lg-3 py-3">
+        <h1 className="fw-bold mb-3">E-Center Records</h1>
         <div className="row relative_div">
           {/* Sidebar */}
           <div className="col-lg-4 p-0 bg_filter mb-2">

@@ -175,6 +175,7 @@ export default function Page() {
   return (
     <section className="blogs margin_navbar">
       <div className="container py-3">
+        <h1 className="fw-bold text-center mb-3">Aya Sir G! Blog</h1>
         {/* Category Slider */}
         <div className="category-slider d-flex align-items-center justify-content-center mt-2 mb-3">
           {showLeft && (

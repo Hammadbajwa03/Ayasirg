@@ -16,6 +16,7 @@ import {
 } from "react-icons/fa6";
 import { fetchCityIdByName } from "@/app/lib/cityPages";
 import ServicesSteps from "@/app/components/services/Services";
+import ServiceChooseSection from "@/app/components/services/ServiceChooseSection";
 import "./cctv-fence-installer.css";
 
 export default function CctvFenceInstallerPage() {
@@ -49,10 +50,10 @@ export default function CctvFenceInstallerPage() {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "How do I book a CCTV or fence installer on Aya Sir G!?",
+        "name": "How do I book a CCTV camera installation or fence installer on Aya Sir G!?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "To book, browse through our verified CCTV and fence installer profiles, check their experience, ratings, and customer reviews, and contact them directly to explain your security requirements and negotiate rates."
+          "text": "It's pretty simple, just go through our verified CCTV camera installation and fence installer profiles, check out their experience, ratings, and what past customers are saying, and then message them directly to talk about what you need and work out a price together."
         }
       },
       {
@@ -60,15 +61,15 @@ export default function CctvFenceInstallerPage() {
         "name": "What is the difference between an IP camera and an analog camera?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "IP (Internet Protocol) cameras transmit video digitally over a network, offering higher resolution, advanced digital zoom, and smarter features like motion detection. Analog cameras transmit video via coaxial cables to a DVR, which is generally more cost-effective but has limited resolution and features."
+          "text": "IP (Internet Protocol) cameras send their footage digitally over a network, which means you get sharper resolution, better digital zoom, and smarter extras like motion detection. Analog cameras work a bit differently, they send video through coaxial cables straight to a DVR. They're usually easier on the pocket, but you won't get the same resolution or feature set."
         }
       },
       {
         "@type": "Question",
-        "name": "Do installers provide the cameras and cables themselves?",
+        "name": "Do CCTV camera installation services near me provide the cameras and cables themselves?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Installers can source the security cameras, DVRs, NVRs, cables, and fence materials for you and include it in a package, or you can purchase the hardware yourself and hire them solely for the professional installation work."
+          "text": "Most of the time, yes. Installers can handle everything for you, cameras, DVRs, NVRs, cables, even fence materials, and bundle it all into one package. But if you already have your own equipment, that's fine too, you can just bring them in for the installation part alone."
         }
       },
       {
@@ -76,7 +77,7 @@ export default function CctvFenceInstallerPage() {
         "name": "What is concertina razor wire and why is it used for fences?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Concertina razor wire is a type of barbed wire formed in large coils that expand like an accordion. It features sharp steel blades designed to prevent scaling or cutting, making it an excellent security upgrade for residential and commercial boundary walls."
+          "text": "Think of concertina razor wire as barbed wire that's been coiled up so it expands like an accordion when stretched out. It's lined with sharp steel blades that make climbing or cutting through pretty much impossible, which is why it's such a popular choice for boosting security on home and business boundary walls."
         }
       },
       {
@@ -84,7 +85,7 @@ export default function CctvFenceInstallerPage() {
         "name": "Can I view my security cameras on my phone when I am away from home?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. Our expert CCTV installers will connect your DVR/NVR to your home internet router and configure the corresponding mobile application, allowing you to monitor live feeds and recorded clips from anywhere in the world."
+          "text": "Yes, absolutely. Our cctv camera installation in Lahore technicians will connect your DVR/NVR to your home internet and set up the app on your phone, so no matter where you are in the world, you can pull up live feeds or check past recordings whenever you need to."
         }
       }
     ]
@@ -105,14 +106,14 @@ export default function CctvFenceInstallerPage() {
             <div className="col-lg-7">
               <div className="cctv_hero_content text-center text-lg-start">
                 <h1 className="cctv_hero_h1">
-                  Professional CCTV & Fence Installers in Pakistan — Hire on Aya Sir G!
+                  Professional CCTV Camera Installation & Fence Installers in Pakistan — Hire on Aya Sir G!
                 </h1>
                 <p className="cctv_hero_subheading">
-                  Find verified security system installers, compare CCTV and safety fence technician profiles, read reviews, and hire trusted experts.
+                  Find verified security system installers, compare CCTV camera installation and safety fence technician profiles, read reviews, and hire trusted experts.
                 </p>
                 <div className="cctv_hero_ctas justify-content-center justify-content-lg-start">
                   <Link
-                    href="/compnies?role=handyman&category_id=11"
+                    href="/compnies/cctv-fence-installer"
                     className="cctv_btn cctv_btn_primary"
                   >
                     Find Security Installers
@@ -148,28 +149,28 @@ export default function CctvFenceInstallerPage() {
         </div>
       </header>
 
-      {/* Content Block (Word Count: ~150 words) */}
+      {/* Content Block */}
       <section className="cctv_content_block">
         <div className="container">
           <div className="cctv_content_wrapper">
-            <h2 className="cctv_section_heading">CCTV and Electric Fence Installation Services with Aya Sir G!</h2>
+            <h2 className="cctv_section_heading">CCTV Camera Installation and Electric Fence Installation Services with Aya Sir G!</h2>
             <p className="cctv_content_text">
-              Inflation is a major challenge in Pakistan. One of its biggest impacts is that many people struggle with rising costs of daily essentials such as food and medicine and in some cases job losses also add to financial pressure. Due to these difficulties, security concerns have increased in many areas.
+              Inflation is one of the biggest challenges Pakistan is facing right now. It's hit people hard, from the rising cost of everyday essentials like food and medicine, to job losses that keep piling on the financial pressure. And with all this strain, security concerns have naturally gone up in many areas too.
             </p>
             <p className="cctv_content_text">
-              In recent years, home robberies and security incidents have become more common, making systems like CCTV cameras and electric fencing an important part of home and business safety.
+              Over the past few years, home robberies and other security incidents have become far more common, which is exactly why CCTV camera installation and electric fencing have turned into a real necessity for homes and businesses alike, not just an add-on.
             </p>
             <p className="cctv_content_text">
-              However, the challenge is finding a reliable and skilled professional for CCTV installation or electric fence setup. Many people still depend on personal references, which is not always the most transparent or efficient method.
+              The tricky part, though, is finding someone reliable and genuinely skilled for cctv camera installation services or setting up an electric fence. Most people still end up relying on word-of-mouth references, and honestly, that's rarely the most transparent or efficient way to go about it.
             </p>
             <p className="cctv_content_text">
-              Aya Sir G! provides a better solution by offering a platform where you can find verified CCTV technicians, security system installers and other blue-collar professionals in one place.
+              That's where Aya Sir G! comes in. We've built a platform that brings verified CCTV technicians, including experts for cctv camera installation in Lahore, security system installers, and other blue-collar professionals, all together in one place.
             </p>
             <p className="cctv_content_text">
-              Users can compare profiles, check ratings and experience and make informed decisions based on real feedback. This helps ensure quality work, competitive pricing and greater transparency.
+              You can compare profiles, check ratings and experience, and make an informed decision based on real feedback from real customers. It's all about ensuring quality work, fair pricing, and a lot more transparency than the old way of doing things.
             </p>
             <p className="cctv_content_text">
-              With Aya Sir G!, you get a one-window solution for all blue-collar service needs, making it easier to find trusted professionals without relying only on informal references.
+              With Aya Sir G!, you basically get a one-window solution for all your blue-collar service needs, including cctv camera installation near me, so you don't have to depend only on informal references anymore.
             </p>
             <div className="mt-4 pt-2">
               <span className="text-muted small">
@@ -268,7 +269,7 @@ export default function CctvFenceInstallerPage() {
             <div className="col-lg-6 cctv_trust_col_text">
               <h2 className="section_heading text-start mb-2">
                 Why Choose Aya Sir G! <br />
-                <span className="red_title">for Security Installation?</span>
+                <span className="red_title">for CCTV Camera Installation Services Near Me?</span>
               </h2>
               <div className="cctv_trust_points">
                 <div className="cctv_trust_point">
@@ -278,7 +279,7 @@ export default function CctvFenceInstallerPage() {
                   <div>
                     <h3 className="cctv_trust_point_title">Verified Security Providers</h3>
                     <p className="cctv_trust_point_desc">
-                      Experienced technicians with clean records, giving you absolute trust during installation at home or work.
+                      Experienced technicians with clean records, so you can feel completely at ease during installation, whether it's at home or at work.
                     </p>
                   </div>
                 </div>
@@ -289,7 +290,7 @@ export default function CctvFenceInstallerPage() {
                   <div>
                     <h3 className="cctv_trust_point_title">HD Surveillance & Precision Fencing</h3>
                     <p className="cctv_trust_point_desc">
-                      Specialists optimize camera view coverage with no blind spots, and install tightly tensioned barbed wire.
+                      Our specialists make sure your camera coverage has no blind spots, and they install barbed wire that's tightly tensioned and built to last.
                     </p>
                   </div>
                 </div>
@@ -300,7 +301,7 @@ export default function CctvFenceInstallerPage() {
                   <div>
                     <h3 className="cctv_trust_point_title">Direct Negotiation, Zero Markup</h3>
                     <p className="cctv_trust_point_desc">
-                      Browse authentic customer ratings, contact installers directly, and pay realistic prices without commission.
+                      Browse authentic customer ratings, reach out to cctv camera installation experts directly, and pay real, fair prices, no hidden commission involved.
                     </p>
                   </div>
                 </div>
@@ -324,30 +325,33 @@ export default function CctvFenceInstallerPage() {
       {/* Shared 4 Steps Component */}
       <ServicesSteps />
 
+      <ServiceChooseSection slug="cctv-fence-installer" />
+
+
       {/* Cities Section */}
       <section className="cctv_cities_sec">
         <div className="container">
           <h2 className="cctv_section_heading">Find Security Installers in Your City</h2>
           <div className="cctv_city_pills">
             <Link
-              href={`/compnies?role=handyman&category_id=11${
-                cityIds.lahore ? `&city=${cityIds.lahore}` : ""
+              href={`/compnies/cctv-fence-installer${
+                cityIds.lahore ? `?city=${cityIds.lahore}` : ""
               }`}
               className="cctv_city_pill"
             >
               Lahore
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=11${
-                cityIds.karachi ? `&city=${cityIds.karachi}` : ""
+              href={`/compnies/cctv-fence-installer${
+                cityIds.karachi ? `?city=${cityIds.karachi}` : ""
               }`}
               className="cctv_city_pill"
             >
               Karachi
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=11${
-                cityIds.islamabad ? `&city=${cityIds.islamabad}` : ""
+              href={`/compnies/cctv-fence-installer${
+                cityIds.islamabad ? `?city=${cityIds.islamabad}` : ""
               }`}
               className="cctv_city_pill"
             >
@@ -360,37 +364,37 @@ export default function CctvFenceInstallerPage() {
       {/* FAQ Section */}
       <section className="cctv_faq_sec">
         <div className="container">
-          <h2 className="cctv_section_heading">Frequently Asked Questions</h2>
+          <h2 className="cctv_section_heading">Frequently Asked Questions – CCTV Camera Installation</h2>
           <div className="cctv_faq_wrapper">
             <Accordion defaultActiveKey="0">
               <Accordion.Item eventKey="0">
-                <Accordion.Header>How do I book a CCTV or fence installer on Aya Sir G!?</Accordion.Header>
+                <Accordion.Header>How do I book a CCTV camera installation or fence installer on Aya Sir G!?</Accordion.Header>
                 <Accordion.Body>
-                  To book, browse through our verified CCTV and fence installer profiles, check their experience, ratings, and customer reviews, and contact them directly to explain your security requirements and negotiate rates.
+                  It's pretty simple, just go through our verified CCTV camera installation and fence installer profiles, check out their experience, ratings, and what past customers are saying, and then message them directly to talk about what you need and work out a price together.
                 </Accordion.Body>
               </Accordion.Item>
               <Accordion.Item eventKey="1">
                 <Accordion.Header>What is the difference between an IP camera and an analog camera?</Accordion.Header>
                 <Accordion.Body>
-                  IP (Internet Protocol) cameras transmit video digitally over a network, offering higher resolution, advanced digital zoom, and smarter features like motion detection. Analog cameras transmit video via coaxial cables to a DVR, which is generally more cost-effective but has limited resolution and features.
+                  IP (Internet Protocol) cameras send their footage digitally over a network, which means you get sharper resolution, better digital zoom, and smarter extras like motion detection. Analog cameras work a bit differently, they send video through coaxial cables straight to a DVR. They're usually easier on the pocket, but you won't get the same resolution or feature set.
                 </Accordion.Body>
               </Accordion.Item>
               <Accordion.Item eventKey="2">
-                <Accordion.Header>Do installers provide the cameras and cables themselves?</Accordion.Header>
+                <Accordion.Header>Do CCTV camera installation services near me provide the cameras and cables themselves?</Accordion.Header>
                 <Accordion.Body>
-                  Installers can source the security cameras, DVRs, NVRs, cables, and fence materials for you and include it in a package, or you can purchase the hardware yourself and hire them solely for the professional installation work.
+                  Most of the time, yes. Installers can handle everything for you, cameras, DVRs, NVRs, cables, even fence materials, and bundle it all into one package. But if you already have your own equipment, that's fine too, you can just bring them in for the installation part alone.
                 </Accordion.Body>
               </Accordion.Item>
               <Accordion.Item eventKey="3">
                 <Accordion.Header>What is concertina razor wire and why is it used for fences?</Accordion.Header>
                 <Accordion.Body>
-                  Concertina razor wire is a type of barbed wire formed in large coils that expand like an accordion. It features sharp steel blades designed to prevent scaling or cutting, making it an excellent security upgrade for residential and commercial boundary walls.
+                  Think of concertina razor wire as barbed wire that's been coiled up so it expands like an accordion when stretched out. It's lined with sharp steel blades that make climbing or cutting through pretty much impossible, which is why it's such a popular choice for boosting security on home and business boundary walls.
                 </Accordion.Body>
               </Accordion.Item>
               <Accordion.Item eventKey="4">
                 <Accordion.Header>Can I view my security cameras on my phone when I am away from home?</Accordion.Header>
                 <Accordion.Body>
-                  Yes. Our expert CCTV installers will connect your DVR/NVR to your home internet router and configure the corresponding mobile application, allowing you to monitor live feeds and recorded clips from anywhere in the world.
+                  Yes, absolutely. Our cctv camera installation in Lahore technicians will connect your DVR/NVR to your home internet and set up the app on your phone, so no matter where you are in the world, you can pull up live feeds or check past recordings whenever you need to.
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion>
@@ -405,7 +409,7 @@ export default function CctvFenceInstallerPage() {
             Looking to Secure Your Property? Find Verified Security Installers Now.
           </h2>
           <Link
-            href="/compnies?role=handyman&category_id=11"
+            href="/compnies/cctv-fence-installer"
             className="cctv_btn"
           >
             Browse Security Installers

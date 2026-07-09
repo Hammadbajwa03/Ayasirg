@@ -15,6 +15,7 @@ import {
 } from "react-icons/fa6";
 import { fetchCityIdByName } from "@/app/lib/cityPages";
 import ServicesSteps from "@/app/components/services/Services";
+import ServiceChooseSection from "@/app/components/services/ServiceChooseSection";
 import "./beautician.css";
 
 export default function BeauticianPage() {
@@ -111,7 +112,7 @@ export default function BeauticianPage() {
                 </p>
                 <div className="beautician_hero_ctas justify-content-center justify-content-lg-start">
                   <Link
-                    href="/compnies?role=handyman&category_id=67"
+                    href="/compnies/beautician"
                     className="beautician_btn beautician_btn_primary"
                   >
                     Find a Beautician
@@ -314,30 +315,32 @@ export default function BeauticianPage() {
       {/* Shared 4 Steps Component */}
       <ServicesSteps />
 
+      <ServiceChooseSection slug="beautician" />
+
       {/* Cities Section */}
       <section className="beautician_cities_sec">
         <div className="container">
           <h2 className="beautician_section_heading">Find Beauticians in Your City</h2>
           <div className="beautician_city_pills">
             <Link
-              href={`/compnies?role=handyman&category_id=67${
-                cityIds.lahore ? `&city=${cityIds.lahore}` : ""
+              href={`/compnies/beautician${
+                cityIds.lahore ? `?city=${cityIds.lahore}` : ""
               }`}
               className="beautician_city_pill"
             >
               Lahore
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=67${
-                cityIds.karachi ? `&city=${cityIds.karachi}` : ""
+              href={`/compnies/beautician${
+                cityIds.karachi ? `?city=${cityIds.karachi}` : ""
               }`}
               className="beautician_city_pill"
             >
               Karachi
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=67${
-                cityIds.islamabad ? `&city=${cityIds.islamabad}` : ""
+              href={`/compnies/beautician${
+                cityIds.islamabad ? `?city=${cityIds.islamabad}` : ""
               }`}
               className="beautician_city_pill"
             >
@@ -395,7 +398,7 @@ export default function BeauticianPage() {
             Ready to Glow? Book a Professional Beautician Today.
           </h2>
           <Link
-            href="/compnies?role=handyman&category_id=67"
+            href="/compnies/beautician"
             className="beautician_btn"
           >
             Browse Home Beauticians

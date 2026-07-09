@@ -18,8 +18,8 @@ const OurServices = dynamic(() => import("../our-services/OurServices"), {
  */
 export default function CityPageRichView({ city, cityId }) {
   const listingsHref = cityId
-    ? `/compnies?role=handyman&city=${encodeURIComponent(cityId)}`
-    : "/compnies?role=handyman";
+    ? `/compnies?city=${encodeURIComponent(cityId)}`
+    : "/compnies";
 
   const {
     hero,

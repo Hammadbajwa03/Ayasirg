@@ -86,7 +86,7 @@ export default function page() {
   };
 
   return (
-    <section className="auth_bg login ">
+    <section className="auth_bg login margin_navbar">
       <div className="container">
         <div className="row">
           <div className="col-lg-6 left_div p-3">
@@ -190,7 +190,7 @@ export default function page() {
             </form>
           </div>
           <div className="col-lg-6 right_div welcom_div">
-            <h1 className="welcom_heading">Welcome to Login</h1>
+            <h2 className="welcom_heading">Welcome to Login</h2>
             <div className="btn_div">
               <p id="account">Don’t have an account?</p>
 

@@ -336,6 +336,7 @@ export default function Page() {
   return (
     <section className="user_profile margin_navbar">
       <div className="container py-3">
+        <h1 className="fw-bold text-center mb-3">My Profile</h1>
         <div className="row profile_flex">
           <div className="col-lg-9 text-center">
             <div className="profile_img_div py-5" style={{

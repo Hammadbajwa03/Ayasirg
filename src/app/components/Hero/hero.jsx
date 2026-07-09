@@ -6,6 +6,7 @@ import Dropdown from "react-bootstrap/Dropdown";
 import { IoSearch } from "react-icons/io5";
 import { useRouter } from "next/navigation";
 import { UserContext } from "@/app/userContext";
+import { compniesListingHref } from "@/app/lib/categoryRoutes";
 
 export default function Hero() {
   const router = useRouter();
@@ -130,13 +131,20 @@ export default function Hero() {
     }
 
     if (!hasError) {
-      let query = `/compnies?role=handyman`;
-
-      if (categoryId) query += `&category_id=${categoryId}`;
-      if (cityId) query += `&city=${cityId}`;
-      if (locationId) query += `&area_code=${locationId}`;
-
-      router.push(query);
+      if (categoryId) {
+        router.push(
+          compniesListingHref(categoryId, {
+            city: cityId,
+            area_code: locationId,
+          })
+        );
+      } else {
+        const params = new URLSearchParams();
+        if (cityId) params.set("city", cityId);
+        if (locationId) params.set("area_code", locationId);
+        const qs = params.toString();
+        router.push(qs ? `/compnies?${qs}` : "/compnies");
+      }
     }
   };
 

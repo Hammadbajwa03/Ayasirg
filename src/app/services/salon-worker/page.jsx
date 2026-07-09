@@ -17,6 +17,7 @@ import {
 } from "react-icons/fa6";
 import { fetchCityIdByName } from "@/app/lib/cityPages";
 import ServicesSteps from "@/app/components/services/Services";
+import ServiceChooseSection from "@/app/components/services/ServiceChooseSection";
 import "./salon-worker.css";
 
 export default function SalonWorkerPage() {
@@ -113,7 +114,7 @@ export default function SalonWorkerPage() {
                 </p>
                 <div className="salon_worker_hero_ctas justify-content-center justify-content-lg-start">
                   <Link
-                    href="/compnies?role=handyman&category_id=45"
+                    href="/compnies/salon-worker"
                     className="salon_worker_btn salon_worker_btn_primary"
                   >
                     Find Salon Workers Near Me
@@ -328,6 +329,8 @@ export default function SalonWorkerPage() {
       {/* Shared 4 Steps Component */}
       <ServicesSteps />
 
+      <ServiceChooseSection slug="salon-worker" />
+
       {/* Cities Section */}
       <section className="salon_worker_cities_sec">
         <div className="container">
@@ -336,24 +339,24 @@ export default function SalonWorkerPage() {
           </h2>
           <div className="salon_worker_city_pills">
             <Link
-              href={`/compnies?role=handyman&category_id=45${
-                cityIds.lahore ? `&city=${cityIds.lahore}` : ""
+              href={`/compnies/salon-worker${
+                cityIds.lahore ? `?city=${cityIds.lahore}` : ""
               }`}
               className="salon_worker_city_pill"
             >
               Lahore
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=45${
-                cityIds.karachi ? `&city=${cityIds.karachi}` : ""
+              href={`/compnies/salon-worker${
+                cityIds.karachi ? `?city=${cityIds.karachi}` : ""
               }`}
               className="salon_worker_city_pill"
             >
               Karachi
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=45${
-                cityIds.islamabad ? `&city=${cityIds.islamabad}` : ""
+              href={`/compnies/salon-worker${
+                cityIds.islamabad ? `?city=${cityIds.islamabad}` : ""
               }`}
               className="salon_worker_city_pill"
             >
@@ -423,7 +426,7 @@ export default function SalonWorkerPage() {
             Looking for a Beauty Professional? Find One Now.
           </h2>
           <Link
-            href="/compnies?role=handyman&category_id=45"
+            href="/compnies/salon-worker"
             className="salon_worker_btn"
           >
             Browse Salon Workers &amp; Beauticians

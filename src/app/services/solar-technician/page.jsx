@@ -17,6 +17,7 @@ import {
 } from "react-icons/fa6";
 import { fetchCityIdByName } from "@/app/lib/cityPages";
 import ServicesSteps from "@/app/components/services/Services";
+import ServiceChooseSection from "@/app/components/services/ServiceChooseSection";
 import "./solar-technician.css";
 
 export default function SolarTechnicianPage() {
@@ -113,7 +114,7 @@ export default function SolarTechnicianPage() {
                 </p>
                 <div className="solar_technician_hero_ctas justify-content-center justify-content-lg-start">
                   <Link
-                    href="/compnies?role=handyman&category_id=32"
+                    href="/compnies/solar-technician"
                     className="solar_technician_btn sofa_carpet_btn_primary"
                   >
                     Find Solar Technicians Near Me
@@ -325,30 +326,32 @@ export default function SolarTechnicianPage() {
       {/* Shared 4 Steps Component */}
       <ServicesSteps />
 
+      <ServiceChooseSection slug="solar-technician" />
+
       {/* Cities Section */}
       <section className="solar_technician_cities_sec">
         <div className="container">
           <h2 className="solar_technician_section_heading">Find Solar Technicians in Your City</h2>
           <div className="solar_technician_city_pills">
             <Link
-              href={`/compnies?role=handyman&category_id=32${
-                cityIds.lahore ? `&city=${cityIds.lahore}` : ""
+              href={`/compnies/solar-technician${
+                cityIds.lahore ? `?city=${cityIds.lahore}` : ""
               }`}
               className="solar_technician_city_pill"
             >
               Lahore
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=32${
-                cityIds.karachi ? `&city=${cityIds.karachi}` : ""
+              href={`/compnies/solar-technician${
+                cityIds.karachi ? `?city=${cityIds.karachi}` : ""
               }`}
               className="solar_technician_city_pill"
             >
               Karachi
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=32${
-                cityIds.islamabad ? `&city=${cityIds.islamabad}` : ""
+              href={`/compnies/solar-technician${
+                cityIds.islamabad ? `?city=${cityIds.islamabad}` : ""
               }`}
               className="solar_technician_city_pill"
             >
@@ -406,7 +409,7 @@ export default function SolarTechnicianPage() {
             Ready to Go Solar or Repair Your System? Connect with Experts.
           </h2>
           <Link
-            href="/compnies?role=handyman&category_id=32"
+            href="/compnies/solar-technician"
             className="solar_technician_btn"
           >
             Browse Solar Technicians

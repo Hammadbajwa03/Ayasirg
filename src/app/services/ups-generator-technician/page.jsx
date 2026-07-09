@@ -17,6 +17,7 @@ import {
 } from "react-icons/fa6";
 import { fetchCityIdByName } from "@/app/lib/cityPages";
 import ServicesSteps from "@/app/components/services/Services";
+import ServiceChooseSection from "@/app/components/services/ServiceChooseSection";
 import "./ups-generator-technician.css";
 
 export default function UPSGeneratorTechnicianPage() {
@@ -113,7 +114,7 @@ export default function UPSGeneratorTechnicianPage() {
                 </p>
                 <div className="ups_generator_hero_ctas justify-content-center justify-content-lg-start">
                   <Link
-                    href="/compnies?role=handyman&category_id=58"
+                    href="/compnies/ups-generator-technician"
                     className="ups_generator_btn ups_generator_btn_primary"
                   >
                     Find Technicians Near Me
@@ -319,30 +320,32 @@ export default function UPSGeneratorTechnicianPage() {
       {/* Shared 4 Steps Component */}
       <ServicesSteps />
 
+      <ServiceChooseSection slug="ups-generator-technician" />
+
       {/* Cities Section */}
       <section className="ups_generator_cities_sec">
         <div className="container">
           <h2 className="ups_generator_section_heading">Find Technicians in Your City</h2>
           <div className="ups_generator_city_pills">
             <Link
-              href={`/compnies?role=handyman&category_id=58${
-                cityIds.lahore ? `&city=${cityIds.lahore}` : ""
+              href={`/compnies/ups-generator-technician${
+                cityIds.lahore ? `?city=${cityIds.lahore}` : ""
               }`}
               className="ups_generator_city_pill"
             >
               Lahore
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=58${
-                cityIds.karachi ? `&city=${cityIds.karachi}` : ""
+              href={`/compnies/ups-generator-technician${
+                cityIds.karachi ? `?city=${cityIds.karachi}` : ""
               }`}
               className="ups_generator_city_pill"
             >
               Karachi
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=58${
-                cityIds.islamabad ? `&city=${cityIds.islamabad}` : ""
+              href={`/compnies/ups-generator-technician${
+                cityIds.islamabad ? `?city=${cityIds.islamabad}` : ""
               }`}
               className="ups_generator_city_pill"
             >
@@ -400,7 +403,7 @@ export default function UPSGeneratorTechnicianPage() {
             Generator or UPS Giving Trouble? Hire a Certified Pro Today.
           </h2>
           <Link
-            href="/compnies?role=handyman&category_id=58"
+            href="/compnies/ups-generator-technician"
             className="ups_generator_btn"
           >
             Browse Technicians

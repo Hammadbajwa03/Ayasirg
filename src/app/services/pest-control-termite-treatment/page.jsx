@@ -17,6 +17,7 @@ import {
 } from "react-icons/fa6";
 import { fetchCityIdByName } from "@/app/lib/cityPages";
 import ServicesSteps from "@/app/components/services/Services";
+import ServiceChooseSection from "@/app/components/services/ServiceChooseSection";
 import "./pest-control-termite-treatment.css";
 
 export default function PestControlPage() {
@@ -47,48 +48,48 @@ export default function PestControlPage() {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: [
+    "mainEntity": [
       {
         "@type": "Question",
-        name: "How do I book a pest control service on Aya Sir G!?",
-        acceptedAnswer: {
+        "name": "How do I book a pest control service on Aya Sir G!?",
+        "acceptedAnswer": {
           "@type": "Answer",
-          text: "Browse verified pest control companies and specialists on Aya Sir G!, check their service areas, customer ratings, and treatment types, then contact them directly to schedule a visit and get a quote.",
-        },
+          "text": "Browse verified pest control companies and specialists on Aya Sir G!, look at their service areas, customer ratings, and the type of treatment they offer, then reach out to them directly to set up a visit and get a quote."
+        }
       },
       {
         "@type": "Question",
-        name: "What pests can be treated through Aya Sir G!?",
-        acceptedAnswer: {
+        "name": "What pests can be treated through Aya Sir G!?",
+        "acceptedAnswer": {
           "@type": "Answer",
-          text: "Our pest control experts handle cockroaches, termites (deemak), bed bugs, rodents (rats and mice), mosquitoes, ants, lizards, and general household insects using safe, approved pesticides.",
-        },
+          "text": "Our pest control experts deal with cockroaches, termites (deemak), bed bugs, rodents (rats and mice), mosquitoes, ants, lizards, and general household insects, all using safe, approved pesticides."
+        }
       },
       {
         "@type": "Question",
-        name: "Is termite (deemak) treatment safe for children and pets?",
-        acceptedAnswer: {
+        "name": "Is termite (deemak) treatment safe for children and pets?",
+        "acceptedAnswer": {
           "@type": "Answer",
-          text: "Professional pest control companies use EPA-approved, low-toxicity chemicals. After treatment, you will typically be advised to vacate the treated area for 2–4 hours. Always inform the technician about children and pets before the service.",
-        },
+          "text": "Professional pest control companies rely on EPA-approved, low-toxicity chemicals. After the treatment, you'll usually be asked to stay out of the treated area for 2–4 hours. It's a good idea to let the technician know beforehand if you have children or pets at home."
+        }
       },
       {
         "@type": "Question",
-        name: "How long does a pest control treatment last?",
-        acceptedAnswer: {
+        "name": "How long does a pest control treatment last?",
+        "acceptedAnswer": {
           "@type": "Answer",
-          text: "General pest control spraying typically lasts 1–3 months. Termite soil treatment and bait systems can provide protection for 3–5 years. Regular quarterly maintenance services are recommended for long-term pest-free living.",
-        },
+          "text": "General pest control spraying usually holds up for 1–3 months. Termite soil treatment and bait systems, on the other hand, can protect your home for 3–5 years. For long-term results, quarterly maintenance visits are worth considering."
+        }
       },
       {
         "@type": "Question",
-        name: "Do I need to leave my home during pest control treatment?",
-        acceptedAnswer: {
+        "name": "Do I need to leave my home during pest control treatment?",
+        "acceptedAnswer": {
           "@type": "Answer",
-          text: "For most general pest sprays, you should vacate for at least 2–3 hours. For heavy infestations or fumigation treatments, you may need to stay away for 24–48 hours. The pest control specialist will advise you on the exact duration.",
-        },
-      },
-    ],
+          "text": "For most general pest sprays, plan to step out for at least 2–3 hours. If it's a heavy infestation or a fumigation treatment, you might need to stay away for 24–48 hours. Your pest control specialist will let you know exactly how long is needed."
+        }
+      }
+    ]
   };
 
   return (
@@ -106,14 +107,14 @@ export default function PestControlPage() {
             <div className="col-lg-7">
               <div className="pest_control_hero_content text-center text-lg-start">
                 <h1 className="pest_control_hero_h1">
-                  Pest Control &amp; Termite Treatment — Aya Sir G!
+                  Pest Control Services & Termite Treatment — Aya Sir G!
                 </h1>
                 <p className="pest_control_hero_subheading">
-                  Find verified pest control experts for cockroaches, termites (deemak), bed bugs, rodents, and mosquitoes. Compare profiles, check ratings, and book directly.
+                  Find verified pest control services near you for cockroaches, termites (deemak), bed bugs, rodents, and mosquitoes. Compare profiles, check ratings, and book directly.
                 </p>
                 <div className="pest_control_hero_ctas justify-content-center justify-content-lg-start">
                   <Link
-                    href="/compnies?role=handyman&category_id=50"
+                    href="/compnies/pest-control-termite-treatment"
                     className="pest_control_btn pest_control_btn_primary"
                   >
                     Find Pest Control Experts
@@ -156,16 +157,16 @@ export default function PestControlPage() {
               Reliable Pest Control Services in Pakistan with Aya Sir G!
             </h2>
             <p className="pest_control_content_text">
-              A large number of homes in Pakistan face issues such as wall dampness, which often leads to long-term moisture problems. This creates an ideal environment for pests and insects, especially in houses with expensive furniture like wall cupboards, fixed showcases, door frames and wooden doors.
+              Many homes across Pakistan struggle with wall dampness, and over time this turns into a moisture problem that's hard to ignore. It also creates the perfect breeding ground for pests and insects, especially in houses with expensive furniture like wall cupboards, fixed showcases, door frames and wooden doors.
             </p>
             <p className="pest_control_content_text">
-              Because of this, pest control services are widely advertised everywhere. However, the real concern is trust how do you know which pest control company is reliable? Almost every provider claims to be the best but results are not always immediate or guaranteed.
+              Because of this, pest control services are advertised everywhere you look. But the real question isn't availability, it's trust. How do you actually know which pest control company will deliver? Nearly every provider claims to be the best, yet results aren't always fast or guaranteed.
             </p>
             <p className="pest_control_content_text">
-              In some cases, unsafe or low-quality chemicals may also be used, which can lead to serious health risks, especially in homes with toddlers and children. This makes choosing the right pest control service even more important.
+              There's also the risk of unsafe or low-quality chemicals being used, which can pose serious health concerns particularly in homes with toddlers and young children. That's exactly why picking the right pest control service matters so much.
             </p>
             <p className="pest_control_content_text">
-              With Aya Sir G!, you can find qualified pest control professionals, review their profiles and check their previous experience and customer feedback before making a decision. This helps you choose trusted experts with proven results and satisfied customers, ensuring safer and more reliable pest control services for your home.
+              With Aya Sir G!, you can browse qualified pest control professionals near you, look through their profiles, and check their past work and customer feedback before deciding who to hire. This way, you end up choosing experts with a proven track record and happy customers giving you safer, more reliable home pest control services near me for your home.
             </p>
             <div className="mt-4 pt-2">
               <span className="text-muted small">
@@ -195,7 +196,7 @@ export default function PestControlPage() {
       <section className="pest_control_services_sec">
         <div className="container">
           <h2 className="pest_control_section_heading">
-            Pest Control Services Available
+            Pest Control Services Available Near You
           </h2>
           <div className="pest_control_services_grid">
             {/* Card 1 */}
@@ -207,7 +208,7 @@ export default function PestControlPage() {
                 Cockroach &amp; Insect Control
               </h3>
               <p className="pest_control_card_desc">
-                Targeted gel baiting and residual spraying to eliminate cockroaches, ants, silverfish, and flying insects from kitchens, bathrooms, and drains.
+                Targeted gel baiting and residual spraying to clear out cockroaches, ants, silverfish, and flying insects from kitchens, bathrooms, and drains.
               </p>
             </div>
             {/* Card 2 */}
@@ -219,7 +220,7 @@ export default function PestControlPage() {
                 Termite (Deemak) Treatment
               </h3>
               <p className="pest_control_card_desc">
-                Pre-construction soil treatment and post-construction termite bait systems to completely protect your structure, wooden floors, furniture, and door frames.
+                Pre-construction soil treatment along with post-construction termite bait systems to fully protect your structure, wooden floors, furniture, and door frames.
               </p>
             </div>
             {/* Card 3 */}
@@ -229,7 +230,7 @@ export default function PestControlPage() {
               </div>
               <h3 className="pest_control_card_title">Bed Bug Treatment</h3>
               <p className="pest_control_card_desc">
-                Deep mattress and bedroom treatment using heat, steam, and chemical sprays to fully eradicate bed bugs at every lifecycle stage.
+                Deep mattress and bedroom treatment using heat, steam, and chemical sprays to eliminate bed bugs at every stage of their lifecycle.
               </p>
             </div>
             {/* Card 4 */}
@@ -241,7 +242,7 @@ export default function PestControlPage() {
                 Rodent Control (Rats &amp; Mice)
               </h3>
               <p className="pest_control_card_desc">
-                Professional trapping, rodenticide baiting, and entry point sealing to eliminate rats and mice from homes, restaurants, and warehouses.
+                Professional trapping, rodenticide baiting, and entry point sealing to remove rats and mice from homes, restaurants, and warehouses.
               </p>
             </div>
             {/* Card 5 */}
@@ -253,7 +254,7 @@ export default function PestControlPage() {
                 Mosquito Fogging &amp; Spraying
               </h3>
               <p className="pest_control_card_desc">
-                ULV cold fogging and residual spraying for gardens, lawns, and outdoor areas to reduce mosquito populations and prevent dengue and malaria risks.
+                ULV cold fogging and residual spraying across gardens, lawns, and outdoor spaces to cut down mosquito populations and lower dengue and malaria risks.
               </p>
             </div>
             {/* Card 6 */}
@@ -265,7 +266,7 @@ export default function PestControlPage() {
                 Annual Maintenance Contracts
               </h3>
               <p className="pest_control_card_desc">
-                Scheduled quarterly or monthly pest control visits with follow-up inspections to keep your home permanently pest-free all year long.
+                Scheduled quarterly or monthly pest control visits with follow-up inspections, so your home stays pest-free year-round.
               </p>
             </div>
           </div>
@@ -279,7 +280,7 @@ export default function PestControlPage() {
             <div className="col-lg-6 pest_control_trust_col_text">
               <h2 className="section_heading text-start mb-2">
                 Why Choose Aya Sir G! <br />
-                <span className="red_title">for Pest Control?</span>
+                <span className="red_title">for Pest Control Services?</span>
               </h2>
               <div className="pest_control_trust_points">
                 <div className="pest_control_trust_point">
@@ -291,7 +292,7 @@ export default function PestControlPage() {
                       Certified &amp; Verified Professionals
                     </h3>
                     <p className="pest_control_trust_point_desc">
-                      Every pest control specialist on Aya Sir G! has CNIC-verified profiles and real customer ratings so you hire only trusted, licensed professionals.
+                      Every pest control specialist on Aya Sir G! has a CNIC-verified profile along with genuine customer ratings, so you're only hiring trusted, licensed professionals.
                     </p>
                   </div>
                 </div>
@@ -304,7 +305,7 @@ export default function PestControlPage() {
                       Safe, Approved Chemicals
                     </h3>
                     <p className="pest_control_trust_point_desc">
-                      Our listed professionals use only government-approved, low-toxicity pesticides that are safe for families, children, and pets when applied correctly.
+                      The professionals listed use only government-approved, low-toxicity pesticides that stay safe for families, children, and pets when applied the right way.
                     </p>
                   </div>
                 </div>
@@ -317,7 +318,7 @@ export default function PestControlPage() {
                       Direct Booking — No Middlemen
                     </h3>
                     <p className="pest_control_trust_point_desc">
-                      Contact pest control companies directly, get transparent quotes, and book services without paying extra agency commissions.
+                      Reach out to pest control near me companies directly, get clear, upfront quotes, and book pest control services without any extra agency commissions.
                     </p>
                   </div>
                 </div>
@@ -341,6 +342,9 @@ export default function PestControlPage() {
       {/* Shared 4 Steps Component */}
       <ServicesSteps />
 
+      <ServiceChooseSection slug="pest-control-termite-treatment" />
+
+
       {/* Cities Section */}
       <section className="pest_control_cities_sec">
         <div className="container">
@@ -349,24 +353,24 @@ export default function PestControlPage() {
           </h2>
           <div className="pest_control_city_pills">
             <Link
-              href={`/compnies?role=handyman&category_id=50${
-                cityIds.lahore ? `&city=${cityIds.lahore}` : ""
+              href={`/compnies/pest-control-termite-treatment${
+                cityIds.lahore ? `?city=${cityIds.lahore}` : ""
               }`}
               className="pest_control_city_pill"
             >
               Lahore
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=50${
-                cityIds.karachi ? `&city=${cityIds.karachi}` : ""
+              href={`/compnies/pest-control-termite-treatment${
+                cityIds.karachi ? `?city=${cityIds.karachi}` : ""
               }`}
               className="pest_control_city_pill"
             >
               Karachi
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=50${
-                cityIds.islamabad ? `&city=${cityIds.islamabad}` : ""
+              href={`/compnies/pest-control-termite-treatment${
+                cityIds.islamabad ? `?city=${cityIds.islamabad}` : ""
               }`}
               className="pest_control_city_pill"
             >
@@ -380,7 +384,7 @@ export default function PestControlPage() {
       <section className="pest_control_faq_sec">
         <div className="container">
           <h2 className="pest_control_section_heading">
-            Frequently Asked Questions
+            Frequently Asked Questions About Pest Control Services
           </h2>
           <div className="pest_control_faq_wrapper">
             <Accordion defaultActiveKey="0">
@@ -389,7 +393,7 @@ export default function PestControlPage() {
                   How do I book a pest control service on Aya Sir G!?
                 </Accordion.Header>
                 <Accordion.Body>
-                  Browse verified pest control companies and specialists on Aya Sir G!, check their service areas, customer ratings, and treatment types, then contact them directly to schedule a visit and get a quote.
+                  Browse verified pest control companies and specialists on Aya Sir G!, look at their service areas, customer ratings, and the type of treatment they offer, then reach out to them directly to set up a visit and get a quote.
                 </Accordion.Body>
               </Accordion.Item>
               <Accordion.Item eventKey="1">
@@ -397,7 +401,7 @@ export default function PestControlPage() {
                   What pests can be treated through Aya Sir G!?
                 </Accordion.Header>
                 <Accordion.Body>
-                  Our pest control experts handle cockroaches, termites (deemak), bed bugs, rodents (rats and mice), mosquitoes, ants, lizards, and general household insects using safe, approved pesticides.
+                  Our pest control experts deal with cockroaches, termites (deemak), bed bugs, rodents (rats and mice), mosquitoes, ants, lizards, and general household insects, all using safe, approved pesticides.
                 </Accordion.Body>
               </Accordion.Item>
               <Accordion.Item eventKey="2">
@@ -405,7 +409,7 @@ export default function PestControlPage() {
                   Is termite (deemak) treatment safe for children and pets?
                 </Accordion.Header>
                 <Accordion.Body>
-                  Professional pest control companies use EPA-approved, low-toxicity chemicals. After treatment, you will typically be advised to vacate the treated area for 2–4 hours. Always inform the technician about children and pets before the service.
+                  Professional pest control companies rely on EPA-approved, low-toxicity chemicals. After the treatment, you'll usually be asked to stay out of the treated area for 2–4 hours. It's a good idea to let the technician know beforehand if you have children or pets at home.
                 </Accordion.Body>
               </Accordion.Item>
               <Accordion.Item eventKey="3">
@@ -413,7 +417,7 @@ export default function PestControlPage() {
                   How long does a pest control treatment last?
                 </Accordion.Header>
                 <Accordion.Body>
-                  General pest control spraying typically lasts 1–3 months. Termite soil treatment and bait systems can provide protection for 3–5 years. Regular quarterly maintenance services are recommended for long-term pest-free living.
+                  General pest control spraying usually holds up for 1–3 months. Termite soil treatment and bait systems, on the other hand, can protect your home for 3–5 years. For long-term results, quarterly maintenance visits are worth considering.
                 </Accordion.Body>
               </Accordion.Item>
               <Accordion.Item eventKey="4">
@@ -421,7 +425,7 @@ export default function PestControlPage() {
                   Do I need to leave my home during pest control treatment?
                 </Accordion.Header>
                 <Accordion.Body>
-                  For most general pest sprays, you should vacate for at least 2–3 hours. For heavy infestations or fumigation treatments, you may need to stay away for 24–48 hours. The pest control specialist will advise you on the exact duration.
+                  For most general pest sprays, plan to step out for at least 2–3 hours. If it's a heavy infestation or a fumigation treatment, you might need to stay away for 24–48 hours. Your pest control specialist will let you know exactly how long is needed.
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion>
@@ -436,7 +440,7 @@ export default function PestControlPage() {
             Pest Problem? Get Professional Treatment Today.
           </h2>
           <Link
-            href="/compnies?role=handyman&category_id=50"
+            href="/compnies/pest-control-termite-treatment"
             className="pest_control_btn"
           >
             Browse Pest Control Experts

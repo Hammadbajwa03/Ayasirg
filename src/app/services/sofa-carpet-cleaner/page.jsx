@@ -16,6 +16,7 @@ import {
 } from "react-icons/fa6";
 import { fetchCityIdByName } from "@/app/lib/cityPages";
 import ServicesSteps from "@/app/components/services/Services";
+import ServiceChooseSection from "@/app/components/services/ServiceChooseSection";
 import "./sofa-carpet-cleaner.css";
 
 export default function SofaCarpetCleanerPage() {
@@ -112,7 +113,7 @@ export default function SofaCarpetCleanerPage() {
                 </p>
                 <div className="sofa_carpet_hero_ctas justify-content-center justify-content-lg-start">
                   <Link
-                    href="/compnies?role=handyman&category_id=49"
+                    href="/compnies/sofa-carpet-cleaner"
                     className="sofa_carpet_btn sofa_carpet_btn_primary"
                   >
                     Find Cleaners Near Me
@@ -321,30 +322,33 @@ export default function SofaCarpetCleanerPage() {
       {/* Shared 4 Steps Component */}
       <ServicesSteps />
 
+      <ServiceChooseSection slug="sofa-carpet-cleaner" />
+
+
       {/* Cities Section */}
       <section className="sofa_carpet_cities_sec">
         <div className="container">
           <h2 className="sofa_carpet_section_heading">Find Cleaners in Your City</h2>
           <div className="sofa_carpet_city_pills">
             <Link
-              href={`/compnies?role=handyman&category_id=49${
-                cityIds.lahore ? `&city=${cityIds.lahore}` : ""
+              href={`/compnies/sofa-carpet-cleaner${
+                cityIds.lahore ? `?city=${cityIds.lahore}` : ""
               }`}
               className="sofa_carpet_city_pill"
             >
               Lahore
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=49${
-                cityIds.karachi ? `&city=${cityIds.karachi}` : ""
+              href={`/compnies/sofa-carpet-cleaner${
+                cityIds.karachi ? `?city=${cityIds.karachi}` : ""
               }`}
               className="sofa_carpet_city_pill"
             >
               Karachi
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=49${
-                cityIds.islamabad ? `&city=${cityIds.islamabad}` : ""
+              href={`/compnies/sofa-carpet-cleaner${
+                cityIds.islamabad ? `?city=${cityIds.islamabad}` : ""
               }`}
               className="sofa_carpet_city_pill"
             >
@@ -402,7 +406,7 @@ export default function SofaCarpetCleanerPage() {
             Ready to Restore Your Sofa &amp; Carpets? Find Expert Cleaners Now.
           </h2>
           <Link
-            href="/compnies?role=handyman&category_id=49"
+            href="/compnies/sofa-carpet-cleaner"
             className="sofa_carpet_btn"
           >
             Browse Sofa &amp; Carpet Cleaners

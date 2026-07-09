@@ -17,6 +17,7 @@ import {
 } from "react-icons/fa6";
 import { fetchCityIdByName } from "@/app/lib/cityPages";
 import ServicesSteps from "@/app/components/services/Services";
+import ServiceChooseSection from "@/app/components/services/ServiceChooseSection";
 import "./maid-kamwali.css";
 
 export default function MaidKamwaliPage() {
@@ -113,7 +114,7 @@ export default function MaidKamwaliPage() {
                 </p>
                 <div className="maid_kamwali_hero_ctas justify-content-center justify-content-lg-start">
                   <Link
-                    href="/compnies?role=handyman&category_id=47"
+                    href="/compnies/maid-kamwali"
                     className="maid_kamwali_btn maid_kamwali_btn_primary"
                   >
                     Find Maids / Kamwalis
@@ -322,30 +323,32 @@ export default function MaidKamwaliPage() {
       {/* Shared 4 Steps Component */}
       <ServicesSteps />
 
+      <ServiceChooseSection slug="maid-kamwali" />
+
       {/* Cities Section */}
       <section className="maid_kamwali_cities_sec">
         <div className="container">
           <h2 className="maid_kamwali_section_heading">Find Maids / Kamwalis in Your City</h2>
           <div className="maid_kamwali_city_pills">
             <Link
-              href={`/compnies?role=handyman&category_id=47${
-                cityIds.lahore ? `&city=${cityIds.lahore}` : ""
+              href={`/compnies/maid-kamwali${
+                cityIds.lahore ? `?city=${cityIds.lahore}` : ""
               }`}
               className="maid_kamwali_city_pill"
             >
               Lahore
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=47${
-                cityIds.karachi ? `&city=${cityIds.karachi}` : ""
+              href={`/compnies/maid-kamwali${
+                cityIds.karachi ? `?city=${cityIds.karachi}` : ""
               }`}
               className="maid_kamwali_city_pill"
             >
               Karachi
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=47${
-                cityIds.islamabad ? `&city=${cityIds.islamabad}` : ""
+              href={`/compnies/maid-kamwali${
+                cityIds.islamabad ? `?city=${cityIds.islamabad}` : ""
               }`}
               className="maid_kamwali_city_pill"
             >
@@ -403,7 +406,7 @@ export default function MaidKamwaliPage() {
             Need Help with Household Chores? Browse Verified Maids Today.
           </h2>
           <Link
-            href="/compnies?role=handyman&category_id=47"
+            href="/compnies/maid-kamwali"
             className="maid_kamwali_btn"
           >
             Browse Maids / Kamwalis

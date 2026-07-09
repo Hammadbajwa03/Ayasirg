@@ -13,6 +13,7 @@ export default function AboutPage() {
       <div className="container">
         {/* Heading */}
         <div className="text-center mb-3">
+          <h1 className="fw-bold mb-2">About Aya Sir G!</h1>
           <h2 className="fw-bold">
             Slogan: <span>“Your Trusted Help, Anywhere.”</span>
           </h2>

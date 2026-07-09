@@ -17,6 +17,7 @@ import {
 } from "react-icons/fa6";
 import { fetchCityIdByName } from "@/app/lib/cityPages";
 import ServicesSteps from "@/app/components/services/Services";
+import ServiceChooseSection from "@/app/components/services/ServiceChooseSection";
 import "./blinds-curtains-wallpapers.css";
 
 export default function BlindsCurtainsWallpapersPage() {
@@ -113,7 +114,7 @@ export default function BlindsCurtainsWallpapersPage() {
                 </p>
                 <div className="blinds_hero_ctas justify-content-center justify-content-lg-start">
                   <Link
-                    href="/compnies?role=handyman&category_id=51"
+                    href="/compnies/blinds-curtains-wallpapers"
                     className="blinds_btn blinds_btn_primary"
                   >
                     Find an Installer
@@ -319,30 +320,32 @@ export default function BlindsCurtainsWallpapersPage() {
       {/* Shared 4 Steps Component */}
       <ServicesSteps />
 
+      <ServiceChooseSection slug="blinds-curtains-wallpapers" />
+
       {/* Cities Section */}
       <section className="blinds_cities_sec">
         <div className="container">
           <h2 className="blinds_section_heading">Find Installers in Your City</h2>
           <div className="blinds_city_pills">
             <Link
-              href={`/compnies?role=handyman&category_id=51${
-                cityIds.lahore ? `&city=${cityIds.lahore}` : ""
+              href={`/compnies/blinds-curtains-wallpapers${
+                cityIds.lahore ? `?city=${cityIds.lahore}` : ""
               }`}
               className="blinds_city_pill"
             >
               Lahore
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=51${
-                cityIds.karachi ? `&city=${cityIds.karachi}` : ""
+              href={`/compnies/blinds-curtains-wallpapers${
+                cityIds.karachi ? `?city=${cityIds.karachi}` : ""
               }`}
               className="blinds_city_pill"
             >
               Karachi
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=51${
-                cityIds.islamabad ? `&city=${cityIds.islamabad}` : ""
+              href={`/compnies/blinds-curtains-wallpapers${
+                cityIds.islamabad ? `?city=${cityIds.islamabad}` : ""
               }`}
               className="blinds_city_pill"
             >
@@ -400,7 +403,7 @@ export default function BlindsCurtainsWallpapersPage() {
             Ready to Beautify Your Windows and Walls? Find an Expert Installer.
           </h2>
           <Link
-            href="/compnies?role=handyman&category_id=51"
+            href="/compnies/blinds-curtains-wallpapers"
             className="blinds_btn"
           >
             Browse Installers

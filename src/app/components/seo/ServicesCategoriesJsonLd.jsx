@@ -2,6 +2,7 @@ import {
   buildServiceEntity,
   stringifySchema,
 } from "@/app/lib/serviceSchema";
+import { compniesListingHref, getServicePagePath } from "@/app/lib/categoryRoutes";
 
 function siteUrl() {
   return (
@@ -23,7 +24,10 @@ export default function ServicesCategoriesJsonLd({ categories }) {
     const description =
       rawDesc ||
       `${name} services on Aya Sir G! — verified professionals in Pakistan.`;
-    const url = `${site}/compnies?role=handyman&category_id=${encodeURIComponent(c.id)}`;
+    const servicePath = getServicePagePath(c.id);
+    const url = servicePath
+      ? `${site}${servicePath}`
+      : `${site}${compniesListingHref(c.id)}`;
     return buildServiceEntity({
       serviceType: name,
       description,

@@ -17,6 +17,7 @@ import {
 } from "react-icons/fa6";
 import { fetchCityIdByName } from "@/app/lib/cityPages";
 import ServicesSteps from "@/app/components/services/Services";
+import ServiceChooseSection from "@/app/components/services/ServiceChooseSection";
 import "./caretaker.css";
 
 export default function CaretakerPage() {
@@ -113,7 +114,7 @@ export default function CaretakerPage() {
                 </p>
                 <div className="caretaker_hero_ctas justify-content-center justify-content-lg-start">
                   <Link
-                    href="/compnies?role=handyman&category_id=66"
+                    href="/compnies/caretaker"
                     className="caretaker_btn caretaker_btn_primary"
                   >
                     Find a Caretaker
@@ -310,30 +311,32 @@ export default function CaretakerPage() {
       {/* Shared 4 Steps Component */}
       <ServicesSteps />
 
+      <ServiceChooseSection slug="caretaker" />
+
       {/* Cities Section */}
       <section className="caretaker_cities_sec">
         <div className="container">
           <h2 className="caretaker_section_heading">Find Caretakers in Your City</h2>
           <div className="caretaker_city_pills">
             <Link
-              href={`/compnies?role=handyman&category_id=66${
-                cityIds.lahore ? `&city=${cityIds.lahore}` : ""
+              href={`/compnies/caretaker${
+                cityIds.lahore ? `?city=${cityIds.lahore}` : ""
               }`}
               className="caretaker_city_pill"
             >
               Lahore
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=66${
-                cityIds.karachi ? `&city=${cityIds.karachi}` : ""
+              href={`/compnies/caretaker${
+                cityIds.karachi ? `?city=${cityIds.karachi}` : ""
               }`}
               className="caretaker_city_pill"
             >
               Karachi
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=66${
-                cityIds.islamabad ? `&city=${cityIds.islamabad}` : ""
+              href={`/compnies/caretaker${
+                cityIds.islamabad ? `?city=${cityIds.islamabad}` : ""
               }`}
               className="caretaker_city_pill"
             >
@@ -391,7 +394,7 @@ export default function CaretakerPage() {
             Need Professional Home Care for Your Loved One? Find a Caretaker Now.
           </h2>
           <Link
-            href="/compnies?role=handyman&category_id=66"
+            href="/compnies/caretaker"
             className="caretaker_btn"
           >
             Browse Caretakers

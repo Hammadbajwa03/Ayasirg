@@ -17,6 +17,7 @@ import {
 } from "react-icons/fa6";
 import { fetchCityIdByName } from "@/app/lib/cityPages";
 import ServicesSteps from "@/app/components/services/Services";
+import ServiceChooseSection from "@/app/components/services/ServiceChooseSection";
 import "./tyre-specialist.css";
 
 export default function TyreSpecialistPage() {
@@ -113,7 +114,7 @@ export default function TyreSpecialistPage() {
                 </p>
                 <div className="tyre_specialist_hero_ctas justify-content-center justify-content-lg-start">
                   <Link
-                    href="/compnies?role=handyman&category_id=54"
+                    href="/compnies/tyre-specialist"
                     className="tyre_specialist_btn tyre_specialist_btn_primary"
                   >
                     Find Tyre Specialists Near Me
@@ -319,30 +320,32 @@ export default function TyreSpecialistPage() {
       {/* Shared 4 Steps Component */}
       <ServicesSteps />
 
+      <ServiceChooseSection slug="tyre-specialist" />
+
       {/* Cities Section */}
       <section className="tyre_specialist_cities_sec">
         <div className="container">
           <h2 className="tyre_specialist_section_heading">Find Tyre Specialists in Your City</h2>
           <div className="tyre_specialist_city_pills">
             <Link
-              href={`/compnies?role=handyman&category_id=54${
-                cityIds.lahore ? `&city=${cityIds.lahore}` : ""
+              href={`/compnies/tyre-specialist${
+                cityIds.lahore ? `?city=${cityIds.lahore}` : ""
               }`}
               className="tyre_specialist_city_pill"
             >
               Lahore
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=54${
-                cityIds.karachi ? `&city=${cityIds.karachi}` : ""
+              href={`/compnies/tyre-specialist${
+                cityIds.karachi ? `?city=${cityIds.karachi}` : ""
               }`}
               className="tyre_specialist_city_pill"
             >
               Karachi
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=54${
-                cityIds.islamabad ? `&city=${cityIds.islamabad}` : ""
+              href={`/compnies/tyre-specialist${
+                cityIds.islamabad ? `?city=${cityIds.islamabad}` : ""
               }`}
               className="tyre_specialist_city_pill"
             >
@@ -400,7 +403,7 @@ export default function TyreSpecialistPage() {
             Need New Tyres or Alignment? Find a Tyre Specialist Now.
           </h2>
           <Link
-            href="/compnies?role=handyman&category_id=54"
+            href="/compnies/tyre-specialist"
             className="tyre_specialist_btn"
           >
             Browse Tyre Specialists

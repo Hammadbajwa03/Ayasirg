@@ -23,9 +23,9 @@ export default function Page() {
           {/* Main Content */}
           <div className="col-lg-9">
             <div className="content p-2">
-              <h2 className="fw-bold mb-3">
+              <h1 className="fw-bold mb-3">
                 Market Your Business <span>with Aya Sir G!</span>
-              </h2>
+              </h1>
               <p>
                 Welcome to <b>Aya Sir G!</b> We are delighted you are exploring
                 how to market your business effectively with us.

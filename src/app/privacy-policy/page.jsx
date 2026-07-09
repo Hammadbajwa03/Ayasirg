@@ -15,7 +15,7 @@ export default function PrivacyPolicyPage() {
       <div className="container py-3">
         {/* Page Header */}
         <div className="text-center mb-2">
-          <h2 className="fw-bold">Aya Sir G! <span>Privacy Policy</span></h2>
+          <h1 className="fw-bold">Aya Sir G! <span>Privacy Policy</span></h1>
           <p className="">
             Effective Date: <b>March 1, 2025</b>
           </p>

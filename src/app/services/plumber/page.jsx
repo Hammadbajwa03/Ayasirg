@@ -17,6 +17,7 @@ import {
 } from "react-icons/fa6";
 import { fetchCityIdByName } from "@/app/lib/cityPages";
 import ServicesSteps from "@/app/components/services/Services";
+import ServiceChooseSection from "@/app/components/services/ServiceChooseSection";
 import "./plumber.css";
 
 export default function PlumberPage() {
@@ -113,7 +114,7 @@ export default function PlumberPage() {
                 </p>
                 <div className="plumber_hero_ctas justify-content-center justify-content-lg-start">
                   <Link
-                    href="/compnies?role=handyman&category_id=36"
+                    href="/compnies/plumber"
                     className="plumber_btn plumber_btn_primary"
                   >
                     Find Plumbers Near Me
@@ -318,30 +319,32 @@ export default function PlumberPage() {
       {/* Shared 4 Steps Component */}
       <ServicesSteps />
 
+      <ServiceChooseSection slug="plumber" />
+
       {/* Cities Section */}
       <section className="plumber_cities_sec">
         <div className="container">
           <h2 className="plumber_section_heading">Find Plumbers in Your City</h2>
           <div className="plumber_city_pills">
             <Link
-              href={`/compnies?role=handyman&category_id=36${
-                cityIds.lahore ? `&city=${cityIds.lahore}` : ""
+              href={`/compnies/plumber${
+                cityIds.lahore ? `?city=${cityIds.lahore}` : ""
               }`}
               className="plumber_city_pill"
             >
               Lahore
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=36${
-                cityIds.karachi ? `&city=${cityIds.karachi}` : ""
+              href={`/compnies/plumber${
+                cityIds.karachi ? `?city=${cityIds.karachi}` : ""
               }`}
               className="plumber_city_pill"
             >
               Karachi
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=36${
-                cityIds.islamabad ? `&city=${cityIds.islamabad}` : ""
+              href={`/compnies/plumber${
+                cityIds.islamabad ? `?city=${cityIds.islamabad}` : ""
               }`}
               className="plumber_city_pill"
             >
@@ -399,7 +402,7 @@ export default function PlumberPage() {
             Plumbing Problem? Find Expert Plumbers Now.
           </h2>
           <Link
-            href="/compnies?role=handyman&category_id=36"
+            href="/compnies/plumber"
             className="plumber_btn"
           >
             Browse Plumbers

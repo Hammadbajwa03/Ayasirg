@@ -110,6 +110,7 @@ export default function page() {
   return (
     <section className="wishlist margin_navbar">
       <div className="container py-3">
+        <h1 className="fw-bold mb-3">My Wishlist</h1>
         <div className="row">
           <div className="col-lg-3 ad_bar p-0 hide_bar">
             <Advartisement />

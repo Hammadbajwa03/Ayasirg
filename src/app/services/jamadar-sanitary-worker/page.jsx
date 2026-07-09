@@ -17,6 +17,7 @@ import {
 } from "react-icons/fa6";
 import { fetchCityIdByName } from "@/app/lib/cityPages";
 import ServicesSteps from "@/app/components/services/Services";
+import ServiceChooseSection from "@/app/components/services/ServiceChooseSection";
 import "./jamadar-sanitary-worker.css";
 
 export default function JamadarSanitaryWorkerPage() {
@@ -113,7 +114,7 @@ export default function JamadarSanitaryWorkerPage() {
                 </p>
                 <div className="sanitary_worker_hero_ctas justify-content-center justify-content-lg-start">
                   <Link
-                    href="/compnies?role=handyman&category_id=13"
+                    href="/compnies/jamadar-sanitary-worker"
                     className="sanitary_worker_btn sanitary_worker_btn_primary"
                   >
                     Find Sanitary Workers
@@ -322,30 +323,32 @@ export default function JamadarSanitaryWorkerPage() {
       {/* Shared 4 Steps Component */}
       <ServicesSteps />
 
+      <ServiceChooseSection slug="jamadar-sanitary-worker" />
+
       {/* Cities Section */}
       <section className="sanitary_worker_cities_sec">
         <div className="container">
           <h2 className="sanitary_worker_section_heading">Find Sanitary Workers in Your City</h2>
           <div className="sanitary_worker_city_pills">
             <Link
-              href={`/compnies?role=handyman&category_id=13${
-                cityIds.lahore ? `&city=${cityIds.lahore}` : ""
+              href={`/compnies/jamadar-sanitary-worker${
+                cityIds.lahore ? `?city=${cityIds.lahore}` : ""
               }`}
               className="sanitary_worker_city_pill"
             >
               Lahore
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=13${
-                cityIds.karachi ? `&city=${cityIds.karachi}` : ""
+              href={`/compnies/jamadar-sanitary-worker${
+                cityIds.karachi ? `?city=${cityIds.karachi}` : ""
               }`}
               className="sanitary_worker_city_pill"
             >
               Karachi
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=13${
-                cityIds.islamabad ? `&city=${cityIds.islamabad}` : ""
+              href={`/compnies/jamadar-sanitary-worker${
+                cityIds.islamabad ? `?city=${cityIds.islamabad}` : ""
               }`}
               className="sanitary_worker_city_pill"
             >
@@ -403,7 +406,7 @@ export default function JamadarSanitaryWorkerPage() {
             Facing Gutter Overflow or Sewerage Blockage? Find Helpers Instantly.
           </h2>
           <Link
-            href="/compnies?role=handyman&category_id=13"
+            href="/compnies/jamadar-sanitary-worker"
             className="sanitary_worker_btn"
           >
             Browse Sanitary Workers

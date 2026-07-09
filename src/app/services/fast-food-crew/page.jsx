@@ -16,6 +16,7 @@ import {
 } from "react-icons/fa6";
 import { fetchCityIdByName } from "@/app/lib/cityPages";
 import ServicesSteps from "@/app/components/services/Services";
+import ServiceChooseSection from "@/app/components/services/ServiceChooseSection";
 import "./fast-food-crew.css";
 
 export default function FastFoodCrewPage() {
@@ -112,7 +113,7 @@ export default function FastFoodCrewPage() {
                 </p>
                 <div className="crew_hero_ctas justify-content-center justify-content-lg-start">
                   <Link
-                    href="/compnies?role=handyman&category_id=53"
+                    href="/compnies/fast-food-crew"
                     className="crew_btn crew_btn_primary"
                   >
                     Find Restaurant Crew
@@ -318,30 +319,32 @@ export default function FastFoodCrewPage() {
       {/* Shared 4 Steps Component */}
       <ServicesSteps />
 
+      <ServiceChooseSection slug="fast-food-crew" />
+
       {/* Cities Section */}
       <section className="crew_cities_sec">
         <div className="container">
           <h2 className="crew_section_heading">Find Restaurant Crew in Your City</h2>
           <div className="crew_city_pills">
             <Link
-              href={`/compnies?role=handyman&category_id=53${
-                cityIds.lahore ? `&city=${cityIds.lahore}` : ""
+              href={`/compnies/fast-food-crew${
+                cityIds.lahore ? `?city=${cityIds.lahore}` : ""
               }`}
               className="crew_city_pill"
             >
               Lahore
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=53${
-                cityIds.karachi ? `&city=${cityIds.karachi}` : ""
+              href={`/compnies/fast-food-crew${
+                cityIds.karachi ? `?city=${cityIds.karachi}` : ""
               }`}
               className="crew_city_pill"
             >
               Karachi
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=53${
-                cityIds.islamabad ? `&city=${cityIds.islamabad}` : ""
+              href={`/compnies/fast-food-crew${
+                cityIds.islamabad ? `?city=${cityIds.islamabad}` : ""
               }`}
               className="crew_city_pill"
             >
@@ -399,7 +402,7 @@ export default function FastFoodCrewPage() {
             Looking for Punctual, Hygienic Restaurant Staff? Hire Crew Members Now.
           </h2>
           <Link
-            href="/compnies?role=handyman&category_id=53"
+            href="/compnies/fast-food-crew"
             className="crew_btn"
           >
             Browse Crew Members

@@ -22,7 +22,7 @@ export const UserProvider = ({ children }) => {
         },
       });
       const data = await res.json();
-      setapiCategories2(data.data);
+      setapiCategories2(Array.isArray(data.data) ? data.data : []);
     } catch (error) {
       console.log("Error while fetching categories");
       // // router.push("/error");

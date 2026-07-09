@@ -16,6 +16,7 @@ import {
 } from "react-icons/fa6";
 import { fetchCityIdByName } from "@/app/lib/cityPages";
 import ServicesSteps from "@/app/components/services/Services";
+import ServiceChooseSection from "@/app/components/services/ServiceChooseSection";
 import "./housekeeping.css";
 
 export default function HousekeepingPage() {
@@ -112,7 +113,7 @@ export default function HousekeepingPage() {
                 </p>
                 <div className="housekeeping_hero_ctas justify-content-center justify-content-lg-start">
                   <Link
-                    href="/compnies?role=handyman&category_id=65"
+                    href="/compnies/housekeeping"
                     className="housekeeping_btn housekeeping_btn_primary"
                   >
                     Find Housekeepers
@@ -309,30 +310,32 @@ export default function HousekeepingPage() {
       {/* Shared 4 Steps Component */}
       <ServicesSteps />
 
+      <ServiceChooseSection slug="housekeeping" />
+
       {/* Cities Section */}
       <section className="housekeeping_cities_sec">
         <div className="container">
           <h2 className="housekeeping_section_heading">Find Housekeepers in Your City</h2>
           <div className="housekeeping_city_pills">
             <Link
-              href={`/compnies?role=handyman&category_id=65${
-                cityIds.lahore ? `&city=${cityIds.lahore}` : ""
+              href={`/compnies/housekeeping${
+                cityIds.lahore ? `?city=${cityIds.lahore}` : ""
               }`}
               className="housekeeping_city_pill"
             >
               Lahore
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=65${
-                cityIds.karachi ? `&city=${cityIds.karachi}` : ""
+              href={`/compnies/housekeeping${
+                cityIds.karachi ? `?city=${cityIds.karachi}` : ""
               }`}
               className="housekeeping_city_pill"
             >
               Karachi
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=65${
-                cityIds.islamabad ? `&city=${cityIds.islamabad}` : ""
+              href={`/compnies/housekeeping${
+                cityIds.islamabad ? `?city=${cityIds.islamabad}` : ""
               }`}
               className="housekeeping_city_pill"
             >
@@ -390,7 +393,7 @@ export default function HousekeepingPage() {
             Need a Clean, Spotless Home or Office? Find Housekeeping Services Now.
           </h2>
           <Link
-            href="/compnies?role=handyman&category_id=65"
+            href="/compnies/housekeeping"
             className="housekeeping_btn"
           >
             Browse Housekeeping

@@ -426,7 +426,7 @@ export default function page() {
                         )}
                       </div>
                     </div>
-                    <h3 className="name_heading">{user?.username}</h3>
+                    <h1 className="name_heading">{user?.username}</h1>
                     <p>{user?.gender === "male" ? "Male" : user?.gender === "female" ? "Female" : ""}, {user?.age} years old</p>
                     <div className="recording mt-1 mb-3" style={{ display: 'flex', alignItems: 'left !important', gap: '10px' }}>
 

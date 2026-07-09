@@ -392,7 +392,7 @@ export default function Page() {
             <div className="pb-3">
                 <div className="content">
                     <div className="heading_div">
-                        <h2 className="heading">{blogData.title}</h2>
+                        <h1 className="heading">{blogData.title}</h1>
                     </div>
                     <div
                         className="description"

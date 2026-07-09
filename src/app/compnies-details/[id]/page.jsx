@@ -413,7 +413,7 @@ export default function page() {
                       )}
                     </div>
                   </div>
-                  <h3 className="name_heading">{company?.username}</h3>
+                  <h1 className="name_heading">{company?.username}</h1>
                   <div className="recording mt-1 mb-3">
                     {/* <IoIosMic className="mic_icon" /> */}
 

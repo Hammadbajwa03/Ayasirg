@@ -17,6 +17,7 @@ import {
 } from "react-icons/fa6";
 import { fetchCityIdByName } from "@/app/lib/cityPages";
 import ServicesSteps from "@/app/components/services/Services";
+import ServiceChooseSection from "@/app/components/services/ServiceChooseSection";
 import "./babysitter-nanny.css";
 
 export default function BabysitterNannyPage() {
@@ -113,7 +114,7 @@ export default function BabysitterNannyPage() {
                 </p>
                 <div className="nanny_hero_ctas justify-content-center justify-content-lg-start">
                   <Link
-                    href="/compnies?role=handyman&category_id=19"
+                    href="/compnies/babysitter-nanny"
                     className="nanny_btn nanny_btn_primary"
                   >
                     Find a Baby Sitter / Nanny
@@ -325,30 +326,32 @@ export default function BabysitterNannyPage() {
       {/* Shared 4 Steps Component */}
       <ServicesSteps />
 
+      <ServiceChooseSection slug="babysitter-nanny" />
+
       {/* Cities Section */}
       <section className="nanny_cities_sec">
         <div className="container">
           <h2 className="nanny_section_heading">Find Baby Sitters & Nannies in Your City</h2>
           <div className="nanny_city_pills">
             <Link
-              href={`/compnies?role=handyman&category_id=19${
-                cityIds.lahore ? `&city=${cityIds.lahore}` : ""
+              href={`/compnies/babysitter-nanny${
+                cityIds.lahore ? `?city=${cityIds.lahore}` : ""
               }`}
               className="nanny_city_pill"
             >
               Lahore
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=19${
-                cityIds.karachi ? `&city=${cityIds.karachi}` : ""
+              href={`/compnies/babysitter-nanny${
+                cityIds.karachi ? `?city=${cityIds.karachi}` : ""
               }`}
               className="nanny_city_pill"
             >
               Karachi
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=19${
-                cityIds.islamabad ? `&city=${cityIds.islamabad}` : ""
+              href={`/compnies/babysitter-nanny${
+                cityIds.islamabad ? `?city=${cityIds.islamabad}` : ""
               }`}
               className="nanny_city_pill"
             >
@@ -406,7 +409,7 @@ export default function BabysitterNannyPage() {
             Need Trusted Childcare? Find a Baby Sitter Now.
           </h2>
           <Link
-            href="/compnies?role=handyman&category_id=19"
+            href="/compnies/babysitter-nanny"
             className="nanny_btn"
           >
             Browse Baby Sitters & Nannies

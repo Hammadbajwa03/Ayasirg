@@ -15,7 +15,7 @@ export default function page() {
       <div className="container py-3">
         {/* Heading Section */}
         <div className="text-center mb-3">
-          <h2 className="fw-bold mb-2">Our <span>Mission</span></h2>
+          <h1 className="fw-bold mb-2">Our <span>Mission</span></h1>
           <h4 className="fw-semibold">Welcome to Aya Sir G!</h4>
         </div>
 

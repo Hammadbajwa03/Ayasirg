@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Page Not Found | Ayasirg",
+  title: "Something Went Wrong | Ayasirg",
   robots: { index: false, follow: false },
 };
 

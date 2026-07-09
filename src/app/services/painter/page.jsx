@@ -17,6 +17,7 @@ import {
 } from "react-icons/fa6";
 import { fetchCityIdByName } from "@/app/lib/cityPages";
 import ServicesSteps from "@/app/components/services/Services";
+import ServiceChooseSection from "@/app/components/services/ServiceChooseSection";
 import "./painter.css";
 
 export default function PainterPage() {
@@ -113,7 +114,7 @@ export default function PainterPage() {
                 </p>
                 <div className="painter_hero_ctas justify-content-center justify-content-lg-start">
                   <Link
-                    href="/compnies?role=handyman&category_id=18"
+                    href="/compnies/painter"
                     className="painter_btn painter_btn_primary"
                   >
                     Find Painters Near Me
@@ -321,30 +322,32 @@ export default function PainterPage() {
       {/* Shared 4 Steps Component */}
       <ServicesSteps />
 
+      <ServiceChooseSection slug="painter" />
+
       {/* Cities Section */}
       <section className="painter_cities_sec">
         <div className="container">
           <h2 className="painter_section_heading">Find Painters in Your City</h2>
           <div className="painter_city_pills">
             <Link
-              href={`/compnies?role=handyman&category_id=18${
-                cityIds.lahore ? `&city=${cityIds.lahore}` : ""
+              href={`/compnies/painter${
+                cityIds.lahore ? `?city=${cityIds.lahore}` : ""
               }`}
               className="painter_city_pill"
             >
               Lahore
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=18${
-                cityIds.karachi ? `&city=${cityIds.karachi}` : ""
+              href={`/compnies/painter${
+                cityIds.karachi ? `?city=${cityIds.karachi}` : ""
               }`}
               className="painter_city_pill"
             >
               Karachi
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=18${
-                cityIds.islamabad ? `&city=${cityIds.islamabad}` : ""
+              href={`/compnies/painter${
+                cityIds.islamabad ? `?city=${cityIds.islamabad}` : ""
               }`}
               className="painter_city_pill"
             >
@@ -402,7 +405,7 @@ export default function PainterPage() {
             Ready to Transform Your Walls? Find Expert Painters Now.
           </h2>
           <Link
-            href="/compnies?role=handyman&category_id=18"
+            href="/compnies/painter"
             className="painter_btn"
           >
             Browse Painters

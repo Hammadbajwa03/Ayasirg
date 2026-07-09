@@ -41,7 +41,7 @@ export default async function ServicesPage() {
       <ServicesCategoriesJsonLd categories={categories} />
       <div className="container py-3">
         <header className="services_page_header text-center text-md-start mb-3 mb-md-4">
-          <h2 className="services_page_h1 fw-bold mb-1">Services</h2>
+          <h1 className="services_page_h1 fw-bold mb-1">Services</h1>
           <h2 className="services_page_h2 fw-semibold mb-0">Categories</h2>
         </header>
 
@@ -54,7 +54,7 @@ export default async function ServicesPage() {
               {/* <div className="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
                 <p className="services_panel_kicker mb-0 text-uppercase">Browse</p>
                 <Link
-                  href="/compnies?role=handyman"
+                  href="/compnies"
                   className="services_panel_all_link text-decoration-none"
                 >
                   View all listings

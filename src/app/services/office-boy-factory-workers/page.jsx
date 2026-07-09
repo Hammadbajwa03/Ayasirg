@@ -17,6 +17,7 @@ import {
 } from "react-icons/fa6";
 import { fetchCityIdByName } from "@/app/lib/cityPages";
 import ServicesSteps from "@/app/components/services/Services";
+import ServiceChooseSection from "@/app/components/services/ServiceChooseSection";
 import "./office-boy-factory-workers.css";
 
 export default function OfficeBoyFactoryWorkersPage() {
@@ -113,7 +114,7 @@ export default function OfficeBoyFactoryWorkersPage() {
                 </p>
                 <div className="office_boy_hero_ctas justify-content-center justify-content-lg-start">
                   <Link
-                    href="/compnies?role=handyman&category_id=52"
+                    href="/compnies/office-boy-factory-workers"
                     className="office_boy_btn office_boy_btn_primary"
                   >
                     Find Office Boys / Workers
@@ -316,30 +317,32 @@ export default function OfficeBoyFactoryWorkersPage() {
       {/* Shared 4 Steps Component */}
       <ServicesSteps />
 
+      <ServiceChooseSection slug="office-boy-factory-workers" />
+
       {/* Cities Section */}
       <section className="office_boy_cities_sec">
         <div className="container">
           <h2 className="office_boy_section_heading">Find Office Boys &amp; Factory Workers in Your City</h2>
           <div className="office_boy_city_pills">
             <Link
-              href={`/compnies?role=handyman&category_id=52${
-                cityIds.lahore ? `&city=${cityIds.lahore}` : ""
+              href={`/compnies/office-boy-factory-workers${
+                cityIds.lahore ? `?city=${cityIds.lahore}` : ""
               }`}
               className="office_boy_city_pill"
             >
               Lahore
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=52${
-                cityIds.karachi ? `&city=${cityIds.karachi}` : ""
+              href={`/compnies/office-boy-factory-workers${
+                cityIds.karachi ? `?city=${cityIds.karachi}` : ""
               }`}
               className="office_boy_city_pill"
             >
               Karachi
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=52${
-                cityIds.islamabad ? `&city=${cityIds.islamabad}` : ""
+              href={`/compnies/office-boy-factory-workers${
+                cityIds.islamabad ? `?city=${cityIds.islamabad}` : ""
               }`}
               className="office_boy_city_pill"
             >
@@ -397,7 +400,7 @@ export default function OfficeBoyFactoryWorkersPage() {
             Need Reliable Office or Factory Staff? Find Them Now.
           </h2>
           <Link
-            href="/compnies?role=handyman&category_id=52"
+            href="/compnies/office-boy-factory-workers"
             className="office_boy_btn"
           >
             Browse Office Boys &amp; Workers

@@ -7,11 +7,9 @@ import MyNavbar from "./components/custom-navbar/CustomNavbar";
 export default function SiteChrome({ position }) {
   const pathname = usePathname();
   const isAuthPage =
-    pathname === "/login" ||
     pathname === "/register" ||
     // pathname === "/contact-us" ||
     pathname === "/forgot-password" ||
-    pathname === "/sign-up" ||
     pathname === "/otp" ||
     pathname === "/register-service-provider" ||
     pathname === "/reset-password" ||

@@ -16,6 +16,7 @@ import {
 } from "react-icons/fa6";
 import { fetchCityIdByName } from "@/app/lib/cityPages";
 import ServicesSteps from "@/app/components/services/Services";
+import ServiceChooseSection from "@/app/components/services/ServiceChooseSection";
 import "./driver.css";
 
 export default function DriverPage() {
@@ -112,7 +113,7 @@ export default function DriverPage() {
                 </p>
                 <div className="driver_hero_ctas justify-content-center justify-content-lg-start">
                   <Link
-                    href="/compnies?role=handyman&category_id=27"
+                    href="/compnies/driver"
                     className="driver_btn driver_btn_primary"
                   >
                     Find a Driver
@@ -324,30 +325,32 @@ export default function DriverPage() {
       {/* Shared 4 Steps Component */}
       <ServicesSteps />
 
+      <ServiceChooseSection slug="driver" />
+
       {/* Cities Section */}
       <section className="driver_cities_sec">
         <div className="container">
           <h2 className="driver_section_heading">Find Drivers in Your City</h2>
           <div className="driver_city_pills">
             <Link
-              href={`/compnies?role=handyman&category_id=27${
-                cityIds.lahore ? `&city=${cityIds.lahore}` : ""
+              href={`/compnies/driver${
+                cityIds.lahore ? `?city=${cityIds.lahore}` : ""
               }`}
               className="driver_city_pill"
             >
               Lahore
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=27${
-                cityIds.karachi ? `&city=${cityIds.karachi}` : ""
+              href={`/compnies/driver${
+                cityIds.karachi ? `?city=${cityIds.karachi}` : ""
               }`}
               className="driver_city_pill"
             >
               Karachi
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=27${
-                cityIds.islamabad ? `&city=${cityIds.islamabad}` : ""
+              href={`/compnies/driver${
+                cityIds.islamabad ? `?city=${cityIds.islamabad}` : ""
               }`}
               className="driver_city_pill"
             >
@@ -405,7 +408,7 @@ export default function DriverPage() {
             Need a Safe, Experienced Driver? Chose Your Driver Now.
           </h2>
           <Link
-            href="/compnies?role=handyman&category_id=27"
+            href="/compnies/driver"
             className="driver_btn"
           >
             Browse Verified Drivers

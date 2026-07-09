@@ -17,6 +17,7 @@ import {
 } from "react-icons/fa6";
 import { fetchCityIdByName } from "@/app/lib/cityPages";
 import ServicesSteps from "@/app/components/services/Services";
+import ServiceChooseSection from "@/app/components/services/ServiceChooseSection";
 import "./welding-worker.css";
 
 export default function WeldingWorkerPage() {
@@ -113,7 +114,7 @@ export default function WeldingWorkerPage() {
                 </p>
                 <div className="welding_worker_hero_ctas justify-content-center justify-content-lg-start">
                   <Link
-                    href="/compnies?role=handyman&category_id=37"
+                    href="/compnies/welding-worker"
                     className="welding_worker_btn welding_worker_btn_primary"
                   >
                     Find Welders Near Me
@@ -325,30 +326,32 @@ export default function WeldingWorkerPage() {
       {/* Shared 4 Steps Component */}
       <ServicesSteps />
 
+      <ServiceChooseSection slug="welding-worker" />
+
       {/* Cities Section */}
       <section className="welding_worker_cities_sec">
         <div className="container">
           <h2 className="welding_worker_section_heading">Find Welders in Your City</h2>
           <div className="welding_worker_city_pills">
             <Link
-              href={`/compnies?role=handyman&category_id=37${
-                cityIds.lahore ? `&city=${cityIds.lahore}` : ""
+              href={`/compnies/welding-worker${
+                cityIds.lahore ? `?city=${cityIds.lahore}` : ""
               }`}
               className="welding_worker_city_pill"
             >
               Lahore
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=37${
-                cityIds.karachi ? `&city=${cityIds.karachi}` : ""
+              href={`/compnies/welding-worker${
+                cityIds.karachi ? `?city=${cityIds.karachi}` : ""
               }`}
               className="welding_worker_city_pill"
             >
               Karachi
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=37${
-                cityIds.islamabad ? `&city=${cityIds.islamabad}` : ""
+              href={`/compnies/welding-worker${
+                cityIds.islamabad ? `?city=${cityIds.islamabad}` : ""
               }`}
               className="welding_worker_city_pill"
             >
@@ -406,7 +409,7 @@ export default function WeldingWorkerPage() {
             Need Gate Repairs or Security Grills? Find Expert Welders Now.
           </h2>
           <Link
-            href="/compnies?role=handyman&category_id=37"
+            href="/compnies/welding-worker"
             className="welding_worker_btn"
           >
             Browse Welders

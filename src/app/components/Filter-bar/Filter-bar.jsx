@@ -32,21 +32,27 @@ export default function Filter_bar({ dataSearch }) {
   const [showAll, setShowAll] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  const visibleCities = showAll ? cities : cities.slice(0, 6);
+  const visibleCities = showAll ? cities || [] : (cities || []).slice(0, 6);
 
   const [showAllArea, setShowAllArea] = useState(false);
 
-  const visibleArea = showAllArea ? locations : locations.slice(0, 6);
+  const visibleArea = showAllArea ? locations || [] : (locations || []).slice(0, 6);
 
   const [showAllCat, setShowAllCat] = useState(false);
 
   // Toggle between showing first 5 and all categories
-  const displayedCategories = showAllCat ? apiCategory2 : apiCategory2.slice(0, 6);
+  const displayedCategories = showAllCat
+    ? apiCategory2 || []
+    : (apiCategory2 || []).slice(0, 6);
 
   const updateURL = (newFilters) => {
     const params = new URLSearchParams(searchParams.toString());
 
     Object.entries(newFilters).forEach(([key, value]) => {
+      if (key === "role" && value === "handyman") {
+        params.delete("role");
+        return;
+      }
       if (value) {
         params.set(key, value);
       } else {
@@ -76,41 +82,46 @@ export default function Filter_bar({ dataSearch }) {
   useEffect(() => {
     setFilters({
       role,
-      gender: "",
-      age_range: "",
-      city: "",
-      category_id: "",
-      area_code: "",
-      verified_status: "",
-      rating: ""
+      gender: gender || "",
+      age_range: age_range || "",
+      city: city || "",
+      category_id: category_id || "",
+      area_code: area_code || "",
+      verified_status: verified_status || "",
+      rating: rating || "",
     });
-  }, [role]);
+  }, [role, gender, age_range, city, category_id, area_code, verified_status, rating]);
 
   useEffect(() => {
-    const role = searchParams.get("role") || "handyman";
-    const gender = searchParams.get("gender");
-    const age_range = searchParams.get("age_range");
-    const city = searchParams.get("city");
-    const category_id = searchParams.get("category_id");
-    const area_code = searchParams.get("area_code");
-    const verified_status = searchParams.get("verified_status");
-    const rating = searchParams.get("rating");
     const page = searchParams.get("page") || 1;
+    const resolvedCategoryId =
+      searchParams.get("category_id") || category_id || "";
 
-    getFilteredUsers({ role, gender, age_range, city, category_id, area_code, verified_status, rating, page });
-  }, [searchParams]);
+    getFilteredUsers({
+      role: searchParams.get("role") || role || "handyman",
+      gender: searchParams.get("gender") || gender || "",
+      age_range: searchParams.get("age_range") || age_range || "",
+      city: searchParams.get("city") || city || "",
+      category_id: resolvedCategoryId,
+      area_code: searchParams.get("area_code") || area_code || "",
+      verified_status:
+        searchParams.get("verified_status") || verified_status || "",
+      rating: searchParams.get("rating") || rating || "",
+      page,
+    });
+  }, [searchParams, role, gender, age_range, city, category_id, area_code, verified_status, rating]);
 
   useEffect(() => {
-    const category_id = searchParams.get("category_id");
-    const city = searchParams.get("city");
-    const area_code = searchParams.get("area_code");
+    const urlCategoryId = searchParams.get("category_id");
+    const urlCity = searchParams.get("city");
+    const urlAreaCode = searchParams.get("area_code");
 
-    if (category_id || city || area_code) {
+    if (urlCategoryId || urlCity || urlAreaCode) {
       setFilters((prev) => ({
         ...prev,
-        category_id: category_id || prev.category_id,
-        city: city || prev.city,
-        area_code: area_code || prev.area_code,
+        category_id: urlCategoryId || prev.category_id,
+        city: urlCity || prev.city,
+        area_code: urlAreaCode || prev.area_code,
       }));
     }
   }, [searchParams]);
@@ -216,7 +227,7 @@ export default function Filter_bar({ dataSearch }) {
             </div>
           ))}
 
-          {apiCategory2.length > 6 && (
+          {(apiCategory2 || []).length > 6 && (
             <button
               type="button"
               onClick={() => setShowAllCat((prev) => !prev)}
@@ -242,7 +253,7 @@ export default function Filter_bar({ dataSearch }) {
             </div>
           ))}
 
-          {cities.length > 6 && (
+          {(cities || []).length > 6 && (
             <button
               className="see-more-btn"
               onClick={() => setShowAll((prev) => !prev)}
@@ -267,7 +278,7 @@ export default function Filter_bar({ dataSearch }) {
             </div>
           ))}
 
-          {locations.length > 6 && (
+          {(locations || []).length > 6 && (
             <button
               className="see-more-btn"
               onClick={() => setShowAllArea((prev) => !prev)}

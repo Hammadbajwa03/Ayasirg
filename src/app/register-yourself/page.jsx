@@ -23,9 +23,9 @@ export default function page() {
           {/* Main Content */}
           <div className="col-lg-9">
             <div className="content p-2">
-              <h2 className="fw-bold mb-3">
+              <h1 className="fw-bold mb-3">
                 Join Aya Sir G! — <span>The Handyman Services Platform in Lahore</span>
-              </h2>
+              </h1>
               <p>Whether you are a skilled professional, a growing service company, or an aspiring E-center, Aya Sir G! is the trusted platform to grow your business, increase visibility, and connect with more clients in Lahore.</p>
               <p>
                 Explore the categories below to see how Aya Sir G! can help you reach more clients, grow your handyman services, and strengthen your business in Lahore. Our support team is here to guide you every step of the way.

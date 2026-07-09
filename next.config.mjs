@@ -107,6 +107,16 @@ const nextConfig = {
         destination: "/compnies",
         permanent: true,
       },
+      {
+        source: "/ac-service-in-lahore",
+        destination: "/services/ac-technician",
+        permanent: true,
+      },
+      {
+        source: "/services/ac-service-in-lahore",
+        destination: "/services/ac-technician",
+        permanent: true,
+      },
     ];
   },
 };

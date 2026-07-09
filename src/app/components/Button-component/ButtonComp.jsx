@@ -279,7 +279,7 @@ import { useSearchParams, useRouter } from "next/navigation";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
-export default function ButtonComp({ searchParamdata }) {
+export default function ButtonComp({ searchParamdata, categoryId: defaultCategoryId = "" }) {
   const { gender, age_range, verified_status } = searchParamdata;
 
   const { filteredUsers, getFilteredUsers, loader, toggleLike, paginations } =
@@ -288,9 +288,9 @@ export default function ButtonComp({ searchParamdata }) {
   const searchParams = useSearchParams();
   const router = useRouter();
 
-  // URL params
+  // URL params (category may come from /compnies/[slug] without query string)
   const role = searchParams.get("role") || "handyman";
-  const category_id = searchParams.get("category_id") || "";
+  const category_id = searchParams.get("category_id") || defaultCategoryId || "";
   const city = searchParams.get("city") || "";
   const area_code = searchParams.get("area_code") || "";
   const pageParam = searchParams.get("page");
@@ -298,18 +298,25 @@ export default function ButtonComp({ searchParamdata }) {
 
   const individual = role !== "provider";
 
-  // Ref to track previous filters
-  const prevFiltersRef = useRef({
-    category_id,
-    city,
-    area_code,
-    gender,
-    age_range,
-    verified_status,
-  });
+  // Ref to track previous filters (skip first run to avoid redirect on mount)
+  const prevFiltersRef = useRef(null);
 
   // Reset page to 1 when filters actually change
   useEffect(() => {
+    const current = {
+      category_id,
+      city,
+      area_code,
+      gender,
+      age_range,
+      verified_status,
+    };
+
+    if (prevFiltersRef.current === null) {
+      prevFiltersRef.current = current;
+      return;
+    }
+
     const prev = prevFiltersRef.current;
     const filtersChanged =
       prev.category_id !== category_id ||
@@ -320,21 +327,13 @@ export default function ButtonComp({ searchParamdata }) {
       prev.verified_status !== verified_status;
 
     if (filtersChanged) {
-      // Update URL with page=1 whenever filters change
       const params = new URLSearchParams(searchParams.toString());
-      params.set("page", "1"); 
+      params.set("page", "1");
       router.replace(`?${params.toString()}`);
     }
 
-    prevFiltersRef.current = {
-      category_id,
-      city,
-      area_code,
-      gender,
-      age_range,
-      verified_status,
-    };
-  }, [category_id, city, area_code, gender, age_range, verified_status]);
+    prevFiltersRef.current = current;
+  }, [category_id, city, area_code, gender, age_range, verified_status, searchParams, router]);
 
   // API call whenever params or page change
   useEffect(() => {
@@ -370,8 +369,12 @@ export default function ButtonComp({ searchParamdata }) {
   // Role toggle
   const handleToggle = (targetRole) => {
     const params = new URLSearchParams(searchParams.toString());
-    params.set("role", targetRole);
-    params.delete("page"); // reset page to 1
+    if (targetRole === "handyman") {
+      params.delete("role");
+    } else {
+      params.set("role", targetRole);
+    }
+    params.delete("page");
     router.replace(`?${params.toString()}`);
   };
 

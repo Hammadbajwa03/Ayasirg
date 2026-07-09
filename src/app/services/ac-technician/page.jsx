@@ -16,6 +16,7 @@ import {
 } from "react-icons/fa6";
 import { fetchCityIdByName } from "@/app/lib/cityPages";
 import ServicesSteps from "@/app/components/services/Services";
+import ServiceChooseSection from "@/app/components/services/ServiceChooseSection";
 import "./ac-technician.css";
 
 export default function AcTechnicianPage() {
@@ -49,7 +50,7 @@ export default function AcTechnicianPage() {
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "How to hire an AC technician on Aya Sir G?",
+        "name": "How to hire an AC technician for ac service in Lahore on Aya Sir G?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "To hire an AC technician on Aya Sir G!, browse our verified profiles, compare reviews and ratings of different technicians, and contact your preferred professional directly."
@@ -65,15 +66,15 @@ export default function AcTechnicianPage() {
       },
       {
         "@type": "Question",
-        "name": "What does an AC service cost in Pakistan?",
+        "name": "What does the best AC service in Lahore cost?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The cost of AC service in Pakistan depends on the type of service required (routine cleaning, repair, gas refilling, or installation). You can compare different technician profiles to find rates that fit your budget."
+          "text": "The cost of ac service in Lahore depends on the type of service required (routine cleaning, repair, gas refilling, or installation). You can compare different technician profiles to find rates that fit your budget."
         }
       },
       {
         "@type": "Question",
-        "name": "Are the AC technicians on Aya Sir G! verified?",
+        "name": "Are the AC technicians offering ac repair services on Aya Sir G! verified?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Yes, Aya Sir G! verifies the profiles and credentials of AC technicians. You can also view reviews and ratings left by previous customers to hire with confidence."
@@ -81,10 +82,10 @@ export default function AcTechnicianPage() {
       },
       {
         "@type": "Question",
-        "name": "Which cities are covered by AC technician services?",
+        "name": "Which cities are covered by ac repair services near me?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Our AC technician services are currently available in Lahore, Karachi, and Islamabad, connecting you with local experts in these areas."
+          "text": "Our ac service and repair near me is currently available in Lahore, Karachi, and Islamabad, connecting you with local experts in these areas."
         }
       }
     ]
@@ -105,14 +106,14 @@ export default function AcTechnicianPage() {
             <div className="col-lg-7">
               <div className="ac_hero_content text-center text-lg-start">
                 <h1 className="ac_hero_h1">
-                  Trusted AC Technicians in Pakistan — Hire on Aya Sir G!
+                  Trusted AC Service in Lahore — Hire AC Technicians on Aya Sir G!
                 </h1>
                 <p className="ac_hero_subheading">
-                  Find verified AC experts, compare professional profiles, check authentic reviews, and hire the perfect technician for your home or office in minutes.
+                  Find verified AC experts offering trusted ac service in Lahore, compare professional profiles, check authentic reviews, and hire the perfect technician for your home or office in minutes.
                 </p>
                 <div className="ac_hero_ctas justify-content-center justify-content-lg-start">
                   <Link
-                    href="/compnies?role=handyman&category_id=44"
+                    href="/compnies/ac-technician"
                     className="ac_btn ac_btn_primary"
                   >
                     Find an AC Technician
@@ -148,25 +149,22 @@ export default function AcTechnicianPage() {
         </div>
       </header>
 
-      {/* Content Block (Word Count: 119 words) */}
+      {/* Content Block */}
       <section className="ac_content_block">
         <div className="container">
           <div className="ac_content_wrapper">
-            <h2 className="ac_section_heading">Trusted AC Gas Filling and Repair Services with Aya Sir G!</h2>
+            <h2 className="ac_section_heading">Stop Getting Scammed on AC Gas Refilling — Here's the Fix</h2>
             <p className="ac_content_text">
-              In Pakistan, especially during the summer season, almost every household relies on air conditioners (ACs) for cooling. However, a common issue in traditional AC systems is gas leakage, which affects cooling performance.
+              In Pakistan, especially in cities like Lahore during the summer season, almost every household relies on air conditioners (ACs) for cooling. However, a common issue in traditional AC systems is gas leakage, which affects cooling performance.
             </p>
             <p className="ac_content_text">
-              The problem is that most people do not have a way to verify whether the AC technician is using high-quality refrigerant gas or a poor-quality substitute. Since AC cooling takes some time to stabilize, it becomes difficult to immediately identify whether the service was done properly or not. In many cases, users only realize the issue later when cooling performance drops.
+              The problem is that most people do not have a way to verify whether the AC technician is using high-quality refrigerant gas or a poor-quality substitute. Since AC cooling takes some time to stabilize, it becomes difficult to immediately identify whether the service was done properly or not. In many cases, users only realize the issue later when cooling performance drops. Unfortunately, due to this lack of transparency, fraud and low-quality service practices can sometimes occur in the market.
             </p>
             <p className="ac_content_text">
-              Unfortunately, due to this lack of transparency, fraud and low-quality service practices can sometimes occur in the market.
+              This is where Aya Sir G! plays an important role, helping you find the best AC service in Lahore. The platform aims to create a transparent and competitive environment where AC technicians and other skilled workers can be easily found, reviewed and compared based on ratings and past customer experiences.
             </p>
             <p className="ac_content_text">
-              This is where Aya Sir G! plays an important role. The platform aims to create a transparent and competitive environment where AC technicians and other skilled workers can be easily found, reviewed and compared based on ratings and past customer experiences.
-            </p>
-            <p className="ac_content_text">
-              With Aya Sir G!, customers can check verified profiles, view feedback and directly contact skilled and trustworthy AC technicians. This helps ensure that only qualified professionals are hired, reducing the chances of scams and improving service quality for everyone.
+              With Aya Sir G!, customers searching for ac repair services near me can check verified profiles, view feedback and directly contact skilled and trustworthy AC technicians. This helps ensure that only qualified professionals are hired, reducing the chances of scams and improving service quality for everyone.
             </p>
             <div className="mt-4 pt-2">
               <span className="text-muted small">
@@ -182,7 +180,7 @@ export default function AcTechnicianPage() {
                 <Link href="/contact-us" className="red_title text-decoration-none">
                   Contact Us
                 </Link>{" "}
-                for any assistance.
+                for any assistance with ac service in Lahore.
               </span>
             </div>
           </div>
@@ -192,7 +190,7 @@ export default function AcTechnicianPage() {
       {/* Services Grid Section */}
       <section className="ac_services_sec">
         <div className="container">
-          <h2 className="ac_section_heading">AC Services Available on Aya Sir G!</h2>
+          <h2 className="ac_section_heading">AC Repair Services Available on Aya Sir G!</h2>
           <div className="ac_services_grid">
             {/* Card 1 */}
             <div className="ac_service_card">
@@ -221,7 +219,7 @@ export default function AcTechnicianPage() {
               </div>
               <h3 className="ac_card_title">Gas Refilling</h3>
               <p className="ac_card_desc">
-                Quality refrigerant refilling and leakage repair for consistent cooling.
+                Quality refrigerant refilling and leakage repair for consistent, reliable ac service and repair near me.
               </p>
             </div>
             {/* Card 4 */}
@@ -231,7 +229,7 @@ export default function AcTechnicianPage() {
               </div>
               <h3 className="ac_card_title">AC Repair and Fault Diagnosis</h3>
               <p className="ac_card_desc">
-                Accurate troubleshooting of wiring, compressor, or thermostat issues.
+                Accurate troubleshooting of wiring, compressor, or thermostat issues with dependable ac repair services.
               </p>
             </div>
             {/* Card 5 */}
@@ -265,7 +263,7 @@ export default function AcTechnicianPage() {
             <div className="col-lg-6 ac_trust_col_text">
               <h2 className="section_heading text-start mb-2">
                 Why Choose Aya Sir G! <br />
-                <span className="red_title">for AC Technicians?</span>
+                <span className="red_title">for AC Technicians in Lahore?</span>
               </h2>
               <div className="ac_trust_points">
                 <div className="ac_trust_point">
@@ -321,30 +319,33 @@ export default function AcTechnicianPage() {
       {/* Shared 4 Steps Component */}
       <ServicesSteps />
 
+      <ServiceChooseSection slug="ac-technician" />
+
+
       {/* Cities Section */}
       <section className="ac_cities_sec">
         <div className="container">
           <h2 className="ac_section_heading">Find AC Technicians in Your City</h2>
           <div className="ac_city_pills">
             <Link
-              href={`/compnies?role=handyman&category_id=44${
-                cityIds.lahore ? `&city=${cityIds.lahore}` : ""
+              href={`/compnies/ac-technician${
+                cityIds.lahore ? `?city=${cityIds.lahore}` : ""
               }`}
               className="ac_city_pill"
             >
               Lahore
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=44${
-                cityIds.karachi ? `&city=${cityIds.karachi}` : ""
+              href={`/compnies/ac-technician${
+                cityIds.karachi ? `?city=${cityIds.karachi}` : ""
               }`}
               className="ac_city_pill"
             >
               Karachi
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=44${
-                cityIds.islamabad ? `&city=${cityIds.islamabad}` : ""
+              href={`/compnies/ac-technician${
+                cityIds.islamabad ? `?city=${cityIds.islamabad}` : ""
               }`}
               className="ac_city_pill"
             >
@@ -361,7 +362,7 @@ export default function AcTechnicianPage() {
           <div className="ac_faq_wrapper">
             <Accordion defaultActiveKey="0">
               <Accordion.Item eventKey="0">
-                <Accordion.Header>How to hire an AC technician on Aya Sir G?</Accordion.Header>
+                <Accordion.Header>How to hire an AC technician for ac service in Lahore on Aya Sir G?</Accordion.Header>
                 <Accordion.Body>
                   To hire an AC technician on Aya Sir G!, browse our verified profiles, compare reviews and ratings of different technicians, and contact your preferred professional directly.
                 </Accordion.Body>
@@ -373,21 +374,21 @@ export default function AcTechnicianPage() {
                 </Accordion.Body>
               </Accordion.Item>
               <Accordion.Item eventKey="2">
-                <Accordion.Header>What does an AC service cost in Pakistan?</Accordion.Header>
+                <Accordion.Header>What does the best AC service in Lahore cost?</Accordion.Header>
                 <Accordion.Body>
-                  The cost of AC service in Pakistan depends on the type of service required (routine cleaning, repair, gas refilling, or installation). You can compare different technician profiles to find rates that fit your budget.
+                  The cost of ac service in Lahore depends on the type of service required (routine cleaning, repair, gas refilling, or installation). You can compare different technician profiles to find rates that fit your budget.
                 </Accordion.Body>
               </Accordion.Item>
               <Accordion.Item eventKey="3">
-                <Accordion.Header>Are the AC technicians on Aya Sir G! verified?</Accordion.Header>
+                <Accordion.Header>Are the AC technicians offering ac repair services on Aya Sir G! verified?</Accordion.Header>
                 <Accordion.Body>
                   Yes, Aya Sir G! verifies the profiles and credentials of AC technicians. You can also view reviews and ratings left by previous customers to hire with confidence.
                 </Accordion.Body>
               </Accordion.Item>
               <Accordion.Item eventKey="4">
-                <Accordion.Header>Which cities are covered by AC technician services?</Accordion.Header>
+                <Accordion.Header>Which cities are covered by ac repair services near me?</Accordion.Header>
                 <Accordion.Body>
-                  Our AC technician services are currently available in Lahore, Karachi, and Islamabad, connecting you with local experts in these areas.
+                  Our ac service and repair near me is currently available in Lahore, Karachi, and Islamabad, connecting you with local experts in these areas.
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion>
@@ -402,7 +403,7 @@ export default function AcTechnicianPage() {
             Ready to Fix Your AC? Find a Technician Now.
           </h2>
           <Link
-            href="/compnies?role=handyman&category_id=44"
+            href="/compnies/ac-technician"
             className="ac_btn"
           >
             Browse AC Technicians

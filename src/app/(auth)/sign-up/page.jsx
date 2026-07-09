@@ -110,7 +110,7 @@ export default function page() {
   };
 
   return (
-    <div className="sign_up auth_bg">
+    <div className="sign_up auth_bg margin_navbar">
       <div className="container p-2 bg_white">
         <h1 className="auth_heading margin_bottom">Sign Up</h1>
         <form onSubmit={handleSubmit}>

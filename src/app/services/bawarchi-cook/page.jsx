@@ -17,6 +17,7 @@ import {
 } from "react-icons/fa6";
 import { fetchCityIdByName } from "@/app/lib/cityPages";
 import ServicesSteps from "@/app/components/services/Services";
+import ServiceChooseSection from "@/app/components/services/ServiceChooseSection";
 import "./bawarchi-cook.css";
 
 export default function BawarchiCookPage() {
@@ -113,7 +114,7 @@ export default function BawarchiCookPage() {
                 </p>
                 <div className="cook_hero_ctas justify-content-center justify-content-lg-start">
                   <Link
-                    href="/compnies?role=handyman&category_id=22"
+                    href="/compnies/bawarchi-cook"
                     className="cook_btn cook_btn_primary"
                   >
                     Find a Bawarchi / Cook
@@ -322,30 +323,32 @@ export default function BawarchiCookPage() {
       {/* Shared 4 Steps Component */}
       <ServicesSteps />
 
+      <ServiceChooseSection slug="bawarchi-cook" />
+
       {/* Cities Section */}
       <section className="cook_cities_sec">
         <div className="container">
           <h2 className="cook_section_heading">Find Bawarchis & Cooks in Your City</h2>
           <div className="cook_city_pills">
             <Link
-              href={`/compnies?role=handyman&category_id=22${
-                cityIds.lahore ? `&city=${cityIds.lahore}` : ""
+              href={`/compnies/bawarchi-cook${
+                cityIds.lahore ? `?city=${cityIds.lahore}` : ""
               }`}
               className="cook_city_pill"
             >
               Lahore
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=22${
-                cityIds.karachi ? `&city=${cityIds.karachi}` : ""
+              href={`/compnies/bawarchi-cook${
+                cityIds.karachi ? `?city=${cityIds.karachi}` : ""
               }`}
               className="cook_city_pill"
             >
               Karachi
             </Link>
             <Link
-              href={`/compnies?role=handyman&category_id=22${
-                cityIds.islamabad ? `&city=${cityIds.islamabad}` : ""
+              href={`/compnies/bawarchi-cook${
+                cityIds.islamabad ? `?city=${cityIds.islamabad}` : ""
               }`}
               className="cook_city_pill"
             >
@@ -403,7 +406,7 @@ export default function BawarchiCookPage() {
             Hungry for Home-Cooked Food? Find a Bawarchi Now.
           </h2>
           <Link
-            href="/compnies?role=handyman&category_id=22"
+            href="/compnies/bawarchi-cook"
             className="cook_btn"
           >
             Browse Bawarchis & Cooks
