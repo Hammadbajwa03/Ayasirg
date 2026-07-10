@@ -1,5 +1,5 @@
 "use client";
-import { createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useRef, useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 export const UserContext = createContext();
@@ -208,38 +208,58 @@ export const UserProvider = ({ children }) => {
 
   // get cities
   const [cities, setCities] = useState([]);
+  const citiesFetchRef = useRef(null);
   const getCities = async () => {
-    try {
-      const res = await fetch(`${apiBase}/api/city-list`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ state_id: 2728 }),
-      });
+    if (citiesFetchRef.current) return citiesFetchRef.current;
 
-      if (!res.ok) {
-        throw new Error(`city-list failed with status ${res.status}`);
+    citiesFetchRef.current = (async () => {
+      try {
+        const res = await fetch(`${apiBase}/api/city-list`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ state_id: 2728 }),
+        });
+
+        if (!res.ok) {
+          throw new Error(`city-list failed with status ${res.status}`);
+        }
+
+        const data = await res.json();
+        setCities(data.data || []);
+      } catch (error) {
+        citiesFetchRef.current = null;
+        console.error("Error fetching cities:", error);
+        setCities([]);
       }
+    })();
 
-      const data = await res.json();
-      // console.log(data, "city list")
-      setCities(data.data || []);
-
-      // setTimeout(() => {
-      //   if (cityDropdownRef.current) {
-      //     cityDropdownRef.current.click();
-      //   }
-      // }, 100);
-    } catch (error) {
-      // // router.push("/error");
-      console.error("Error fetching cities:", error);
-      setCities([]);
-    }
+    return citiesFetchRef.current;
   };
+
   useEffect(() => {
-    getCities()
-  }, [])
+    if (typeof window === "undefined") return;
+
+    const loadCities = () => {
+      getCities();
+    };
+
+    let handle;
+    if ("requestIdleCallback" in window) {
+      handle = window.requestIdleCallback(loadCities, { timeout: 3000 });
+    } else {
+      handle = window.setTimeout(loadCities, 2000);
+    }
+
+    return () => {
+      if (typeof handle === "number") {
+        window.clearTimeout(handle);
+      } else if (handle) {
+        window.cancelIdleCallback(handle);
+      }
+    };
+  }, []);
 
   // locations zipcode
   const [locations, setLocations] = useState([]);

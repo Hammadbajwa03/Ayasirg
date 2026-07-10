@@ -93,7 +93,7 @@ export default function RootLayout({ children }) {
         <Script
           id="organization-schema"
           type="application/ld+json"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(organizationSchema),
           }}

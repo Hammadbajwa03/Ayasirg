@@ -10,11 +10,11 @@ import { FaBars } from "react-icons/fa";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { UserContext } from "@/app/userContext";
-import Myform from "../Myform/Myform";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 
 const TranslateWrapper = dynamic(() => import("../translateWrapper/LanguageDropdown"), { ssr: false });
+const Myform = dynamic(() => import("../Myform/Myform"), { ssr: false });
 
 /** API may return a string URL or `{ original, web, webp }` (Spatie-style). */
 function resolveProfileAvatarUrl(profileImage) {
@@ -148,7 +148,15 @@ export default function CustomNavbar() {
   }, []);
 
 
-  if (loadingUser) return null;
+  if (loadingUser) {
+    return (
+      <section className="navbar navbar_loading" aria-hidden="true">
+        <div className="container">
+          <nav className="nav" />
+        </div>
+      </section>
+    );
+  }
 
   const handleClickPage = (type) => {
     router.push(`/e-center?type=${type}`);

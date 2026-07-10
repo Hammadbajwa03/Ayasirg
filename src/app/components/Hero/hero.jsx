@@ -157,6 +157,7 @@ export default function Hero() {
         fill
         priority
         fetchPriority="high"
+        sizes="100vw"
         className="hero_bg_img"
       />
       <div className="hero_overlay"></div>
@@ -229,7 +230,10 @@ export default function Hero() {
                   <Dropdown
                     onSelect={handleCitySelect}
                     show={cityMenuOpen}
-                    onToggle={(isOpen) => setCityMenuOpen(isOpen)}
+                    onToggle={(isOpen) => {
+                      setCityMenuOpen(isOpen);
+                      if (isOpen) getCities();
+                    }}
                     className="services_dropdown "
                   >
                     <Dropdown.Toggle as="div" className="w-100 h-100 p-0 border-0 bg-transparent d-flex align-items-center">
@@ -247,7 +251,10 @@ export default function Hero() {
                           }
                           setCityMenuOpen(true);
                         }}
-                        onClick={() => setCityMenuOpen(true)}
+                        onClick={() => {
+                          getCities();
+                          setCityMenuOpen(true);
+                        }}
                       />
                     </Dropdown.Toggle>
 

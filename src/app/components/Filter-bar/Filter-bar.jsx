@@ -8,7 +8,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 
 export default function Filter_bar({ dataSearch }) {
   const { role, gender, age_range, city, category_id, area_code, verified_status, rating } = dataSearch;
-  const { apiCategory2, cities, locations, getLocations, getFilteredUsers } = useContext(UserContext);
+  const { apiCategory2, cities, locations, getLocations, getFilteredUsers, getCities } = useContext(UserContext);
   const searchParams = useSearchParams();
   const router = useRouter();
 
@@ -22,6 +22,10 @@ export default function Filter_bar({ dataSearch }) {
     verified_status,
     rating
   });
+
+  useEffect(() => {
+    getCities();
+  }, []);
 
   useEffect(() => {
     if (filters.city) {

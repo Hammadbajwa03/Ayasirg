@@ -274,7 +274,9 @@ export default function OurServices() {
                         src={service.image} 
                         alt={service.name} 
                         width={70} 
-                        height={70} 
+                        height={70}
+                        sizes="70px"
+                        loading="lazy"
                         className="service-icon-img"
                       />
                     </div>
