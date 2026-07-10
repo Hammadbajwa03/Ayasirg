@@ -21,9 +21,7 @@ export const metadata = {
   title: "Aya Sir G! - Pakistan's Trusted Blue Collar Job Platform",
   description:
     "Connect with skilled and verified blue-collar workers in Pakistan. Hire reliable maids, drivers, cooks, plumbers, electricians, and security personnel easily.",
-  alternates: {
-    canonical: "https://www.ayasirg.com",
-  },
+  metadataBase: new URL("https://www.ayasirg.com"),
   verification: {
     google: "AmPMtQzaUe0ZihZM-3LXhAXMke8fDlmEeBIHcVzUtdY",
   },
@@ -79,7 +77,7 @@ export default function RootLayout({ children }) {
   };
 
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth">
       {/* <head>
         <link rel="icon" type="image/png" href="/logo_header.png" />
         <link rel="apple-touch-icon" href="/logo_header.png" />

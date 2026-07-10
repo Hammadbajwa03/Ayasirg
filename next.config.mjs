@@ -85,6 +85,18 @@ const nextConfig = {
     ];
   },
 
+  async rewrites() {
+    const backend =
+      process.env.NEXT_PUBLIC_BASE_URL?.replace(/\/+$/, "") ||
+      "https://admin.ayasirg.com";
+    return [
+      {
+        source: "/api/:path*",
+        destination: `${backend}/api/:path*`,
+      },
+    ];
+  },
+
   async redirects() {
     return [
       {

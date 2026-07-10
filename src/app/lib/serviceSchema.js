@@ -3,13 +3,14 @@ const ORG = "Aya Sir G!";
 const defaultProvider = () => ({
   "@type": "LocalBusiness",
   name: ORG,
-  location: {
-    "@type": "Place",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Pakistan",
-      addressCountry: "PK",
-    },
+  url: "https://www.ayasirg.com",
+  image: "https://www.ayasirg.com/logo_header.png",
+  telephone: "+92-309-8574093",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Lahore",
+    addressRegion: "Punjab",
+    addressCountry: "PK",
   },
 });
 

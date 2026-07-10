@@ -5,11 +5,15 @@ import { FaClock, FaEnvelope, FaMap, FaPhone } from "react-icons/fa";
 import { FaPhoneVolume } from "react-icons/fa6";
 import Link from "next/link";
 import Image from "next/image";
+import { canonicalUrl } from "@/app/lib/siteUrl";
 
 export const metadata = {
   title: "Contact Aya Sir G! | Get in Touch for Support & Services",
   description:
     "Need help or have questions? Contact Aya Sir G! today. Reach us via phone, email, or visit our Lahore office. We are here to assist you Monday to Saturday.",
+  alternates: {
+    canonical: canonicalUrl("/contact-us"),
+  },
 };
 
 export default function page() {

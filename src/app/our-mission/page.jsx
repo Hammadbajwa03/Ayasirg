@@ -2,11 +2,15 @@
 
 import React from "react";
 import "./our_mission.css";
+import { canonicalUrl } from "@/app/lib/siteUrl";
 
 export const metadata = {
   title: "Our Mission | Empowering Pakistan’s Blue-Collar Workforce",
   description:
     "Discover our mission to bridge the gap between skilled workers and households. We empower Pakistan's blue-collar workforce by providing a reliable digital platform.",
+  alternates: {
+    canonical: canonicalUrl("/our-mission"),
+  },
 };
 
 export default function page() {

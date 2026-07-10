@@ -4,14 +4,15 @@ import axios from "axios";
 import { toast } from "react-toastify";
 export const UserContext = createContext();
 import { useRouter } from "next/navigation";
+import { getApiBase } from "@/app/lib/apiBase";
 
 export const UserProvider = ({ children }) => {
   const router = useRouter();
   const [userInfo, setUserInfo] = useState(null);
 
   const [apiCategory2, setapiCategories2] = useState([]);
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-  const categoryApi = `${baseUrl}/api/category-list`;
+  const apiBase = getApiBase();
+  const categoryApi = `${apiBase}/api/category-list`;
 
   const getCategories = async () => {
     try {
@@ -61,8 +62,7 @@ export const UserProvider = ({ children }) => {
   const token = userInfo?.api_token;
   // console.log("token is ", token);
 
-  const base = process.env.NEXT_PUBLIC_BASE_URL || "https://admin.ayasirg.com";
-  const profileUrl = `${base}/api/update-profile`;
+  const profileUrl = `${apiBase}/api/update-profile`;
   // const userUpdateUrl = `${base}/api/update-user`;
 
   // const base =
@@ -95,7 +95,7 @@ export const UserProvider = ({ children }) => {
     if (!userInfo?.api_token) return;
     setLoader(true);
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/user-detail/${id}`, {
+      const res = await fetch(`${apiBase}/api/user-detail/${id}`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -165,7 +165,7 @@ export const UserProvider = ({ children }) => {
   const updateAssociatedUserProfile = async (formData) => {
     setLoader(true);
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/update-user`, {
+      const res = await fetch(`${apiBase}/api/update-user`, {
         method: "POST",
         headers: {
           "Accept": "application/json",
@@ -210,13 +210,17 @@ export const UserProvider = ({ children }) => {
   const [cities, setCities] = useState([]);
   const getCities = async () => {
     try {
-      const res = await fetch(`${baseUrl}/api/city-list`, {
+      const res = await fetch(`${apiBase}/api/city-list`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ state_id: 2728 }),
       });
+
+      if (!res.ok) {
+        throw new Error(`city-list failed with status ${res.status}`);
+      }
 
       const data = await res.json();
       // console.log(data, "city list")
@@ -242,7 +246,7 @@ export const UserProvider = ({ children }) => {
   const getLocations = async (cityId) => {
     if (!cityId) return;
     try {
-      const res = await fetch(`${baseUrl}/api/area-list`, {
+      const res = await fetch(`${apiBase}/api/area-list`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -272,7 +276,7 @@ export const UserProvider = ({ children }) => {
   const [area, setArea] = useState([]);
   const getAreas = async () => {
     try {
-      const res = await fetch(`${baseUrl}/api/area-list`, {
+      const res = await fetch(`${apiBase}/api/area-list`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -310,7 +314,7 @@ export const UserProvider = ({ children }) => {
     setLoader(true);
     try {
       const response = await axios.get(
-        `${baseUrl}/api/users/new-filter`, {
+        `${apiBase}/api/users/new-filter`, {
         params,
         headers: userInfo?.api_token
           ? {
@@ -343,7 +347,7 @@ export const UserProvider = ({ children }) => {
 
   const toggleLike = async (userId, can_like) => {
     try {
-      const res = await fetch(`${baseUrl}/api/users/${userId}/like`, {
+      const res = await fetch(`${apiBase}/api/users/${userId}/like`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -393,7 +397,7 @@ export const UserProvider = ({ children }) => {
   const getAllBanners = async () => {
     setLoader(true);
     try {
-      const res = await axios.get(`${baseUrl}/api/slider-list`);
+      const res = await axios.get(`${apiBase}/api/slider-list`);
       if (res?.data?.data) {
         setServices(res.data.data);
       } else {
@@ -414,7 +418,7 @@ export const UserProvider = ({ children }) => {
     if (!userInfo?.api_token) return;
     setLoader(true);
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/user/create`, {
+      const res = await fetch(`${apiBase}/api/user/create`, {
         method: "POST",
         headers: {
           // 'Content-Type': 'multipart/form-data',
@@ -448,7 +452,7 @@ export const UserProvider = ({ children }) => {
     if (!userInfo?.api_token) return;
     setLoader(true);
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/save-handyman-rating`, {
+      const res = await fetch(`${apiBase}/api/save-handyman-rating`, {
         method: "POST",
         headers: {
           "Accept": "application/json",
@@ -486,7 +490,7 @@ export const UserProvider = ({ children }) => {
     setResendLoading(true);
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BASE_URL}/api/resend-otp`,
+        `${apiBase}/api/resend-otp`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -518,7 +522,7 @@ export const UserProvider = ({ children }) => {
   const addBlogComment = async (payload) => {
     setLoader(true);
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/comments/store`, {
+      const res = await fetch(`${apiBase}/api/comments/store`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

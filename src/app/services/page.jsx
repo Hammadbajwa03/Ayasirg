@@ -1,5 +1,6 @@
 import Advartisement from "@/app/components/AdvertisementBar/Advartisement";
 import ServicesCategoriesJsonLd from "@/app/components/seo/ServicesCategoriesJsonLd";
+import { canonicalUrl } from "@/app/lib/siteUrl";
 import "./services-page.css";
 import ServicesCategoryGrid from "./ServicesCategoryGrid";
 
@@ -7,6 +8,9 @@ export const metadata = {
   title: "Services | Aya Sir G!",
   description:
     "Browse service categories on Aya Sir G! and open filtered listings for trusted professionals in Pakistan.",
+  alternates: {
+    canonical: canonicalUrl("/services"),
+  },
 };
 
 async function fetchCategories() {

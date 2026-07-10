@@ -7,7 +7,7 @@ import { compniesListingHref, getServicePagePath } from "@/app/lib/categoryRoute
 function siteUrl() {
   return (
     process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/+$/, "") ||
-    "https://ayasirg.com"
+    "https://www.ayasirg.com"
   );
 }
 

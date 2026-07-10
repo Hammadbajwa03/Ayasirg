@@ -2,11 +2,15 @@
 
 import React from "react";
 import "./privacy_policy.css";
+import { canonicalUrl } from "@/app/lib/siteUrl";
 
 export const metadata = {
   title: "Privacy Policy - Aya Sir G! | Data Security & User Rights",
   description:
     "Read the Aya Sir G! privacy policy to learn how we collect, use, and protect your personal data. We are committed to ensuring transparency, trust, and safety.",
+  alternates: {
+    canonical: canonicalUrl("/privacy-policy"),
+  },
 };
 
 export default function PrivacyPolicyPage() {
