@@ -45,62 +45,10 @@ export default function CaretakerPage() {
     loadCityIds();
   }, []);
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I book a caretaker on Aya Sir G!?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "To book a caretaker, browse through our verified profiles for elderly caregivers and patient caretakers, check customer reviews and ratings, and contact them directly to schedule shifts."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Are the caretakers trained to handle medical emergencies?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Many of our registered caretakers have basic nursing or first-aid training. However, it is important to review individual profiles or discuss specific emergency handling protocols directly with the caretaker before hiring."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I book a caretaker for night shifts only?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, caretakers offer flexible shifts, including day care, night shifts, hourly shifts, or 24/7 live-in support. You can align shift schedules directly with the professional caregiver."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How is the caretaker's background verified?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Aya Sir G! conducts identity and credential verifications for registered service providers. We also encourage you to check reviews left by previous clients and request ID documents during your interview."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the cost of hiring a home caretaker in Pakistan?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The cost varies depending on the caregiver's experience, patient condition, shift duration, and location. You can compare caregiver profiles to find services that fit your budget."
-        }
-      }
-    ]
-  };
 
   return (
     <div className="caretaker_page margin_navbar">
-      {/* FAQ Schema Injection for Google Rich Results */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-
-      {/* Hero Section */}
+{/* Hero Section */}
       <header className="caretaker_hero">
         <div className="container">
           <div className="row align-items-center">

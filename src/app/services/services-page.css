@@ -5,13 +5,8 @@
 }
 
 .services_page_header {
-  padding-bottom: 0.25rem;
-}
-
-.services_page_h1 {
-  font-size: clamp(1.65rem, 2.5vw, 2rem);
-  color: #1a1a1a;
-  letter-spacing: -0.02em;
+  padding-bottom: 0;
+  margin-bottom: 0.75rem;
 }
 
 .services_page_h2 {
@@ -20,6 +15,36 @@
   color: var(--svc-brand);
   text-transform: uppercase;
   letter-spacing: 0.12em;
+  margin-bottom: 0 !important;
+  line-height: 1.2;
+}
+
+.services_page .services_page_header .services_page_intro.about_us {
+  padding: 0 !important;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Intro copy — same as About Us page paragraphs */
+.services_page .services_page_intro.about_us p {
+  font-size: 16px !important;
+  color: #212529 !important;
+  font-weight: 500 !important;
+  line-height: 1.6 !important;
+  padding: 6px 0 !important;
+  margin-bottom: 0 !important;
+  font-family: var(--font-poppins), sans-serif !important;
+}
+
+.services_page .services_page_intro.about_us p:first-child {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+.services_page_h1 {
+  font-size: clamp(1.65rem, 2.5vw, 2rem);
+  color: #1a1a1a;
+  letter-spacing: -0.02em;
 }
 
 /* .services_main_panel {

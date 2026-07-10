@@ -44,61 +44,10 @@ export default function SecurityGuardPage() {
     loadCityIds();
   }, []);
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I hire a security guard or watchman on Aya Sir G!?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Browse verified security guard profiles on Aya Sir G!, check their experience, customer ratings, and availability, then reach out to them directly to work out duty hours, location, and monthly salary."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What types of security guard services are available?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Our security staff covers residential gate guards, commercial building security, night watchmen, factory and warehouse security, armed guards, and event security personnel."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I hire a security guard for a residential society or home?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Many security guards on Aya Sir G! specialize in home security guard services — guarding gates, monitoring entry and exit, and providing 24/7 watchman services for houses, apartments, and housing societies."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How much does a security guard cost per month in Pakistan?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Security guard monthly salaries in Pakistan usually range from PKR 25,000 to PKR 50,000, depending on the city, duty hours (day or night), experience, and whether the guard is armed or unarmed. For accurate rates, it's best to contact security guard services near me directly on Aya Sir G!."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Are the security guards on Aya Sir G! background checked?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Aya Sir G! shows verified profile cards with CNIC status and genuine customer reviews, so you can safely bring on the best security guard services and reliable staff for your property."
-        }
-      }
-    ]
-  };
+
   return (
     <div className="security_guard_page margin_navbar">
-      {/* FAQ Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-
-      {/* Hero Section */}
+{/* Hero Section */}
       <header className="security_guard_hero">
         <div className="container">
           <div className="row align-items-center">

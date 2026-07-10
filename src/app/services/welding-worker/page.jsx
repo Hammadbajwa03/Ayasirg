@@ -45,62 +45,10 @@ export default function WeldingWorkerPage() {
     loadCityIds();
   }, []);
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I book a welding worker on Aya Sir G!?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Browse verified welder profiles on Aya Sir G!, check their portfolios and reviews, then contact the welder directly to negotiate prices and schedule their visit."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What kinds of welding services can I hire for?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "You can hire welders for iron main gate repair, safety window grills fabrication, steel stair railings, door latch welding, structural steel welding, and general home metal repairs."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do welders bring their own welding machines?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, professional welders bring their own portable electric arc welding machines, welding electrodes, grinders, and face shields. You only need to provide access to a stable electricity outlet."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How much does gate repair or grill fabrication cost?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Minor repairs (like latch welding) are usually charged at a flat rate, while new fabrications (like gates or window grills) are quoted per square foot or by total metal weight in kilograms. Negotiate rates directly with the welder."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Are the welders CNIC-verified?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, all welder profiles on Aya Sir G! undergo CNIC verification and display customer feedback to ensure safe and reliable hiring."
-        }
-      }
-    ]
-  };
 
   return (
     <div className="welding_worker_page margin_navbar">
-      {/* FAQ Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-
-      {/* Hero Section */}
+{/* Hero Section */}
       <header className="welding_worker_hero">
         <div className="container">
           <div className="row align-items-center">

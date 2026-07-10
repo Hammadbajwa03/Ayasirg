@@ -45,62 +45,10 @@ export default function PestControlPage() {
     loadCityIds();
   }, []);
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I book a pest control service on Aya Sir G!?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Browse verified pest control companies and specialists on Aya Sir G!, look at their service areas, customer ratings, and the type of treatment they offer, then reach out to them directly to set up a visit and get a quote."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What pests can be treated through Aya Sir G!?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Our pest control experts deal with cockroaches, termites (deemak), bed bugs, rodents (rats and mice), mosquitoes, ants, lizards, and general household insects, all using safe, approved pesticides."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is termite (deemak) treatment safe for children and pets?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Professional pest control companies rely on EPA-approved, low-toxicity chemicals. After the treatment, you'll usually be asked to stay out of the treated area for 2–4 hours. It's a good idea to let the technician know beforehand if you have children or pets at home."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How long does a pest control treatment last?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "General pest control spraying usually holds up for 1–3 months. Termite soil treatment and bait systems, on the other hand, can protect your home for 3–5 years. For long-term results, quarterly maintenance visits are worth considering."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do I need to leave my home during pest control treatment?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "For most general pest sprays, plan to step out for at least 2–3 hours. If it's a heavy infestation or a fumigation treatment, you might need to stay away for 24–48 hours. Your pest control specialist will let you know exactly how long is needed."
-        }
-      }
-    ]
-  };
 
   return (
     <div className="pest_control_page margin_navbar">
-      {/* FAQ Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-
-      {/* Hero Section */}
+{/* Hero Section */}
       <header className="pest_control_hero">
         <div className="container">
           <div className="row align-items-center">

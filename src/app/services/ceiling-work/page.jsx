@@ -44,62 +44,10 @@ export default function CeilingWorkPage() {
     loadCityIds();
   }, []);
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I book a ceiling installer on Aya Sir G!?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "To book, browse through our verified false ceiling specialist profiles, review their previous designs, check ratings and client feedback, and contact them directly to request a site survey and quote."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What material is best for a false ceiling in Pakistan?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Gypsum board is highly recommended for drawing rooms, bedrooms, and offices due to its smooth finish, quick installation, and design flexibility. For high-moisture areas like kitchens and bathrooms, PVC ceiling panels are ideal because they are waterproof and easy to clean."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How long does it take to install a false ceiling in a standard room?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A standard 12x14 room false ceiling installation (framing, boarding, joint filling, and initial sanding) typically takes about 2 to 4 days, depending on the complexity of the design. Final paint finishing takes another 1-2 days."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do false ceilings help with temperature and heat reduction?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. False ceilings create an insulating air gap between the main concrete roof and the room. This trapped air layer slows down heat transmission, keeping the room cooler in summers, warmer in winters, and reducing AC electricity consumption."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can ceiling spotlights and LED strips be replaced easily after installation?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Recessed LED downlights have spring-loaded clips and can be pulled out of their cut-out holes easily to change the driver or fixture. LED strip lights in the coves can also be accessed and replaced without damaging the gypsum board structure."
-        }
-      }
-    ]
-  };
 
   return (
     <div className="ceiling_page margin_navbar">
-      {/* FAQ Schema Injection for Google Rich Results */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-
-      {/* Hero Section */}
+{/* Hero Section */}
       <header className="ceiling_hero">
         <div className="container">
           <div className="row align-items-center">

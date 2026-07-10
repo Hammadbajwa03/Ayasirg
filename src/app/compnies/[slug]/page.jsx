@@ -1,5 +1,8 @@
 import { notFound, redirect } from "next/navigation";
 import CompaniesClient from "../CompaniesClient";
+import CompaniesListingHeader from "../CompaniesListingHeader";
+import CompaniesListingFooter from "../CompaniesListingFooter";
+import ListingServiceJsonLd from "../ListingServiceJsonLd";
 import { getCategoryBySlug } from "@/app/lib/categoryRoutes";
 
 function stripDefaultRole(params) {
@@ -38,11 +41,23 @@ export default async function CategoryCompniesPage({ params, searchParams }) {
     redirect(qs ? `/compnies/${slug}?${qs}` : `/compnies/${slug}`);
   }
 
+  const canonical = `https://www.ayasirg.com/compnies/${slug}`;
+
   return (
-    <CompaniesClient
-      categoryId={String(cat.id)}
-      categoryName={cat.name}
-      categorySlug={cat.slug}
-    />
+    <section className="individuals margin_navbar">
+      <ListingServiceJsonLd
+        categorySlug={cat.slug}
+        categoryName={cat.name}
+        canonicalUrl={canonical}
+      />
+      <div className="container content py-3">
+        <CompaniesListingHeader
+          categorySlug={cat.slug}
+          categoryName={cat.name}
+        />
+        <CompaniesClient categoryId={String(cat.id)} />
+        <CompaniesListingFooter />
+      </div>
+    </section>
   );
 }

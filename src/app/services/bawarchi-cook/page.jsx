@@ -45,62 +45,10 @@ export default function BawarchiCookPage() {
     loadCityIds();
   }, []);
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How to hire a cook or bawarchi on Aya Sir G?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "To hire a cook or bawarchi on Aya Sir G!, browse our list of verified kitchen experts, compare their reviews and experience, and contact the chef directly."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What cuisines can the cooks prepare?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Our registered cooks can prepare a variety of cuisines, including traditional Pakistani (Desi), Chinese, continental, fast food, and specialized diet-friendly meals."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How much does a cook cost in Pakistan?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The cost of hiring a cook in Pakistan depends on whether they are hired full-time, part-time, or for a single event. Compare cook profiles to discuss rates directly."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Are the cooks on Aya Sir G! verified for hygiene?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, Aya Sir G! verifies the profiles and credentials of cooks and bawarchis. We also recommend that parents read authentic reviews and discuss hygiene standards during the interview."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Which cities have cooks and bawarchis available?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Our bawarchi and cooking services are currently available in Lahore, Karachi, and Islamabad, connecting you with local experts."
-        }
-      }
-    ]
-  };
 
   return (
     <div className="cook_page margin_navbar">
-      {/* FAQ Schema Injection for Google Rich Results */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-
-      {/* Hero Section */}
+{/* Hero Section */}
       <header className="cook_hero">
         <div className="container">
           <div className="row align-items-center">

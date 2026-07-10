@@ -44,62 +44,10 @@ export default function GardenerMaliPage() {
     loadCityIds();
   }, []);
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I hire a gardener or Mali on Aya Sir G!?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "To hire, browse through our verified gardener profiles, check their reviews, ratings, and experience levels, and contact them directly to negotiate schedules, duties, and monthly salary or daily fees."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What are the standard visitation packages (weekly vs monthly)?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Gardeners on our platform offer flexible plans: 2-3 visits per week for regular watering and weeding, once-a-week visits for lawn mowing and trimming, or full-time monthly placements for large houses and corporate lawns."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do gardeners bring their own mowing machines and tools?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Typically, visiting gardeners carry basic hand tools like trowels, pruning shears, and sickles. For heavy machinery like lawn mowers, hedge trimmers, or long water pipes, you can negotiate with them to bring their own equipment for an additional fee, or use the tools available at your home."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Who pays for the new plants, soil, and organic fertilizers?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The cost of nursery plants, sweet soil (Bhal), manure (Khadd), and pots is paid by the client. The gardener can accompany you to the nursery to help select the best plants or purchase them on your behalf and present the receipts."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I hire a gardener for vertical garden setup or landscape designing?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Our platform lists skilled landscape designers and vertical gardening experts who can design, construct, and plant modern green walls, rooftop gardens, and custom patios."
-        }
-      }
-    ]
-  };
 
   return (
     <div className="gardener_page margin_navbar">
-      {/* FAQ Schema Injection for Google Rich Results */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-
-      {/* Hero Section */}
+{/* Hero Section */}
       <header className="gardener_hero">
         <div className="container">
           <div className="row align-items-center">

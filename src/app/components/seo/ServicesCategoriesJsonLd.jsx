@@ -1,7 +1,4 @@
-import {
-  buildServiceEntity,
-  stringifySchema,
-} from "@/app/lib/serviceSchema";
+import { buildServicesItemListSchema, stringifySchema } from "@/app/lib/serviceSchema";
 import { compniesListingHref, getServicePagePath } from "@/app/lib/categoryRoutes";
 
 function siteUrl() {
@@ -11,34 +8,21 @@ function siteUrl() {
   );
 }
 
-/** Server: one `@graph` of `Service` for each category on /services */
+/** Server: compact ItemList for /services (replaces heavy per-category Service @graph). */
 export default function ServicesCategoriesJsonLd({ categories }) {
   if (!categories?.length) return null;
+
   const site = siteUrl();
-  const graph = categories.map((c) => {
+  const items = categories.map((c) => {
     const name = (c?.name && String(c.name).trim()) || "Service";
-    const rawDesc =
-      (typeof c?.description === "string" && c.description.trim()) ||
-      (typeof c?.meta_description === "string" && c.meta_description.trim()) ||
-      "";
-    const description =
-      rawDesc ||
-      `${name} services on Aya Sir G! — verified professionals in Pakistan.`;
     const servicePath = getServicePagePath(c.id);
     const url = servicePath
-      ? `${site}${servicePath}`
-      : `${site}${compniesListingHref(c.id)}`;
-    return buildServiceEntity({
-      serviceType: name,
-      description,
-      url,
-    });
+      ? servicePath
+      : compniesListingHref(c.id);
+    return { name, url };
   });
 
-  const doc = {
-    "@context": "https://schema.org",
-    "@graph": graph,
-  };
+  const doc = buildServicesItemListSchema(items, site);
 
   return (
     <script

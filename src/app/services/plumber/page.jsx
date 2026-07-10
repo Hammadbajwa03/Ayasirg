@@ -45,62 +45,10 @@ export default function PlumberPage() {
     loadCityIds();
   }, []);
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "How do I hire a plumber on Aya Sir G!?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Browse verified plumber profiles on Aya Sir G!, check their ratings, reviews, and specializations, then contact them directly to describe your plumbing issue and get a quote.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "What plumbing services are available on Aya Sir G!?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Our plumbers handle pipe leakage repair, bathroom fitting and installation, water tank cleaning and installation, blocked drain clearing, tap and valve replacement, geyser installation, and complete new construction plumbing.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Can I hire a plumber for emergency pipe leakage?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes. Many plumbers listed on Aya Sir G! offer emergency same-day or after-hours services for urgent pipe bursts, leakages, and flooding issues. Contact them directly to check availability.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "How much does a plumber charge in Pakistan?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Plumbing charges in Pakistan vary by job type and city. Minor repairs like tap replacement start from PKR 500–1,500. Major work like bathroom fitting or pipe replacement is usually quoted as a full job price. Get quotes directly from plumbers on Aya Sir G!.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Do plumbers on Aya Sir G! supply their own tools and materials?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Plumbers bring their own tools. Materials like pipes, fittings, and fixtures are usually purchased by the client, though some plumbers offer a material-plus-labour package. Always clarify before the job starts.",
-        },
-      },
-    ],
-  };
 
   return (
     <div className="plumber_page margin_navbar">
-      {/* FAQ Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-
-      {/* Hero Section */}
+{/* Hero Section */}
       <header className="plumber_hero">
         <div className="container">
           <div className="row align-items-center">

@@ -45,62 +45,10 @@ export default function SweeperPage() {
     loadCityIds();
   }, []);
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I book a sweeper or cleaning worker on Aya Sir G!?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Browse verified sweeper profiles on Aya Sir G!, compare their ratings, check customer reviews, and view their previous work details. Contact the candidate directly to discuss duties, hours, and rates."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What cleaning duties can a sweeper perform?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sweepers can perform floor sweeping and mopping, courtyard and outdoor cleaning, garbage disposal, washroom cleaning, office cleaning, post-construction cleanup, and street sweeping."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do sweepers work on a daily, weekly, or monthly basis?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, you can hire sweepers for one-time daily tasks, weekly deep cleaning shifts, or as full-time monthly domestic or commercial cleaners. You negotiate terms directly with them."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do I need to provide cleaning tools and chemicals?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Generally, for residential or office maintenance, the client provides brooms, mops, buckets, and disinfectants/chemicals. Discuss this clearly during the interview to align expectations."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Are the sweepers on Aya Sir G! verified?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Aya Sir G! displays verified CNIC status badges and customer reviews on profiles to help you hire trustworthy and reliable cleaning help."
-        }
-      }
-    ]
-  };
 
   return (
     <div className="sweeper_page margin_navbar">
-      {/* FAQ Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-
-      {/* Hero Section */}
+{/* Hero Section */}
       <header className="sweeper_hero">
         <div className="container">
           <div className="row align-items-center">

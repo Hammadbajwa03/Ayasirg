@@ -45,62 +45,10 @@ export default function OfficeBoyFactoryWorkersPage() {
     loadCityIds();
   }, []);
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I hire an office boy on Aya Sir G!?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Browse verified office boy and factory worker profiles on Aya Sir G!, review their work history and ratings, then contact them directly to discuss duties, working hours, and monthly salary."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What tasks does an office boy perform?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "An office boy handles tea/coffee preparation, photocopying, document delivery, basic office cleaning, running errands, mail dispatching, and general support for the office staff."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I hire factory workers for short-term or contractual work?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. On Aya Sir G! you can find factory workers available for daily wage (dihari), weekly, monthly, or full project-based contracts depending on your manufacturing or warehouse requirements."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Are the office boys and factory workers verified?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Aya Sir G! displays profile cards with CNIC verification status and customer reviews so you can confidently choose reliable, trustworthy, and background-checked staff."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the typical salary for an office boy in Pakistan?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Office boy salaries in Pakistan typically range between PKR 20,000 to PKR 35,000 per month depending on the city, experience level, and duties assigned. Factory workers may have different wage structures based on industry."
-        }
-      }
-    ]
-  };
 
   return (
     <div className="office_boy_page margin_navbar">
-      {/* FAQ Schema Injection for Google Rich Results */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-
-      {/* Hero Section */}
+{/* Hero Section */}
       <header className="office_boy_hero">
         <div className="container">
           <div className="row align-items-center">

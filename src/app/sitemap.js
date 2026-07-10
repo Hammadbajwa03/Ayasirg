@@ -1,3 +1,5 @@
+import { CATEGORIES } from "./lib/categoryRoutes";
+
 /**
  * Blog list: every `/sitemap.xml` request hits the API (no ISR cache) so new posts show on refresh.
  * Higher load on `blog-list` if bots crawl often — acceptable if your traffic/API allow it.
@@ -176,6 +178,19 @@ export default async function sitemap() {
     priority: path === "/" ? 1 : 0.8,
   }));
 
+  const categoryEntries = CATEGORIES.flatMap((cat) => [
+    {
+      url: absoluteUrl(siteOrigin, `/services/${cat.slug}`),
+      changeFrequency: "monthly",
+      priority: 0.75,
+    },
+    {
+      url: absoluteUrl(siteOrigin, `/compnies/${cat.slug}`),
+      changeFrequency: "weekly",
+      priority: 0.7,
+    },
+  ]);
+
   const sections = await Promise.allSettled([
     collectAllBlogEntries(apiBase, siteOrigin),
     // collectUserEntries(apiBase, siteOrigin, "handyman", "/profile-details"),
@@ -191,5 +206,5 @@ export default async function sitemap() {
     }
   }
 
-  return [...staticEntries, ...dynamicEntries];
+  return [...staticEntries, ...categoryEntries, ...dynamicEntries];
 }

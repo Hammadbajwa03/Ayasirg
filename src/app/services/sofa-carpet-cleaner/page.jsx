@@ -44,62 +44,10 @@ export default function SofaCarpetCleanerPage() {
     loadCityIds();
   }, []);
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I book a sofa or carpet cleaning service on Aya Sir G!?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Simply browse verified cleaner profiles on Aya Sir G!, compare their ratings, read customer reviews, and view their previous work photos. Contact the service provider directly to get a quote and book a cleaning session at your convenience."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What cleaning methods do the professionals use?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Cleaners on Aya Sir G! offer a range of methods including deep vacuuming, wet shampoo washing, steam extraction, foam cleaning, and dry cleaning, depending on the fabric type (velvet, leather, standard upholstery)."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How long does it take for a sofa or carpet to dry after cleaning?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Typically, sofas and carpets take about 3 to 6 hours to dry completely, depending on ventilation, room temperature, and the cleaning method used. Using ceiling fans or AC helps speed up the drying process."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can you remove stubborn pet stains and bad odours?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, professional cleaners use specialized stain removers and deodorizing solutions to lift stubborn stains (like coffee, tea, ink, or urine) and eliminate deep-seated odours, leaving your upholstery smelling fresh."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do I need to provide any cleaning machines or chemicals?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No, the service providers will bring their own professional vacuum cleaners, steam extraction machines, and cleaning detergents. You only need to provide access to water and electricity."
-        }
-      }
-    ]
-  };
 
   return (
     <div className="sofa_carpet_page margin_navbar">
-      {/* FAQ Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-
-      {/* Hero Section */}
+{/* Hero Section */}
       <header className="sofa_carpet_hero">
         <div className="container">
           <div className="row align-items-center">

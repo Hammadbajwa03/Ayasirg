@@ -44,62 +44,10 @@ export default function HousekeepingPage() {
     loadCityIds();
   }, []);
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I book a housekeeping service on Aya Sir G!?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "To book, browse through our verified housekeeping and home cleaning profiles, compare experience levels and client reviews, and contact providers directly to negotiate rates and schedules."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do housekeeping providers bring their own cleaning materials?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "This varies by provider. Some independent housekeepers expect you to provide basic cleaning liquids, mops, and vacuums. Professional cleaning agencies usually bring their own specialized sanitizers, sprayers, and vacuum machines. You can clarify this directly when discussing details."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is included in a deep kitchen cleaning service?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Deep kitchen cleaning includes degreasing the stove and kitchen exhaust hood, washing tile backsplashes, wiping cabinet exteriors and interiors, scrubbing the sink and taps, sanitizing countertops, and deep-cleaning floor tiles."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I hire a full-time housekeeper for monthly residential duties?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Our platform connects you with both individual domestic housekeepers available for full-time monthly positions and agencies offering regular cleaning staff packages."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you offer cleaning services for offices and commercial spaces?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. You can find professional commercial cleaning services and corporate office boys who specialize in dusting desks, vacuuming office carpets, and cleaning office kitchenettes and washrooms."
-        }
-      }
-    ]
-  };
 
   return (
     <div className="housekeeping_page margin_navbar">
-      {/* FAQ Schema Injection for Google Rich Results */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-
-      {/* Hero Section */}
+{/* Hero Section */}
       <header className="housekeeping_hero">
         <div className="container">
           <div className="row align-items-center">

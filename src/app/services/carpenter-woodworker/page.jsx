@@ -45,62 +45,10 @@ export default function CarpenterWoodworkerPage() {
     loadCityIds();
   }, []);
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I book a carpenter on Aya Sir G!?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "To book a carpenter, browse our verified carpenter profiles, check reviews, ratings, and experience levels, and contact the woodworker directly to negotiate rates and schedules."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do carpenters bring their own wood and materials?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Typically, customers purchase the main raw wood or laminate sheets based on their design preferences. The carpenter will bring professional cutting and assembly tools, nails, glue, and screws. You can discuss material procurement directly with the carpenter."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can carpenters repair damaged antique or modern furniture?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, our registered carpenters are skilled in fixing broken joints, loose drawers, creaky doors, and re-polishing old wood to make it look brand new."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How long does it take to assemble a standard wardrobe or bed?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Assembling a standard pre-fabricated bed or wardrobe takes about 1 to 3 hours, depending on the complexity of the design and hardware."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Are the carpentry labor rates negotiable?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, you connect directly with the carpenters on our platform. This allows you to explain the scope of work and discuss a mutually acceptable fixed price or hourly rate."
-        }
-      }
-    ]
-  };
 
   return (
     <div className="carpenter_page margin_navbar">
-      {/* FAQ Schema Injection for Google Rich Results */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-
-      {/* Hero Section */}
+{/* Hero Section */}
       <header className="carpenter_hero">
         <div className="container">
           <div className="row align-items-center">

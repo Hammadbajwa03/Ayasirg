@@ -45,62 +45,10 @@ export default function CarpetCleaningLaundryPage() {
     loadCityIds();
   }, []);
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I book a sofa or carpet cleaning service on Aya Sir G!?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Just browse through verified cleaner profiles offering sofa cleaning services on Aya Sir G!, check their ratings, go through customer reviews, and take a look at photos of their past work. Once you find someone you like, message them directly for a quote and set up a time that works for you."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What cleaning methods do the professionals use?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Depends on what you need — cleaners here use deep vacuuming, wet shampoo washing, steam extraction, foam cleaning, or dry cleaning, based on your fabric type (velvet, leather, or regular upholstery). It's all part of the standard sofa and carpet cleaning services offered on the platform."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How long does it take for a sofa or carpet to dry after cleaning?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Usually somewhere between 3 to 6 hours, depending on the room's ventilation, temperature, and which method was used. If you turn on a fan or the AC afterward, it'll dry even faster."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can you remove stubborn pet stains and bad odours?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, definitely. Professionals bring specialized stain removers and deodorizers that handle tough stains — coffee, tea, ink, even pet urine — and get rid of those lingering smells. It's a core part of proper sofa set cleaning services."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do I need to provide any cleaning machines or chemicals?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Nope, not at all. The cleaner brings their own vacuum, steam extraction machine, and detergents. All you need to have ready is water and electricity access. That's really it — finding sofa cleaning services near me shouldn't be complicated, and it isn't."
-        }
-      }
-    ]
-  };
 
   return (
     <div className="laundry_page margin_navbar">
-      {/* FAQ Schema Injection for Google Rich Results */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-
-      {/* Hero Section */}
+{/* Hero Section */}
       <header className="laundry_hero">
         <div className="container">
           <div className="row align-items-center">

@@ -43,62 +43,10 @@ export default function BeauticianPage() {
     loadCityIds();
   }, []);
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I book a beautician at home via Aya Sir G!?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "To book a beautician, simply browse our registered home beauty profiles, check reviews, ratings, and experience levels, and contact the beautician directly to discuss details."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do home beauticians bring their own products and equipment?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, most professional home beauticians bring their own beauty kits, products, and portable equipment. You can confirm specific product preferences or brands directly with them before booking."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Are the beauty products used safe for all skin types?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Professional beauticians use standard, premium products. If you have sensitive skin or allergies, we highly recommend discussing your skin type and preferred brands with the beautician beforehand."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I book a bridal or party makeup artist in advance?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, you can browse profiles of specialized bridal and event makeup artists on our platform and book their services well in advance to secure availability for your special day."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is it safe to hire home beauticians on Aya Sir G!?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Absolutely. Aya Sir G! verifies the credentials of registered beauticians. We also encourage you to read authentic reviews from other clients and interview them before confirming a service."
-        }
-      }
-    ]
-  };
 
   return (
     <div className="beautician_page margin_navbar">
-      {/* FAQ Schema Injection for Google Rich Results */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-
-      {/* Hero Section */}
+{/* Hero Section */}
       <header className="beautician_hero">
         <div className="container">
           <div className="row align-items-center">

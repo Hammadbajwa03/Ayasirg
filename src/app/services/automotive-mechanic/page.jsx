@@ -45,62 +45,10 @@ export default function AutomotiveMechanicPage() {
     loadCityIds();
   }, []);
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How to hire an automotive mechanic on Aya Sir G?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "To hire an automotive mechanic on Aya Sir G!, browse our list of verified car experts, compare their ratings and customer reviews, and call or message them directly to discuss your vehicle repair needs."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What types of vehicles do the mechanics service?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Our registered mechanics service a wide range of vehicles, including sedans, hatchbacks, SUVs, luxury cars, and commercial vans of various makes and models."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How much does car repair cost in Pakistan?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The cost of car repair in Pakistan varies depending on the issue (e.g., oil changes, engine tuning, or brake replacement). Compare profiles on Aya Sir G! to get competitive quotes directly from mechanics."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Are the mechanics on Aya Sir G! verified and experienced?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, Aya Sir G! verifies the profiles and credentials of automotive mechanics. You can review their detailed profile history, experience levels, and customer ratings before booking."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Which cities have automotive mechanics available?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Our automotive mechanic services are currently available in Lahore, Karachi, and Islamabad, connecting you with top local car workshops and mobile mechanics."
-        }
-      }
-    ]
-  };
 
   return (
     <div className="mech_page margin_navbar">
-      {/* FAQ Schema Injection for Google Rich Results */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-
-      {/* Hero Section */}
+{/* Hero Section */}
       <header className="mech_hero">
         <div className="container">
           <div className="row align-items-center">

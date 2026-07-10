@@ -44,62 +44,10 @@ export default function FastFoodCrewPage() {
     loadCityIds();
   }, []);
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I hire fast-food workers or crew members on Aya Sir G!?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "To hire, browse through our verified restaurant crew and kitchen worker profiles, check their experience levels and ratings, and contact them directly to schedule interviews and discuss salaries."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do listed crew members have experience in commercial kitchens?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Many of the candidates registered on our platform have previously worked in local cafés, fast-food outlets, bakeries, or international food chains, and are well-trained in commercial food prep."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What are the standard shifts for fast-food workers?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Shifts are highly flexible and negotiated directly between you and the worker. Common shifts include full-time (8-9 hours), part-time (4-5 hours), evening shifts, or weekend-only support."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I hire temporary crew members for catering or weekend events?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. You can filter and contact crew members who are available for short-term, daily, or event-based assignments to help manage weddings, parties, or festival food stalls."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you charge commission on driver or restaurant staff placements?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. Aya Sir G! is a free-to-use directory connecting clients directly with service providers and workers. You hire them directly and negotiate wages without paying any third-party commission."
-        }
-      }
-    ]
-  };
 
   return (
     <div className="crew_page margin_navbar">
-      {/* FAQ Schema Injection for Google Rich Results */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-
-      {/* Hero Section */}
+{/* Hero Section */}
       <header className="crew_hero">
         <div className="container">
           <div className="row align-items-center">

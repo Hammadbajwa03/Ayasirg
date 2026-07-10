@@ -45,62 +45,10 @@ export default function KeyMakerPage() {
     loadCityIds();
   }, []);
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I book a local key maker on Aya Sir G!?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "To book, browse through our local key maker and locksmith profiles, compare experience and customer ratings, and contact them directly to negotiate pricing and schedule a visit."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What services do locksmiths on your platform provide?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Our locksmiths provide duplicate keys, master key system creation, car key transponder programming, lock repairs, new lock installations, smart lock setups, and emergency door lockout solutions."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do key makers offer door-to-door mobile locksmith services?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, most listed key makers and locksmiths provide mobile services and can visit your home, office, or vehicle location with portable key-cutting and programming machinery."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How much does it cost to duplicate a home or car key?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Costs vary depending on key types (mechanical key vs. laser-cut transponder key or smart key). You negotiate pricing directly with the service provider. There are no middleman commissions."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can a locksmith open a locked security door or safe?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, professional locksmiths are trained in lock picking, bypass tools, and safe opening techniques. You can specify the lock type directly to find a provider with the right tools."
-        }
-      }
-    ]
-  };
 
   return (
     <div className="key_maker_page margin_navbar">
-      {/* FAQ Schema Injection for Google Rich Results */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-
-      {/* Hero Section */}
+{/* Hero Section */}
       <header className="key_maker_hero">
         <div className="container">
           <div className="row align-items-center">

@@ -44,62 +44,10 @@ export default function AcTechnicianPage() {
     loadCityIds();
   }, []);
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How to hire an AC technician for ac service in Lahore on Aya Sir G?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "To hire an AC technician on Aya Sir G!, browse our verified profiles, compare reviews and ratings of different technicians, and contact your preferred professional directly."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is gas refilling service available?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, our AC technicians offer professional gas refilling services for all types of air conditioners, including split and window units, ensuring leak detection before refilling."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What does the best AC service in Lahore cost?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The cost of ac service in Lahore depends on the type of service required (routine cleaning, repair, gas refilling, or installation). You can compare different technician profiles to find rates that fit your budget."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Are the AC technicians offering ac repair services on Aya Sir G! verified?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, Aya Sir G! verifies the profiles and credentials of AC technicians. You can also view reviews and ratings left by previous customers to hire with confidence."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Which cities are covered by ac repair services near me?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Our ac service and repair near me is currently available in Lahore, Karachi, and Islamabad, connecting you with local experts in these areas."
-        }
-      }
-    ]
-  };
 
   return (
     <div className="ac_page margin_navbar">
-      {/* FAQ Schema Injection for Google Rich Results */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-
-      {/* Hero Section */}
+{/* Hero Section */}
       <header className="ac_hero">
         <div className="container">
           <div className="row align-items-center">

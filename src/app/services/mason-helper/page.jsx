@@ -45,62 +45,10 @@ export default function MasonHelperPage() {
     loadCityIds();
   }, []);
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I book a mason (mistri) or helper on Aya Sir G!?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "To book, browse through our local mason and construction helper profiles, check their previous work reviews and ratings, and contact them directly to negotiate daily wages or contract rates."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What construction tasks do your masons perform?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Our masons handle bricklaying, plastering walls, concrete mixing, floor tiling, marble laying, roof waterproofing, wall repair, and complete bathroom or kitchen renovations."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do masons charge daily wages (dihari) or take full contracts (theka)?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "They do both. You can hire them on a daily wage basis (mistri and mazdoor separate rates) or agree on a lump-sum project contract. Discuss all pricing directly before starting."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do I need to supply construction materials like cement, sand, and bricks?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Usually, clients purchase and supply all construction materials, while the mason provides the labor and manual tools. However, you can negotiate a 'material+labor' contract directly if preferred."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Are the construction helpers and masons background checked?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Aya Sir G! lists verified profile cards showing CNIC status and customer reviews to help you choose trusted, safe, and reliable helpers."
-        }
-      }
-    ]
-  };
 
   return (
     <div className="mason_helper_page margin_navbar">
-      {/* FAQ Schema Injection for Google Rich Results */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-
-      {/* Hero Section */}
+{/* Hero Section */}
       <header className="mason_helper_hero">
         <div className="container">
           <div className="row align-items-center">

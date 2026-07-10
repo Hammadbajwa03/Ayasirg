@@ -45,62 +45,10 @@ export default function UPSGeneratorTechnicianPage() {
     loadCityIds();
   }, []);
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I book a UPS or generator technician on Aya Sir G!?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Simply browse verified profiles on Aya Sir G!, compare their reviews, previous ratings, and portfolio photos. You can contact technicians directly to explain your issue, negotiate rates, and book an onsite visit."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What generator services are available?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Our technicians provide complete gas and diesel generator tuning, engine oil and filter replacement, valve adjustment, fuel line cleaning, alternator repair, and automatic transfer switch (ATS) installation."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Why is my UPS not charging or not giving backup?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "This is usually caused by a degraded battery, faulty charging circuit card, or blown fuses. Hire a technician on Aya Sir G! to inspect battery gravity and repair the inverter card."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is an ATS (Automatic Transfer Switch) and do you install it?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "An ATS automatically switches your home's power source from WAPDA/electric grid to your generator when a power outage occurs, and switches back when power is restored. Technicians on Aya Sir G! can customize and install ATS panels."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Are the technicians background checked?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, Aya Sir G! displays verified CNIC status and customer reviews on profiles to help you find safe, professional, and reliable technicians near you."
-        }
-      }
-    ]
-  };
 
   return (
     <div className="ups_generator_page margin_navbar">
-      {/* FAQ Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-
-      {/* Hero Section */}
+{/* Hero Section */}
       <header className="ups_generator_hero">
         <div className="container">
           <div className="row align-items-center">

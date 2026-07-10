@@ -44,62 +44,10 @@ export default function DriverPage() {
     loadCityIds();
   }, []);
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I hire a driver on Aya Sir G!?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "To hire, browse through our verified driver profiles, check their driving experience, license details, customer reviews, and contact them directly to negotiate working hours and monthly salary."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you perform background checks on the drivers?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Aya Sir G! displays verified badges on profiles of drivers who submit their CNIC, driving license, and police verification reports. We strongly advise users to double-check original documents before finalizing any hire."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Are the drivers capable of driving both manual and automatic cars?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Most drivers on our platform are highly experienced and fully capable of driving manual hatchbacks, automatic sedans, crossovers, SUVs, and luxury passenger vans."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Who covers the driver's food and accommodation on outstation trips?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "For outstation overnight journeys, the host or client typically provides the driver's meals and a decent place to sleep, or pays an agreed-upon daily outstation allowance (ta Bhatta) so the driver can arrange it themselves."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I hire a driver for just a few hours or a single day?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. You can contact drivers on our platform and hire them for temporary, hourly, daily, or weekend assignments depending on their availability."
-        }
-      }
-    ]
-  };
 
   return (
     <div className="driver_page margin_navbar">
-      {/* FAQ Schema Injection for Google Rich Results */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-
-      {/* Hero Section */}
+{/* Hero Section */}
       <header className="driver_hero">
         <div className="container">
           <div className="row align-items-center">

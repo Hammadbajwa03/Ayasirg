@@ -45,62 +45,10 @@ export default function PainterPage() {
     loadCityIds();
   }, []);
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I book a painter on Aya Sir G!?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Browse verified painter profiles on Aya Sir G!, check their previous work photos, customer ratings, and reviews, then contact the painter directly to get a quote and book a convenient time."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What types of painting services are available?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Our painters offer interior wall painting, exterior painting, texture and 3D wall paint, epoxy floor coatings, wood staining and varnishing, ceiling painting, waterproofing paint, and full home or office repainting services."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do painters supply their own paint and materials?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "It depends on the painter. Some painters provide labour only while you purchase the paint, while others offer a complete material-plus-labour package. Discuss clearly before hiring to avoid any misunderstandings."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How much does house painting cost in Pakistan?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Painting costs vary by surface area, type of paint (standard, texture, epoxy), and city. Typically, basic interior painting starts around PKR 10–20 per square foot for labour only. Get quotes directly from painters on Aya Sir G! for accurate pricing."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Are the painters on Aya Sir G! background checked?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Aya Sir G! displays profile cards with CNIC verification status and verified customer reviews to help you choose reliable, safe, and professional painters near you."
-        }
-      }
-    ]
-  };
 
   return (
     <div className="painter_page margin_navbar">
-      {/* FAQ Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-
-      {/* Hero Section */}
+{/* Hero Section */}
       <header className="painter_hero">
         <div className="container">
           <div className="row align-items-center">

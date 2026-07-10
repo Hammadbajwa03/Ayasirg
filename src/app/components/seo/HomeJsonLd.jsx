@@ -1,123 +1,39 @@
 import React from "react";
+import { ORGANIZATION_ID, stringifySchema } from "@/app/lib/serviceSchema";
 
+/** Compact homepage JSON-LD — FAQ omitted (visible on page); org referenced by @id. */
 export default function HomeJsonLd() {
-  const websiteSchema = {
+  const doc = {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Aya Sir G!",
-    "url": "https://www.ayasirg.com",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://www.ayasirg.com/compnies?category_id={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  };
-
-  const serviceSchema = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Aya Sir G! Blue Collar Jobs & Home Services",
-    "serviceType": "Blue Collar Jobs & Home Services",
-    "provider": {
-      "@type": "LocalBusiness",
-      "name": "Aya Sir G!",
-      "image": "https://www.ayasirg.com/logo_header.png",
-      "telephone": "+92-309-8574093",
-      "priceRange": "$$",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Lahore",
-        "addressRegion": "Punjab",
-        "addressCountry": "PK"
-      },
-      "url": "https://www.ayasirg.com"
-    },
-    "areaServed": [
+    "@graph": [
       {
-        "@type": "City",
-        "name": "Lahore",
-        "sameAs": "https://en.wikipedia.org/wiki/Lahore"
+        "@type": "WebSite",
+        name: "Aya Sir G!",
+        url: "https://www.ayasirg.com",
+        publisher: { "@id": ORGANIZATION_ID },
+        potentialAction: {
+          "@type": "SearchAction",
+          target: "https://www.ayasirg.com/compnies?category_id={search_term_string}",
+          "query-input": "required name=search_term_string",
+        },
       },
       {
-        "@type": "City",
-        "name": "Karachi",
-        "sameAs": "https://en.wikipedia.org/wiki/Karachi"
+        "@type": "Service",
+        name: "Blue Collar Jobs & Home Services",
+        serviceType: "Blue Collar Jobs & Home Services",
+        provider: { "@id": ORGANIZATION_ID },
+        areaServed: ["Lahore", "Karachi", "Islamabad"],
+        url: "https://www.ayasirg.com/services",
       },
-      {
-        "@type": "City",
-        "name": "Islamabad",
-        "sameAs": "https://en.wikipedia.org/wiki/Islamabad"
-      }
-    ]
-  };
-
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How does Aya Sir G! work?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Aya Sir G! is Pakistan's trusted platform connecting you directly with verified blue-collar workers (maids, drivers, plumbers, electricians, etc.). You search by category and city, view verified profiles with ratings and experience, and contact providers directly to hire them."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is there any booking fee or commission?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No, Aya Sir G! does not charge any booking fees or commission from customers. You can browse, compare, and connect with service providers completely free of charge. You negotiate and pay the service provider directly."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Are the service providers verified?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, trust and safety are our top priorities. We verify service providers' identities (using CNIC and background checks) before listing them on our platform to ensure a safe and secure experience for both households and businesses."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Which cities are these services available in?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We offer coverage across major cities in Pakistan including Lahore, Karachi, Islamabad, Faisalabad, Rawalpindi, Peshawar, Multan, and more. You can easily filter search results by your city and local neighborhood."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How can I register as a worker or company?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "You can register easily by clicking the 'Create Your Profile' or 'Register Yourself' buttons, entering your phone number, and filling in your details. If you need assistance, you can visit a local E-center or contact our support team directly at 0309-8574093."
-        }
-      }
-    ]
+    ],
   };
 
   return (
-    <>
-      <script
-        id="jsonld-website"
-        suppressHydrationWarning
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema).replace(/</g, '\\u003c') }}
-      />
-      <script
-        id="jsonld-service"
-        suppressHydrationWarning
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema).replace(/</g, '\\u003c') }}
-      />
-      <script
-        id="jsonld-faq"
-        suppressHydrationWarning
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema).replace(/</g, '\\u003c') }}
-      />
-    </>
+    <script
+      id="jsonld-home"
+      suppressHydrationWarning
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: stringifySchema(doc) }}
+    />
   );
 }

@@ -45,62 +45,10 @@ export default function BlindsCurtainsWallpapersPage() {
     loadCityIds();
   }, []);
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I book an installation technician on Aya Sir G!?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "To book an installation expert, browse our list of verified profiles for blinds, curtains, and wallpaper service providers, read client reviews, compare experience, and contact them directly to schedule the work."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do I need to purchase the blinds, curtains, or wallpaper myself?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, you typically purchase the decorative materials (curtains, wallpapers, or blinds) based on your personal taste and room measurements. The technician will bring the professional tools, brackets, screws, and adhesive glue required to install them."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How long does it take to install wallpaper in a room?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Depending on the room size and complexity (pattern matching, wall preparation), installing wallpaper in a standard-sized room usually takes between 3 to 6 hours."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do installation technicians offer measurement services?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, you can hire a professional to take precise measurements of your windows and walls. This ensures you purchase the correct quantity of wallpaper rolls or the exact size of custom window blinds."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is it safe to hire installers via Aya Sir G!?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, Aya Sir G! verifies profiles and credentials. We encourage customers to read reviews, compare quotes, and conduct interviews before hiring."
-        }
-      }
-    ]
-  };
 
   return (
     <div className="blinds_page margin_navbar">
-      {/* FAQ Schema Injection for Google Rich Results */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-
-      {/* Hero Section */}
+{/* Hero Section */}
       <header className="blinds_hero">
         <div className="container">
           <div className="row align-items-center">

@@ -7,6 +7,8 @@ import "react-loading-skeleton/dist/skeleton.css";
 import "./blogs.css";
 import { FaArrowLeft, FaArrowRight, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { useRouter } from "next/navigation";
+import SeoIntroBlock from "../components/seo/SeoIntroBlock";
+import { getBlogsIntro } from "@/app/lib/pageSeoContent";
 
 export default function Page() {
   const router = useRouter();
@@ -172,10 +174,13 @@ export default function Page() {
     );
   };
 
+  const blogsIntro = getBlogsIntro();
+
   return (
     <section className="blogs margin_navbar">
       <div className="container py-3">
         <h1 className="fw-bold text-center mb-3">Aya Sir G! Blog</h1>
+        <SeoIntroBlock paragraphs={blogsIntro.paragraphs} className="seo_intro_block mx-auto" />
         {/* Category Slider */}
         <div className="category-slider d-flex align-items-center justify-content-center mt-2 mb-3">
           {showLeft && (

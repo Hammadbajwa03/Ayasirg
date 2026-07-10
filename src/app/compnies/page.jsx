@@ -1,6 +1,8 @@
 import React from "react";
 import { redirect } from "next/navigation";
 import CompaniesClient from "./CompaniesClient";
+import CompaniesListingHeader from "./CompaniesListingHeader";
+import CompaniesListingFooter from "./CompaniesListingFooter";
 import { getCategoryById } from "@/app/lib/categoryRoutes";
 
 function stripDefaultRole(params) {
@@ -78,5 +80,13 @@ export default async function Page({ searchParams }) {
     redirect(qs ? `/compnies?${qs}` : "/compnies");
   }
 
-  return <CompaniesClient />;
+  return (
+    <section className="individuals margin_navbar">
+      <div className="container content py-3">
+        <CompaniesListingHeader />
+        <CompaniesClient />
+        <CompaniesListingFooter />
+      </div>
+    </section>
+  );
 }

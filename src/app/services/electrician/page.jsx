@@ -44,62 +44,10 @@ export default function ElectricianPage() {
     loadCityIds();
   }, []);
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I book an electrician on Aya Sir G!?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "To book, browse through our verified electrician profiles, check customer reviews, ratings, and project histories, and contact the technician directly to explain the scope of work and negotiate rates."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What are the common causes of frequent circuit breaker tripping?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Circuit breakers usually trip due to an overloaded circuit (running too many heavy appliances at once), a short circuit (hot wire touching a neutral wire), or a ground fault (hot wire touching the ground/metal box). Our electricians can safely diagnose and resolve the exact cause."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do electricians bring their own spare wires and switches?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Electricians carry professional testing and cutting tools, tape, and basic screws. The cost of materials like replacement switches, sockets, wires, and breakers is borne by the customer. The electrician can purchase them on your behalf and provide receipts, or you can purchase them yourself."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I hire an electrician for full house electrical wiring?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Our platform lists experienced electrical contractors who handle complete conduit piping, wire pulling, distribution board (DB) box installations, and finish fittings for new houses and major renovation projects."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you provide emergency electrical repair services late at night?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "You can contact listed electricians directly to check if they offer 24/7 or emergency late-night call-out services in your specific neighborhood."
-        }
-      }
-    ]
-  };
 
   return (
     <div className="electrician_page margin_navbar">
-      {/* FAQ Schema Injection for Google Rich Results */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-
-      {/* Hero Section */}
+{/* Hero Section */}
       <header className="electrician_hero">
         <div className="container">
           <div className="row align-items-center">

@@ -4,6 +4,14 @@
   background-color: var(--bg-gray);
 }
 
+.individuals .listing_intro.about_us p {
+  font-size: 16px !important;
+  color: #212529 !important;
+  font-weight: 500 !important;
+  padding: 10px 0 !important;
+  line-height: 1.6 !important;
+}
+
 .individuals .content {
   z-index: 9;
 }

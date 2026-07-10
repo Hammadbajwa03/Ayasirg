@@ -45,62 +45,10 @@ export default function SalonWorkerPage() {
     loadCityIds();
   }, []);
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "How do I hire a salon worker or beautician on Aya Sir G!?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Browse verified salon worker profiles on Aya Sir G!, check their service specializations, customer ratings, and portfolio, then contact them directly to book an appointment at their salon or for a home visit.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "What beauty services are available on Aya Sir G!?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Our salon workers offer haircuts, hair colouring, blow-dry styling, bridal makeup, facial treatments, waxing, threading, manicure, pedicure, mehendi (henna), and complete bridal grooming packages.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Can I book a salon worker for a home visit in Pakistan?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes. Many beauticians and salon workers on Aya Sir G! offer home visit services for weddings, events, and personal grooming. Contact them directly to confirm availability, pricing, and location coverage.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "How much does a bridal makeup artist charge in Pakistan?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Bridal makeup costs in Pakistan vary widely — from PKR 10,000 for basic makeup to PKR 80,000+ for top artists with airbrush, HD, or international techniques. Browse and compare packages directly on Aya Sir G!.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Are the salon workers and beauticians on Aya Sir G! verified?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Aya Sir G! displays profile cards with CNIC verification status and genuine customer reviews to help you confidently choose the right beautician or salon worker for your needs.",
-        },
-      },
-    ],
-  };
 
   return (
     <div className="salon_worker_page margin_navbar">
-      {/* FAQ Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-
-      {/* Hero Section */}
+{/* Hero Section */}
       <header className="salon_worker_hero">
         <div className="container">
           <div className="row align-items-center">

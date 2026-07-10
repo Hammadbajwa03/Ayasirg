@@ -7,6 +7,7 @@ import { UserProvider } from "./userContext";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Script from "next/script";
+import { buildOrganizationSchema, stringifySchema } from "@/app/lib/serviceSchema";
 
 const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
@@ -55,26 +56,7 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-
-
-  // ORGANIZATION SCHEMA
-  const organizationSchema = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-
-    name: "Aya Sir G!",
-    url: "https://www.ayasirg.com",
-
-    logo: "https://www.ayasirg.com/assets/logo_header.png",
-
-    contactPoint: {
-      "@type": "ContactPoint",
-      telephone: "+92-309-8574093",
-      contactType: "customer service",
-      areaServed: "PK",
-      availableLanguage: ["English", "Urdu"],
-    },
-  };
+  const organizationSchema = buildOrganizationSchema();
 
   return (
     <html lang="en" data-scroll-behavior="smooth">
@@ -95,7 +77,7 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           strategy="lazyOnload"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(organizationSchema),
+            __html: stringifySchema(organizationSchema),
           }}
         />
         {/* GOOGLE ANALYTICS */}

@@ -45,62 +45,10 @@ export default function SolarTechnicianPage() {
     loadCityIds();
   }, []);
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I book a solar technician on Aya Sir G!?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Browse verified solar technician profiles on Aya Sir G!, check their ratings, portfolios, and customer reviews. You can contact the technicians directly to get a quote and schedule an onsite visit."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What services do solar technicians offer?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Our solar experts provide complete rooftop solar panel installation, solar inverter repair, battery health checks, net metering application support, solar structure design, and periodic cleaning and maintenance."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you help with solar net metering applications?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, many solar technicians and companies listed on Aya Sir G! can manage the end-to-end net metering process with NEPRA and local power distribution companies (like LESCO, KE, IESCO) to export excess electricity."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Why is my solar system producing less power?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Reduced power generation can be caused by dirty panels, shadow obstructions, improper tilt angles, inverter faults, or loose wiring. Hire a technician on Aya Sir G! to run a diagnostic audit on your system."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How often should solar panels be cleaned?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "For maximum efficiency in dusty Pakistani cities, it is recommended to clean solar panels every 1 to 2 weeks. Dust accumulation can reduce electricity generation by up to 20-30%."
-        }
-      }
-    ]
-  };
 
   return (
     <div className="solar_technician_page margin_navbar">
-      {/* FAQ Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-
-      {/* Hero Section */}
+{/* Hero Section */}
       <header className="solar_technician_hero">
         <div className="container">
           <div className="row align-items-center">

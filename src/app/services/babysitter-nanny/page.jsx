@@ -45,62 +45,10 @@ export default function BabysitterNannyPage() {
     loadCityIds();
   }, []);
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How to hire a baby sitter or nanny on Aya Sir G?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "To hire a baby sitter or nanny on Aya Sir G!, browse our list of verified childcare profiles, compare reviews, ratings, and experience levels, and contact the caregiver directly."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What age groups do the nannies service?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Our registered nannies offer care for various age groups, including newborns, infants, toddlers, preschoolers, and school-age children."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How much does a nanny or baby sitter cost in Pakistan?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The cost of hiring a nanny or baby sitter in Pakistan depends on the duration (part-time, full-time, or monthly) and specific duties. Compare caregiver profiles to discuss rates that suit your budget."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Are the nannies on Aya Sir G! verified for safety?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, Aya Sir G! verifies the profiles and credentials of nannies and baby sitters. We also encourage parents to read authentic customer reviews and conduct interviews before hiring."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Which cities have baby sitters and nannies available?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Our babysitting and nanny services are currently available in Lahore, Karachi, and Islamabad, connecting you with local experts."
-        }
-      }
-    ]
-  };
 
   return (
     <div className="nanny_page margin_navbar">
-      {/* FAQ Schema Injection for Google Rich Results */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-
-      {/* Hero Section */}
+{/* Hero Section */}
       <header className="nanny_hero">
         <div className="container">
           <div className="row align-items-center">

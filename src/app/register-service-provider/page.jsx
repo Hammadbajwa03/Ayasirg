@@ -4,6 +4,8 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./register-provider.css";
 import { useRouter } from "next/navigation";
+import SeoIntroBlock from "@/app/components/seo/SeoIntroBlock";
+import { getRegisterProviderIntro } from "@/app/lib/pageSeoContent";
 
 export default function RegisterPage() {
   const router = useRouter();
@@ -71,6 +73,7 @@ export default function RegisterPage() {
     <div className="register_provider auth_bg">
       <div className="container p-2 bg_white">
         <h1 className="auth_heading margin_bottom">Sign Up</h1>
+        <SeoIntroBlock paragraphs={getRegisterProviderIntro().paragraphs} />
         <form onSubmit={handleSubmit}>
           <div className="input_one_row">
             <input

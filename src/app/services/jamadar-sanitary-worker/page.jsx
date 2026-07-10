@@ -45,62 +45,10 @@ export default function JamadarSanitaryWorkerPage() {
     loadCityIds();
   }, []);
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I hire a sanitary worker or jamadar on Aya Sir G!?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Browse through our list of verified sanitary worker profiles, compare experience levels, read customer reviews, and contact them directly via phone or WhatsApp to discuss and negotiate rates."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What services does a sanitary worker / jamadar perform?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sanitary workers handle main sewerage line blockages, septic tank and gutter cleaning, waste disposal, drain pipe flushing, and general residential or commercial sanitation tasks."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do they bring their own sewerage clearing and sanitation equipment?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, most professional sanitary workers and sewerage cleaners bring manual rods, high-pressure water hoses, suction pumps, and cleaning disinfectants. You can clarify special machine needs directly before booking."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How is the pricing determined for sewerage cleaning?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Pricing is negotiated directly between you and the helper. Factors include the complexity of the blockage, the depth of the gutter/drain, and the equipment required. Aya Sir G! charges zero commissions."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Are emergency sewerage clearing services available 24/7?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Many independent sanitary workers and sanitation agencies on our platform offer emergency services for critical kitchen, toilet, or main street blockages. You can check individual profile hours."
-        }
-      }
-    ]
-  };
 
   return (
     <div className="sanitary_worker_page margin_navbar">
-      {/* FAQ Schema Injection for Google Rich Results */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-
-      {/* Hero Section */}
+{/* Hero Section */}
       <header className="sanitary_worker_hero">
         <div className="container">
           <div className="row align-items-center">

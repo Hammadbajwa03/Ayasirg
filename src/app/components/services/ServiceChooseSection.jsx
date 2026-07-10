@@ -1,11 +1,17 @@
 import { getServiceChooseContent } from "@/app/lib/serviceChooseContent";
 import { getServiceThemePrefix } from "@/app/lib/servicePageThemes";
+import { getBridgeParagraphs } from "@/app/lib/pageSeoContent";
 
 export default function ServiceChooseSection({ slug }) {
   const prefix = getServiceThemePrefix(slug);
   const content = getServiceChooseContent(slug);
 
   if (!prefix || !content) return null;
+
+  const allParagraphs = [
+    ...content.paragraphs,
+    ...getBridgeParagraphs(content.highlight),
+  ];
 
   return (
     <section className={`${prefix}_content_block`}>
@@ -15,11 +21,11 @@ export default function ServiceChooseSection({ slug }) {
             How to Choose the Right{" "}
             <span className="red_title">{content.highlight}</span>
           </h2>
-          {content.paragraphs.map((text, index) => (
+          {allParagraphs.map((text, index) => (
             <p
               key={text.slice(0, 48)}
               className={`${prefix}_content_text${
-                index === content.paragraphs.length - 1 ? " mb-0" : ""
+                index === allParagraphs.length - 1 ? " mb-0" : ""
               }`}
             >
               {text}

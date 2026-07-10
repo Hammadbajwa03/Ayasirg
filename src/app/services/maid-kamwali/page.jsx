@@ -45,62 +45,10 @@ export default function MaidKamwaliPage() {
     loadCityIds();
   }, []);
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I book a maid or kamwali on Aya Sir G!?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "To book, browse through our local domestic helper and maid profiles, compare experience and client reviews, and contact them directly to negotiate salaries and work timings."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What are the common work options available?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "You can hire part-time maids for specific tasks (like dishwashing or floor mopping), daily helpers for a few hours, or full-time 24/7 live-in maids."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Are the maids CNIC verified?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, we prioritize security by presenting profiles of maids and domestic workers with verified CNIC records and ratings from previous clients."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How is the monthly salary determined?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Salaries are negotiated directly between you and the maid based on the size of the house, the number of chores (cooking, cleaning, ironing), and working hours. Aya Sir G! does not charge any commissions."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I find a maid who can cook as well?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, many domestic helpers on our platform offer multi-service support, including basic home cooking (Bawarchi help), childcare assistance, and home cleaning."
-        }
-      }
-    ]
-  };
 
   return (
     <div className="maid_kamwali_page margin_navbar">
-      {/* FAQ Schema Injection for Google Rich Results */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-
-      {/* Hero Section */}
+{/* Hero Section */}
       <header className="maid_kamwali_hero">
         <div className="container">
           <div className="row align-items-center">

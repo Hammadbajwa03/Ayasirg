@@ -45,62 +45,10 @@ export default function TyreSpecialistPage() {
     loadCityIds();
   }, []);
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I book a tyre specialist on Aya Sir G!?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Simply browse verified tyre specialist profiles on Aya Sir G!, compare their ratings, read customer reviews, and view their services. Contact them directly to negotiate rates and book an onsite visit or roadside assistance."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What services do tyre specialists offer?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Our experts offer new tyre installation, wheel alignment, wheel balancing, tyre pressure calibration, tubeless puncture repair, and emergency roadside puncture assistance."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do tyre specialists provide mobile or roadside assistance?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, many tyre specialists on Aya Sir G! offer mobile emergency services. If you have a flat tyre or puncture on the road in Lahore, Karachi, or Islamabad, you can call them directly to your location."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How often should I align and balance my car wheels?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "It is generally recommended to get your wheels balanced and aligned every 5,000 to 10,000 kilometres, or immediately if you feel your car pulling to one side or the steering wheel vibrating."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Are the tyre technicians on Aya Sir G! verified?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, Aya Sir G! displays verified CNIC status and customer reviews on technician profiles so you can confidently hire trusted professionals near you."
-        }
-      }
-    ]
-  };
 
   return (
     <div className="tyre_specialist_page margin_navbar">
-      {/* FAQ Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-
-      {/* Hero Section */}
+{/* Hero Section */}
       <header className="tyre_specialist_hero">
         <div className="container">
           <div className="row align-items-center">

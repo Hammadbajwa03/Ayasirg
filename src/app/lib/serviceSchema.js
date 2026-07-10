@@ -1,7 +1,9 @@
 const ORG = "Aya Sir G!";
+export const ORGANIZATION_ID = "https://www.ayasirg.com/#organization";
 
 const defaultProvider = () => ({
   "@type": "LocalBusiness",
+  "@id": ORGANIZATION_ID,
   name: ORG,
   url: "https://www.ayasirg.com",
   image: "https://www.ayasirg.com/logo_header.png",
@@ -14,8 +16,13 @@ const defaultProvider = () => ({
   },
 });
 
+/** Compact provider reference (no duplicated address block). */
+export function providerReference() {
+  return { "@id": ORGANIZATION_ID };
+}
+
 /**
- * Service entity only (for @graph items — no @context).
+ * Service entity only (for single-page JSON-LD).
  * @param {{ serviceType: string; description?: string; url?: string }} p
  */
 export function buildServiceEntity({ serviceType, description, url }) {
@@ -26,8 +33,8 @@ export function buildServiceEntity({ serviceType, description, url }) {
   return {
     "@type": "Service",
     serviceType: name,
-    provider: defaultProvider(),
-    description: desc.slice(0, 5000),
+    provider: providerReference(),
+    description: desc.slice(0, 320),
     ...(url ? { url: String(url) } : {}),
   };
 }
@@ -37,6 +44,30 @@ export function buildServiceStructuredData({ serviceType, description, url }) {
   return {
     "@context": "https://schema.org",
     ...buildServiceEntity({ serviceType, description, url }),
+  };
+}
+
+/** Lightweight ItemList for /services hub (avoids 30+ nested Service graphs). */
+export function buildServicesItemListSchema(items, siteOrigin) {
+  const site = siteOrigin.replace(/\/+$/, "");
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Aya Sir G! Service Categories",
+    numberOfItems: items.length,
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      url: item.url.startsWith("http") ? item.url : `${site}${item.url}`,
+    })),
+  };
+}
+
+export function buildOrganizationSchema() {
+  return {
+    "@context": "https://schema.org",
+    ...defaultProvider(),
   };
 }
 

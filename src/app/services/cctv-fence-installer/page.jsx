@@ -44,62 +44,10 @@ export default function CctvFenceInstallerPage() {
     loadCityIds();
   }, []);
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I book a CCTV camera installation or fence installer on Aya Sir G!?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "It's pretty simple, just go through our verified CCTV camera installation and fence installer profiles, check out their experience, ratings, and what past customers are saying, and then message them directly to talk about what you need and work out a price together."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the difference between an IP camera and an analog camera?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "IP (Internet Protocol) cameras send their footage digitally over a network, which means you get sharper resolution, better digital zoom, and smarter extras like motion detection. Analog cameras work a bit differently, they send video through coaxial cables straight to a DVR. They're usually easier on the pocket, but you won't get the same resolution or feature set."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do CCTV camera installation services near me provide the cameras and cables themselves?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Most of the time, yes. Installers can handle everything for you, cameras, DVRs, NVRs, cables, even fence materials, and bundle it all into one package. But if you already have your own equipment, that's fine too, you can just bring them in for the installation part alone."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is concertina razor wire and why is it used for fences?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Think of concertina razor wire as barbed wire that's been coiled up so it expands like an accordion when stretched out. It's lined with sharp steel blades that make climbing or cutting through pretty much impossible, which is why it's such a popular choice for boosting security on home and business boundary walls."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I view my security cameras on my phone when I am away from home?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, absolutely. Our cctv camera installation in Lahore technicians will connect your DVR/NVR to your home internet and set up the app on your phone, so no matter where you are in the world, you can pull up live feeds or check past recordings whenever you need to."
-        }
-      }
-    ]
-  };
 
   return (
     <div className="cctv_page margin_navbar">
-      {/* FAQ Schema Injection for Google Rich Results */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-
-      {/* Hero Section */}
+{/* Hero Section */}
       <header className="cctv_hero">
         <div className="container">
           <div className="row align-items-center">
