@@ -533,3 +533,17 @@ form button:hover {
   visibility: visible;
   opacity: 1;
 }
+
+.form-footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+.ecenter_submit_btn.sign_in {
+  width: 100%;
+  max-width: 280px;
+  margin-top: 0;
+}

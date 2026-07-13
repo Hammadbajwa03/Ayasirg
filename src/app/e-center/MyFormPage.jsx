@@ -20,15 +20,16 @@ import { FaDeleteLeft } from "react-icons/fa6";
 import imageCompression from "browser-image-compression";
 
 
-export default function MyFormPage() {
+export default function MyFormPage({ initialUserType = null }) {
     //   const searchParams = useSearchParams();
     //   const userType = searchParams.get("type");
     const searchParams = useSearchParams();
-    const [userType, setUserType] = useState(null);
+    const [userType, setUserType] = useState(initialUserType);
     const router = useRouter();
     const inputRefs = useRef([]);
     const [otp, setOtp] = useState(new Array(6).fill(""));
     const [loading, setLoading] = useState(false);
+    const [isClient, setIsClient] = useState(false);
 
     const blobToBase64 = (blob) => {
         return new Promise((resolve, reject) => {
@@ -40,9 +41,21 @@ export default function MyFormPage() {
     };
 
     useEffect(() => {
+        setIsClient(true);
         const type = searchParams.get("type");
-        setUserType(type);
-    }, [searchParams]);
+        // Prefer clean path prop; fall back to query (?type=) for older links
+        if (initialUserType) {
+            setUserType(initialUserType);
+            return;
+        }
+        if (type === "individual" || type === "handyman") {
+            setUserType("handyman");
+        } else if (type === "company" || type === "provider") {
+            setUserType("provider");
+        } else {
+            setUserType(type);
+        }
+    }, [searchParams, initialUserType]);
     const [loader, setLoader] = useState(false);
 
     const {
@@ -789,7 +802,14 @@ export default function MyFormPage() {
                         </div>
                         <div className="input_select col-lg-6">
                             <label htmlFor="">Fields of Interest</label>
-                            <MultiSelect options={optionsCat} hasSelectAll={false} value={selectedFields} onChange={handleFieldsChange} labelledBy="Select Fields" portal={document.body} />
+                            <MultiSelect
+                                options={optionsCat}
+                                hasSelectAll={false}
+                                value={selectedFields}
+                                onChange={handleFieldsChange}
+                                labelledBy="Select Fields"
+                                portal={isClient ? document.body : undefined}
+                            />
                             {formErrors.fields_of_interest && <small style={{ color: "red" }}>{formErrors.fields_of_interest}</small>}
                         </div>
                         <div className="col-lg-6">
@@ -936,11 +956,11 @@ export default function MyFormPage() {
 
                     {/* Submit */}
                     <div className="form-footer mt-4 text-center w-100">
-                        <button type="submit" className="btn btn_primary w-lg-25 w-50" style={{ color: "white" }}>
+                        <button type="submit" className="sign_in ecenter_submit_btn" disabled={loader}>
                             {loader ? (
                                 <>
                                     <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
-                                    Submit...
+                                    Submitting...
                                 </>
                             ) : (
                                 "Submit"

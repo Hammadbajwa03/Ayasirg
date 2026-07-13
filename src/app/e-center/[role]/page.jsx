@@ -1,30 +1,30 @@
 import React, { Suspense } from "react";
-import { redirect } from "next/navigation";
+import { notFound } from "next/navigation";
 import SeoIntroBlock from "@/app/components/seo/SeoIntroBlock";
 import { getEcenterIntro } from "@/app/lib/pageSeoContent";
 import {
-  getEcenterHref,
   getEcenterPageTitle,
   resolveApiRole,
 } from "@/app/lib/ecenterRoutes";
-import MyFormPage from "./MyFormPage";
-import "./e-center.css";
+import MyFormPage from "../MyFormPage";
+import "../e-center.css";
 
-export default async function Page({ searchParams }) {
-  const params = await searchParams;
-  const rawType = params?.type;
+export async function generateMetadata({ params }) {
+  const { role } = await params;
+  const title = getEcenterPageTitle(role);
+  return {
+    title: `${title} | Aya Sir G!`,
+    robots: { index: false, follow: false },
+  };
+}
 
-  // Old/unprofessional query URLs → clean paths
-  if (rawType) {
-    const href = getEcenterHref(rawType);
-    if (href !== "/e-center") {
-      redirect(href);
-    }
-  }
+export default async function Page({ params }) {
+  const { role } = await params;
+  const apiRole = resolveApiRole(role);
+  if (!apiRole) notFound();
 
-  const title = getEcenterPageTitle(rawType);
+  const title = getEcenterPageTitle(role);
   const intro = getEcenterIntro();
-  const apiRole = resolveApiRole(rawType);
 
   return (
     <section className="Form_section">

@@ -159,7 +159,13 @@ export default function CustomNavbar() {
   }
 
   const handleClickPage = (type) => {
-    router.push(`/e-center?type=${type}`);
+    const path =
+      type === "handyman" || type === "individual"
+        ? "/e-center/individual"
+        : type === "provider" || type === "company"
+          ? "/e-center/company"
+          : "/e-center";
+    router.push(path);
   };
 
   const DEFAULT_PROFILE_AVATAR =
@@ -392,10 +398,10 @@ export default function CustomNavbar() {
                   )}
                   {userDetails?.user_type === "e-center" && (
                     <>
-                      <li onClick={() => handleDropdownItemClick(() => handleClickPage("handyman"))}>
+                      <li onClick={() => handleDropdownItemClick(() => handleClickPage("individual"))}>
                         Individuals
                       </li>
-                      <li onClick={() => handleDropdownItemClick(() => handleClickPage("provider"))}>
+                      <li onClick={() => handleDropdownItemClick(() => handleClickPage("company"))}>
                         Companies
                       </li>
                     </>
