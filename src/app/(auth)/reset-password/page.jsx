@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
+import { getApiBase } from "@/app/lib/apiBase";
 
 export default function page() {
   const router = useRouter();
@@ -46,7 +47,7 @@ export default function page() {
 
     setloader(true);
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/forgot-password/reset`, {
+      const res = await fetch(`${getApiBase()}/api/forgot-password/reset`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import Image from "next/image";
+import { getApiBase } from "@/app/lib/apiBase";
 
 export default function page() {
   const [loader, setLoader] = useState(false);
@@ -40,11 +41,7 @@ export default function page() {
     setFormData({ ...formData, [name]: value });
   };
 
-  const baseUrl =
-    process.env.NEXT_PUBLIC_BASE_URL ||
-    "https://admin.ayasirg.com";
-
-  const api = `${baseUrl}/api/register/send-otp`;
+  const api = `${getApiBase()}/api/register/send-otp`;
   const postData = async () => {
     setLoader(true);
     let toastFired = false;

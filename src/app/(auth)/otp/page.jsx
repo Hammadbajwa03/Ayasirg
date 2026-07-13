@@ -7,6 +7,7 @@ import { toast, ToastContainer } from "react-toastify";
 import Link from "next/link";
 import { UserContext } from "@/app/userContext";
 import Image from "next/image";
+import { getApiBase } from "@/app/lib/apiBase";
 
 export default function page() {
   const router = useRouter();
@@ -64,7 +65,7 @@ export default function page() {
 
     setLoader(true);
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/forgot-password/verify-otp`, {
+      const res = await fetch(`${getApiBase()}/api/forgot-password/verify-otp`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -126,6 +127,7 @@ export default function page() {
               </p>
             ) : (
               <button
+                type="button"
                 className="btn" style={{ outline: "none" }}
                 onClick={() => handleResend(phoneNumber)}
                 disabled={resendLoading}

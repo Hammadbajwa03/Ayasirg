@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { toast, ToastContainer } from "react-toastify";
 import Image from "next/image";
+import { getApiBase } from "@/app/lib/apiBase";
 
 export default function Page() {
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -23,7 +24,7 @@ export default function Page() {
 
     try {
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_BASE_URL}/api/forgot-password/send-otp`,
+        `${getApiBase()}/api/forgot-password/send-otp`,
         {
           method: "POST",
           headers: {

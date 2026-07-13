@@ -130,6 +130,7 @@ export default function Page() {
               </p>
             ) : (
               <button
+                type="button"
                 className="btn" style={{ outline: "none" }}
                 onClick={() => handleResend(phoneNumber)}
                 disabled={resendLoading}

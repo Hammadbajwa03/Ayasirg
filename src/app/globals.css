@@ -174,7 +174,8 @@ p#descri {
   font-weight: 500;
 }
 
-button.sign_in {
+button.sign_in,
+a.sign_in {
   margin-top: 20px;
   width: 100%;
   max-width: 472px;
@@ -187,14 +188,23 @@ button.sign_in {
   outline: none;
   transition: background 0.4s ease;
   border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  box-sizing: border-box;
 }
 
 .margin_navbar {
   margin-top: 125px;
 }
 
-button.sign_in:hover {
+button.sign_in:hover,
+a.sign_in:hover {
   background: linear-gradient(135deg, #b50000, #00c853);
+  color: white;
+  text-decoration: none;
 }
 
 p#forgot {

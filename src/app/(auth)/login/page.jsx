@@ -1,24 +1,27 @@
 "use client";
 import Link from "next/link";
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./login.css";
 import Button from "react-bootstrap/Button";
 import { useRouter } from "next/navigation";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import { UserContext } from "@/app/userContext";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import Image from "next/image";
+import { getApiBase } from "@/app/lib/apiBase";
 
 export default function page() {
-  const { userInfo, setUserInfo, fetchUserProfile } = useContext(UserContext);
+  const { userInfo, setUserInfo } = useContext(UserContext);
   const [loader, setLoader] = useState(false);
   const router = useRouter();
   const [termsAccepted, setTermsAccepted] = useState(false);
   const [termsError, setTermsError] = useState("");
 
-  if(userInfo?.api_token){
-    router.push("/");
-  }
+  useEffect(() => {
+    if (userInfo?.api_token) {
+      router.push("/");
+    }
+  }, [userInfo?.api_token, router]);
 
   const [showPassword, setShowPassword] = useState(false);
 
@@ -31,13 +34,11 @@ export default function page() {
     password: "",
   });
 
-  const baseUrl =
-    process.env.NEXT_PUBLIC_BASE_URL ||
-    "https://admin.ayasirg.com";
   const login = async () => {
     setLoader(true);
     try {
-      const loginUrl = `${baseUrl}/api/login`;
+      // Same-origin /api/* is proxied to the backend (avoids browser CORS failures).
+      const loginUrl = `${getApiBase()}/api/login`;
       const res = await fetch(loginUrl, {
         method: "POST",
         headers: {
@@ -47,26 +48,19 @@ export default function page() {
         body: JSON.stringify(formData),
       });
 
-      // if (!res.ok) {
-      //   throw new Error("Login failed");
-      // }
-
       const data = await res.json();
-      // console.log("data is ,", data);
       if (res.ok) {
         toast.success(data.message || "Login Successful!");
         localStorage.setItem("token", JSON.stringify(data.data));
         setUserInfo(data.data);
-        await fetchUserProfile(data.data.api_token);
-
+        // Profile loads via UserProvider when api_token is set.
         router.push("/");
-      }else{
-        toast.error(data.message)
+      } else {
+        toast.error(data.message || "Login failed");
       }
     } catch (error) {
-      // router.push("/error");
-      console.log("Error while login:", error.data.message);
-      toast.error(error.message || "Error While Login failed to fetch");
+      console.log("Error while login:", error);
+      toast.error(error?.message || "Login failed. Please try again.");
     } finally {
       setLoader(false);
     }
