@@ -15,7 +15,6 @@ import { useRouter } from "next/navigation";
 import Select from "react-select";
 // import { Modal } from 'bootstrap';
 import axios from "axios";
-import dynamic from "next/dynamic";
 import { FaDeleteLeft } from "react-icons/fa6";
 import imageCompression from "browser-image-compression";
 
@@ -29,7 +28,6 @@ export default function MyFormPage({ initialUserType = null }) {
     const inputRefs = useRef([]);
     const [otp, setOtp] = useState(new Array(6).fill(""));
     const [loading, setLoading] = useState(false);
-    const [isClient, setIsClient] = useState(false);
 
     const blobToBase64 = (blob) => {
         return new Promise((resolve, reject) => {
@@ -41,7 +39,6 @@ export default function MyFormPage({ initialUserType = null }) {
     };
 
     useEffect(() => {
-        setIsClient(true);
         const type = searchParams.get("type");
         // Prefer clean path prop; fall back to query (?type=) for older links
         if (initialUserType) {
@@ -538,22 +535,22 @@ export default function MyFormPage({ initialUserType = null }) {
     //     if (selectedAreaId) getLocations(selectedAreaId);
     // }, [selectedAreaId]);
 
-    const optionsCat = apiCategory2.map((cat) => ({
+    const optionsCat = (apiCategory2 || []).map((cat) => ({
         label: cat.name,
         value: cat.id,
     }));
 
-    const optionsLocation = locations.map((loc) => ({
+    const optionsLocation = (locations || []).map((loc) => ({
         label: loc.name,
         value: loc.id,
     }));
 
-    const optionsAreas = area.map((loc) => ({
+    const optionsAreas = (area || []).map((loc) => ({
         label: loc.name,
         value: loc.id,
     }));
 
-    const optionsCity = cities.map((loc) => ({
+    const optionsCity = (cities || []).map((loc) => ({
         label: loc.name,
         value: loc.id,
     }));
@@ -715,7 +712,7 @@ export default function MyFormPage({ initialUserType = null }) {
                                             <div className="col-md-6">
                                                 <label htmlFor="city">Interested City</label>
                                                 <Select
-                                                    options={cities.map((c) => ({ label: c.name, value: c.id }))}
+                                                    options={(cities || []).map((c) => ({ label: c.name, value: c.id }))}
                                                     value={row.city}
                                                     onChange={(city) => {
                                                         handleCityChange(city, row.id)
@@ -808,7 +805,6 @@ export default function MyFormPage({ initialUserType = null }) {
                                 value={selectedFields}
                                 onChange={handleFieldsChange}
                                 labelledBy="Select Fields"
-                                portal={isClient ? document.body : undefined}
                             />
                             {formErrors.fields_of_interest && <small style={{ color: "red" }}>{formErrors.fields_of_interest}</small>}
                         </div>

@@ -6,7 +6,7 @@ import {
   getEcenterPageTitle,
   resolveApiRole,
 } from "@/app/lib/ecenterRoutes";
-import MyFormPage from "../MyFormPage";
+import EcenterFormClient from "../EcenterFormClient";
 import "../e-center.css";
 
 export async function generateMetadata({ params }) {
@@ -31,8 +31,8 @@ export default async function Page({ params }) {
       <div className="container myform_page">
         <h1>{title}</h1>
         <SeoIntroBlock paragraphs={intro.paragraphs} />
-        <Suspense fallback={<div>Loading form...</div>}>
-          <MyFormPage initialUserType={apiRole} />
+        <Suspense fallback={<div className="text-center py-4">Loading form...</div>}>
+          <EcenterFormClient initialUserType={apiRole} />
         </Suspense>
       </div>
     </section>

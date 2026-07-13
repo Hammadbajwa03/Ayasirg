@@ -435,32 +435,33 @@ export const UserProvider = ({ children }) => {
   // e-center 
   const [ecenterInfo, setEcenterInfo] = useState();
   const ecenterAdd = async (formData) => {
-    if (!userInfo?.api_token) return;
+    if (!userInfo?.api_token) {
+      return {
+        success: false,
+        result: { message: "Please log in as an E-Center to submit this form." },
+      };
+    }
     setLoader(true);
     try {
       const res = await fetch(`${apiBase}/api/user/create`, {
         method: "POST",
         headers: {
-          // 'Content-Type': 'multipart/form-data',
-          "Accept": "application/json",
-          // "Content-Type": "application/json",
+          Accept: "application/json",
           Authorization: `Bearer ${userInfo.api_token}`,
         },
         body: formData,
       });
 
       const result = await res.json();
-      // console.log(result, "profile update")
       if (res.ok) {
         setEcenterInfo(result);
         return { success: true, result };
       } else {
-        return { success: false, result: result || "add failed." };
+        return { success: false, result: result || { message: "Add failed." } };
       }
     } catch (error) {
-      // console.error("Update failed:", error);
-      // // router.push("/error");
-      return { success: false, message: "Something went wrong." };
+      console.error("E-center create failed:", error);
+      return { success: false, result: { message: "Something went wrong. Please try again." } };
     } finally {
       setLoader(false);
     }
