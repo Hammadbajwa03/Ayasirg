@@ -1,9 +1,20 @@
 .seo_intro_block {
-  max-width: 920px;
+  display: block;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: visible;
+  text-align: left;
   margin-bottom: 1.5rem;
+  box-sizing: border-box;
 }
 
 .seo_intro_block .seo_intro_text {
+  display: block;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: visible;
+  text-align: left;
+  white-space: normal;
   font-size: 16px;
   color: #212529;
   font-weight: 500;
@@ -11,4 +22,5 @@
   padding: 10px 0;
   margin-bottom: 0;
   font-family: var(--font-poppins), sans-serif;
+  box-sizing: border-box;
 }

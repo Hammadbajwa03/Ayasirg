@@ -7,7 +7,7 @@ export default function CompaniesListingFooter() {
   return (
     <SeoIntroBlock
       paragraphs={footer.paragraphs}
-      className="seo_intro_block listing_intro about_us mt-3"
+      className="seo_intro_block listing_intro about_us listing_intro_followup w-100"
     />
   );
 }

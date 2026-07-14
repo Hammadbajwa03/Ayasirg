@@ -23,6 +23,10 @@
   padding: 0 !important;
   margin-top: 0;
   margin-bottom: 0;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: visible;
+  text-align: left;
 }
 
 /* Intro copy — same as About Us page paragraphs */

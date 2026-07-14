@@ -55,8 +55,8 @@ export default async function CategoryCompniesPage({ params, searchParams }) {
           categorySlug={cat.slug}
           categoryName={cat.name}
         />
-        <CompaniesClient categoryId={String(cat.id)} />
         <CompaniesListingFooter />
+        <CompaniesClient categoryId={String(cat.id)} />
       </div>
     </section>
   );

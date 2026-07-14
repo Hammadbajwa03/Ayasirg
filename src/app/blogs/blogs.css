@@ -2,6 +2,18 @@
   font-family: var(--font-poppins), sans-serif;
 }
 
+.blogs h1,
+.blogs .seo_intro_block,
+.blogs .seo_intro_text {
+  text-align: left;
+  width: 100%;
+  max-width: none;
+}
+
+.blogs .seo_intro_block {
+  max-width: none !important;
+}
+
 .blogs .card_div {
   display: grid;
   justify-content: center;
@@ -60,6 +72,7 @@
   border-radius: 3px;
   font-size: 16px !important;
   font-weight: 500 !important;
+  color: #212529 !important;
 }
 
 .arrow-btn {
@@ -71,6 +84,14 @@
   color: #333;
 }
 
-.btn_outline_primary{
-  background-color: #e2e2e2;
+.blogs .category-btn.btn_outline_primary {
+  background-color: #e2e2e2 !important;
+  border: 1px solid #e2e2e2 !important;
+  color: #212529 !important;
+}
+
+.blogs .category-btn.btn_primary {
+  background-color: var(--red-color, #b50000) !important;
+  border: 1px solid var(--red-color, #b50000) !important;
+  color: #ffffff !important;
 }

@@ -48,17 +48,20 @@ export default async function ServicesPage() {
     <section className="services_page margin_navbar">
       <ServicesCategoriesJsonLd categories={categories} />
       <div className="container py-3">
-        <header className="services_page_header text-center text-md-start">
+        <header className="services_page_header text-start">
           <h1 className="services_page_h1 fw-bold mb-1">Services</h1>
           <h2 className="services_page_h2 fw-semibold mb-0">Categories</h2>
           <div className="services_page_intro about_us">
             {hubIntro.paragraphs.map((text) => (
               <p key={text.slice(0, 48)}>{text}</p>
             ))}
+            {hubFooter.paragraphs.map((text) => (
+              <p key={text.slice(0, 48)}>{text}</p>
+            ))}
           </div>
         </header>
 
-        <div className="row align-items-stretch">
+        <div className="row align-items-start">
           <div className="col-lg-3 col-md-3 ad_bar p-0 hide_bar">
             <Advartisement />
           </div>
@@ -74,11 +77,6 @@ export default async function ServicesPage() {
                 </Link>
               </div> */}
               <ServicesCategoryGrid categories={categories} />
-              <div className="services_page_intro about_us mt-3">
-                {hubFooter.paragraphs.map((text) => (
-                  <p key={text.slice(0, 48)}>{text}</p>
-                ))}
-              </div>
             </div>
           </div>
         </div>

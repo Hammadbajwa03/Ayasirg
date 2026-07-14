@@ -4,12 +4,35 @@
   background-color: var(--bg-gray);
 }
 
-.individuals .listing_intro.about_us p {
+.individuals .listing_intro.about_us,
+.individuals .seo_intro_block {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: visible !important;
+  text-align: left !important;
+  margin-bottom: 0.35rem;
+  box-sizing: border-box;
+}
+
+.individuals .listing_intro_followup.about_us {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+.individuals .listing_intro.about_us p,
+.individuals .seo_intro_text {
   font-size: 16px !important;
   color: #212529 !important;
   font-weight: 500 !important;
   padding: 10px 0 !important;
   line-height: 1.6 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: visible !important;
+  text-align: left !important;
+  white-space: normal !important;
+  box-sizing: border-box !important;
 }
 
 .individuals .content {

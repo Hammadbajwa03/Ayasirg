@@ -9,13 +9,16 @@ import { FaArrowLeft, FaArrowRight, FaChevronLeft, FaChevronRight } from "react-
 import { useRouter } from "next/navigation";
 import SeoIntroBlock from "../components/seo/SeoIntroBlock";
 import { getBlogsIntro } from "@/app/lib/pageSeoContent";
+import { getApiBase } from "@/app/lib/apiBase";
 
 export default function Page() {
   const router = useRouter();
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const [categories, setCategories] = useState(["All Blogs"]);
+  const [categories, setCategories] = useState([
+    { id: 0, name: "All Blogs", slug: "all" },
+  ]);
   // console.log(categories, "categories")
   const [activeCategory, setActiveCategory] = useState("All Blogs");
 
@@ -68,7 +71,7 @@ export default function Page() {
   const fetchBlogs = async () => {
     try {
       setLoading(true);
-      const link = process.env.NEXT_PUBLIC_BASE_URL;
+      const link = getApiBase();
 
       let api = "";
 
@@ -94,6 +97,7 @@ export default function Page() {
     } catch (error) {
       // router.push("/error");
       console.error("Error while fetching blogs:", error);
+      setData([]);
     } finally {
       setLoading(false);
     }
@@ -102,7 +106,7 @@ export default function Page() {
   // ---- Fetch Categories ----
   const fetchCategories = async () => {
     try {
-      const link = process.env.NEXT_PUBLIC_BASE_URL;
+      const link = getApiBase();
       const api = `${link}/api/blog-categories`;
       const res = await fetch(api, { cache: "no-store" });
       if (!res.ok) throw new Error("Failed to fetch categories");
@@ -179,10 +183,10 @@ export default function Page() {
   return (
     <section className="blogs margin_navbar">
       <div className="container py-3">
-        <h1 className="fw-bold text-center mb-3">Aya Sir G! Blog</h1>
-        <SeoIntroBlock paragraphs={blogsIntro.paragraphs} className="seo_intro_block mx-auto" />
+        <h1 className="fw-bold text-start mb-3">Aya Sir G! Blog</h1>
+        <SeoIntroBlock paragraphs={blogsIntro.paragraphs} className="seo_intro_block text-start" />
         {/* Category Slider */}
-        <div className="category-slider d-flex align-items-center justify-content-center mt-2 mb-3">
+        <div className="category-slider d-flex align-items-center justify-content-start mt-2 mb-3">
           {showLeft && (
             <button className="arrow-btn" onClick={() => scroll("left")}>
               <FaChevronLeft />

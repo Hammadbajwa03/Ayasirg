@@ -30,7 +30,10 @@ export default async function Page({ searchParams }) {
     <section className="Form_section">
       <div className="container myform_page">
         <h1>{title}</h1>
-        <SeoIntroBlock paragraphs={intro.paragraphs} />
+        <SeoIntroBlock
+          paragraphs={intro.paragraphs}
+          className="seo_intro_block w-100"
+        />
         <Suspense fallback={<div className="text-center py-4">Loading form...</div>}>
           <EcenterFormClient initialUserType={apiRole} />
         </Suspense>

@@ -84,8 +84,8 @@ export default async function Page({ searchParams }) {
     <section className="individuals margin_navbar">
       <div className="container content py-3">
         <CompaniesListingHeader />
-        <CompaniesClient />
         <CompaniesListingFooter />
+        <CompaniesClient />
       </div>
     </section>
   );
