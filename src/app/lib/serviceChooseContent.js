@@ -21,9 +21,9 @@ export const SERVICE_CHOOSE_CONTENT = {
       "If you're looking for AC service in Lahore, it's a good idea to compare different service providers before making a decision. Reading genuine customer feedback and reviewing professional profiles can help you find reliable AC repair services that match your needs and budget. Whether you need routine maintenance, gas refilling, cleaning, or emergency repairs, choosing a qualified technician can help extend the life of your air conditioner and improve its efficiency.",
       `With ${SITE}, you can easily browse verified AC technicians, compare profiles, read authentic customer reviews, and connect directly with trusted professionals. Whether you're searching for the best AC service in Lahore, AC repair services near me, or AC service and repair near me, ${SITE} makes it simple to find experienced technicians with confidence.`,
     ],
-    metaTitle: "AC Service in Lahore | Best AC Repair Services | Aya Sir G!",
+    metaTitle: "AC Repair Services Near Me | Aya Sir G",
     metaDescription:
-      "Find trusted AC service in Lahore with Aya Sir G! Compare verified technicians for AC repair services, maintenance, and AC service and repair near you.",
+      "Looking for reliable AC repair services? Aya Sir G connects you with skilled AC technicians for installation, maintenance, gas filling, and repairs.",
   },
   "pest-control-termite-treatment": {
     highlight: "Pest Control Service",
@@ -32,9 +32,9 @@ export const SERVICE_CHOOSE_CONTENT = {
       "If you're searching for pest control services near me, it's worth comparing different providers before making a decision. Reading genuine customer feedback and reviewing professional profiles can help you find trusted experts who offer safe and effective pest control solutions. Whether you're dealing with termites, cockroaches, rodents, mosquitoes, or other common pests, choosing experienced professionals can help prevent future infestations and keep your property protected.",
       `With ${SITE}, you can easily find verified professionals offering home pest control services near me and compare their profiles, experience, and customer reviews. Whether you need regular inspections or a one-time treatment, ${SITE} makes it simple to connect with trusted experts for pest control near me and hire with confidence.`,
     ],
-    metaTitle: "Pest Control Services Near Me | Aya Sir G!",
+    metaTitle: "Pest Control Services Near Me | Aya Sir G",
     metaDescription:
-      "Find trusted pest control services near you. Compare verified professionals for home pest control services and hire with confidence on Aya Sir G!",
+      "Hire trusted pest control services through Aya Sir G for homes and offices. Get effective solutions for termites, rodents, mosquitoes, and more.",
   },
   "security-guard-watchman": {
     highlight: "Security Guard Service",
@@ -43,9 +43,9 @@ export const SERVICE_CHOOSE_CONTENT = {
       "If you're searching for security guard services near me, comparing different providers can help you make a confident decision. Looking at genuine customer feedback, service quality, and professional experience makes it easier to find trusted guards who meet your specific security requirements. Whether you need security for residential, commercial, or event purposes, choosing experienced professionals helps ensure better protection and peace of mind.",
       `With ${SITE}, you can easily browse verified providers offering home security guard services, compare profiles, read authentic customer reviews, and contact professionals directly through one platform. Whether you're looking for the best security guard services or reliable security guard services near me, ${SITE} makes it simple to find trusted security professionals with confidence.`,
     ],
-    metaTitle: "Best Security Guard Services Near Me | Aya Sir G!",
+    metaTitle: "Security Guard Services Near Me | Aya Sir G",
     metaDescription:
-      "Find trusted security guard services near you. Compare verified professionals for home and commercial security and hire with confidence on Aya Sir G!",
+      "Hire professional security guard services through Aya Sir G for homes, offices, events, warehouses, and commercial properties.",
   },
   "sofa-carpet-cleaner": {
     highlight: "Sofa Cleaning Service",
@@ -54,9 +54,9 @@ export const SERVICE_CHOOSE_CONTENT = {
       "If you're searching for sofa cleaning services near me, comparing different service providers can help you find experienced professionals who deliver quality results. Reading genuine customer reviews and reviewing provider profiles allows you to choose a service that fits your cleaning needs and budget. Whether you need regular maintenance or deep cleaning, hiring trained professionals helps restore the appearance and hygiene of your furniture.",
       `With ${SITE}, you can easily browse verified professionals offering sofa set cleaning services, compare profiles, read authentic customer reviews, and connect directly with trusted providers. Whether you need sofa and carpet cleaning services or are looking for reliable sofa cleaning services near me, ${SITE} makes it simple to find experienced cleaning experts with confidence.`,
     ],
-    metaTitle: "Sofa Cleaning Services Near Me | Aya Sir G!",
+    metaTitle: "Sofa Cleaning Services Near Me | Aya Sir G",
     metaDescription:
-      "Find trusted sofa cleaning services near you. Compare verified professionals for sofa set and carpet cleaning services on Aya Sir G!",
+      "Book professional sofa cleaning services with Aya Sir G. Remove stains, dust, and odors to keep your furniture fresh and hygienic.",
   },
   "cctv-fence-installer": {
     highlight: "CCTV Camera Installation Service",
@@ -65,9 +65,9 @@ export const SERVICE_CHOOSE_CONTENT = {
       "If you're searching for CCTV camera installation near me, it's worth comparing different service providers before making a decision. Reading genuine customer reviews and checking professional profiles can help you find experienced installers who offer quality workmanship and dependable service. Whether you need a new security system or want to upgrade an existing one, choosing the right professionals can help ensure better coverage and long-term performance.",
       `With ${SITE}, you can easily browse verified professionals offering CCTV camera installation services, compare profiles, read authentic customer feedback, and connect directly with trusted installers. Whether you're looking for CCTV camera installation in Lahore or CCTV camera installation services near me, ${SITE} makes it simple to find experienced professionals with confidence.`,
     ],
-    metaTitle: "CCTV Camera Installation Near Me | Aya Sir G!",
+    metaTitle: "CCTV Camera Installation Services | Aya Sir G",
     metaDescription:
-      "Find trusted CCTV camera installation services near you. Compare verified installers in Lahore and across Pakistan with Aya Sir G!",
+      "Get professional CCTV camera installation services with Aya Sir G. Secure your home or business with expert installation and setup.",
   },
   electrician: {
     highlight: "Electrician",
@@ -87,9 +87,9 @@ export const SERVICE_CHOOSE_CONTENT = {
         `Whether you need an electrician in Lahore, Karachi, or Islamabad, ${SITE} makes it simple to find experienced electricians with confidence.`
       ),
     ],
-    metaTitle: "Electrician Services Near Me | Aya Sir G!",
+    metaTitle: "Electrician Near Me | Aya Sir G",
     metaDescription:
-      "Find trusted electrician services near you. Compare verified professionals for wiring, repairs, and installation on Aya Sir G!",
+      "Hire experienced electricians near you with Aya Sir G for wiring, installations, repairs, maintenance, and electrical emergencies.",
   },
   plumber: {
     highlight: "Plumber",
@@ -109,9 +109,9 @@ export const SERVICE_CHOOSE_CONTENT = {
         `Whether you're looking for a plumber in Lahore or the best plumbers near me, ${SITE} helps you hire skilled professionals with confidence.`
       ),
     ],
-    metaTitle: "Plumber Services Near Me | Aya Sir G!",
+    metaTitle: "Plumbers Near Me | Aya Sir G",
     metaDescription:
-      "Find trusted plumber services near you. Compare verified professionals for leaks, fittings, and repairs on Aya Sir G!",
+      "Hire experienced plumbers near you with Aya Sir G for pipe repairs, leak fixing, bathroom fittings, and plumbing installations.",
   },
   painter: {
     highlight: "Painter",
@@ -135,9 +135,9 @@ export const SERVICE_CHOOSE_CONTENT = {
       `On ${SITE}, you can browse verified painter profiles across Lahore, Karachi, Islamabad, Faisalabad, Rawalpindi, and other cities in Pakistan. Use location filters and customer ratings to compare professionals before you hire.`,
       `Whether you need support for a one-time job or ongoing assistance, ${SITE} helps you find trusted painter experts offering reliable painting services, with clear profiles, genuine reviews, and direct contact options—so you can hire with confidence and peace of mind.`,
     ],
-    metaTitle: "Painting Services Near Me | Aya Sir G!",
+    metaTitle: "Painting Services Near Me | Aya Sir G",
     metaDescription:
-      "Find trusted painting services near you. Compare verified painters for home and office projects on Aya Sir G!",
+      "Find professional painting services through Aya Sir G for homes, offices, interior painting, exterior painting, and renovations.",
   },
   "carpenter-woodworker": {
     highlight: "Carpenter / Woodworker",
@@ -157,9 +157,9 @@ export const SERVICE_CHOOSE_CONTENT = {
         `Whether you need a carpenter in Lahore or carpenter services near me, ${SITE} connects you with skilled woodworkers you can trust.`
       ),
     ],
-    metaTitle: "Carpenter Services Near Me | Aya Sir G!",
+    metaTitle: "Carpenter Services Near Me | Aya Sir G",
     metaDescription:
-      "Find trusted carpenter services near you. Compare verified woodworkers for furniture and fittings on Aya Sir G!",
+      "Find skilled carpenters through Aya Sir G for furniture repair, custom woodwork, cabinets, doors, and home improvement projects.",
   },
   "babysitter-nanny": {
     highlight: "Baby Sitter / Nanny",
@@ -179,9 +179,9 @@ export const SERVICE_CHOOSE_CONTENT = {
         `Whether you're searching for a nanny in Lahore or babysitter services near me, ${SITE} helps you find caring professionals with confidence.`
       ),
     ],
-    metaTitle: "Babysitter & Nanny Services Near Me | Aya Sir G!",
+    metaTitle: "Baby Sitter Maid Services | Aya Sir G",
     metaDescription:
-      "Find trusted babysitter and nanny services near you. Compare verified childcare professionals on Aya Sir G!",
+      "Hire trusted baby sitter maids through Aya Sir G for childcare, newborn care, and household support from verified professionals.",
   },
   "gardener-mali": {
     highlight: "Gardener / Mali",
@@ -195,9 +195,9 @@ export const SERVICE_CHOOSE_CONTENT = {
     bridgeParagraphs: [
       `Explore other services at ${SITE} Services, Register as a Service Provider, or Contact Us for any assistance.`,
     ],
-    metaTitle: "Gardener Services Near Me | Aya Sir G!",
+    metaTitle: "Professional Gardener Services | Aya Sir G",
     metaDescription:
-      "Find trusted gardener services near you. Compare verified malis for lawn care and landscaping on Aya Sir G!",
+      "Book skilled gardeners through Aya Sir G for lawn care, landscaping, garden maintenance, planting, and outdoor beautification.",
   },
   "bawarchi-cook": {
     highlight: "Bawarchi / Cook",
@@ -217,9 +217,9 @@ export const SERVICE_CHOOSE_CONTENT = {
         `Whether you need a cook in Lahore or cook services near me, ${SITE} helps you compare verified chefs and hire with confidence.`
       ),
     ],
-    metaTitle: "Cook & Bawarchi Services Near Me | Aya Sir G!",
+    metaTitle: "Bawarchi & Professional Chef Services | Aya Sir G",
     metaDescription:
-      "Find trusted cook and bawarchi services near you. Compare verified home chefs on Aya Sir G!",
+      "Hire experienced bawarchis and professional chefs with Aya Sir G for home cooking, parties, events, and family gatherings.",
   },
   driver: {
     highlight: "Driver",
@@ -239,9 +239,9 @@ export const SERVICE_CHOOSE_CONTENT = {
         `Whether you need a driver in Lahore or driver services near me, ${SITE} makes it easy to find experienced drivers with confidence.`
       ),
     ],
-    metaTitle: "Driver Services Near Me | Aya Sir G!",
+    metaTitle: "Personal Driver Services Near Me | Aya Sir G",
     metaDescription:
-      "Find trusted driver services near you. Compare verified chauffeurs and personal drivers on Aya Sir G!",
+      "Hire a professional personal driver through Aya Sir G for daily travel, business trips, family transport, and special occasions.",
   },
   "solar-technician": {
     highlight: "Solar Technician",
@@ -266,9 +266,9 @@ export const SERVICE_CHOOSE_CONTENT = {
       `On ${SITE}, you can browse verified solar technician profiles across Lahore, Karachi, Islamabad, Faisalabad, Rawalpindi, and other cities in Pakistan. Use location filters and customer ratings to compare professionals before you hire.`,
       `Whether you need support for a one-time solar system installation or ongoing maintenance assistance, ${SITE} helps you find trusted solar panel installation experts with clear profiles, genuine reviews, and direct contact options—so you can hire with confidence and peace of mind.`,
     ],
-    metaTitle: "Solar Technician Services Near Me | Aya Sir G!",
+    metaTitle: "Solar Panel Installation Services | Aya Sir G",
     metaDescription:
-      "Find trusted solar technician services near you. Compare verified installers and repair experts on Aya Sir G!",
+      "Get expert solar panel installation services with Aya Sir G for homes and businesses. Hire trusted solar technicians today.",
   },
   "ceiling-work": {
     highlight: "Ceiling Work Specialist",
@@ -288,9 +288,9 @@ export const SERVICE_CHOOSE_CONTENT = {
         `Whether you need ceiling work in Lahore or ceiling services near me, ${SITE} connects you with skilled installers you can trust.`
       ),
     ],
-    metaTitle: "Ceiling Work Services Near Me | Aya Sir G!",
+    metaTitle: "Ceiling Design Services Near Me | Aya Sir G",
     metaDescription:
-      "Find trusted ceiling work services near you. Compare verified false ceiling installers on Aya Sir G!",
+      "Upgrade your home with modern ceiling design services from Aya Sir G. Hire experts for gypsum, POP, and decorative ceiling work.",
   },
   "welding-worker": {
     highlight: "Welding Worker",
@@ -310,9 +310,9 @@ export const SERVICE_CHOOSE_CONTENT = {
         `Whether you need a welder in Lahore or welding services near me, ${SITE} makes it simple to find experienced professionals with confidence.`
       ),
     ],
-    metaTitle: "Welding Services Near Me | Aya Sir G!",
+    metaTitle: "Welders Near Me | Aya Sir G",
     metaDescription:
-      "Find trusted welding services near you. Compare verified welders for fabrication and repairs on Aya Sir G!",
+      "Hire experienced welders near you through Aya Sir G for metal fabrication, gate welding, grills, repairs, and custom welding work.",
   },
   "salon-worker": {
     highlight: "Salon Worker",
@@ -355,9 +355,9 @@ export const SERVICE_CHOOSE_CONTENT = {
         `Whether you need a sweeper in Lahore or sweeper services near me, ${SITE} makes it easy to find reliable workers with confidence.`
       ),
     ],
-    metaTitle: "Sweeper Services Near Me | Aya Sir G!",
+    metaTitle: "Cleaning Services Near Me | Aya Sir G",
     metaDescription:
-      "Find trusted sweeper services near you. Compare verified cleaning workers on Aya Sir G!",
+      "Book professional cleaning services through Aya Sir G for homes, offices, apartments, deep cleaning, and commercial spaces.",
   },
   "maid-kamwali": {
     highlight: "Maid / Kamwali",
@@ -377,9 +377,9 @@ export const SERVICE_CHOOSE_CONTENT = {
         `Whether you need a maid in Lahore or maid services near me, ${SITE} helps you compare verified domestic workers and hire with confidence.`
       ),
     ],
-    metaTitle: "Maid & Kamwali Services Near Me | Aya Sir G!",
+    metaTitle: "Maid Service Near Me | Aya Sir G",
     metaDescription:
-      "Find trusted maid and kamwali services near you. Compare verified domestic helpers on Aya Sir G!",
+      "Hire reliable maid services through Aya Sir G for cleaning, cooking, childcare, elderly care, and household assistance.",
   },
   "mason-helper": {
     highlight: "Mason & Helper",
@@ -421,9 +421,9 @@ export const SERVICE_CHOOSE_CONTENT = {
         `Whether you need installers in Lahore or blinds installation near me, ${SITE} makes it simple to find experienced professionals with confidence.`
       ),
     ],
-    metaTitle: "Blinds & Curtains Installation Near Me | Aya Sir G!",
+    metaTitle: "Wallpaper Installation Services | Aya Sir G",
     metaDescription:
-      "Find trusted blinds and curtains installation near you. Compare verified installers on Aya Sir G!",
+      "Transform your interiors with professional wallpaper installation services by skilled experts available through Aya Sir G.",
   },
   "office-boy-factory-workers": {
     highlight: "Office Boy / Factory Worker",
@@ -487,9 +487,9 @@ export const SERVICE_CHOOSE_CONTENT = {
         `Whether you need a tyre specialist in Lahore or tyre services near me, ${SITE} helps you compare verified professionals with confidence.`
       ),
     ],
-    metaTitle: "Tyre Services Near Me | Aya Sir G!",
+    metaTitle: "Tyre Puncture Repair Near Me | Aya Sir G",
     metaDescription:
-      "Find trusted tyre services near you. Compare verified tyre specialists for repair and fitting on Aya Sir G!",
+      "Find tyre puncture repair specialists with Aya Sir G for quick, reliable tyre repair and roadside assistance near you.",
   },
   "carpet-cleaning-laundry": {
     highlight: "Carpet Cleaning / Laundry Service",
@@ -509,9 +509,9 @@ export const SERVICE_CHOOSE_CONTENT = {
         `Whether you need carpet cleaning in Lahore or laundry services near me, ${SITE} makes it simple to find trusted professionals with confidence.`
       ),
     ],
-    metaTitle: "Carpet Cleaning Services Near Me | Aya Sir G!",
+    metaTitle: "Laundry Service Near Me | Aya Sir G",
     metaDescription:
-      "Find trusted carpet cleaning and laundry services near you on Aya Sir G!",
+      "Find trusted laundry services near you with Aya Sir G. Book washing, ironing, dry cleaning, and garment care professionals.",
   },
   "automotive-mechanic": {
     highlight: "Automotive Mechanic",
@@ -531,9 +531,9 @@ export const SERVICE_CHOOSE_CONTENT = {
         `Whether you need a mechanic in Lahore or car repair services near me, ${SITE} helps you hire verified automotive experts with confidence.`
       ),
     ],
-    metaTitle: "Car Mechanic Services Near Me | Aya Sir G!",
+    metaTitle: "Car Mechanic Near Me | Aya Sir G",
     metaDescription:
-      "Find trusted car mechanic services near you. Compare verified automotive mechanics on Aya Sir G!",
+      "Looking for a car mechanic near you? Aya Sir G connects you with skilled mechanics for repairs, maintenance, diagnostics, and inspections.",
   },
   "key-maker": {
     highlight: "Key Maker",
@@ -553,9 +553,9 @@ export const SERVICE_CHOOSE_CONTENT = {
         `Whether you need a key maker in Lahore or locksmith services near me, ${SITE} makes it easy to find trusted professionals with confidence.`
       ),
     ],
-    metaTitle: "Key Maker Services Near Me | Aya Sir G!",
+    metaTitle: "Key Maker Near Me | Aya Sir G",
     metaDescription:
-      "Find trusted key maker and locksmith services near you on Aya Sir G!",
+      "Find trusted key makers near you with Aya Sir G for key duplication, lock repair, lock replacement, and emergency locksmith services.",
   },
   "ups-generator-technician": {
     highlight: "UPS & Generator Technician",
@@ -575,9 +575,9 @@ export const SERVICE_CHOOSE_CONTENT = {
         `Whether you need a technician in Lahore or UPS repair services near me, ${SITE} helps you compare verified experts with confidence.`
       ),
     ],
-    metaTitle: "UPS & Generator Repair Near Me | Aya Sir G!",
+    metaTitle: "UPS & Generator Repair Services | Aya Sir G",
     metaDescription:
-      "Find trusted UPS and generator repair services near you on Aya Sir G!",
+      "Find expert UPS and generator repair services with Aya Sir G. Hire technicians for repairs, maintenance, troubleshooting, and servicing.",
   },
   "jamadar-sanitary-worker": {
     highlight: "Jamadar / Sanitary Worker",
@@ -619,9 +619,9 @@ export const SERVICE_CHOOSE_CONTENT = {
         `Whether you need housekeeping in Lahore or housekeeping services near me, ${SITE} helps you compare verified cleaners and hire with confidence.`
       ),
     ],
-    metaTitle: "Housekeeping Services Near Me | Aya Sir G!",
+    metaTitle: "Housekeeping Services Near Me | Aya Sir G",
     metaDescription:
-      "Find trusted housekeeping services near you. Compare verified cleaners on Aya Sir G!",
+      "Hire professional housekeeping services through Aya Sir G for homes, offices, apartments, and commercial cleaning needs.",
   },
   caretaker: {
     highlight: "Caretaker",
@@ -641,9 +641,9 @@ export const SERVICE_CHOOSE_CONTENT = {
         `Whether you need a caretaker in Lahore or caretaker services near me, ${SITE} makes it simple to find trusted caregivers with confidence.`
       ),
     ],
-    metaTitle: "Caretaker Services Near Me | Aya Sir G!",
+    metaTitle: "Professional Caretaker Services | Aya Sir G",
     metaDescription:
-      "Find trusted caretaker services near you. Compare verified caregivers on Aya Sir G!",
+      "Hire reliable caretakers with Aya Sir G for elderly care, patient care, disability support, and daily assistance at home.",
   },
   beautician: {
     highlight: "Beautician",
@@ -663,9 +663,9 @@ export const SERVICE_CHOOSE_CONTENT = {
         `Whether you need a beautician in Lahore or beautician services near me, ${SITE} helps you compare verified beauty professionals with confidence.`
       ),
     ],
-    metaTitle: "Beautician Services Near Me | Aya Sir G!",
+    metaTitle: "Professional Beautician Services | Aya Sir G",
     metaDescription:
-      "Find trusted beautician services near you. Compare verified makeup artists on Aya Sir G!",
+      "Book experienced beauticians through Aya Sir G for makeup, skincare, hair styling, bridal services, and beauty treatments.",
   },
 };
 
