@@ -14,7 +14,7 @@ export default function CompaniesListingHeader({
 
   return (
     <>
-      <h1 className="fw-bold mb-3">{pageTitle}</h1>
+      <h1 className="fw-bold mb-0">{pageTitle}</h1>
       <SeoIntroBlock
         paragraphs={intro.paragraphs}
         className="seo_intro_block listing_intro about_us w-100"

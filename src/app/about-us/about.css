@@ -1,6 +1,6 @@
 .about_us {
   font-family: var(--font-poppins), sans-serif;
-  padding: 20px 0px;
+  padding: 0px !important;
 }
 
 .about_us h2 {

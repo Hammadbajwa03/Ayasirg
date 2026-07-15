@@ -11,8 +11,25 @@
   max-width: 100% !important;
   overflow: visible !important;
   text-align: left !important;
+  padding-top: 0 !important;
+  margin-top: -6px !important;
   margin-bottom: 0.35rem;
   box-sizing: border-box;
+}
+
+.individuals .listing_intro.about_us p:first-child,
+.individuals .seo_intro_block .seo_intro_text:first-child {
+  padding-top: 0 !important;
+}
+
+.individuals h1.fw-bold {
+  margin-bottom: 2px !important;
+  line-height: 1.2;
+}
+
+.individuals .listing_intro.about_us p + p,
+.individuals .seo_intro_block .seo_intro_text + .seo_intro_text {
+  margin-top: 0 !important;
 }
 
 .individuals .listing_intro_followup.about_us {
@@ -25,7 +42,8 @@
   font-size: 16px !important;
   color: #212529 !important;
   font-weight: 500 !important;
-  padding: 10px 0 !important;
+  padding: 0 !important;
+  margin-bottom: 0 !important;
   line-height: 1.6 !important;
   width: 100% !important;
   max-width: 100% !important;

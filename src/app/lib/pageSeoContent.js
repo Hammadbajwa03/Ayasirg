@@ -3,10 +3,7 @@ import { getServiceChooseContent } from "./serviceChooseContent";
 const SITE = "Aya Sir G!";
 
 const GENERIC_COMPANIES_INTRO = [
-  `${SITE} is Pakistan's trusted platform for hiring verified blue-collar workers and registered companies. Browse profiles for electricians, plumbers, drivers, maids, AC technicians, security guards, and dozens of other skilled roles in one place.`,
-  "Use the filters on this page to narrow results by city, area, category, gender, age range, verification status, and ratings. Each listing includes profile details and customer feedback so you can compare options before making contact.",
-  "Whether you are an employer looking for reliable help or a service provider building your client base, Aya Sir G! connects talent with opportunity across major cities including Lahore, Karachi, Islamabad, Faisalabad, Rawalpindi, and Multan.",
-  "Our marketplace is designed for households, offices, and businesses that need vetted workers quickly. Review experience, ratings, and verification badges before you contact a provider directly through the platform.",
+  `${SITE} is Pakistan's trusted platform for hiring verified blue-collar workers and registered companies across Lahore, Karachi, Islamabad, and other major cities. Use the filters to narrow results by city, area, category, gender, age range, verification status, and ratings, then compare profiles and contact a provider directly through the platform.`,
 ];
 
 const SERVICES_HUB_INTRO = [
