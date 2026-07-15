@@ -100,13 +100,13 @@ export const SERVICE_CHOOSE_CONTENT = {
         "to prevent water damage and maintain a hygienic home or office"
       ),
       p2(
-        "plumber services near me",
+        "plumbers near me",
         "leak fixes, bathroom fitting, kitchen plumbing, or emergency pipe repairs",
         "restore water flow and avoid costly property damage"
       ),
       p3(
         "reliable plumbing services",
-        `Whether you're looking for a plumber in Lahore or plumber services near me, ${SITE} helps you hire skilled professionals with confidence.`
+        `Whether you're looking for a plumber in Lahore or the best plumbers near me, ${SITE} helps you hire skilled professionals with confidence.`
       ),
     ],
     metaTitle: "Plumber Services Near Me | Aya Sir G!",
@@ -122,7 +122,7 @@ export const SERVICE_CHOOSE_CONTENT = {
         "to achieve a clean, durable, and professional finish"
       ),
       p2(
-        "painting services near me",
+        "house painting services near me or painting services near me",
         "interior painting, exterior weather-proofing, touch-ups, or full home repainting",
         "improve appearance and protect walls for years to come"
       ),
@@ -130,6 +130,10 @@ export const SERVICE_CHOOSE_CONTENT = {
         "home and commercial painting services",
         `Whether you need painters in Lahore or painting services near me, ${SITE} makes it easy to compare verified professionals and hire with confidence.`
       ),
+    ],
+    bridgeParagraphs: [
+      `On ${SITE}, you can browse verified painter profiles across Lahore, Karachi, Islamabad, Faisalabad, Rawalpindi, and other cities in Pakistan. Use location filters and customer ratings to compare professionals before you hire.`,
+      `Whether you need support for a one-time job or ongoing assistance, ${SITE} helps you find trusted painter experts offering reliable painting services, with clear profiles, genuine reviews, and direct contact options—so you can hire with confidence and peace of mind.`,
     ],
     metaTitle: "Painting Services Near Me | Aya Sir G!",
     metaDescription:
@@ -182,20 +186,14 @@ export const SERVICE_CHOOSE_CONTENT = {
   "gardener-mali": {
     highlight: "Gardener / Mali",
     paragraphs: [
-      p1(
-        "gardener or mali",
-        "their plant care experience, maintenance schedule options, and landscaping skills",
-        "to keep your lawn, plants, and outdoor spaces healthy and well maintained"
-      ),
-      p2(
-        "gardener services near me",
-        "lawn mowing, hedge trimming, seasonal planting, or regular garden upkeep",
-        "maintain a clean and attractive outdoor environment"
-      ),
-      p3(
-        "gardening and landscaping services",
-        `Whether you need a gardener in Lahore or gardener services near me, ${SITE} makes it simple to hire experienced malis with confidence.`
-      ),
+      "Gardening is not just decoration, it is a passion, a love, and a way to bring life and color into your surroundings. It is especially meaningful for those who enjoy seeing seasonal blooms, fresh greenery, and feel connected to nature in their everyday life.",
+      "More than just making a garden beautiful, gardening is about giving something back to nature and playing your part in maintaining a healthy environment. A well-kept garden doesn't just look good, it also improves air quality, brings a sense of calm, and adds real value to your home or property.",
+      `Finding the right professional gardener is important for anyone who truly values this work. Many people struggle to find someone reliable, skilled, and honest, and end up compromising on the quality of their lawn or plants. That is why ${SITE} is building a trusted network of gardeners from across Pakistan, so users can easily find skilled professionals based on their specific needs, budget, and location.`,
+      `On the platform, you can view gardener profiles, check ratings and reviews, and listen to "Ta'araf" voice notes or CV details to better understand their experience and expertise before hiring. This helps you make a confident decision without any guesswork.`,
+      `The best part is that there is no middleman commission involved. You can simply sign up on ${SITE}, explore verified profiles, compare a few options, and contact gardeners directly to choose the right person for your requirements — quickly and without any hassle.`,
+    ],
+    bridgeParagraphs: [
+      `Explore other services at ${SITE} Services, Register as a Service Provider, or Contact Us for any assistance.`,
     ],
     metaTitle: "Gardener Services Near Me | Aya Sir G!",
     metaDescription:
@@ -247,21 +245,26 @@ export const SERVICE_CHOOSE_CONTENT = {
   },
   "solar-technician": {
     highlight: "Solar Technician",
+    headingHighlight: "Technician for Solar Panel Installation",
     paragraphs: [
       p1(
-        "solar technician",
+        "technician",
         "their installation experience, system brands they work with, and after-sales support",
-        "to maximize energy savings and ensure your solar system runs efficiently"
+        "to maximize energy savings and ensure your solar system installation runs efficiently"
       ),
       p2(
         "solar installation services near me",
-        "new solar panel setup, inverter repair, battery maintenance, or system upgrades",
+        "new solar panel installation, inverter repair, battery maintenance, or system upgrades",
         "reduce downtime and get the most from your investment"
       ),
       p3(
         "solar panel installation and repair services",
-        `Whether you need solar technicians in Lahore or solar services near me, ${SITE} helps you hire verified professionals with confidence.`
+        `Whether you need solar technicians in Lahore or solar installation services near me, ${SITE} helps you hire verified professionals with confidence.`
       ),
+    ],
+    bridgeParagraphs: [
+      `On ${SITE}, you can browse verified solar technician profiles across Lahore, Karachi, Islamabad, Faisalabad, Rawalpindi, and other cities in Pakistan. Use location filters and customer ratings to compare professionals before you hire.`,
+      `Whether you need support for a one-time solar system installation or ongoing maintenance assistance, ${SITE} helps you find trusted solar panel installation experts with clear profiles, genuine reviews, and direct contact options—so you can hire with confidence and peace of mind.`,
     ],
     metaTitle: "Solar Technician Services Near Me | Aya Sir G!",
     metaDescription:
@@ -313,21 +316,22 @@ export const SERVICE_CHOOSE_CONTENT = {
   },
   "salon-worker": {
     highlight: "Salon Worker",
+    headingHighlight: "Salon Worker for Salon Services",
     paragraphs: [
       p1(
         "salon worker",
         "their styling experience, hygiene standards, and the salon services they provide",
-        "to get professional grooming results at a salon or at home"
+        "to get professional grooming results at a salon or through salon services at home"
       ),
-      p2(
-        "salon services near me",
-        "haircuts, coloring, bridal styling, manicures, or grooming packages",
-        "look your best for everyday needs or special occasions"
-      ),
+      "If you're searching for salon services near me, comparing different providers before making a decision is worthwhile. Reading genuine customer feedback and reviewing professional profiles can help you find trusted experts who match your needs and budget. Whether you need haircuts, coloring, bridal styling, manicures, or grooming packages, hiring experienced professionals for beauty salon services helps you look your best for everyday needs or special occasions.",
       p3(
         "salon and grooming services",
         `Whether you need salon workers in Lahore or salon services near me, ${SITE} helps you compare verified stylists and hire with confidence.`
       ),
+    ],
+    bridgeParagraphs: [
+      `On ${SITE}, you can browse verified salon worker profiles across Lahore, Karachi, Islamabad, Faisalabad, Rawalpindi, and other cities in Pakistan. Use location filters and customer ratings to compare professionals before you hire.`,
+      `Whether you need support for a one-time job or ongoing assistance, ${SITE} helps you find trusted experts for salon services at home, offering clear profiles, genuine reviews, and direct contact options for reliable beauty salon services—so you can hire with confidence and peace of mind.`,
     ],
     metaTitle: "Salon Services Near Me | Aya Sir G!",
     metaDescription:

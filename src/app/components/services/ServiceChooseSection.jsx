@@ -10,7 +10,7 @@ export default function ServiceChooseSection({ slug }) {
 
   const allParagraphs = [
     ...content.paragraphs,
-    ...getBridgeParagraphs(content.highlight),
+    ...(content.bridgeParagraphs || getBridgeParagraphs(content.highlight)),
   ];
 
   return (
@@ -19,7 +19,9 @@ export default function ServiceChooseSection({ slug }) {
         <div className={`${prefix}_content_wrapper`}>
           <h2 className={`${prefix}_section_heading`}>
             How to Choose the Right{" "}
-            <span className="red_title">{content.highlight}</span>
+            <span className="red_title">
+              {content.headingHighlight || content.highlight}
+            </span>
           </h2>
           {allParagraphs.map((text, index) => (
             <p
