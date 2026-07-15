@@ -34,9 +34,9 @@ export default function Work() {
           </div>
           <div className="col-lg-6 img_col mt-lg-0 mt-3" data-aos="fade-bottom">
             <Image
-              src="/assets/staffs.png"
-              width={200}
-              height={200}
+              src="/assets/staffs-hd.png"
+              width={1536}
+              height={1024}
               sizes="(max-width: 992px) 100vw, 50vw"
               loading="lazy"
               alt="Blue-collar workers and professionals finding opportunities on Aya Sir G! in Pakistan"

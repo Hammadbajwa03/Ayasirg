@@ -17,11 +17,10 @@ span.red_title {
 }
 
 .work .img_col img {
-  /* max-width: 533px;
-  max-height: 443px; */
   width: 100%;
-  height: 100%;
-  /* overflow: none; */
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
 .work .col_1 {

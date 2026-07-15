@@ -2,8 +2,6 @@
 import React from "react";
 import { 
   FaUserCheck, 
-  FaClock, 
-  FaTags, 
   FaMapMarkedAlt, 
   FaGraduationCap, 
   FaThumbsUp, 
@@ -17,18 +15,6 @@ const reasonsData = [
     icon: <FaUserCheck />,
     title: "Verified Workers",
     description: "CNIC and background-checked workers so you can trust who enters your home or office."
-  },
-  {
-    id: 2,
-    icon: <FaClock />,
-    title: "Quick Booking",
-    description: "Connect and hire skilled professionals in just a few clicks through our platform."
-  },
-  {
-    id: 3,
-    icon: <FaTags />,
-    title: "Transparent Pricing",
-    description: "Affordable rates agreed directly with the provider with absolutely zero hidden charges."
   },
   {
     id: 4,
