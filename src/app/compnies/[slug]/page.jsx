@@ -1,7 +1,6 @@
 import { notFound, redirect } from "next/navigation";
 import CompaniesClient from "../CompaniesClient";
 import CompaniesListingHeader from "../CompaniesListingHeader";
-import CompaniesListingFooter from "../CompaniesListingFooter";
 import ListingServiceJsonLd from "../ListingServiceJsonLd";
 import { getCategoryBySlug } from "@/app/lib/categoryRoutes";
 
@@ -55,7 +54,6 @@ export default async function CategoryCompniesPage({ params, searchParams }) {
           categorySlug={cat.slug}
           categoryName={cat.name}
         />
-        <CompaniesListingFooter />
         <CompaniesClient categoryId={String(cat.id)} />
       </div>
     </section>

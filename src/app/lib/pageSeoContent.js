@@ -58,18 +58,12 @@ export function getListingIntro(categorySlug, categoryName) {
 
   const choose = getServiceChooseContent(categorySlug);
   const name = categoryName || choose?.highlight || "Professional";
-  const paragraphs = choose?.paragraphs
-    ? [...choose.paragraphs]
-    : [
-        `Find verified ${name} professionals across Pakistan on ${SITE}. Compare profiles, read customer reviews, and contact trusted experts for your home or business needs.`,
-        `Use the filters on this page to search by city, area, and ratings. Each listing shows experience details and verification status to help you hire with confidence.`,
-      ];
 
-  paragraphs.push(
-    `This page lists active ${name} profiles available for hire through ${SITE}. Filter by location to find professionals near you in Lahore, Karachi, Islamabad, or other cities, then contact your preferred provider directly without middlemen or hidden fees.`,
-  );
-
-  return { paragraphs };
+  return {
+    paragraphs: [
+      `Find verified ${name} professionals on ${SITE} for home and business needs across Lahore, Karachi, Islamabad, and other cities in Pakistan. Use the filters below to search by city, area, ratings, and verification status—compare profiles and read customer reviews before you hire. Contact trusted ${name} experts directly through ${SITE} for reliable service without middlemen or hidden fees.`,
+    ],
+  };
 }
 
 export function getServicesHubIntro() {
