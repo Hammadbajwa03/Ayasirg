@@ -19,7 +19,7 @@ export default function AboutPage() {
         <div className="text-center mb-3">
           <h1 className="fw-bold mb-2">About Aya Sir G!</h1>
           <h2 className="fw-bold">
-            Slogan: <span>“Your Trusted Help, Anywhere.”</span>
+            Slogan: <span>“Your Trusted Help, Everywhere.”</span>
           </h2>
           <p className="mt-2">
             Connecting people with reliable helpers and service providers.
@@ -86,7 +86,7 @@ export default function AboutPage() {
           <div className="col-md-12">
             <div className="p-lg-4 p-3 bg-white h-100 shadow-sm rounded-3">
               <p className="text-center">
-                Our slogan, <b>"Your Trusted Help, Anywhere."</b> reflects our dedication to providing convenient, secure, and reliable services for every household and business need.
+                Our slogan, <b>"Your Trusted Help, Everywhere."</b> reflects our dedication to providing convenient, secure, and reliable services for every household and business need.
               </p>
             </div>
           </div>
