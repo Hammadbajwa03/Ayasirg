@@ -322,10 +322,28 @@ export default function MyFormPage({ initialUserType = null }) {
     const [mediaRecorder, setMediaRecorder] = useState(null);
     const [timer, setTimer] = useState(0);
     const timerRef = useRef(null);
+    // iPhone/iPad: file input with accept="audio/*" opens Files/Drive — use in-app mic instead.
+    // Desktop + Android keep the existing file picker.
+    const [isIOS, setIsIOS] = useState(false);
+    useEffect(() => {
+        if (typeof navigator === "undefined") return;
+        const ua = navigator.userAgent || "";
+        const iOS =
+            /iPad|iPhone|iPod/.test(ua) ||
+            (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+        setIsIOS(iOS);
+    }, []);
     const handleStartRecording = async () => {
         try {
             const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-            const recorder = new MediaRecorder(stream);
+            // Prefer a mime type the browser supports (iPhone Safari needs audio/mp4; Chrome prefers webm).
+            const mimeCandidates = ["audio/mp4", "audio/aac", "audio/webm;codecs=opus", "audio/webm"];
+            const mimeType = mimeCandidates.find(
+                (t) => typeof MediaRecorder !== "undefined" && MediaRecorder.isTypeSupported?.(t)
+            );
+            const recorder = mimeType
+                ? new MediaRecorder(stream, { mimeType })
+                : new MediaRecorder(stream);
             let chunks = [];
 
             recorder.ondataavailable = (e) => {
@@ -333,7 +351,9 @@ export default function MyFormPage({ initialUserType = null }) {
             };
 
             recorder.onstop = () => {
-                const blob = new Blob(chunks, { type: "audio/mp3" });
+                stream.getTracks().forEach((track) => track.stop());
+                const blobType = recorder.mimeType || mimeType || "audio/webm";
+                const blob = new Blob(chunks, { type: blobType });
                 const url = URL.createObjectURL(blob);
                 setAudioURL(url);
                 setFormData((prev) => ({
@@ -886,19 +906,46 @@ export default function MyFormPage({ initialUserType = null }) {
                                             <p style={{ fontWeight: "600", marginRight: "10px" }}>Record Voice</p>
                                         </div>
                                     )}
-                                    {/* Audio File Upload */}
+                                    {/* Audio File Upload — on iPhone open in-app mic recording (not Files/Drive). Desktop + Android keep file picker. */}
                                     {!audioURL && !isRecording && (
                                         <div className="p-2">
-                                            <input
-                                                type="file"
-                                                accept="audio/*"
-                                                id="audioUpload"
-                                                onChange={handleAudioUpload}
-                                                style={{ display: "none" }}
-                                            />
-                                            <label htmlFor="audioUpload" className="upload-label">
+                                            {!isIOS && (
+                                                <input
+                                                    type="file"
+                                                    accept="audio/*"
+                                                    id="audioUpload"
+                                                    onChange={handleAudioUpload}
+                                                    style={{ display: "none" }}
+                                                />
+                                            )}
+                                            <label
+                                                htmlFor={isIOS ? undefined : "audioUpload"}
+                                                className="upload-label"
+                                                onClick={
+                                                    isIOS
+                                                        ? (e) => {
+                                                              e.preventDefault();
+                                                              handleStartRecording();
+                                                          }
+                                                        : undefined
+                                                }
+                                                role={isIOS ? "button" : undefined}
+                                                tabIndex={isIOS ? 0 : undefined}
+                                                onKeyDown={
+                                                    isIOS
+                                                        ? (e) => {
+                                                              if (e.key === "Enter" || e.key === " ") {
+                                                                  e.preventDefault();
+                                                                  handleStartRecording();
+                                                              }
+                                                          }
+                                                        : undefined
+                                                }
+                                            >
                                                 <FaFileAudio size={22} style={{ color: "gray" }} />
-                                                <span className="tooltip-text">Upload audio file</span>
+                                                <span className="tooltip-text">
+                                                    {isIOS ? "Record audio" : "Upload audio file"}
+                                                </span>
                                             </label>
                                         </div>
                                     )}
