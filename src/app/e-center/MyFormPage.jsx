@@ -322,8 +322,8 @@ export default function MyFormPage({ initialUserType = null }) {
     const [mediaRecorder, setMediaRecorder] = useState(null);
     const [timer, setTimer] = useState(0);
     const timerRef = useRef(null);
-    // iPhone/iPad: file input with accept="audio/*" opens Files/Drive — use in-app mic instead.
-    // Desktop + Android keep the existing file picker.
+    // iPhone/iPad: use capture so the system voice recorder opens (not Files/Drive).
+    // Android + desktop: normal file picker for already-recorded audio.
     const [isIOS, setIsIOS] = useState(false);
     useEffect(() => {
         if (typeof navigator === "undefined") return;
@@ -389,22 +389,37 @@ export default function MyFormPage({ initialUserType = null }) {
         setIsRecording(false);
         clearInterval(timerRef.current);
         setTimer(0);
+        setFormData((prev) => ({
+            ...prev,
+            audio_sample_blob: "",
+        }));
     };
 
     const handleAudioUpload = (e) => {
-        const file = e.target.files[0];
-        if (file) {
-            const url = URL.createObjectURL(file);
-            setAudioURL(url);
-            setIsRecording(false);
-            setIsPlaying(false);
+        const file = e.target.files?.[0];
+        // Allow selecting/recording the same file again on iPhone
+        e.target.value = "";
+        if (!file) return;
 
-            // Yeh file hi blob hota hai
-            setFormData((prev) => ({
-                ...prev,
-                audio_sample_blob: file, // ✅ file as blob
-            }));
+        // iPhone sometimes returns empty MIME — also check extension. Reject photos/videos.
+        const type = (file.type || "").toLowerCase();
+        const name = (file.name || "").toLowerCase();
+        const isAudioByType = type.startsWith("audio/");
+        const isAudioByExt = /\.(m4a|mp3|wav|aac|caf|ogg|webm|mpeg)$/i.test(name);
+        const isVideo = type.startsWith("video/") || type.startsWith("image/");
+        if (isVideo || (!isAudioByType && !isAudioByExt)) {
+            toast.error("Please choose an audio file only.");
+            return;
         }
+
+        const url = URL.createObjectURL(file);
+        setAudioURL(url);
+        setIsRecording(false);
+        setIsPlaying(false);
+        setFormData((prev) => ({
+            ...prev,
+            audio_sample_blob: file,
+        }));
     };
 
 
@@ -906,42 +921,24 @@ export default function MyFormPage({ initialUserType = null }) {
                                             <p style={{ fontWeight: "600", marginRight: "10px" }}>Record Voice</p>
                                         </div>
                                     )}
-                                    {/* Audio File Upload — on iPhone open in-app mic recording (not Files/Drive). Desktop + Android keep file picker. */}
+                                    {/* Audio File Upload
+                                        - Android/desktop: pick an already-recorded audio file and show it
+                                        - iPhone: capture opens the system voice recorder; result is shown in the player */}
                                     {!audioURL && !isRecording && (
                                         <div className="p-2">
-                                            {!isIOS && (
-                                                <input
-                                                    type="file"
-                                                    accept="audio/*"
-                                                    id="audioUpload"
-                                                    onChange={handleAudioUpload}
-                                                    style={{ display: "none" }}
-                                                />
-                                            )}
-                                            <label
-                                                htmlFor={isIOS ? undefined : "audioUpload"}
-                                                className="upload-label"
-                                                onClick={
+                                            <input
+                                                type="file"
+                                                accept={
                                                     isIOS
-                                                        ? (e) => {
-                                                              e.preventDefault();
-                                                              handleStartRecording();
-                                                          }
-                                                        : undefined
+                                                        ? "audio/mp4,audio/x-m4a,audio/m4a,audio/aac,audio/mpeg,audio/wav,audio/*,.m4a,.mp3,.wav,.caf"
+                                                        : "audio/*"
                                                 }
-                                                role={isIOS ? "button" : undefined}
-                                                tabIndex={isIOS ? 0 : undefined}
-                                                onKeyDown={
-                                                    isIOS
-                                                        ? (e) => {
-                                                              if (e.key === "Enter" || e.key === " ") {
-                                                                  e.preventDefault();
-                                                                  handleStartRecording();
-                                                              }
-                                                          }
-                                                        : undefined
-                                                }
-                                            >
+                                                {...(isIOS ? { capture: "user" } : {})}
+                                                id="audioUpload"
+                                                onChange={handleAudioUpload}
+                                                style={{ display: "none" }}
+                                            />
+                                            <label htmlFor="audioUpload" className="upload-label">
                                                 <FaFileAudio size={22} style={{ color: "gray" }} />
                                                 <span className="tooltip-text">
                                                     {isIOS ? "Record audio" : "Upload audio file"}
