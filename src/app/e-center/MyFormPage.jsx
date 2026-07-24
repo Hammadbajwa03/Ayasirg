@@ -322,28 +322,10 @@ export default function MyFormPage({ initialUserType = null }) {
     const [mediaRecorder, setMediaRecorder] = useState(null);
     const [timer, setTimer] = useState(0);
     const timerRef = useRef(null);
-    // iPhone/iPad: use capture so the system voice recorder opens (not Files/Drive).
-    // Android + desktop: normal file picker for already-recorded audio.
-    const [isIOS, setIsIOS] = useState(false);
-    useEffect(() => {
-        if (typeof navigator === "undefined") return;
-        const ua = navigator.userAgent || "";
-        const iOS =
-            /iPad|iPhone|iPod/.test(ua) ||
-            (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
-        setIsIOS(iOS);
-    }, []);
     const handleStartRecording = async () => {
         try {
             const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-            // Prefer a mime type the browser supports (iPhone Safari needs audio/mp4; Chrome prefers webm).
-            const mimeCandidates = ["audio/mp4", "audio/aac", "audio/webm;codecs=opus", "audio/webm"];
-            const mimeType = mimeCandidates.find(
-                (t) => typeof MediaRecorder !== "undefined" && MediaRecorder.isTypeSupported?.(t)
-            );
-            const recorder = mimeType
-                ? new MediaRecorder(stream, { mimeType })
-                : new MediaRecorder(stream);
+            const recorder = new MediaRecorder(stream);
             let chunks = [];
 
             recorder.ondataavailable = (e) => {
@@ -351,9 +333,7 @@ export default function MyFormPage({ initialUserType = null }) {
             };
 
             recorder.onstop = () => {
-                stream.getTracks().forEach((track) => track.stop());
-                const blobType = recorder.mimeType || mimeType || "audio/webm";
-                const blob = new Blob(chunks, { type: blobType });
+                const blob = new Blob(chunks, { type: "audio/mp3" });
                 const url = URL.createObjectURL(blob);
                 setAudioURL(url);
                 setFormData((prev) => ({
@@ -389,37 +369,22 @@ export default function MyFormPage({ initialUserType = null }) {
         setIsRecording(false);
         clearInterval(timerRef.current);
         setTimer(0);
-        setFormData((prev) => ({
-            ...prev,
-            audio_sample_blob: "",
-        }));
     };
 
     const handleAudioUpload = (e) => {
-        const file = e.target.files?.[0];
-        // Allow selecting/recording the same file again on iPhone
-        e.target.value = "";
-        if (!file) return;
+        const file = e.target.files[0];
+        if (file) {
+            const url = URL.createObjectURL(file);
+            setAudioURL(url);
+            setIsRecording(false);
+            setIsPlaying(false);
 
-        // iPhone sometimes returns empty MIME — also check extension. Reject photos/videos.
-        const type = (file.type || "").toLowerCase();
-        const name = (file.name || "").toLowerCase();
-        const isAudioByType = type.startsWith("audio/");
-        const isAudioByExt = /\.(m4a|mp3|wav|aac|caf|ogg|webm|mpeg)$/i.test(name);
-        const isVideo = type.startsWith("video/") || type.startsWith("image/");
-        if (isVideo || (!isAudioByType && !isAudioByExt)) {
-            toast.error("Please choose an audio file only.");
-            return;
+            // Yeh file hi blob hota hai
+            setFormData((prev) => ({
+                ...prev,
+                audio_sample_blob: file, // ✅ file as blob
+            }));
         }
-
-        const url = URL.createObjectURL(file);
-        setAudioURL(url);
-        setIsRecording(false);
-        setIsPlaying(false);
-        setFormData((prev) => ({
-            ...prev,
-            audio_sample_blob: file,
-        }));
     };
 
 
@@ -921,28 +886,19 @@ export default function MyFormPage({ initialUserType = null }) {
                                             <p style={{ fontWeight: "600", marginRight: "10px" }}>Record Voice</p>
                                         </div>
                                     )}
-                                    {/* Audio File Upload
-                                        - Android/desktop: pick an already-recorded audio file and show it
-                                        - iPhone: capture opens the system voice recorder; result is shown in the player */}
+                                    {/* Audio File Upload */}
                                     {!audioURL && !isRecording && (
                                         <div className="p-2">
                                             <input
                                                 type="file"
-                                                accept={
-                                                    isIOS
-                                                        ? "audio/mp4,audio/x-m4a,audio/m4a,audio/aac,audio/mpeg,audio/wav,audio/*,.m4a,.mp3,.wav,.caf"
-                                                        : "audio/*"
-                                                }
-                                                {...(isIOS ? { capture: "user" } : {})}
+                                                accept="audio/*"
                                                 id="audioUpload"
                                                 onChange={handleAudioUpload}
                                                 style={{ display: "none" }}
                                             />
                                             <label htmlFor="audioUpload" className="upload-label">
                                                 <FaFileAudio size={22} style={{ color: "gray" }} />
-                                                <span className="tooltip-text">
-                                                    {isIOS ? "Record audio" : "Upload audio file"}
-                                                </span>
+                                                <span className="tooltip-text">Upload audio file</span>
                                             </label>
                                         </div>
                                     )}
